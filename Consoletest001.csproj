@@ -87,32 +87,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArchiveControler.cs" />
-    <Compile Include="NewFolder1\MetaPlugin.cs" />
-    <Compile Include="NewFolder1\MetaPluginZ3.cs" />
-    <Compile Include="NewFolder1\XMLReaderHelper.cs" />
-    <Compile Include="NewFolder1\MetaPluginsdfas.cs" />
+    <Compile Include="image\ImageDemo.cs" />
+    <Compile Include="Linq\Class1.cs" />
+    <Compile Include="MyGame\TenPointGame.cs" />
     <Compile Include="otherThing\StringTest.cs" />
     <Compile Include="otherThing\TimeControl.cs" />
     <Compile Include="otherThing\ListTest.cs" />
     <Compile Include="otherThing\DirectoryTestCcd4.cs" />
     <Compile Include="otherThing\DirectoryTest6Erji.cs" />
-    <Compile Include="Sqlite\Class1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sqlite\Common\MyConfig.cs" />
-    <Compile Include="Sqlite\Common\NpoiHelper.cs" />
-    <Compile Include="Sqlite\Common\TypeParse.cs" />
-    <Compile Include="Sqlite\DAL\SqlHelper.cs" />
-    <Compile Include="Sqlite\DAL\UserDal.cs" />
-    <Compile Include="Sqlite\DAL\PhoneDal.cs" />
-    <Compile Include="Sqlite\DAL\GeneralDal.cs" />
-    <Compile Include="Sqlite\Entity\PhoneInfo.cs" />
-    <Compile Include="Sqlite\Entity\TableInfo.cs" />
-    <Compile Include="Sqlite\Entity\UserInfo.cs" />
-    <Compile Include="Sqlite\SQLiteHelper.cs" />
-    <Compile Include="Sqlite\SQLTest.cs" />
-    <Compile Include="Sqlite\LibraryContainer.cs" />
-    <Compile Include="Sqlite\RomDal.cs" />
     <Compile Include="threadGaoji\CalculateTest.cs" />
     <Compile Include="threadGaoji\Calculate.cs" />
     <Compile Include="threadGaoji\JoinDemo.cs" />
@@ -143,7 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Delegate\TimeControl.cs" />
-    <Compile Include="NewFolder1\ConvertEx.cs" />
     <Compile Include="otherThing\TestJiCheng.cs" />
     <Compile Include="thread1\ThreadPoolTest.cs" />
     <Compile Include="WEB\GetWebStr.cs" />
@@ -181,15 +162,6 @@
     <Compile Include="Delegate\Class1.cs" />
     <Compile Include="jiami\RSAManager.cs" />
     <Compile Include="WEB\ConvertEx.cs 的副本%283%29.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Sqlite\dll\npoi4\ICSharpCode.SharpZipLib.dll" />
-    <Content Include="Sqlite\dll\npoi4\NPOI.dll" />
-    <Content Include="Sqlite\dll\npoi4\NPOI.OOXML.dll" />
-    <Content Include="Sqlite\dll\npoi4\NPOI.OpenXml4Net.dll" />
-    <Content Include="Sqlite\dll\npoi4\NPOI.OpenXmlFormats.dll" />
-    <Content Include="Sqlite\dll\npoi4\NPOI.XML" />
-    <Content Include="Sqlite\dll\System.Data.SQLite.dll" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="XML\XmlForm.resx">
