@@ -87,6 +87,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArchiveControler.cs" />
+    <Compile Include="MyGame\Class2.cs" />
+    <Compile Include="MyGame\TenPointGame.cs" />
     <Compile Include="NewFolder1\MetaPlugin.cs" />
     <Compile Include="NewFolder1\MetaPluginZ3.cs" />
     <Compile Include="NewFolder1\XMLReaderHelper.cs" />

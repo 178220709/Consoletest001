@@ -2,6 +2,7 @@
 using System.Threading;
 using Consoletest001;
 using Consoletest001.Delegate;
+using Consoletest001.MyGame;
 using Consoletest001.NewFolder1;
 using Consoletest001.Sqlite;
 using Consoletest001.Test;
@@ -18,7 +19,8 @@ internal class Test
     {
 
     
-        SQLTest.maindf();
+      //  SQLTest.maindf();
+        TenPointGame.Maintest1();
       
     }
 

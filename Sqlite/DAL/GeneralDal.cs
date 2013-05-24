@@ -35,9 +35,9 @@ namespace Consoletest001.Sqlite.DAL
        }
 
        public static bool CreadTableStructure(DataTable dt)
-        {
-            
-        }
+       {
+           return true;
+       }
 
     }
 }
