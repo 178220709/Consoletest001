@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
@@ -163,3 +164,6 @@ namespace Consoletest001.MyGame
         }
     }
 }
+=======
+﻿
+>>>>>>> 5fbbcce73ae87060fff41903a3c26e7645f7241e
