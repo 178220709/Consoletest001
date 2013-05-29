@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -67,7 +66,7 @@ namespace Consoletest001.MyGame
        /// <summary>
        /// 组合算法，a为目标集合，n为集合数目，m和M为取的个数，b为new int[m]
        /// </summary>
-        public void combine(int[] a, int n, int m, int[] b, int M )
+        public  void combine(int[] a, int n, int m, int[] b, int M )
         {
 
             for (int i = n; i >= m; i--) // 注意这里的循环范围
@@ -164,6 +163,4 @@ namespace Consoletest001.MyGame
         }
     }
 }
-=======
-﻿
->>>>>>> 5fbbcce73ae87060fff41903a3c26e7645f7241e
+

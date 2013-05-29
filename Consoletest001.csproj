@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Consoletest001</RootNamespace>
     <AssemblyName>Consoletest001</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -31,6 +31,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -87,15 +88,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArchiveControler.cs" />
-    <Compile Include="MyGame\Class2.cs" />
+    <Compile Include="MyGame\QueenGame.cs" />
     <Compile Include="MyGame\TenPointGame.cs" />
-    <Compile Include="NewFolder1\MetaPlugin.cs" />
-    <Compile Include="NewFolder1\MetaPluginZ3.cs" />
-    <Compile Include="NewFolder1\XMLReaderHelper.cs" />
-    <Compile Include="NewFolder1\MetaPluginsdfas.cs" />
     <Compile Include="image\ImageDemo.cs" />
     <Compile Include="Linq\Class1.cs" />
-    <Compile Include="MyGame\TenPointGame.cs" />
+    <Compile Include="MyGame\Combine.cs" />
+    <Compile Include="MyGame\MyMath.cs" />
     <Compile Include="otherThing\StringTest.cs" />
     <Compile Include="otherThing\TimeControl.cs" />
     <Compile Include="otherThing\ListTest.cs" />
@@ -127,6 +125,7 @@
     <Compile Include="XML\XmlHelper.cs" />
     <Compile Include="XML\XmlReader.cs" />
     <Compile Include="XML\xmlTest.cs" />
+    <None Include="app.config" />
     <None Include="ProcessTest\process.cs2" />
   </ItemGroup>
   <ItemGroup>
