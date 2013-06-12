@@ -27,20 +27,22 @@ namespace Consoletest001
     /// 每次读取N条数据待归档数据，并将N条待归档数据分配到归档线程中
     /// 归档任务监控线程和应用程序有相同的生命周期。
     /// </summary>
-    public  class ArchiveControler
+    public class ArchiveControler
     {
 
         # region 初始化监控环境
 
         private delegate void ThreadOverEventHandler(object serder, ThreadOverEventArgs e);
+
         private event ThreadOverEventHandler ThreadOver;
 
         private readonly int _threadCount;
         private readonly int _archiveCount;
 
-        private  SortedDictionary<string, Thread> _lstThreads = new SortedDictionary<string, Thread>();
+        private SortedDictionary<string, Thread> _lstThreads = new SortedDictionary<string, Thread>();
+        //用于保存线程运行需要的参数，必须加锁同步
         private Stack<object> _archiveDatas = new Stack<object>();
-    //    private ProcessTest.Loger _loger = new ProcessTest.Loger();
+        //    private ProcessTest.Loger _loger = new ProcessTest.Loger();
 
         /// <summary>
         /// 归档数据监控 构造函数 
@@ -59,7 +61,7 @@ namespace Consoletest001
                 this._threadCount = threadCount;
                 this._archiveCount = threadCount;
             }
-           
+
         }
 
         public void StartWork()
@@ -118,11 +120,11 @@ namespace Consoletest001
         }
 
         /// <summary>
-        /// 从数据库中取出N条记录
+        /// 从数据源中取出N条记录，
         /// </summary>
         private void TakeOutDatas()
         {
-            //Thread.Sleep(8000);
+            //Thread.Sleep(800);
             for (int i = 0; i < _archiveCount; i++)
             {
                 _archiveDatas.Push(new object());
@@ -131,51 +133,27 @@ namespace Consoletest001
 
         #endregion
 
-        public  static int SignLock= 0;
+        public static int SignLock = 0;
         public static int SignUnLock = 0;
-        private static readonly object LockThis  = new  object();
+        private static readonly object LockThis = new object();
+
         /// <summary>
-        /// 归档执行函数
+        /// 归档执行函数,此函数体内部所有代码都运行在线程队列的子线程环境中
         /// </summary>
-        /// <param name="归档参数">归档参数</param>
-        private void DoWork( object 归档参数)
+        /// <param name="param">新线程所需参数</param>
+        private void DoWork(object param)
         {
-
-            //待归档数据分配到归档线程，执行归档
-        //    Random random = new Random();
-                    
-          Thread.Sleep(Math.Abs(Guid.NewGuid().GetHashCode()) / 400000);
-            int i  = Math.Abs(Guid.NewGuid().GetHashCode()/4000000);
-            if (SignUnLock%2==0)
+            int n = 0;
+            if (param is int )
             {
-                SignUnLock = SignUnLock +i ;
+                 n = (int)param;
             }
-            else
-            {
-                SignUnLock = SignUnLock + i%73;
-            }
-       
             
-            lock (LockThis)
-            {
-                if (SignLock % 2 == 0)
-                {
-                    SignLock = SignLock + i;
-                }
-                else
-                {
-                    SignLock = SignLock + i % 73;
-                }
 
-            }
-                
             //执行完毕后，触发线程做完事件，
             ThreadOver(Thread.CurrentThread, new ThreadOverEventArgs(Thread.CurrentThread.Name));
-           
+
         }
-
-
-
 
     }
 }

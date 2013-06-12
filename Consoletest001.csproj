@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArchiveControler.cs" />
+    <Compile Include="MyGame\ThreeGate.cs" />
     <Compile Include="MyGame\QueenGame.cs" />
     <Compile Include="MyGame\TenPointGame.cs" />
     <Compile Include="image\ImageDemo.cs" />
