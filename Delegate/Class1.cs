@@ -12,6 +12,7 @@ namespace Consoletest001.Delegate
         public delegate void BoiledEventHandler(Object sender, BoiledEventArgs e);
 
         public event BoiledEventHandler Boiled; //声明事件
+        public  BoiledEventHandler Boiled2; //声明事件
 
         // 定义BoiledEventArgs类，传递给Observer所感兴趣的信息
         public class BoiledEventArgs : EventArgs

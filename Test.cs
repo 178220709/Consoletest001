@@ -13,6 +13,8 @@ internal class Test
 {
     private static void Main()
     {
+        string str = ComputerInfo.ComputerInfoHead;
+
         ThreeGate.t1();
     }
 }
