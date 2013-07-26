@@ -87,8 +87,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArchiveControler.cs" />
-    <Compile Include="MyGame\ComputerInfo.cs" />
+    <Compile Include="ManiaSongs\CommonDictionary.cs" />
+    <Compile Include="ManiaSongs\SongDal.cs" />
+    <Compile Include="ManiaSongs\SongInfo.cs" />
+    <Compile Include="thread1\ArchiveControler.cs" />
+    <Compile Include="Common\ComputerInfo.cs" />
     <Compile Include="MyGame\ThreeGate.cs" />
     <Compile Include="MyGame\QueenGame.cs" />
     <Compile Include="MyGame\TenPointGame.cs" />
@@ -107,9 +110,8 @@
     <Compile Include="threadGaoji\ThreadInterruptDemo.cs" />
     <Compile Include="threadGaoji\WaitEventHandleSample.cs" />
     <Compile Include="threadGaoji\MutexTest.cs" />
-    <Compile Include="Log.cs" />
     <Compile Include="threadGaoji\SemaphoreExample.cs" />
-    <Compile Include="ResumeDemo.cs" />
+    <Compile Include="thread1\ResumeDemo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="threadGaoji\MonitorSample.cs" />
     <Compile Include="Test.cs" />
@@ -128,7 +130,6 @@
     <Compile Include="XML\XmlReader.cs" />
     <Compile Include="XML\xmlTest.cs" />
     <None Include="app.config" />
-    <None Include="ProcessTest\process.cs2" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Delegate\TimeControl.cs" />
@@ -159,9 +160,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Geoway.Archiver.ReceiveAndRetrieve\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="WEB\WebDal.cs 的副本%282%29.cs" />
   </ItemGroup>
