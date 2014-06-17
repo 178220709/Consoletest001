@@ -10,6 +10,7 @@ namespace BaseFeatureTest
         [TestMethod]
         public void TestMethod1()
         {
+            //这是github上的修改
             SudokuDemo.Main1();
         }
     }
