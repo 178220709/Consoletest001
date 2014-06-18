@@ -2,13 +2,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BaseFeatureDemo.Base
 {
-    public class List
+
+    public class YieldDemo
     {
         //using System.Collections;
-        public static IEnumerable Power(int number, int exponent)
+        public static IEnumerable<int> Power(int number, int exponent)
+        {
+            int counter = 0;
+            int result = 1;
+            while (counter++ < exponent)
+            {
+                result = result * number;
+                yield return result;
+            }
+        }   
+        public static IEnumerator<int> Power2(int number, int exponent)
         {
             int counter = 0;
             int result = 1;
@@ -41,21 +53,43 @@ namespace BaseFeatureDemo.Base
             }
         }
 
+
         public static void Main1()
         {
             // Display powers of 2 up to the exponent 8:
-            foreach (int i in Power(2, 8))
+            foreach (var i in Power(2, 8))
             {
                 Console.Write("{0} ", i);
             }
+
+          
+            IList<int> myList = new List<int>(){1,2,3,4};
+            var ienu1 = myList.GetEnumerator();
+            ienu1.MoveNext();
+     
+            Console.ReadLine();
+        }
+
+        public static void Main2()
+        {
+            foreach (var i in new MyCCC())
+            {
+                Console.WriteLine(" foreach {0} ", i);
+            }
+            Console.ReadLine();
         }
 
 
         class MyList : IEnumerable
         {
+            public IEnumerable List = new List<string>();
+            public IEnumerator List2 = new myEnumerator();
             public IEnumerator GetEnumerator()
             {
-                throw new NotImplementedException();
+                foreach (var VARIABLE in List)
+                {
+                    yield return VARIABLE;
+                }
             }
         }
 

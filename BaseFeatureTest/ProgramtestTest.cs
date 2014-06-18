@@ -1,4 +1,5 @@
-﻿using BaseFeatureDemo.Delegate;
+﻿using BaseFeatureDemo.Base.Delegate;
+using BaseFeatureDemo.Delegate;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 

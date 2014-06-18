@@ -50,8 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\clone\ColonBehindDemo.cs" />
-    <Compile Include="Base\YieldDemo.cs" />
-    <Compile Include="Base\Delegate\Class1.cs" />
+    <Compile Include="Base\Yield\IEnumeratorTest.cs" />
+    <Compile Include="Base\Yield\YieldTest2.cs" />
+    <Compile Include="Base\Yield\YieldDemo.cs" />
+    <Compile Include="Base\Yield\YieldTest1.cs" />
     <Compile Include="Base\Delegate\PredicateDemo.cs" />
     <Compile Include="Base\Delegate\TimeControl.cs" />
     <Compile Include="Image\ImageDemo.cs" />
