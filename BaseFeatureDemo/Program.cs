@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BaseFeatureDemo.Base;
+using BaseFeatureDemo.Base.ThreadDemo.ThreadBase;
+using BaseFeatureDemo.Base.ThreadDemo.ThreadNew;
 
 namespace BaseFeatureDemo
 {
@@ -11,7 +13,7 @@ namespace BaseFeatureDemo
     {
         static void Main(string[] args)
         {
-            YieldDemo.Main2();
+            TaskContinuDemo.Main1();
         }
     }
 }

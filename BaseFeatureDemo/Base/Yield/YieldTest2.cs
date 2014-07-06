@@ -1,11 +1,8 @@
-using System;
 using System.Diagnostics;
-using System.Linq;
-using System.Collections.Generic;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace BaseFeatureDemo.Base.Delegate
+namespace BaseFeatureDemo.Base.Yield
 {
 
     public class Persons : System.Collections.IEnumerable
@@ -15,7 +12,7 @@ namespace BaseFeatureDemo.Base.Delegate
         public System.Collections.IEnumerator GetEnumerator()
         {
             yield return "1";
-            Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(1000);
             yield return "2";
             Thread.Sleep(1000);
             yield return "3";
@@ -36,6 +33,7 @@ namespace BaseFeatureDemo.Base.Delegate
         [TestMethod]
         public void MainTest()
         {
+            
             Persons arrPersons = new Persons();
             foreach (string s in arrPersons)
             {
