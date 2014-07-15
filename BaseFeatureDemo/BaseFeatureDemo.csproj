@@ -50,8 +50,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\clone\ColonBehindDemo.cs" />
+    <Compile Include="Base\Reg\Class1.cs" />
     <Compile Include="Base\ThreadDemo\ThreadNew\TaskContinuDemo.cs" />
     <Compile Include="Base\ThreadDemo\ThreadNew\TaskDemo.cs" />
+    <Compile Include="Base\Thread\ArchiveControler.cs" />
+    <Compile Include="Base\Thread\ResumeDemo.cs" />
+    <Compile Include="Base\Thread\ThreadPoolTest.cs" />
+    <Compile Include="Base\Thread\ThreadSync\Calculate.cs" />
+    <Compile Include="Base\Thread\ThreadSync\CalculateTest.cs" />
+    <Compile Include="Base\Thread\ThreadSync\JoinDemo.cs" />
+    <Compile Include="Base\Thread\ThreadSync\MonitorSample.cs" />
+    <Compile Include="Base\Thread\ThreadSync\MutexTest.cs" />
+    <Compile Include="Base\Thread\ThreadSync\SemaphoreExample.cs" />
+    <Compile Include="Base\Thread\ThreadSync\ThreadInterruptDemo.cs" />
+    <Compile Include="Base\Thread\ThreadSync\WaitEventHandleLog.cs" />
+    <Compile Include="Base\Thread\ThreadSync\WaitEventHandleSample.cs" />
+    <Compile Include="Base\Thread\ThreadSync\WaitHandleDemo.cs" />
     <Compile Include="Base\Yield\IEnumeratorTest.cs" />
     <Compile Include="Base\Yield\YieldTest2.cs" />
     <Compile Include="Base\Yield\YieldDemo.cs" />
@@ -106,6 +120,7 @@
       <Name>MyProject</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

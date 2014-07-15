@@ -1,4 +1,6 @@
-﻿using BaseFeatureDemo.Reflect;
+﻿using System.Collections;
+using System.Diagnostics;
+using BaseFeatureDemo.Reflect;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Newtonsoft.Json;
@@ -81,10 +83,32 @@ namespace TestProject1
         [TestMethod()]
         public void maintTestTest2()
         {
+            var str = "sfasdfasdf".GetHashCode();
+            DictionaryEntry item1 = new DictionaryEntry(1, "中国");
+            var str2 = item1.GetHashCode();
+            var str22 = ((object)item1).GetHashCode();
+            Hashtable ht = new Hashtable();
+            ht.Add(1, "中国");
+            ht.Add(2, "法国");
+            ht.Add(3, "德国");
+            ht.Add(4, "意大利");
+            ht.Add(5, "西班牙");
+            
+            foreach (DictionaryEntry item in ht)
+            {
+                Trace.WriteLine(item.GetHashCode());
+                Trace.WriteLine(string.Format("Key:{0},Value:{1}", item.Key.ToString(), item.Value.ToString()));
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                Trace.WriteLine( i + " hash is : "+   i.GetHashCode());
+            }
+
             Assert.Inconclusive("无法验证不返回值的方法。");
-        } 
-        
-      
+
+        }
+
 
     }
 }

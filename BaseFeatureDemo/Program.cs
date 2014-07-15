@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BaseFeatureDemo.Base;
+using BaseFeatureDemo.Base.Reg;
 using BaseFeatureDemo.Base.ThreadDemo.ThreadBase;
 using BaseFeatureDemo.Base.ThreadDemo.ThreadNew;
 
@@ -13,7 +14,7 @@ namespace BaseFeatureDemo
     {
         static void Main(string[] args)
         {
-            TaskContinuDemo.Main1();
+            RegexDemmo.Main1();
         }
     }
 }

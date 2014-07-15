@@ -71,7 +71,7 @@ namespace TestProject1
         [TestMethod()]
         public void MainsdfTest()
         {
-            Programtest.Mainsdf();
+          //  Programtest.Mainsdf();
             Assert.Inconclusive("无法验证不返回值的方法。");
         }
     }
