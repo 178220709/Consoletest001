@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>nstSlider.js Demo</title>
+    <!-- 1. Include CSS -->
+    <link type="text/css" rel="stylesheet" href="../dist/jquery.nstSlider.css">
+</head>
+<body>
+    <h1>Get started with jquery.nstSlider.js</h1>
+    <h2>(view source to see a step-by-step guide)</h2>
+    <!-- 2. Write markup for the slider -->
+    <div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="40" data-cur_max="70">
+        <div class="bar"></div>
+        <div class="leftGrip"></div>
+        <div class="rightGrip"></div>
+    </div>
+    <br />
+    <br />
+    <div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="40" data-cur_max="70">
+        <div class="bar"></div>
+        <div class="leftGrip"></div>
+        <div class="rightGrip"></div>
+    </div>
+
+    <br />
+    <br />
+    <div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="40" data-cur_max="70">
+        <div class="bar"></div>
+        <div class="leftGrip"></div>
+        <div class="rightGrip"></div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+    <!-- 3. Add jQuery -->
+
+    <script src="../../libs/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+    <!-- 4. Add nstSlider.js after jQuery -->
+    <script src="../dist/jquery.nstSlider.js"></script>
+    <!-- 5. setup the slider! -->
+    <script>
+        $('.nstSlider').nstSlider({
+            "left_grip_selector": ".leftGrip",
+            "right_grip_selector": ".rightGrip",
+            "value_bar_selector": ".bar",
+        });
+        //$('.nstSlider').eq(1).nstSlider({
+        //    "left_grip_selector": ".leftGrip",
+        //    "right_grip_selector": ".rightGrip",
+        //    "value_bar_selector": ".bar",
+        //    "highlight": {
+        //        "grip_class": "gripHighlighted",
+        //        "panel_selector": ".highlightPanel"
+        //    },
+        //    "value_changed_callback": function (cause, leftValue, rightValue) {
+        //        $(this).find('.leftLabel').text(leftValue);
+        //        $(this).find('.rightLabel').text(rightValue);
+        //    },
+        //});
+
+        // Call methods and such...
+        //var highlightMin = Math.random() * 20,
+        //    highlightMax = highlightMin + Math.random() * 80;
+        //$('.nstSlider').nstSlider('highlight_range', highlightMin, highlightMax);
+    </script>
+</body>
+</html>

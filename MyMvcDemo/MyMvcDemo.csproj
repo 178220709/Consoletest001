@@ -1034,6 +1034,19 @@
     <Content Include="Content\libs\zTree-3.5.15\js\jquery.ztree.exedit-3.5.min.js" />
     <Content Include="Content\libs\zTree-3.5.15\js\jquery.ztree.exhide-3.5.js" />
     <Content Include="Content\libs\zTree-3.5.15\js\jquery.ztree.exhide-3.5.min.js" />
+    <Content Include="Content\TestLib\demo\index - 复制.html" />
+    <Content Include="Content\TestLib\demo\index.html" />
+    <Content Include="Content\TestLib\dist\jquery.nstSlider.css" />
+    <Content Include="Content\TestLib\dist\jquery.nstSlider.js" />
+    <Content Include="Content\TestLib\dist\jquery.nstSlider.min.css" />
+    <Content Include="Content\TestLib\dist\jquery.nstSlider.min.js" />
+    <Content Include="Content\TestLib\libs\jquery-loader.js" />
+    <Content Include="Content\TestLib\libs\jquery\jquery.js" />
+    <Content Include="Content\TestLib\libs\qunit\qunit.css" />
+    <Content Include="Content\TestLib\libs\qunit\qunit.js" />
+    <Content Include="Content\TestLib\src\jquery.nstSlider.js" />
+    <Content Include="Content\TestLib\test\nstSlider.html" />
+    <Content Include="Content\TestLib\test\nstSlider_test.js" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\defaults.js" />
     <Content Include="Scripts\Extend\jquery.form.js" />
@@ -1126,6 +1139,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\AngularJS\JStest.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\TestLib\src\.jshintrc" />
+    <Content Include="Content\TestLib\src\jquery.nstSlider.less" />
+    <Content Include="Content\TestLib\test\.jshintrc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
