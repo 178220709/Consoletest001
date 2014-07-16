@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=F24558769cbdc9f25bd3ba1e7ef90c46"></script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        @Url.CombresLink("baseCss")
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="~/Content/libs/ace/css/ace.min.css" />
+            <link rel="stylesheet" href="~/Content/libs/ace/css/ace-rtl.min.css" />
+            <link rel="stylesheet" href="~/Content/libs/ace/css/ace-skins.min.css" />
+            <link rel="stylesheet" href="~/Content/libs/ace/css/ace-ie.min.css" />
+        <![endif]-->
+        @Url.CombresLink("siteCss")
+ 
+        <!--[if IE 7]>
+            <link rel="stylesheet" href="~/content/css/font-awesome-ie7.min.css" />
+        <![endif]-->
+   
+  
+        @Url.CombresLink("framework")
+        @RenderSection("head", false)
+        @RenderSection("headJS", false)
+
+        <!--[if lt IE 9]>
+            <script src="~/content/libs/HTML5Shiv-v3.7.0/html5shiv.js"></script>
+            <script src="~/content/libs/responsejs/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+<body>
+    @RenderBody()
+
+
+    <!--[if lte IE 8]>
+		    <script src="~/content/libs/excanvas.min.js"></script>
+	    <![endif]-->
+
+</body>
+</html>
+
+

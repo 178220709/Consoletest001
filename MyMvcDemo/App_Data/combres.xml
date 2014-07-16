@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  This file contains basic settings needed for most web apps.
+  For full Combres settings (with explanation), refer to the sample definition file: combres_full_with_annotation.xml
+  Also, refer to Combres' documentation: http://combres.codeplex.com/documentation	
+-->
+<combres xmlns='urn:combres'>
+  <filters>
+    <filter type="Combres.Filters.FixUrlsInCssFilter, Combres" />
+  </filters>
+  <resourceSets url="~/combres.axd"
+                defaultDuration="30"
+                defaultVersion="auto"
+                defaultDebugEnabled="false"
+                defaultIgnorePipelineWhenDebug="true"
+                localChangeMonitorInterval="30"
+                remoteChangeMonitorInterval="60"
+                >
+    <resourceSet name="baseCss" type="css" minifierRef="off">
+      <resource path="~/Content/libs/bootstrap-3.0.3/css/bootstrap.min.css"/>
+      <resource path="~/Content/css/font-awesome.min.css"/>
+      <resource path="~/Content/libs/jQueryjqGrid-4.5.2/css/ui.jqgrid.css"/>
+      <resource path="~/Content/libs/jquery.gritter/css/jquery.gritter.css"/>
+      <resource path="~/Content/libs/select-2-3.4.3/select2.css"/>
+      <resource path="~/Content/libs/select-2-3.4.3/select2-bootstrap.css"/>
+      <resource path="~/Content/libs/ace/css/ace.min.css"/>
+      <resource path="~/Content/libs/ace/css/ace-rtl.min.css"/>
+      <resource path="~/Content/libs/ace/css/ace-skins.min.css"/>
+      <resource path="~/Content/libs/bootstrap-datepicker/css/datepicker.css"/>
+      <resource path="~/Content/libs/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+    </resourceSet>
+    
+    <resourceSet name="siteCss" type="css">
+      <resource path="~/Content/css/style.css"/>
+      <resource path="~/Content/css/rewriteJQGrid.css"/>
+    </resourceSet>
+    
+    <resourceSet name="login" type="js">
+      <resource path="~/Content/libs/jquery-1.10.2/jquery-1.10.2.min.js"/>
+      <resource path="~/content/libs/seajs-2.1.1/sea.js"/>
+      <resource path="~/Content/libs/jquery.cookie-1.4.0/jquery.cookie.js"/>
+      <resource path="~/Content/libs/jquery.validate-v1.11.1/jquery.validate.min.js"/>
+      <resource path="~/Content/libs/jquery.form-3.28/jquery.form.js"/>
+      <resource path="~/Content/libs/blockUI-2.57/jquery.blockUI.js"/>
+      <resource path="~/content/libs/underscore-1.4.4/underscore-min.js"/>
+      <resource path="~/scripts/util.js"/>
+      <resource path="~/scripts/login.js" />
+    </resourceSet>
+
+    <resourceSet name="framework" type="js"  minifierRef="off">
+      <resource path="~/App_Data/jsConfigs.js" />
+      <resource path="~/Content/libs/ace/ace-extra.min.js"/>
+      <resource path="~/Content/libs/jquery-1.10.2/jquery-1.10.2.min.js"/>
+      <resource path="~/content/libs/seajs-2.1.1/sea.js"/>
+      <resource path="~/Content/libs/jquery.cookie-1.4.0/jquery.cookie.js"/>
+      <resource path="~/content/libs/jquery-1.10.2/jquery-migrate-1.2.1.min.js"/>
+      <resource path="~/content/libs/bootstrap-3.0.3/js/bootstrap.min.js"/>
+      <!--<resource path="~/content/libs/bootstrap-3.0.0/bootstrap-typeahead.js"/>-->
+      <resource path="~/Content/libs/blockUI-2.57/jquery.blockUI.js"/>
+      <resource path="~/Content/libs/ace/ace-elements.min.js"/>
+      <resource path="~/Content/libs/ace/ace.min.js"/>
+      <resource path="~/Content/libs/jquery.gritter/js/jquery.gritter.min.js"/>
+      <resource path="~/content/libs/underscore-1.4.4/underscore-min.js"/>
+      <resource path="~/content/libs/underscore-1.4.4/underscore.string.min-2.3.js"/>
+      <resource path="~/Content/libs/json2/json2.js" />
+      <resource path="~/Content/libs/moment-2.1/moment.min.js" />
+      <resource path="~/Content/libs/moment-2.1/zh-cn.js" />
+      <resource path="~/Content/libs/select-2-3.4.3/select2.min.js" />
+      <resource path="~/Content/libs/select-2-3.4.3/select2_locale_zh-CN.js" />
+      <resource path="~/Content/libs/fuelux/fuelux.spinner.min.js"/>
+      <resource path="~/Content/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"/>
+      <resource path="~/Content/libs/bootstrap-datepicker/bootstrap-datepicker.zh-CN.js"/>
+      <resource path="~/Content/libs/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"/>
+      <resource path="~/Content/libs/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"/>
+      <resource path="~/scripts/datetimepicker.defaults.js"/>
+      <resource path="~/scripts/util.js"/>
+      <resource path="~/scripts/defaults.js" />
+      <resource path="~/scripts/validations.js" />
+      <resource path="~/scripts/select2.defaults.js"/>      
+      <resource path="~/Content/libs/jquery.zclip.1.1.1/jquery.zclip.js"/>      
+      <resource path="~/scripts/ux/jq.imageField.js"/>
+      <resource path="~/scripts/doCopyUtil.js"/>      
+      <resource path="~/Content/libs/jquery-ui-1.10.4/js/jquery-ui-1.10.4.custom.min.js"/>
+      <resource path="~/Content/libs/jquery.scrolltable/jquery.scrolltable.js"/>
+      <resource path="~/scripts/ux/jq.optionField.js"/>
+      <resource path="~/Content/libs/tpl/jsrender.js"/>
+      <resource path="~/scripts/Extend/jquery.form.js"/>
+    </resourceSet>
+    
+   
+    
+    <resourceSet name="PaymentBankAddEdit" type="js" minifierRef="off">
+      <resource path="~/scripts/pages/PaymentBank/AddEdit.js"/>
+    </resourceSet>
+    <resourceSet name="PaymentBankList" type="js" minifierRef="off">
+      <resource path="~/scripts/pages/PaymentBank/List.js"/>
+    </resourceSet>
+    <resourceSet name="UserCenterConfigSetting" type="js" minifierRef="off">
+      <resource path="~/scripts/pages/Configuration/UserCenterConfigSetting.js"/>
+    </resourceSet>
+    <resourceSet name="GlobalConfigSetting" type="js" minifierRef="off">
+      <resource path="~/scripts/pages/Configuration/GlobalConfigSetting.js"/>
+    </resourceSet>
+    <resourceSet name="EmailTemplateConfigSetting" type="js" minifierRef="off">
+      <resource path="~/scripts/pages/Configuration/EmailTemplateConfigSetting.js"/>
+    </resourceSet>
+  </resourceSets>
+</combres>

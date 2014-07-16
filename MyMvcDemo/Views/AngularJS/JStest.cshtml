@@ -1,0 +1,19 @@
+﻿<html>
+<head>
+    <title>display 属性分别为block, inline, none 值时的显示区别</title>
+</head>
+<body style="display: list-item">
+
+    <p>
+        <span id="oSpan" style="background-color: #CFCFCF;">This is a SPAN</span> in a sentence.
+    </p>
+    <p>
+        <input type=button value="Inline" onclick="oSpan.style.display='inline'">
+        <input type=button value="Block" onclick="oSpan.style.display='block'">
+        <input type=button value="None" onclick="oSpan.style.display='none'">
+        <input type=button value="None" onclick="oSpan.style.display = 'list-item'">
+        
+    </p>
+
+</body>
+</html>
