@@ -15,7 +15,7 @@
     <AssemblyName>MyMvcDemo</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -172,7 +172,9 @@
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
     <Compile Include="Controllers\AngularJSController.cs" />
+    <Compile Include="Controllers\WeixinController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Extend\JsonNetController.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Filters\CustomAuthorize.cs">
       <SubType>Code</SubType>
@@ -181,6 +183,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="JsonNetController.cs" />
+    <Compile Include="Models\CheckModel.cs" />
     <Compile Include="Models\CustomAuthorize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Constants.cs" />
@@ -1128,9 +1131,7 @@
   <ItemGroup>
     <Content Include="App_Data\MimeTypes.json" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ControllerExtend\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Views\Home\JStest.cshtml" />
   </ItemGroup>
@@ -1144,6 +1145,12 @@
     <Content Include="Content\TestLib\src\.jshintrc" />
     <Content Include="Content\TestLib\src\jquery.nstSlider.less" />
     <Content Include="Content\TestLib\test\.jshintrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Weixin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Weixin\JStest.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -1163,7 +1170,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3033</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:4004/</IISUrl>
+          <IISUrl>http://localhost:4001</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
