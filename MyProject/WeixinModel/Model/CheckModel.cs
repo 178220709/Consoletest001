@@ -1,4 +1,4 @@
-﻿namespace MyMvcDemo.Models
+﻿namespace MyProject.WeixinModel.Model
 {
     public class CheckModel
     {

@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 
-namespace BaseFeatureDemo.Reflect
+namespace BaseFeatureDemo.Base.Reflect
 {
 
 
