@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using MyMvcDemo.Extend;
-using MyMvcDemo.Models;
 using MyProject.WeixinModel.Extend;
 using MyProject.WeixinModel.Injection;
 using MyProject.WeixinModel.Model;
 using Omu.ValueInjecter;
 
-namespace MyMvcDemo
+namespace MyMvcDemo.Controllers
 {
     public class WeixinController : Controller
     {
