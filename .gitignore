@@ -1,3 +1,6 @@
 /packages
 /MyMvcDemo/obj
 /MyMvcDemo/bin
+/BaseFeatureDemo/obj
+/BaseFeatureDemo/bin
+/BaseFeatureDemo/obj/Debug/*.cache
