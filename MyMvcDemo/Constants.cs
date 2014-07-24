@@ -17,9 +17,6 @@
         public const string KEY_GlobalConfig = "MyMvcDemo.GlobalConfig";
 
 
-        public static class WeixinConstants
-        {
-            public const string MyToken = "suijing";
-        }
+       
     }
 }

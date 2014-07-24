@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Xml;
 using System.Xml.Linq;
-using BaseFeatureDemo.XML.Utility;
 
-namespace BaseFeatureDemo.XML.DAL
+namespace MyProject.XML.DAL
 {
     public class XMLTest
     {
