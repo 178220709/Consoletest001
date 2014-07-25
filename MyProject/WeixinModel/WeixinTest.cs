@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 using System.Xml.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyProject.WeixinModel.Extend;
@@ -38,9 +39,8 @@ namespace MyProject.WeixinModel
         {
             var msg = new TextMessage();
             msg.InjectFrom<XmlStrInjection>(MsgDemo1);
-            Assert.AreEqual(msg.FromUserName, "oinzFjmCt9LdPgmnEnvBShE0W5Qk");
-            Assert.AreEqual(msg.MsgId, "6039496236316578696");
-            Assert.AreEqual(msg.CreateTime, "1406179796");
+           
+            
 
             var time = msg.CreateTime.ToDateTime();
             var str = time.ToTimeInt();

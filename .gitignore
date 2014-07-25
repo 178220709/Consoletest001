@@ -1,1 +1,13 @@
 /packages
+/MyMvcDemo/obj
+/MyMvcDemo/bin
+/BaseFeatureDemo/obj
+/BaseFeatureDemo/bin
+/BaseFeatureDemo/obj/Debug/*.cache
+/*.suo
+/*.user
+/MyProject/bin
+/MyProject/obj
+/MyMvcDemo/*.user
+/BaseFeatureTest/obj
+/BaseFeatureTest/bin
