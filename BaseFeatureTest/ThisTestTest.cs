@@ -77,38 +77,34 @@ namespace TestProject1
             Assert.Inconclusive("无法验证不返回值的方法。");
         }
 
-        /// <summary>
-        ///maintTest 的测试
-        ///</summary>
-        [TestMethod()]
-        public void maintTestTest2()
-        {
-            var str = "sfasdfasdf".GetHashCode();
-            DictionaryEntry item1 = new DictionaryEntry(1, "中国");
-            var str2 = item1.GetHashCode();
-            var str22 = ((object)item1).GetHashCode();
-            Hashtable ht = new Hashtable();
-            ht.Add(1, "中国");
-            ht.Add(2, "法国");
-            ht.Add(3, "德国");
-            ht.Add(4, "意大利");
-            ht.Add(5, "西班牙");
-            
-            foreach (DictionaryEntry item in ht)
-            {
-                Trace.WriteLine(item.GetHashCode());
-                Trace.WriteLine(string.Format("Key:{0},Value:{1}", item.Key.ToString(), item.Value.ToString()));
-            }
+        //public void SetType3()
+        //{
+        //    var p1 = this._p1;
+        //    var p2 = this._p2;
+        //     //......Deal p1 and p2
+        //    this._p3 = xxx;
+        //}
 
-            for (int i = 0; i < 5; i++)
-            {
-                Trace.WriteLine( i + " hash is : "+   i.GetHashCode());
-            }
+        //public static void SetType3(MyClass obj)  //静态函数,但修改了实例的成员 不是纯函数
+        //{
+        //    var p1 = obj._p1;
+        //    var p2 = obj._p2;
+        //    //......Deal p1 and p2
+        //    obj._p3 = xxx;
+        //}
 
-            Assert.Inconclusive("无法验证不返回值的方法。");
-
-        }
+        //public static void SetType3(Type1 p1, Type2 p2, MyClass obj)  //静态函数,但修改了实例的成员 不是纯函数
+        //{
+        //    //......Deal p1 and p2
+        //    obj._p3 = xxx;
+        //}
 
 
+        //public static Type3 GetType3(Type1 p1, Type2 p2)
+        //{
+        //    //......Deal p1 and p2
+        //    Type3 p3 = xxx;
+        //    return p3;
+        //}
     }
 }

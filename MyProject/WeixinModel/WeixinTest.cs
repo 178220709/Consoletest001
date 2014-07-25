@@ -26,7 +26,7 @@ namespace MyProject.WeixinModel
             Assert.AreEqual(msg.FromUserName, "oinzFjmCt9LdPgmnEnvBShE0W5Qk");
             Assert.AreEqual(msg.MsgId, "6039496236316578696");
             Assert.AreEqual(msg.CreateTime, "1406179796");
-
+                                             
             var time = msg.CreateTime.ToDateTime();
             var str = time.ToTimeInt();
             Assert.AreEqual(msg.CreateTime, str);
@@ -59,8 +59,24 @@ namespace MyProject.WeixinModel
             return "";
         }
 
-     
 
+        [TestMethod]
+        public void  ConvertHexToDate()
+        {
+            //Base64String to Hex
+            string   timeStampStr = "AAAAAF+O6G8=";
+            byte[] bytes = Convert.FromBase64String(timeStampStr);
+            string hexString = BitConverter.ToString(bytes).Replace("-", string.Empty);
+            //Hex to DateTime
+            long unixTime = long.Parse(hexString, System.Globalization.NumberStyles.HexNumber);
+            var dt2 = unixTime.ToString().ToDateTime();
+            long lTime = long.Parse(unixTime + "0000000");
+
+            var epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Local);
+            DateTime dt = epoch.AddSeconds(unixTime);
+
+
+        }
 
     }
 }
