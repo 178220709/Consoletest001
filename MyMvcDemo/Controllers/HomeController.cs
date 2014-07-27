@@ -1,17 +1,29 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
+using MyMvcDemo.Extend;
+using MyProject.WeixinModel.Model;
 
-namespace MyMvcDemo
+namespace MyMvcDemo.Controllers
 {
+    public class TestModel
+    {
+        public string id { get; set; }
+        public string name { get; set; }
+    }
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        [HttpGet]
+        public ActionResult Index(CheckModel model)
         {
-            return View();
+            model = model ?? new CheckModel();
+            model.echostr = "testhahaha";
+            return View(model);
         }
 
-        public ActionResult JStest()
+
+        public ActionResult JStest(int state, [ModelBinder(typeof(JsonBinder<int>))] IEnumerable<int> goodsIds)
         {
-            return View();
+            return PartialView();
         }
     }
 }

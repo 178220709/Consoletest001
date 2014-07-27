@@ -1,14 +1,53 @@
-﻿<!DOCTYPE html>
+﻿
+@model MyProject.WeixinModel.Model.CheckModel
+
+<!DOCTYPE html>
 <html>
 <head>
     <title>111</title>
+    <script src="~/Content/libs/json2/json2.js"></script>
+    <script src="~/Content/libs/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+    <script >
+        $(function (parameters) {
+
+            var model = { "signature": "123", "timestamp": "", "nonce": "haha", "echostr": "testhahaha" };
+            var models = [];
+            var idsStr = "[1046, 1047]";
+            models.push({id:1001,name:"hahah"});
+            models.push({id:1002,name:"hahah222"});
+            models.push({id:1003,name:"hahah22333"});
+            console.log(JSON.stringify(model));
+            $.ajax({
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                url: "/home/jstest",
+                type: "post",
+                dataType: "json",
+                data: {
+                   // model: model,
+                    echostr: model.echostr,
+                    id: "123",
+                    goodsIds: $("tete").attr("ids"),
+                    models: models
+                },
+                success: function (result) {
+                  
+                },
+            });
+        });
+    </script>
 </head>
-<script src="~/Content/libs/jquery-1.10.2/jquery-1.10.2.min.js"></script>
-<script>
-   
-</script>
-  
+
 <body>
-hello world 
+    hello world
+    @{
+        int[] ids = new[] {1, 2, 3, 5, 67, 890};
+        string str = ids.ToJson();
+    }
+
+    <input id="tete" ids="@str"/>
+    <div>
+        @Model.ToJson()
+    </div>
+   
 </body>
 </html>

@@ -1,155 +1,63 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using BaseFeatureDemo.MyGame;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Omu.ValueInjecter;
 
 namespace BaseFeatureTest
 {
     [TestClass]
-    public class SuitSort
+    public class MyTest1
     {
-        public List<string> SuitList { get; set; }
-
-        public SuitSort(List<string> list)
+        public class TargeClass
         {
-            SuitList = list;
+            public int? Id { get; set; }
         }
 
-        public void SortSuitList()
+        [TestMethod]
+        public  void Test1()
         {
-            SuitList.Sort(SuitComparer);
+            
         }
 
-        private static int SuitComparer(string porkerA, string porkerB)
+
+        public static void Main(string[] args)
         {
-            var a = GetPorkerNumber(porkerA);
-            var b = GetPorkerNumber(porkerB);
-            return a - b;
-        }
-
-        private static int GetPorkerNumber(string porker)
-        {
-            if (string.IsNullOrEmpty(porker))
+            var target = new TargeClass();
+            var pros = target.GetProps();
+            foreach (PropertyDescriptor pro in pros)
             {
-                return 0;
-            }
-            var suitValue = 0;
-            char c = porker[0];
-            switch (c)
-            {
-                case '♠':
-                    suitValue = 100;
-                    break;
-                case '♥':
-                    suitValue = 200;
-                    break;
-                case '♦':
-                    suitValue = 300;
-                    break;
-                case '♣':
-                    suitValue = 400;
-                    break;
-                default:
-                    break;
-            }
+                var value = "16";
+                try
+                {
+                    pro.SetValue(target, value);
+                }
+                catch (Exception)
+                {
+                    try
+                    {
+                        var result = pro.Converter.ConvertFromString(value);
+                        pro.SetValue(target, result);
+                    }
+                    catch (Exception)
+                    {
+                        
+                        continue;
+                    }
+                 
 
-            var numStr = porker.Substring(1);
-            var number = 0;
-            switch (numStr)
-            {
-                case "A":
-                    number = 14;
-                    break;
-                case "K":
-                    number = 13;
-                    break;
-                case "Q":
-                    number = 12;
-                    break;
-                case "J":
-                    number = 11;
-                    break;
-                default:
-                    number = Convert.ToInt32(numStr);
-                    break;
-            }
+                    //if (pro.GetType()==typeof(int?))
+                    //{
+                    //    int res = 0;
+                    //    int.TryParse(value, out res);
+                    //    pro.SetValue(target, res);
+                    //}
+                }
 
-            number = (15 - number) + suitValue;
-            return number;
+            }
         }
     }
 
-    public class RankSort
-    {
-        public List<string> RankList { get; set; }
-
-        public RankSort(List<string> list)
-        {
-            RankList = list;
-        }
-
-        public void SortRankList()
-        {
-            RankList.Sort(SuitComparer);
-        }
-
-        private static int SuitComparer(string porkerA, string porkerB)
-        {
-            var a = GetPorkerNumber(porkerA);
-            var b = GetPorkerNumber(porkerB);
-
-            return a - b;
-        }
-
-        private static int GetPorkerNumber(string porker)
-        {
-            if (string.IsNullOrEmpty(porker))
-            {
-                return 0;
-            }
-            var numStr = porker.Substring(1);
-            var number = 0;
-            switch (numStr)
-            {
-                case "A":
-                    number = 14;
-                    break;
-                case "K":
-                    number = 13;
-                    break;
-                case "Q":
-                    number = 12;
-                    break;
-                case "J":
-                    number = 11;
-                    break;
-                default:
-                    number = Convert.ToInt32(numStr);
-                    break;
-            }
-
-            number = (15 - number) * 100;
-
-            char c = porker[0];
-            switch (c)
-            {
-                case '♠':
-                    number += 1;
-                    break;
-                case '♥':
-                    number += 2;
-                    break;
-                case '♦':
-                    number += 3;
-                    break;
-                case '♣':
-                    number += 4;
-                    break;
-                default:
-                    break;
-            }
-
-            return number;
-        }
-    }
+   
 }

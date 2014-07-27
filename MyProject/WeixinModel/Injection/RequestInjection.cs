@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Web;
 using Omu.ValueInjecter;
 
@@ -12,9 +13,24 @@ namespace MyProject.WeixinModel.Injection
             foreach (PropertyDescriptor targetPro in targetPros)
             {
                 var name = targetPro.Name;
-                var vaule = source[name];
-                if (vaule == null) continue;
-                targetPro.SetValue(target, vaule);
+                var value = source[name];
+                if (value == null) continue;
+                try
+                {
+                    targetPro.SetValue(target, value);
+                }
+                catch (Exception)
+                {
+                    try
+                    {
+                        var result = targetPro.Converter.ConvertFromString(value);
+                        targetPro.SetValue(target, result);
+                    }
+                    catch (Exception)
+                    {
+                        continue;
+                    }
+                }
             }
         }
     }
