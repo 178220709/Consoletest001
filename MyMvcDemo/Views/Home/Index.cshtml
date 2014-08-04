@@ -1,5 +1,4 @@
-﻿
-@model MyProject.WeixinModel.Model.CheckModel
+﻿@model MyProject.WeixinModel.Model.CheckModel
 
 <!DOCTYPE html>
 <html>
@@ -7,47 +6,62 @@
     <title>111</title>
     <script src="~/Content/libs/json2/json2.js"></script>
     <script src="~/Content/libs/jquery-1.10.2/jquery-1.10.2.min.js"></script>
-    <script >
-        $(function (parameters) {
+    <script>
+        function SearchBaidu(formname) {
+            var url = "http://www.baidu.com/baidu";
+            formname.method = "get";
+            if (formname.myselectvalue.value == "1") {
+                document.search_form1.word.value =
+                    document.search_form1.word.value + " site:xxxxx.com";
+            }
+            formname.action = url;
+            return true;
+        }
 
-            var model = { "signature": "123", "timestamp": "", "nonce": "haha", "echostr": "testhahaha" };
-            var models = [];
-            var idsStr = "[1046, 1047]";
-            models.push({id:1001,name:"hahah"});
-            models.push({id:1002,name:"hahah222"});
-            models.push({id:1003,name:"hahah22333"});
-            console.log(JSON.stringify(model));
-            $.ajax({
-                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-                url: "/home/jstest",
-                type: "post",
-                dataType: "json",
-                data: {
-                   // model: model,
-                    echostr: model.echostr,
-                    id: "123",
-                    goodsIds: $("tete").attr("ids"),
-                    models: models
-                },
-                success: function (result) {
-                  
-                },
+
+        $(function (parameters) {
+            var list = [];
+            var test = "";
+            $("table").find("tbody").find("tr").each(function () {
+                var name = $(this).find("td:eq(2)").text();
+                var id = $(this).find("td:eq(1)").text();
+                list.push({ id: id, name: name });
+                test += ' {"' + name + '","' + id + '"},';
             });
+            // console.log(test);
+            // $("#mySpan").text(test);
+
+
+
         });
     </script>
 </head>
 
 <body>
-    hello world
-    @{
-        int[] ids = new[] {1, 2, 3, 5, 67, 890};
-        string str = ids.ToJson();
-    }
 
-    <input id="tete" ids="@str"/>
-    <div>
-        @Model.ToJson()
-    </div>
-   
+
+    <form action="http://www.baidu.com/baidu">
+        <input type="text" name="word">
+        <input type="submit" value="Baidu 搜索">
+        <input name="tn" type="hidden" value="bds">
+        <input name="cl" type="hidden" value="3">
+        <input name="ct" type="hidden" value="2097152">
+        <input name="si" type="hidden" value="www.ccicinspection.com">
+    </form>
+
+    <!--Google站内搜索开始-->
+    <form method="get" action="http://www.google.com/search">
+        <input type="text" name="q">
+        <input type="submit" name="btnG" value="Google 搜索">
+        <input type="hidden" name="ie" value="GB2312">
+        <input type="hidden" name="oe" value="GB2312">
+        <input type="hidden" name="hl" value="zh-CN">
+        <input type="hidden" name="domains" value="www.ccicinspection.com">
+        <input type="hidden" name="sitesearch" value="www.ccicinspection.com">
+    </form>
+
+    <span id="mySpan" style="height: 400px;"></span>
+    <input type="button" value="baidushousuo" id="btnTest" />
+
 </body>
 </html>
