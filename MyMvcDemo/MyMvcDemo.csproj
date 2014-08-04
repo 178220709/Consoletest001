@@ -173,6 +173,7 @@
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
     <Compile Include="Controllers\AngularJSController.cs" />
+    <Compile Include="Controllers\MyJSDemo.cs" />
     <Compile Include="Extend\JsonBinder.cs" />
     <Compile Include="Controllers\WeixinController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -1157,6 +1158,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Weixin\JStest.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MyJSDemo\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
