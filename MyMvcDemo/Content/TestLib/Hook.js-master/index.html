@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hook Fork</title>
+    <link href="hook.css?v=1" rel="stylesheet">
+  
+</head>
+    <body>
+        <div id="hook" style="height: 200px; margin-top: 120px;">
+            <div id="loader">
+                <div class="spinner"></div>
+            </div>
+            <span id="hook-text">Reloading...</span>
+            <span id="hook-text2">0</span>
+        </div>　　
+
+     
+        <script src="jquery.js"></script>
+        <script src="mousewheel.js"></script>
+        <script src="hook.js"></script>
+        <script>
+    $(function () {
+        window.loadheight = $('#hook').height();
+        window.hidden = $("#hook").animate("marginTop", "-" + loadheight + "px");
+        window.visible = $("#hook").animate("marginTop", "0px");
+       // $("#hook").css("marginTop", "-" + loadheight + "px")
+    });
+    $(function hook() {
+        var loadheight = $('#hook').height();
+        $(window).scroll(function (event) {
+            var conso = $("#hook-text2");
+            var cu = parseInt(conso.text());
+            conso.text(cu + 1);
+
+            var st = $(window).scrollTop();
+            if (st <= 0) {
+                $("#hook").animate({
+                    "marginTop": "0px"
+                }, 200);
+                $("#hook").delay(500).slideUp(200, function () {
+                    window.location.reload()
+                })
+            }
+            if ($.browser.webkit) {
+                if (st == 0) {
+                    $('body').css('overflow', 'hidden')
+                }
+            }
+          
+        })
+    });
+        </script>
+
+    </body>
+</html>
