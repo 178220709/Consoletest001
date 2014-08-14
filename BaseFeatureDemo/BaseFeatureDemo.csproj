@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\clone\ColonBehindDemo.cs" />
+    <Compile Include="Base\Delegate\CloserDemo2.cs" />
+    <Compile Include="Base\Delegate\CloserDemo.cs" />
     <Compile Include="Base\Reg\RegexTestDemmo.cs" />
     <Compile Include="Base\Reg\RegexDemmo.cs" />
     <Compile Include="Base\ThreadDemo\ThreadNew\TaskContinuDemo.cs" />
