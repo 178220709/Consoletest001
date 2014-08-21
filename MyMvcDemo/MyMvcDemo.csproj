@@ -1040,8 +1040,11 @@
     <Content Include="Content\libs\zTree-3.5.15\js\jquery.ztree.exhide-3.5.js" />
     <Content Include="Content\libs\zTree-3.5.15\js\jquery.ztree.exhide-3.5.min.js" />
     <Content Include="Content\libs\qunit\qunit.css" />
-    <Content Include="Content\TestLib\JsDemo\index.html" />
-    <Content Include="Content\TestLib\Hook.js-master\onscroll.html" />
+    <Content Include="Content\TestDemo\JsDemo\index.html" />
+    <Content Include="Content\TestDemo\Hook.js-master\onscroll.html" />
+    <Content Include="Content\TestDemo\QUnitDemo\test.html" />
+    <Content Include="Content\TestDemo\QUnitDemo\index.html" />
+    <Content Include="Content\TestDemo\QUnitDemo\prettydate.js" />
     <Content Include="Global.asax" />
     <Content Include="Views\QUnitTests\Sample.js" />
     <Content Include="Scripts\defaults.js" />
@@ -1069,18 +1072,17 @@
     <Content Include="Scripts\doCopyUtil.js" />
     <Content Include="Scripts\datetimepicker.defaults.js" />
     <Content Include="Scripts\checkDataUtil.js" />
-    <Content Include="Content\TestLib\Hook.js-master\.gitignore" />
-    <Content Include="Content\TestLib\Hook.js-master\hook-bg.png" />
-    <Content Include="Content\TestLib\Hook.js-master\hook-bgs.png" />
-    <Content Include="Content\TestLib\Hook.js-master\hook-spinner%402x.png" />
-    <Content Include="Content\TestLib\Hook.js-master\hook-spinner.gif" />
-    <Content Include="Content\TestLib\Hook.js-master\hook-spinner.png" />
-    <Content Include="Content\TestLib\Hook.js-master\hook.css" />
-    <Content Include="Content\TestLib\Hook.js-master\hook.js" />
-    <Content Include="Content\TestLib\Hook.js-master\hook.min.js" />
-    <Content Include="Content\TestLib\Hook.js-master\index.html" />
-    <Content Include="Content\TestLib\Hook.js-master\jquery.js" />
-    <Content Include="Content\TestLib\Hook.js-master\mousewheel.js" />
+    <Content Include="Content\TestDemo\Hook.js-master\hook-bg.png" />
+    <Content Include="Content\TestDemo\Hook.js-master\hook-bgs.png" />
+    <Content Include="Content\TestDemo\Hook.js-master\hook-spinner%402x.png" />
+    <Content Include="Content\TestDemo\Hook.js-master\hook-spinner.gif" />
+    <Content Include="Content\TestDemo\Hook.js-master\hook-spinner.png" />
+    <Content Include="Content\TestDemo\Hook.js-master\hook.css" />
+    <Content Include="Content\TestDemo\Hook.js-master\hook.js" />
+    <Content Include="Content\TestDemo\Hook.js-master\hook.min.js" />
+    <Content Include="Content\TestDemo\Hook.js-master\index.html" />
+    <Content Include="Content\TestDemo\Hook.js-master\jquery.js" />
+    <Content Include="Content\TestDemo\Hook.js-master\mousewheel.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1165,7 +1167,7 @@
     <Content Include="Views\MyJSDemo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\TestLib\Hook.js-master\README.md" />
+    <Content Include="Content\TestDemo\Hook.js-master\README.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
