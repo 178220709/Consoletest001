@@ -458,6 +458,7 @@
     <Content Include="Content\libs\giniedp-spritespin-2.0.4-0\dev\spritespin.mod-gallery.js" />
     <Content Include="Content\libs\giniedp-spritespin-2.0.4-0\dev\spritespin.mod-panorama.js" />
     <Content Include="Content\libs\giniedp-spritespin-2.0.4-0\spritespin.js" />
+    <Content Include="Content\libs\headroom.js" />
     <Content Include="Content\libs\javaScript.load.image\load-image.min.js" />
     <Content Include="Content\libs\jQuery-File-Upload-9.5.2\css\jquery.fileupload-ui.css" />
     <Content Include="Content\libs\jQuery-File-Upload-9.5.2\css\jquery.fileupload.css" />
@@ -1168,6 +1169,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\TestDemo\Hook.js-master\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index1.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

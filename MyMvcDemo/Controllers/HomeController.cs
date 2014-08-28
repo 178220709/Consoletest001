@@ -18,6 +18,11 @@ namespace MyMvcDemo.Controllers
             model = model ?? new CheckModel();
             model.echostr = "testhahaha";
             return View(model);
+        }  
+        
+        public ActionResult Index1()
+        {
+            return View();
         }
 
 

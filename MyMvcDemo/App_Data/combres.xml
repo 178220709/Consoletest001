@@ -84,25 +84,9 @@
       <resource path="~/Content/libs/jquery.scrolltable/jquery.scrolltable.js"/>
       <resource path="~/scripts/ux/jq.optionField.js"/>
       <resource path="~/Content/libs/tpl/jsrender.js"/>
+      <resource path="~/Content/libs/headroom.js"/>
       <resource path="~/scripts/Extend/jquery.form.js"/>
     </resourceSet>
     
-   
-    
-    <resourceSet name="PaymentBankAddEdit" type="js" minifierRef="off">
-      <resource path="~/scripts/pages/PaymentBank/AddEdit.js"/>
-    </resourceSet>
-    <resourceSet name="PaymentBankList" type="js" minifierRef="off">
-      <resource path="~/scripts/pages/PaymentBank/List.js"/>
-    </resourceSet>
-    <resourceSet name="UserCenterConfigSetting" type="js" minifierRef="off">
-      <resource path="~/scripts/pages/Configuration/UserCenterConfigSetting.js"/>
-    </resourceSet>
-    <resourceSet name="GlobalConfigSetting" type="js" minifierRef="off">
-      <resource path="~/scripts/pages/Configuration/GlobalConfigSetting.js"/>
-    </resourceSet>
-    <resourceSet name="EmailTemplateConfigSetting" type="js" minifierRef="off">
-      <resource path="~/scripts/pages/Configuration/EmailTemplateConfigSetting.js"/>
-    </resourceSet>
   </resourceSets>
 </combres>

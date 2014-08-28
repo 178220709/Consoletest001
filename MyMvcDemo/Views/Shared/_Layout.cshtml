@@ -20,7 +20,7 @@
   
         @Url.CombresLink("framework")
         @RenderSection("head", false)
-        @RenderSection("headJS", false)
+       
 
         <!--[if lt IE 9]>
             <script src="~/content/libs/HTML5Shiv-v3.7.0/html5shiv.js"></script>
@@ -36,7 +36,7 @@
     <!--[if lte IE 8]>
 		    <script src="~/content/libs/excanvas.min.js"></script>
 	    <![endif]-->
-
+    @RenderSection("foot", false)
 </body>
 </html>
 
