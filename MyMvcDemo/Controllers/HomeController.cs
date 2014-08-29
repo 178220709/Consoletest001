@@ -1,25 +1,31 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using MyMvcDemo.Extend;
+using MyMvcDemo.Models;
 using MyProject.WeixinModel.Model;
+using Suijing.Utils.Constants;
 
 namespace MyMvcDemo.Controllers
 {
-    public class TestModel
-    {
-        public string id { get; set; }
-        public string name { get; set; }
-    }
+
+    [Module(Name = "主页",CSS = MyConstants.Bootstrap.Icon.Globe , Sort = -1)]
     public class HomeController : Controller
     {
         [HttpGet]
-        public ActionResult Index(CheckModel model)
+      
+        public ActionResult Index(IndexModel model)
         {
-            model = model ?? new CheckModel();
-            model.echostr = "testhahaha";
+            model = model ?? new IndexModel();
+
+            model.Admin = new AdministratorDTO()
+            {
+                Name = "碎景"
+            };
+            model.Modules = model.GetIndexModules();
             return View(model);
-        }  
-        
+        }
+
+        [Module(Name = "Index1", CSS = MyConstants.Bootstrap.Icon.Globe)]
         public ActionResult Index1()
         {
             return View();

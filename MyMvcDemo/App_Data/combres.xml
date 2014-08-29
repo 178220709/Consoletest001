@@ -87,6 +87,12 @@
       <resource path="~/Content/libs/headroom.js"/>
       <resource path="~/scripts/Extend/jquery.form.js"/>
     </resourceSet>
+
+
+    <resourceSet name="app" type="js">
+      <resource path="~/scripts/index.cshtml.js" />
+    </resourceSet>
+    
     
   </resourceSets>
 </combres>

@@ -2,13 +2,15 @@
 using System.Web.Mvc;
 using MyMvcDemo.Extend;
 using MyProject.WeixinModel.Model;
+using Suijing.Utils.Constants;
 
 namespace MyMvcDemo.Controllers
 {
-
-    public class MyJSDemo : Controller
+      [Module(CSS = MyConstants.Bootstrap.Icon.Globe)]
+    public class MyJsDemoController : Controller
     {
         [HttpGet]
+        [Module(Name = "Index", CSS = MyConstants.Bootstrap.Icon.Globe)]
         public ActionResult Index()
         {
             return View();

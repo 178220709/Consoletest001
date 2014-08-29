@@ -62,6 +62,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Json\JsonTest.cs" />
+    <Compile Include="MyMVCTest\ControllerTest\HomeTest.cs" />
     <Compile Include="MyStringsFactoryTest.cs" />
     <Compile Include="ProgramtestTest.cs" />
     <Compile Include="ThisTestTest.cs" />
@@ -72,6 +73,10 @@
     <ProjectReference Include="..\BaseFeatureDemo\BaseFeatureDemo.csproj">
       <Project>{509303b5-6986-4e2e-befa-45d2abf1cdea}</Project>
       <Name>BaseFeatureDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyMvcDemo\MyMvcDemo.csproj">
+      <Project>{582a8372-b8be-44ab-9be0-ad88062799c0}</Project>
+      <Name>MyMvcDemo</Name>
     </ProjectReference>
     <ProjectReference Include="..\MyProject\MyProject.csproj">
       <Project>{54cb55d4-e806-4b76-9900-0b0b8ffd6d16}</Project>

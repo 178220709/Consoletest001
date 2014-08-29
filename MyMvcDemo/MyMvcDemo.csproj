@@ -173,10 +173,12 @@
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
     <Compile Include="Controllers\AngularJSController.cs" />
-    <Compile Include="Controllers\MyJSDemo.cs" />
+    <Compile Include="Extend\ModuleAttribute.cs" />
+    <Compile Include="Controllers\MyJsDemoController.cs" />
     <Compile Include="Extend\JsonBinder.cs" />
     <Compile Include="Controllers\WeixinController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Extend\HomeExtend.cs" />
     <Compile Include="Extend\WeixinEx.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Filters\CustomAuthorize.cs">
@@ -187,6 +189,7 @@
     </Compile>
     <Compile Include="JsonNetController.cs" />
     <Compile Include="Models\CustomAuthorize.cs" />
+    <Compile Include="Models\IndexModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="ControllerBase.cs" />
@@ -1147,6 +1150,10 @@
     <ProjectReference Include="..\MyProject\MyProject.csproj">
       <Project>{54CB55D4-E806-4B76-9900-0B0B8FFD6D16}</Project>
       <Name>MyProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Suijing.Utils.csproj">
+      <Project>{EA4D5D5E-E6F8-4487-A65A-752C05E9F7B1}</Project>
+      <Name>Suijing.Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

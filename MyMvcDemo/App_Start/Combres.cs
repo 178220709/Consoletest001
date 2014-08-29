@@ -5,7 +5,7 @@ using Combres;
 namespace MyMvcDemo {
     public static class Combres {
         public static void PreStart() {
-          //  RouteTable.Routes.AddCombresRoute("Combres");
+            RouteTable.Routes.AddCombresRoute("Combres");
         }
     }
 }

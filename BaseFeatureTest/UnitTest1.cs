@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using BaseFeatureDemo.MyGame;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MyMvcDemo.Extend;
 using Omu.ValueInjecter;
 
 namespace BaseFeatureTest
@@ -21,43 +22,28 @@ namespace BaseFeatureTest
             
         }
 
-
         public static void Main(string[] args)
         {
-            var target = new TargeClass();
-            var pros = target.GetProps();
-            foreach (PropertyDescriptor pro in pros)
-            {
-                var value = "16";
-                try
-                {
-                    pro.SetValue(target, value);
-                }
-                catch (Exception)
-                {
-                    try
-                    {
-                        var result = pro.Converter.ConvertFromString(value);
-                        pro.SetValue(target, result);
-                    }
-                    catch (Exception)
-                    {
-                        
-                        continue;
-                    }
-                 
 
-                    //if (pro.GetType()==typeof(int?))
-                    //{
-                    //    int res = 0;
-                    //    int.TryParse(value, out res);
-                    //    pro.SetValue(target, res);
-                    //}
-                }
+            var str = MyConstants.Globe2;
+
+        }
+    }
+    public static class MyConstants
+    {
+        public static string Globe2 = "icon-globe";
+        public static class Bootstrap
+        {
+
+            public static class Icon
+            {
+                public const string Globe = "icon-globe";
+                public const string User = "icon-globe";
+                public const string Card = "icon-credit-card";
+
 
             }
         }
     }
-
    
 }
