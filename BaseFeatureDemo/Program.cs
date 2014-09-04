@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using BaseFeatureDemo.Base;
+using BaseFeatureDemo.Base.CLR;
 using BaseFeatureDemo.Base.Delegate;
 using BaseFeatureDemo.Base.Reg;
 using BaseFeatureDemo.Base.ThreadDemo.ThreadBase;
@@ -20,7 +21,7 @@ namespace BaseFeatureDemo
         {
           
            // SudokuDemo.Main1();
-            CloserDemo2.Main1();
+            ConditionalDemo.Main1();
         }
     }
 }

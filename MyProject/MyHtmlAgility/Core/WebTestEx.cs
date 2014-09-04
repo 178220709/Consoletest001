@@ -113,5 +113,21 @@ namespace MyProject.MyHtmlAgility.Core
             string listStr = string.Join("<br/>", resultList);
         }
 
+        [TestMethod]
+        public void Test1()
+        {
+            const string loginUrl = @"http://my.51job.com/my/My_SignIn.php?url=%2Fmy%2FMy_Pmc.php%3F3547";
+            var web = new HtmlWeb();
+            var loginDoc = web.Load(loginUrl);
+            var head = loginDoc.DocumentNode.SelectSingleNode("//head");
+            
+            const string url = @"http://my.51job.com/my/65790564/My_Pmc.php";
+            const string url2 = @"http://www.dygod.net/html/gndy/";
+           
+            var doc = web.Load(url);
+         
+
+
+        }
     }
 }

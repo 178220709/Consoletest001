@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Diagnostics;
+using System.Linq.Expressions;
 using BaseFeatureDemo.Reflect;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -66,6 +67,12 @@ namespace TestProject1
         //
         #endregion
 
+        private delegate void MyDelegate();
+
+   MyDelegate   mymethod ()
+    {
+        return null;
+    }
 
         /// <summary>
         ///maintTest 的测试
@@ -74,6 +81,7 @@ namespace TestProject1
         public void maintTestTest()
         {
             ThisTest.maintTest();
+
             Assert.Inconclusive("无法验证不返回值的方法。");
         }
 
@@ -100,11 +108,6 @@ namespace TestProject1
         //}
 
 
-        //public static Type3 GetType3(Type1 p1, Type2 p2)
-        //{
-        //    //......Deal p1 and p2
-        //    Type3 p3 = xxx;
-        //    return p3;
-        //}
+      
     }
 }

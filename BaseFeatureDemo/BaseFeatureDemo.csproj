@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\clone\ColonBehindDemo.cs" />
+    <Compile Include="Base\CLR\ConditionalDemo.cs" />
     <Compile Include="Base\Delegate\CloserDemo2.cs" />
     <Compile Include="Base\Delegate\CloserDemo.cs" />
     <Compile Include="Base\Reg\RegexTestDemmo.cs" />
@@ -83,12 +84,13 @@
     <Compile Include="Base\Linq\LinqDemo.cs" />
     <Compile Include="Base\Linq\LinqXMLDemo.cs" />
     <Compile Include="MyGame\CheckStrEquation.cs" />
-    <Compile Include="MyGame\SudokuDemo.cs" />
-    <Compile Include="MyGame\Combine.cs" />
+    <Compile Include="MyGame\Number\SudokuDemo.cs" />
+    <Compile Include="MyGame\Number\Combine.cs" />
     <Compile Include="MyGame\MyMath.cs" />
+    <Compile Include="MyGame\Probability\BlackWhiteBall.cs" />
     <Compile Include="MyGame\QueenGame.cs" />
-    <Compile Include="MyGame\TenPointGame.cs" />
-    <Compile Include="MyGame\ThreeGate.cs" />
+    <Compile Include="MyGame\Number\TenPointGame.cs" />
+    <Compile Include="MyGame\Probability\ThreeGate.cs" />
     <Compile Include="MyGame\MyStringsFactory.cs" />
     <Compile Include="otherThing\ListTest.cs" />
     <Compile Include="otherThing\StaticTest.cs" />
