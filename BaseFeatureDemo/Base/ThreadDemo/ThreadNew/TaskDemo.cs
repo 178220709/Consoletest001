@@ -93,15 +93,15 @@ namespace BaseFeatureDemo.Base.ThreadDemo.ThreadNew
 
             Action<object> doAction = (i) =>
             {
-                Console.WriteLine( " Thread{0} is start at {1}   ",i, ConsoleTestHelper.GetCurrentTime());
+                Console.WriteLine( " Thread{0} is start at {1}   ",i, TestHelper.GetCurrentTime());
                 Thread.Sleep(random.Next(100,800));
-                Console.WriteLine(" Thread{0} is over at {1}   ", i, ConsoleTestHelper.GetCurrentTime());
+                Console.WriteLine(" Thread{0} is over at {1}   ", i, TestHelper.GetCurrentTime());
             };
 
             for (var i = 0; i < 16; i++)
             {
                 Task task = new Task(doAction,i);
-                Console.WriteLine(" MainThread is open task{0} at {1}   ", i, ConsoleTestHelper.GetCurrentTime());
+                Console.WriteLine(" MainThread is open task{0} at {1}   ", i, TestHelper.GetCurrentTime());
                 task.Start();
             }
             Thread.Sleep(20*1000);

@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
+using System.Threading;
+using System.Web;
+using System.Web.Hosting;
 using BaseFeatureDemo.MyGame;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyMvcDemo.Extend;
 using Omu.ValueInjecter;
+using Suijing.Utils;
 
 namespace BaseFeatureTest
 {
@@ -19,7 +24,14 @@ namespace BaseFeatureTest
         [TestMethod]
         public  void Test1()
         {
-            
+            //Thread.GetDomain().SetData(".appPath", "c:\\inetpub\\wwwroot\\webapp\\");
+            //Thread.GetDomain().SetData(".appVPath", "/");
+            //TextWriter tw = new StringWriter();
+            //HttpWorkerRequest wr = new SimpleWorkerRequest
+            //("/Home/app", "", tw);
+            //HttpContext.Current = new HttpContext(wr);
+
+            var str = ConfigHelper.GetJsConfigAs<string>("cookie51job");
         }
 
         public static void Main(string[] args)

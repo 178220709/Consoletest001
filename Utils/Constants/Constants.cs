@@ -14,6 +14,14 @@
         
                
             }
+        }   
+        
+        
+        public static class CacheKey
+        {
+            public const string KEY_JS_CONFIG = "KEY_JS_CONFIG";
+           
         }
+
     }
 }

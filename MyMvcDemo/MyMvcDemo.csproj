@@ -173,6 +173,7 @@
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
     <Compile Include="Controllers\AngularJSController.cs" />
+    <Compile Include="Extend\ConfigHelper.cs" />
     <Compile Include="Extend\ModuleAttribute.cs" />
     <Compile Include="Controllers\MyJsDemoController.cs" />
     <Compile Include="Extend\JsonBinder.cs" />

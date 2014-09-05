@@ -47,6 +47,7 @@
       <HintPath>..\packages\valueinjecter.2.3.3\lib\net35\Omu.ValueInjecter.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Web" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -82,8 +83,13 @@
       <Project>{54cb55d4-e806-4b76-9900-0b0b8ffd6d16}</Project>
       <Name>MyProject</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utils\Suijing.Utils.csproj">
+      <Project>{EA4D5D5E-E6F8-4487-A65A-752C05E9F7B1}</Project>
+      <Name>Suijing.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>
