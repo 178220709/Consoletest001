@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    @RenderSection("head", false)
+    @RenderSection("headJS", false)
+</head>
+<body>
+    <div class="breadcrumbs " id="breadcrumbs">
+        <script type="text/javascript">
+            try { ace.settings.check('breadcrumbs', 'fixed') } catch (e) { }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home home-icon" title="回到首页"></i>
+                <a href="@Url.Action("index", "Home")">首页</a>
+            </li>
+
+            @RenderSection("breadcrumb", false)
+        </ul>
+
+        <div class="nav-search">
+            <button id="refreshContent" type="button" class="btn btn-inverse" style="padding:0;">
+                <span class="icon-refresh">
+
+                </span> 刷新内容
+
+            </button>
+
+        </div>
+    </div>
+
+    @RenderBody()
+    @RenderSection("bottom", false)
+</body>
+</html>

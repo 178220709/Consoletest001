@@ -23,7 +23,6 @@ namespace MyMvcDemo.Extend
             {
                 if (t.HasAttribute<ModuleAttribute>())
                 {
-                    //var attr = (ModuleMenuAttribute)attributes[0];
                     t.GetControllerAction(modules);
                 }
             }

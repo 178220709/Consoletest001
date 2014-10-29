@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "qunit hello world";
+    Layout = "~/Views/Shared/_ContentLayout.cshtml";
+}
+@*@section bottom {
+    @Url.CombresLink("qunitDemo")
+}*@
+
+<link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.11.0.css" />
+
+
+<script src="http://code.jquery.com/qunit/qunit-1.11.0.js"></script>
+<script>
+    $(function() {
+
+        test("hello", function() {
+            ok(true, "world");
+        });
+    });
+   
+    
+</script>
+
+<h1 id="qunit-header">QUnit Hello World</h1>
+<h2 id="qunit-banner"></h2>
+<ol id="qunit-tests"></ol>
+<ol id="qunit-testresult"></ol>

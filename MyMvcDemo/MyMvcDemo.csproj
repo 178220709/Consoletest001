@@ -173,6 +173,8 @@
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
     <Compile Include="Controllers\AngularJSController.cs" />
+    <Compile Include="Controllers\ModuleController.cs" />
+    <Compile Include="Controllers\MyQunitDemo.cs" />
     <Compile Include="Extend\ConfigHelper.cs" />
     <Compile Include="Extend\ModuleAttribute.cs" />
     <Compile Include="Controllers\MyJsDemoController.cs" />
@@ -1180,6 +1182,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index1.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MyQunitDemo\hello.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_ContentLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\TestDemo\QUnitDemo\1_1hello.html" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

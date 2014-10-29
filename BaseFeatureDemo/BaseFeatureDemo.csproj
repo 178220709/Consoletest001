@@ -56,6 +56,7 @@
     <Compile Include="Base\Delegate\CloserDemo2.cs" />
     <Compile Include="Base\Delegate\CloserDemo.cs" />
     <Compile Include="Base\File\FileDemo.cs" />
+    <Compile Include="Base\Reflect\SealedApplication.cs" />
     <Compile Include="Base\Reg\RegexTestDemmo.cs" />
     <Compile Include="Base\Reg\RegexDemmo.cs" />
     <Compile Include="Base\ThreadDemo\ThreadNew\TaskContinuDemo.cs" />

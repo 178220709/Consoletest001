@@ -6,12 +6,12 @@ using Suijing.Utils.Constants;
 
 namespace MyMvcDemo.Controllers
 {
-      [Module(CSS = MyConstants.Bootstrap.Icon.Globe)]
-    public class MyJsDemoController : Controller
+      [Module(CSS = MyConstants.Bootstrap.Icon.Globe,Sort = -2)]
+    public class MyQunitDemoController : Controller
     {
         [HttpGet]
         [Module(Name = "Index", CSS = MyConstants.Bootstrap.Icon.Globe)]
-        public ActionResult Index()
+        public ActionResult Hello()
         {
             return View();
         }   

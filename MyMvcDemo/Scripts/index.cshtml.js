@@ -35,7 +35,7 @@
             }
         //}
         // 清除浮动
-        $("#main-content").append("<div class='clear'></div>")
+        $("#main-content").append("<div class='clear'></div>");
     });
 }
 
@@ -88,7 +88,6 @@ function doContentRefresh() {
 }
 
 $(function () {
-   
     // === Sidebar navigation === //
     $('#menu_ul li').click(function () {
         //if (!$(this).hasClass("active")) {
@@ -157,15 +156,15 @@ $(function () {
     });
 
     // 默认选中菜单第一项 现在是部门列表 到确定后在调整
-    appGetModule();
+    //appGetModule();
     var menuli = $('#menu_ul li');
     menuli.first().addClass("open");
     menuli.first().find("ul").show();
     for (var i = 0; i < menuli.length; i++) {
-        $(menuli[i]).click();
         var url = $(menuli[i]).attr("data-url");
         if (!_.isEmpty(url)) {
-            break;
+            $(menuli[i]).click();
+            return;
         }
     }
     
