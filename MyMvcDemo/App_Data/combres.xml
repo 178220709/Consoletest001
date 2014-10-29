@@ -11,7 +11,7 @@
   <resourceSets url="~/combres.axd"
                 defaultDuration="30"
                 defaultVersion="auto"
-                defaultDebugEnabled="false"
+                defaultDebugEnabled="true"
                 defaultIgnorePipelineWhenDebug="true"
                 localChangeMonitorInterval="30"
                 remoteChangeMonitorInterval="60"
@@ -87,6 +87,7 @@
       <resource path="~/Content/libs/tpl/jsrender.js"/>
       <resource path="~/Content/libs/headroom.js"/>
       <resource path="~/scripts/Extend/jquery.form.js"/>
+      <resource path="~/Content/libs/qunit/qunit.js"/>
     
  </resourceSet>
 
@@ -95,9 +96,7 @@
       <resource path="~/scripts/index.cshtml.js" />
     </resourceSet> 
     
-    <resourceSet name="qunitDemo" type="js" minifierRef="off">
-      <resource path="~/Content\libs\qunit\qunit.js"/>
-    </resourceSet>
+   
     
     
     
