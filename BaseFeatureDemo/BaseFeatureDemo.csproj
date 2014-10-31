@@ -55,6 +55,7 @@
     <Compile Include="Base\CLR\ConditionalDemo.cs" />
     <Compile Include="Base\Delegate\CloserDemo2.cs" />
     <Compile Include="Base\Delegate\CloserDemo.cs" />
+    <Compile Include="Base\Enum\EnumDemo.cs" />
     <Compile Include="Base\File\FileDemo.cs" />
     <Compile Include="Base\Reg\RegexTestDemmo.cs" />
     <Compile Include="Base\Reg\RegexDemmo.cs" />
