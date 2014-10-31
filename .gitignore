@@ -11,3 +11,6 @@
 /MyMvcDemo/*.user
 /BaseFeatureTest/obj
 /BaseFeatureTest/bin
+/BaseFeatureDemo/obj
+
+/BaseFeatureDemo/obj/Debug/*.cache
