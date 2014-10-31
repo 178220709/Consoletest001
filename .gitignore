@@ -14,3 +14,10 @@
 /BaseFeatureDemo/obj
 
 /BaseFeatureDemo/obj/Debug/*.cache
+obj
+
+BaseFeatureDemo\obj\Debug*/
+*.cache
+*.cache
+*.cache
+BaseFeatureDemo/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
