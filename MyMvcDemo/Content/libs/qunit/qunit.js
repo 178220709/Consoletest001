@@ -1835,7 +1835,7 @@ QUnit.diff = (function () {
         if (typeof window === "undefined") {
             return;
         }
-
+        debugger;
         qunit = id("qunit");
         if (qunit) {
             qunit.innerHTML =
@@ -1999,6 +1999,7 @@ QUnit.diff = (function () {
 
     function id(name) {
         return defined.document && document.getElementById && document.getElementById(name);
+       // return $("#"+name).length>0  ? $("#"+name)[0]:null;
     }
 
     function getUrlConfigHtml() {
