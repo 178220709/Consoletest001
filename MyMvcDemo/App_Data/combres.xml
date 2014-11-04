@@ -11,7 +11,7 @@
   <resourceSets url="~/combres.axd"
                 defaultDuration="30"
                 defaultVersion="auto"
-                defaultDebugEnabled="false"
+                defaultDebugEnabled="true"
                 defaultIgnorePipelineWhenDebug="true"
                 localChangeMonitorInterval="30"
                 remoteChangeMonitorInterval="60"
@@ -28,6 +28,7 @@
       <resource path="~/Content/libs/ace/css/ace-skins.min.css"/>
       <resource path="~/Content/libs/bootstrap-datepicker/css/datepicker.css"/>
       <resource path="~/Content/libs/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+      <resource path="~/Content\libs\qunit\qunit.css"/>
     </resourceSet>
     
     <resourceSet name="siteCss" type="css">
@@ -86,12 +87,17 @@
       <resource path="~/Content/libs/tpl/jsrender.js"/>
       <resource path="~/Content/libs/headroom.js"/>
       <resource path="~/scripts/Extend/jquery.form.js"/>
-    </resourceSet>
+      <resource path="~/Content/libs/qunit/qunit.js"/>
+    
+ </resourceSet>
 
 
-    <resourceSet name="app" type="js">
+    <resourceSet name="app" type="js" minifierRef="off">
       <resource path="~/scripts/index.cshtml.js" />
-    </resourceSet>
+    </resourceSet> 
+    
+   
+    
     
     
   </resourceSets>

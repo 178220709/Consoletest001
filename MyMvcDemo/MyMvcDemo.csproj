@@ -176,8 +176,12 @@
     <Compile Include="App_Start\Combres.cs" />
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
+    <Content Include="Content\TestDemo\QUnitDemo\fullDiv.html" />
     <Compile Include="Controllers\AngularJSController.cs" />
-    <Compile Include="Extend\JsonControllerEX\JsonTypeAttribute.cs" />
+ <Compile Include="Controllers\ModuleController.cs" />
+ <Compile Include="Extend\JsonControllerEX\JsonTypeAttribute.cs" />
+    <Compile Include="Controllers\MyQunitDemo.cs" />
+    <Compile Include="Extend\ConfigHelper.cs" />
     <Compile Include="Extend\ModuleAttribute.cs" />
     <Compile Include="Controllers\MyJsDemoController.cs" />
     <Compile Include="Extend\JsonBinder.cs" />
@@ -1184,6 +1188,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index1.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MyQunitDemo\hello.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_ContentLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\TestDemo\QUnitDemo\1_1hello.html" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

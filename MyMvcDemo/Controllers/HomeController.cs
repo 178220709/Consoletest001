@@ -8,7 +8,7 @@ using Suijing.Utils.Constants;
 namespace MyMvcDemo.Controllers
 {
 
-    [Module(Name = "主页",CSS = MyConstants.Bootstrap.Icon.Globe , Sort = -1)]
+    [Module(Name = "主页",CSS = MyConstants.Bootstrap.Icon.Globe , Sort = 0)]
     public class HomeController : Controller
     {
         [HttpGet]

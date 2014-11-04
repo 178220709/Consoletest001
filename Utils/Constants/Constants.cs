@@ -10,9 +10,7 @@
             {
                 public const string Globe = "icon-globe";
                 public const string User = "icon-globe";
-                public const string Card = "icon-credit-card";
-        
-               
+                public const string Card = "icon-credit-card"; 
             }
         }   
         
