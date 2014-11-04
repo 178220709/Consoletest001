@@ -29,6 +29,7 @@ namespace MyProject.TestHelper
             TextWriter tw = new StringWriter();
             HttpWorkerRequest wr = new SimpleWorkerRequest("/Home/app", "", tw);
             HttpContext.Current = new HttpContext(wr);
+        }
 
         public static object GetCurrentTime()
         {

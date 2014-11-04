@@ -38,7 +38,7 @@
     
     <resourceSet name="login" type="js">
       <resource path="~/Content/libs/jquery-1.10.2/jquery-1.10.2.min.js"/>
-      <resource path="~/content/libs/seajs-2.1.1/sea.js"/>
+      <resource path="~/content/libs/seajs-2.3.0/sea-debug.js"/>
       <resource path="~/Content/libs/jquery.cookie-1.4.0/jquery.cookie.js"/>
       <resource path="~/Content/libs/jquery.validate-v1.11.1/jquery.validate.min.js"/>
       <resource path="~/Content/libs/jquery.form-3.28/jquery.form.js"/>
@@ -52,7 +52,7 @@
       <resource path="~/App_Data/jsConfigs.js" />
       <resource path="~/Content/libs/ace/ace-extra.min.js"/>
       <resource path="~/Content/libs/jquery-1.10.2/jquery-1.10.2.min.js"/>
-      <resource path="~/content/libs/seajs-2.1.1/sea.js"/>
+      <resource path="~/content/libs/seajs-2.3.0/sea-debug.js"/>
       <resource path="~/Content/libs/jquery.cookie-1.4.0/jquery.cookie.js"/>
       <resource path="~/content/libs/jquery-1.10.2/jquery-migrate-1.2.1.min.js"/>
       <resource path="~/content/libs/bootstrap-3.0.3/js/bootstrap.min.js"/>

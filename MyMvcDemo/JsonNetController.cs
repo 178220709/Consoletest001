@@ -75,8 +75,8 @@ namespace MyMvcDemo
                                  StringComparison.OrdinalIgnoreCase))
                 //Call JsonResult to throw the same exception as JsonResult
                 return new JsonResult();
-            
-            return new JsonNetResult()
+
+            return new JsonNetResult(JsonType.JsonDotNet)
             {
                 Data = data,
                 ContentType = contentType,

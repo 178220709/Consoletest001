@@ -4,7 +4,7 @@ using System.Web.Helpers;
 namespace MyMvcDemo.Extend
 {
     /// <summary>
-    /// 标记该controller和里面的action方法是否用于首页菜单
+    /// 标记该controller返回jsonResult时序列化使用哪种库,默认是json.net
     /// </summary>
     public class JsonTypeAttribute : Attribute
     {

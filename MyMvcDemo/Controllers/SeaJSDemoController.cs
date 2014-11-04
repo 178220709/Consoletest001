@@ -6,19 +6,12 @@ using Suijing.Utils.Constants;
 
 namespace MyMvcDemo.Controllers
 {
-    [Module(CSS = MyConstants.Bootstrap.Icon.Globe)]
-    public class MyJsDemoController : Controller
+      [Module(CSS = MyConstants.Bootstrap.Icon.Globe,Sort = -2)]
+    public class SeaJSDemoController : Controller
     {
         [HttpGet]
         [Module(Name = "Index", CSS = MyConstants.Bootstrap.Icon.Globe)]
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-
-        [Module(Name = "DateTime", CSS = MyConstants.Bootstrap.Icon.User)]
-        public ActionResult DateTime()
+        public ActionResult Hello()
         {
             return View();
         }   

@@ -9,9 +9,9 @@ using Omu.ValueInjecter;
 
 namespace MyMvcDemo.Extend
 {
-    public  static  class HomeExtend
+    public  static  class HomeHelper
     {
-        public static IEnumerable<ModuleDTO> GetIndexModules( this IndexModel model)
+        public static IEnumerable<ModuleDTO> GetIndexModules( )
         {
             IList<ModuleDTO> modules = new List<ModuleDTO>();
 
@@ -38,6 +38,7 @@ namespace MyMvcDemo.Extend
             var controllerName = type.Name.Replace("Controller","");
             var parentAttr = type.GetAttribute<ModuleAttribute>();
             var actions = type.GetMethods().Where(a => a.HasAttribute<ModuleAttribute>()).ToList();
+            var actions2 = type.GetMethods().Where(a => a.GetType().HasAttribute<ModuleAttribute>()).ToList();
             if (!actions .Any())
             {
                 return;
@@ -61,7 +62,7 @@ namespace MyMvcDemo.Extend
             modules.Add(parentModule);
         }
 
-        public static bool HasAttribute<T>(this Type type) where T:Attribute
+        public static bool HasMyAttribute<T>(this MemberInfo type) where T : Attribute
         {
             var attributes = type.GetCustomAttributes(typeof(T), false);
             if (attributes.Length > 0)
@@ -69,7 +70,7 @@ namespace MyMvcDemo.Extend
                return true;
             }
             return false;
-        } 
+        }
         public static T GetAttribute<T>(this MemberInfo type) where T : Attribute
         {
             var attributes = type.GetCustomAttributes(typeof(T), false);
