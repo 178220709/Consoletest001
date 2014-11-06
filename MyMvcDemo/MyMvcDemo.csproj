@@ -176,6 +176,10 @@
     <Compile Include="App_Start\Combres.cs" />
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\TestDemo\QUnitDemo\fullDiv.html" />
     <Compile Include="Controllers\AngularJSController.cs" />
     <Compile Include="Controllers\ModuleController.cs" />
@@ -1014,8 +1018,8 @@
     <Content Include="Content\libs\moment-2.1\moment.min.js" />
     <Content Include="Content\libs\moment-2.1\zh-cn.js" />
     <Content Include="Content\libs\responsejs\respond.min.js" />
-    <Content Include="Content\libs\seajs-2.1.1\sea-debug.js" />
-    <Content Include="Content\libs\seajs-2.1.1\sea.js" />
+    <Content Include="Content\libs\seajs-2.3.0\sea-debug.js" />
+    <Content Include="Content\libs\seajs-2.3.0\sea.js" />
     <Content Include="Content\libs\select-2-3.4.3\select2-bootstrap.css" />
     <Content Include="Content\libs\select-2-3.4.3\select2-spinner.gif" />
     <Content Include="Content\libs\select-2-3.4.3\select2.css" />
@@ -1059,7 +1063,15 @@
     <Content Include="Content\TestDemo\QUnitDemo\test.html" />
     <Content Include="Content\TestDemo\QUnitDemo\index.html" />
     <Content Include="Content\TestDemo\QUnitDemo\prettydate.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Views\QUnitTests\Sample.js" />
     <Content Include="Scripts\defaults.js" />
     <Content Include="Scripts\Extend\jquery.form.js" />
@@ -1144,9 +1156,6 @@
     <Content Include="Content\libs\ckeditor_4.3.1\plugins\wsc\LICENSE.md" />
     <Content Include="Content\libs\ckeditor_4.3.1\plugins\wsc\README.md" />
     <Content Include="Content\libs\ckeditor_4.3.1\skins\moono\readme.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\libs\seajs-2.1.1\sea.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\libs\jquery.zclip.1.1.1\jquery.zclip.min.js.map">
