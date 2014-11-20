@@ -1,3 +1,5 @@
+  项目已经整体迁移到git china. 天朝的网络,大家懂得. 这里作为代码仓库吧.
+  
   这是我的C#代码库,是我学习,测试和娱乐所用.
   
   BaseFeatureDemo这个项目,包含的是C#的基本元素的demo示例,从最简单的string的特殊用法,到比较复杂的Thread,Reflection,Expression,都是可运行的Demo. 可以从main函数开始运行示例,也可以用测试工具(我用的是Resharper + Microsoft.VisualStudio.TestTools.UnitTesting )直接在TestMethod上Debug.
