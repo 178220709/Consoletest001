@@ -65,6 +65,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="UtilsTest\JsonTest.cs" />
     <Compile Include="Json\JsonTest.cs" />
     <Compile Include="MyMVCTest\ControllerTest\HomeTest.cs" />
     <Compile Include="MyStringsFactoryTest.cs" />
