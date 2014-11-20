@@ -87,6 +87,9 @@
     <Reference Include="ImageResizer.Plugins.DiskCache">
       <HintPath>..\packages\ImageResizer.Plugins.DiskCache.3.4.2\lib\ImageResizer.Plugins.DiskCache.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -172,6 +175,20 @@
     <Compile Include="App_Start\Combres.cs" />
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_curd.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_dsl.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_exp.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_form.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_index.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\detail.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\index.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\angular-route.js" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\angular-route.min.js" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\angular.js" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\angular.min.js" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\controller.js" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\ng_hange.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\list.html" />
     <Content Include="Content\TestDemo\QUnitDemo\fullDiv.html" />
     <Compile Include="Controllers\AngularJSController.cs" />
     <Compile Include="Controllers\ModuleController.cs" />
@@ -1192,6 +1209,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\TestDemo\QUnitDemo\1_1hello.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\angular.min.js.map" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\server\user.json" />
+    <Content Include="Content\TestDemo\AngularJS-master\README.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

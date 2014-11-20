@@ -31,5 +31,10 @@ namespace MyProject.TestHelper
             HttpContext.Current = new HttpContext(wr);
             
         }
+
+        public static object GetCurrentTime()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

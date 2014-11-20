@@ -12,7 +12,7 @@ namespace MyMvcDemo.Controllers
         {
             return View();
         }
-         [Module(CSS = MyConstants.Bootstrap.Icon.Globe)]
+        [Module(CSS = MyConstants.Bootstrap.Icon.Globe)]
         public ActionResult JStest()
         {
             return View();

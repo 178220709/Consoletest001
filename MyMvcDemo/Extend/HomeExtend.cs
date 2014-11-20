@@ -23,13 +23,13 @@ namespace MyMvcDemo.Extend
             {
                 if (t.HasAttribute<ModuleAttribute>())
                 {
-                    t.GetControllerAction(modules);
+                    t.GetControllerActionAndFillList( modules);
                 }
             }
             return modules.OrderBy(a=>a.Sort).ToList();
         }
 
-        public static void GetControllerAction(this Type type, IList<ModuleDTO> modules)
+        public static void GetControllerActionAndFillList(this Type type, IList<ModuleDTO> modules)
         {
             if (!typeof(Controller).IsAssignableFrom(type))
             {

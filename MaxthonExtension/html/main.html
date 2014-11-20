@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>我的首页</title>
+    <script src="../js/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+    <script src="../js/util.js"></script>
+</head>
+    <body>
+        <input type="button" name="name" value="btn1" id="btnTest1"/>
+        <input type="button" name="name" value="btn2" id="btnTest2" />
+        <input type="button" name="name" value="btn3" id="btnTest3" />
+        <input type="button" name="name" value="result" id="txtResult" />
+        <div id="divResult" style="height: 200px;width: 200px;border: 1px red dashed">
+            
+        </div>
+        <script>
+            $(function() {
+                $("#btnTest1").click(function () {
+                    var br = util.getBrowser();
+                    var str = "";
+                    for (var obj in br) {
+                        str += obj + ":" + br[obj]+"/n";
+                    }
+                    $("#divResult").text(str);
+                });
+
+                $("#btnTest2").click(function () {
+                    var what = window.external.mxVersion;
+                    $("#divResult").text(what);
+                });
+
+                $("#btnTest3").click(function () {
+                    try {
+                        $.get('/item.htm?spm=0.0.0.0.bdoV9i&id=38808845486&viewfrom=try#J_TabBar').fail(function (html) {
+                            $("#btnTest3").val(html.toString());
+                         
+                           // $("#divResult").text(util.showEveryAttr(html));
+                            $("#divResult").text(util.getBrowser());
+                            $("#divResult").text("hahahahah");
+                        });
+                          
+                       
+
+                    } catch (e) {
+                       
+                        $("#divResult").text(util.showEveryAttr(e));
+                    } 
+                    $("#divResult").text("hahahahah22");
+                });
+               
+            });
+
+            //$.get('/question/26477210/answer/32917478').then(function(html) {
+            //     console.log(JSON.parse($(html).find('blockquote')[0].lastChild.textContent));
+            //});
+
+        </script>
+    </body>
+</html>
