@@ -175,6 +175,11 @@
     <Compile Include="App_Start\Combres.cs" />
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
+    <Content Include="Content\libs\angularJS\angular-route.js" />
+    <Content Include="Content\libs\angularJS\angular-route.min.js" />
+    <Content Include="Content\libs\angularJS\angular.js" />
+    <Content Include="Content\libs\angularJS\angular.min.js" />
+    <Content Include="Content\libs\angularJS\controller.js" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_curd.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_dsl.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_exp.html" />
@@ -200,6 +205,7 @@
     <Compile Include="Controllers\WeixinController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extend\HomeExtend.cs" />
+    <Compile Include="Extend\RazorEx.cs" />
     <Compile Include="Extend\WeixinEx.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Filters\CustomAuthorize.cs">
@@ -209,7 +215,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="JsonNetController.cs" />
+    <Compile Include="Models\Base\IndexColumnConst.cs" />
     <Compile Include="Models\CustomAuthorize.cs" />
+    <Compile Include="Models\Base\BaseModel.cs" />
+    <Compile Include="Models\Base\IndexColumnModel.cs" />
     <Compile Include="Models\IndexModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Constants.cs" />
@@ -1184,7 +1193,7 @@
     <Content Include="Views\AngularJS\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\AngularJS\JStest.cshtml" />
+    <Content Include="Views\AngularJS\ModelBind.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Weixin\Index.cshtml" />
@@ -1214,6 +1223,18 @@
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\angular.min.js.map" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\server\user.json" />
     <Content Include="Content\TestDemo\AngularJS-master\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\libs\angularJS\angular.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_IndexHead.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AngularJS\Head.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_AngularJSLayout.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,14 @@
+﻿
+@{
+    var heads = new List<IndexColumnModel>()
+    {
+        new IndexColumnModel(){Name = "hello world",Url = Url.Action("Index")},
+        new IndexColumnModel(){Name = "model bind",Url = Url.Action("ModelBind")}
+    };
+}
+
+
+
+
+@Html.Partial("_IndexHead", heads)
+

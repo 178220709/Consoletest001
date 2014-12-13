@@ -1,0 +1,30 @@
+﻿@model IList<IndexColumnModel>
+@{
+    Layout = null;
+}
+<style type="text/css">
+    .DivIndexHead {
+         width: 100%;
+         border-bottom: 2px antiquewhite;
+        margin-bottom: 30px;
+     }
+     .DivIndexHead  a{
+         width: 160px;
+     }
+    .DivIndexHead .active {
+         border-bottom: 2px aquamarine;
+    }
+</style>
+
+@{
+    
+}
+
+<div class="DivIndexHead">
+    @foreach (var mo in Model)
+    {
+     
+        <a href="@mo.Url" class="@(mo.IsCurrentPage()?"avtive":"")">@mo.Name</a>
+    }
+  
+</div>
