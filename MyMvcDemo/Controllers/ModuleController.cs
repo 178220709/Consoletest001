@@ -15,7 +15,7 @@ namespace MyMvcDemo.Controllers
         public JsonResult GetAllModules()
         {
            var model = new IndexModel();
-           var modules = model.GetIndexModules();
+           var modules = HomeHelper.GetIndexModules();
 
            return Json(modules.Select(a => new
            {

@@ -20,10 +20,14 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -35,7 +39,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -63,11 +67,11 @@
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Fasterflect">
       <HintPath>..\packages\fasterflect.2.1.3\lib\net40\Fasterflect.dll</HintPath>
@@ -175,11 +179,13 @@
     <Compile Include="App_Start\Combres.cs" />
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
-    <Content Include="Content\libs\angularJS\angular-route.js" />
+ <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" /> <Content Include="Content\libs\angularJS\angular-route.js" />
     <Content Include="Content\libs\angularJS\angular-route.min.js" />
     <Content Include="Content\libs\angularJS\angular.js" />
-    <Content Include="Content\libs\angularJS\angular.min.js" />
-    <Content Include="Content\libs\angularJS\controller.js" />
+    <Content Include="Content\libs\angularJS\angular.min.js" /> <Content Include="Content\libs\angularJS\controller.js" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_curd.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_dsl.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_exp.html" />
@@ -194,9 +200,11 @@
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\controller.js" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\ng_hange.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\list.html" />
-    <Content Include="Content\TestDemo\QUnitDemo\fullDiv.html" />
+   <Content Include="Content\TestDemo\QUnitDemo\fullDiv.html" />
     <Compile Include="Controllers\AngularJSController.cs" />
     <Compile Include="Controllers\ModuleController.cs" />
+    <Compile Include="Controllers\SeaJSDemoController.cs" />
+    <Compile Include="Extend\JsonControllerEX\JsonTypeAttribute.cs" />
     <Compile Include="Controllers\MyQunitDemo.cs" />
     <Compile Include="Extend\ConfigHelper.cs" />
     <Compile Include="Extend\ModuleAttribute.cs" />
@@ -1034,8 +1042,8 @@
     <Content Include="Content\libs\moment-2.1\moment.min.js" />
     <Content Include="Content\libs\moment-2.1\zh-cn.js" />
     <Content Include="Content\libs\responsejs\respond.min.js" />
-    <Content Include="Content\libs\seajs-2.1.1\sea-debug.js" />
-    <Content Include="Content\libs\seajs-2.1.1\sea.js" />
+    <Content Include="Content\libs\seajs-2.3.0\sea-debug.js" />
+    <Content Include="Content\libs\seajs-2.3.0\sea.js" />
     <Content Include="Content\libs\select-2-3.4.3\select2-bootstrap.css" />
     <Content Include="Content\libs\select-2-3.4.3\select2-spinner.gif" />
     <Content Include="Content\libs\select-2-3.4.3\select2.css" />
@@ -1079,7 +1087,15 @@
     <Content Include="Content\TestDemo\QUnitDemo\test.html" />
     <Content Include="Content\TestDemo\QUnitDemo\index.html" />
     <Content Include="Content\TestDemo\QUnitDemo\prettydate.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Views\QUnitTests\Sample.js" />
     <Content Include="Scripts\defaults.js" />
     <Content Include="Scripts\Extend\jquery.form.js" />
@@ -1166,9 +1182,6 @@
     <Content Include="Content\libs\ckeditor_4.3.1\skins\moono\readme.md" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\libs\seajs-2.1.1\sea.js.map" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Content\libs\jquery.zclip.1.1.1\jquery.zclip.min.js.map">
       <DependentUpon>jquery.zclip.js</DependentUpon>
     </Content>
@@ -1219,7 +1232,7 @@
   <ItemGroup>
     <Content Include="Content\TestDemo\QUnitDemo\1_1hello.html" />
   </ItemGroup>
-  <ItemGroup>
+ <ItemGroup>
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\angular.min.js.map" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\server\user.json" />
     <Content Include="Content\TestDemo\AngularJS-master\README.md" />
@@ -1235,8 +1248,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_AngularJSLayout.cshtml" />
-  </ItemGroup>
-  <PropertyGroup>
+  </ItemGroup>  <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>

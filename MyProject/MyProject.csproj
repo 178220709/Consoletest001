@@ -82,8 +82,6 @@
     <Compile Include="ManiaSongs\SongDal.cs" />
     <Compile Include="ManiaSongs\SongInfo.cs" />
     <Content Include="MyHtmlAgility\XPathDemo\demoXML.xml" />
-    <Compile Include="MyHtmlAgility\ProjectTest\HttpWebResponseUtilityTest.cs" />
-    <Compile Include="MyHtmlAgility\ProjectTest\51job.cs" />
     <Compile Include="MyHtmlAgility\XPathDemo\XPathDemo.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,6 +113,7 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="MyHtmlAgility\ProjectTest\" />
     <Folder Include="MyHtmlAgility\Project\51job\" />
     <Folder Include="SignalRProject\" />
   </ItemGroup>

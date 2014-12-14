@@ -21,7 +21,7 @@ namespace MyMvcDemo.Controllers
             {
                 Name = "碎景"
             };
-            model.Modules = model.GetIndexModules();
+            model.Modules = HomeHelper.GetIndexModules();
             return View(model);
         }
 

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Ajax.Utilities;
+using Newtonsoft.Json;
 using ServiceStack.Text;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,11 @@ namespace MyMvcDemo
 {
     public class JsonNetResult : JsonResult
     {
-        public JsonNetResult()
+        private readonly JsonType _type ;
+       
+        public JsonNetResult(JsonType type)
         {
-
+            this._type = type;
         }
         public override void ExecuteResult(ControllerContext context)
         {
@@ -32,42 +35,35 @@ namespace MyMvcDemo
 
             if (Data != null)
             {
-                var json = Data.ToJson();
+                var json = _type.SerializeWithMine(Data);
                 response.Output.Write(json);
                 response.Output.Flush();
             }
         }
     }
 
-    //使用JsonConvert序列化 少量json用servicestack无法正常序列化
-    public class JsonNetResult2 : JsonResult
+    public enum JsonType
     {
-        public JsonNetResult2()
+        ServiceStack,
+        JsonDotNet
+    }
+
+    public static class JsonConverterFactory
+    {
+        public static string SerializeWithMine(this JsonType type,object obj)
         {
-
-        }
-        public override void ExecuteResult(ControllerContext context)
-        {
-            if (context == null)
+            switch (type)
             {
-                throw new ArgumentNullException("context");
-            }
-
-            var response = context.HttpContext.Response;
-            response.ContentType = !string.IsNullOrWhiteSpace(ContentType) ? ContentType : "application/json";
-            if (ContentEncoding != null)
-            {
-                response.ContentEncoding = ContentEncoding;
-            }
-
-            if (Data != null)
-            {
-                var json = JsonConvert.SerializeObject(Data);
-                response.Output.Write(json);
-                response.Output.Flush();
+                case JsonType.JsonDotNet:
+                    return    JsonConvert.SerializeObject(obj);
+                case JsonType.ServiceStack:
+                    return obj.ToJson();
+                default :
+                    return obj.ToJson();
             }
         }
     }
+
 
     public class JsonNetController : Controller
     {
@@ -79,7 +75,8 @@ namespace MyMvcDemo
                                  StringComparison.OrdinalIgnoreCase))
                 //Call JsonResult to throw the same exception as JsonResult
                 return new JsonResult();
-            return new JsonNetResult()
+
+            return new JsonNetResult(JsonType.JsonDotNet)
             {
                 Data = data,
                 ContentType = contentType,
