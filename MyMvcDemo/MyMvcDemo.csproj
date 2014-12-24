@@ -176,13 +176,10 @@
     <Compile Include="App_Start\Combres.cs" />
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\TestDemo\QUnitDemo\fullDiv.html" />
     <Compile Include="Controllers\AngularJSController.cs" />
     <Compile Include="Controllers\ModuleController.cs" />
+    <Compile Include="Controllers\PrintDemoController.cs" />
     <Compile Include="Controllers\SeaJSDemoController.cs" />
     <Compile Include="Extend\JsonControllerEX\JsonTypeAttribute.cs" />
     <Compile Include="Controllers\MyQunitDemo.cs" />
@@ -1063,13 +1060,37 @@
     <Content Include="Content\TestDemo\QUnitDemo\test.html" />
     <Content Include="Content\TestDemo\QUnitDemo\index.html" />
     <Content Include="Content\TestDemo\QUnitDemo\prettydate.js" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\css\base.css" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\css\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\css\jquery-ui-1.9.2.custom.css" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\css\price.css" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\img\arrow.png" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\img\btn.png" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\img\call.png" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\img\close.png" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\img\export.png" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\img\logo.png" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\img\logo_zg.png" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\img\print.png" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\img\service.png" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\jiancai.html" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\jiancai_print.html" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\js\calendar.js" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\js\jquery-1.7.1.js" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\js\jquery_const.js" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\lengzha.html" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\lengzha_print.html" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\rezha.html" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\rezha_print.html" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\zhongban.html" />
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\zhongban_print.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Views\QUnitTests\Sample.js" />
@@ -1216,6 +1237,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\seaJSDemo\hello.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PrintDemo\Hello.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\css\images\Thumbs.db" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
