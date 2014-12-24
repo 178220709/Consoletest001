@@ -91,6 +91,9 @@
     <Reference Include="ImageResizer.Plugins.DiskCache">
       <HintPath>..\packages\ImageResizer.Plugins.DiskCache.3.4.2\lib\ImageResizer.Plugins.DiskCache.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -177,6 +180,27 @@
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
     <Content Include="Content\TestDemo\QUnitDemo\fullDiv.html" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\libs\angularJS\angular-route.js" />
+    <Content Include="Content\libs\angularJS\angular-route.min.js" />
+    <Content Include="Content\libs\angularJS\angular.js" />
+    <Content Include="Content\libs\angularJS\angular.min.js" /> <Content Include="Content\libs\angularJS\controller.js" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_curd.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_dsl.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_exp.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_form.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_index.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\detail.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\index.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\angular-route.js" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\angular-route.min.js" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\angular.js" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\angular.min.js" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\controller.js" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\ng_hange.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\list.html" />
+  
     <Compile Include="Controllers\AngularJSController.cs" />
     <Compile Include="Controllers\ModuleController.cs" />
     <Compile Include="Controllers\PrintDemoController.cs" />
@@ -190,6 +214,7 @@
     <Compile Include="Controllers\WeixinController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extend\HomeExtend.cs" />
+    <Compile Include="Extend\RazorEx.cs" />
     <Compile Include="Extend\WeixinEx.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Filters\CustomAuthorize.cs">
@@ -199,7 +224,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="JsonNetController.cs" />
+    <Compile Include="Models\Base\IndexColumnConst.cs" />
     <Compile Include="Models\CustomAuthorize.cs" />
+    <Compile Include="Models\Base\BaseModel.cs" />
+    <Compile Include="Models\Base\IndexColumnModel.cs" />
     <Compile Include="Models\IndexModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Constants.cs" />
@@ -1203,7 +1231,7 @@
     <Content Include="Views\AngularJS\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\AngularJS\JStest.cshtml" />
+    <Content Include="Views\AngularJS\ModelBind.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Weixin\Index.cshtml" />
@@ -1229,18 +1257,23 @@
   <ItemGroup>
     <Content Include="Content\TestDemo\QUnitDemo\1_1hello.html" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\MyJSDemo\DateTime.cshtml" />
+ <ItemGroup>
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\angular.min.js.map" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\server\user.json" />
+    <Content Include="Content\TestDemo\AngularJS-master\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\seaJSDemo\index.cshtml" />
+    <Content Include="Content\libs\angularJS\angular.min.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\seaJSDemo\hello.cshtml" />
+    <Content Include="Views\Shared\_IndexHead.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\PrintDemo\Hello.cshtml" />
+    <Content Include="Views\AngularJS\Head.cshtml" />
   </ItemGroup>
+ <ItemGroup>
+    <Content Include="Views\Shared\_AngularJSLayout.cshtml" />
+  </ItemGroup> 
   <ItemGroup>
     <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\css\images\Thumbs.db" />
   </ItemGroup>
@@ -1248,6 +1281,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
+ 
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />

@@ -35,5 +35,10 @@ namespace MyProject.TestHelper
         {
             throw new NotImplementedException();
         }
+
+        public static object GetCurrentTime()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

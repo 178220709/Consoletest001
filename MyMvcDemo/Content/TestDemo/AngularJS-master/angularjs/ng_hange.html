@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="test">
+<head>
+    <title>angularJs-checkbox</title>
+</head>
+<body>
+    <div ng-controller="ChangeCtrl">
+        <input type="checkbox" ng-model="chk" ng-change="chkboxChange(chk)" />
+        <input type="text" ng-model="val" ng-change="textChange(val)" />
+    </div>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript">
+        var test = angular.module('test', []);
+        test.controller('ChangeCtrl', function($scope){
+            $scope.chk = false;
+            $scope.val = 123;
+            $scope.chkboxChange = function(val){
+                !val ? alert('选中') : alert('未选中');
+            }
+
+            $scope.textChange = function(val){
+                alert('变化了')
+            }
+        })
+    </script>
+</body>
+</html>

@@ -4,6 +4,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 using ServiceStack.Text;
+using Suijing.Utils;
 
 namespace MyMvcDemo
 {
@@ -24,7 +25,8 @@ namespace MyMvcDemo
            // WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-
+            LogHepler.SetConfig();
+            LogHepler.WriteLog("the mvcDemo is start up");
             ImageResizer.Configuration.Config.Current.Pipeline.AuthorizeImage += Pipeline_AuthorizeImage;
         }
 

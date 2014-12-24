@@ -5,7 +5,9 @@ using System.IO;
 using System.Threading;
 using System.Web;
 using System.Web.Hosting;
+using System.Web.UI;
 using BaseFeatureDemo.MyGame;
+using log4net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyMvcDemo.Extend;
 using Omu.ValueInjecter;
@@ -36,26 +38,18 @@ namespace BaseFeatureTest
 
         public static void Main(string[] args)
         {
+           var ll= log4net.Config.XmlConfigurator.Configure();
 
-            var str = MyConstants.Globe2;
-
-        }
-    }
-    public static class MyConstants
-    {
-        public static string Globe2 = "icon-globe";
-        public static class Bootstrap
-        {
-
-            public static class Icon
+            var loginfo = log4net.LogManager.GetLogger("loginfo2");
+            var b1 = LogManager.Exists("loginfo2");
+            var logerror = log4net.LogManager.GetLogger("logerror");
+            if (logerror.IsErrorEnabled)
             {
-                public const string Globe = "icon-globe";
-                public const string User = "icon-globe";
-                public const string Card = "icon-credit-card";
-
-
+                logerror.Error("this is my");
             }
+
         }
     }
+ 
    
 }
