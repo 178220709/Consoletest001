@@ -11,17 +11,17 @@
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript">
         var test = angular.module('test', []);
-        test.controller('ChangeCtrl', function($scope){
+        test.controller('ChangeCtrl', function($scope) {
             $scope.chk = false;
             $scope.val = 123;
-            $scope.chkboxChange = function(val){
+            $scope.chkboxChange = function(val) {
                 !val ? alert('选中') : alert('未选中');
             }
 
-            $scope.textChange = function(val){
-                alert('变化了')
+            $scope.textChange = function(val) {
+                alert('变化了');
             }
-        })
+        });
     </script>
 </body>
 </html>

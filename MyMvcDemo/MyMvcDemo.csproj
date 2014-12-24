@@ -179,13 +179,13 @@
     <Compile Include="App_Start\Combres.cs" />
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_chk.html" />
     <Content Include="Content\TestDemo\QUnitDemo\fullDiv.html" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap.css" />
     <Content Include="Content\libs\angularJS\angular-route.js" />
     <Content Include="Content\libs\angularJS\angular-route.min.js" />
     <Content Include="Content\libs\angularJS\angular.js" />
-    <Content Include="Content\libs\angularJS\angular.min.js" /> <Content Include="Content\libs\angularJS\controller.js" />
+    <Content Include="Content\libs\angularJS\angular.min.js" />
+    <Content Include="Content\libs\angularJS\controller.js" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_curd.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_dsl.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_exp.html" />
@@ -200,7 +200,6 @@
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\controller.js" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\ng_hange.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\list.html" />
-  
     <Compile Include="Controllers\AngularJSController.cs" />
     <Compile Include="Controllers\ModuleController.cs" />
     <Compile Include="Controllers\PrintDemoController.cs" />
@@ -1257,7 +1256,7 @@
   <ItemGroup>
     <Content Include="Content\TestDemo\QUnitDemo\1_1hello.html" />
   </ItemGroup>
- <ItemGroup>
+  <ItemGroup>
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\angular.min.js.map" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\server\user.json" />
     <Content Include="Content\TestDemo\AngularJS-master\README.md" />
@@ -1271,9 +1270,9 @@
   <ItemGroup>
     <Content Include="Views\AngularJS\Head.cshtml" />
   </ItemGroup>
- <ItemGroup>
+  <ItemGroup>
     <Content Include="Views\Shared\_AngularJSLayout.cshtml" />
-  </ItemGroup> 
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Content\TestDemo\价格指数终端版V1.01_1页面设计稿\css\images\Thumbs.db" />
   </ItemGroup>
@@ -1281,7 +1280,6 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
- 
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
