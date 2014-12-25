@@ -17,6 +17,12 @@ namespace MyMvcDemo.Controllers
         public ActionResult ModelBind()
         {
             return View();
+        } 
+        
+        [Module(CSS = MyConstants.Bootstrap.Icon.Globe)]
+        public ActionResult ChkDemo()
+        {
+            return View();
         }
     }
 }

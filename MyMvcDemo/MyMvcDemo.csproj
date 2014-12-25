@@ -184,6 +184,8 @@
     <Content Include="Content\libs\angularJS\angular.js" />
     <Content Include="Content\libs\angularJS\angular.min.js" />
     <Content Include="Content\libs\angularJS\controller.js" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_chk.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_curd2.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_curd.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_dsl.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_exp.html" />
@@ -1244,6 +1246,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_AngularJSLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PrintDemo\Hello.cshtml" />
+    <Content Include="Views\seaJSDemo\hello.cshtml" />
+    <Content Include="Views\seaJSDemo\index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AngularJS\chkDemo.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
