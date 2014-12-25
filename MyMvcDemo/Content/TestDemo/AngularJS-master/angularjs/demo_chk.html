@@ -33,7 +33,7 @@
                 { id: 3, text: "乒乓球", checked: false },
                 { id: 4, text: "网球", checked: false }
             ];
-            $scope.chkAll = function (checked) {
+            $scope.chkAll = function (checked) {  
                 angular.forEach($scope.chkArr, function (value, key) {
                     value.checked = checked;
                 });
