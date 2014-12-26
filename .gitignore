@@ -40,3 +40,5 @@ BaseFeatureDemo/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 /Utils/bin/Debug/log4net.xml
 /MyMvcDemo/Log/LogDebugger/*.txt
 /MyMvcDemo/Log/LogError/*.txt
+/.nuget
+/*.rar
