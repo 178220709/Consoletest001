@@ -1,0 +1,1049 @@
+﻿input, select, textarea
+{
+    color: #3F3F3F!important;
+}
+/*artdialog*/
+.st-head .st-head-table
+{
+    border-top: 1px solid #ddd;
+}
+.st-head .st-head-table th
+{
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+.st-body .st-body-table tbody td
+{
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 6px;
+}
+
+.ui-dialog-header .ui-dialog-close
+{
+    top: 10px!important;
+}
+
+.ui-dialog-header .ui-dialog-title
+{
+    padding: 10px!important;
+}
+
+.captchalogin
+{
+    display: block;
+    margin: 10px 0 0 0;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.spinner-down
+{
+    margin-left: -1px!important;
+}
+/*数字控件向下按钮*/
+#main-content
+{
+    min-height: 500px;
+    width: auto;
+}
+
+.form-control a.select2-choice
+{
+    background-color: #ffffff !important;
+}
+
+.select2-container-disabled a.select2-choice
+{
+    background-color: #f4f4f4 !important;
+}
+
+.jqgrid_empty
+{
+    width: 120px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.gritter-close
+{
+    top: 1px!important;
+    right: 3px!important;
+    background: url(/Content/libs/jquery.gritter/images/gritter.png) no-repeat left top!important;
+    width: 30px!important;
+    height: 30px!important;
+}
+
+.form-group
+{
+    margin-bottom: 8px;
+}
+/*权限树*/
+.divTreePanel .tree-file, .tree-folder
+{
+    background: none;
+    width: 2px;
+}
+
+.divTreePanel .tree-title
+{
+    font-size: 13px;
+}
+
+.divTreePanel
+{
+    border: 1px solid rgb(213, 213, 213);
+    overflow: hidden;
+}
+
+    .divTreePanel .module-tree
+    {
+        margin: 0 0 0 -2px;
+        padding: 8px 0 0 8px;
+        height: 300px;
+        overflow-y: auto;
+    }
+
+        .divTreePanel .module-tree .tree-folder
+        {
+            display: none;
+        }
+/*树*/
+.treePanel
+{
+    border: 1px solid rgb(213, 213, 213);
+    overflow: hidden;
+}
+
+    .treePanel .tree-file, .tree-folder
+    {
+        background: none;
+        width: 2px;
+    }
+
+    .treePanel .tree-title
+    {
+        font-size: 13px;
+    }
+
+    .treePanel .tree
+    {
+        margin: 0 0 0 -2px;
+        padding: 8px 0 0 8px;
+        overflow-y: auto;
+    }
+
+        .treePanel .tree .tree-folder
+        {
+            display: none;
+        }
+
+/*tab*/
+.lang-nav-tabs
+{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+    .lang-nav-tabs li
+    {
+        cursor: pointer;
+    }
+
+        .lang-nav-tabs li.disabled a
+        {
+            background-color: rgb(238, 236, 236)!important;
+        }
+
+        .lang-nav-tabs li.errors .tabAction
+        {
+            color: rgb(209, 110, 108);
+        }
+
+        .lang-nav-tabs li.errors a
+        {
+            border-top-color: rgb(209, 110, 108);
+            border-right-color: rgb(209, 110, 108);
+        }
+    /*开关*/
+    .lang-nav-tabs input[type="checkbox"].ace.ace-switch.ace-switch-7 + .lbl::before
+    {
+        content: "\a0关\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0开";
+    }
+
+input[type="checkbox"].ace.ace-switch.ace-switch-7.YesOrNo + .lbl::before
+{
+    content: "\a0否\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0是";
+}
+
+input[type="checkbox"].ace.ace-switch.ace-switch-7.OnOrOff + .lbl::before
+{
+    content: "\a0停用\a0\a0\a0\a0\a0\a0\a0\a0\a0启用";
+}
+
+input[type="checkbox"].ace.ace-switch.ace-switch-7.Sex + .lbl::before
+{
+    content: "\a0男\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0女";
+}
+
+/*分组*/
+.gridGroupDiv
+{
+    margin-left: 10px;
+}
+
+    .gridGroupDiv .name
+    {
+        float: left;
+        margin-top: 3px;
+        max-width: 250px;
+    }
+
+    .gridGroupDiv .rowDelete
+    {
+        float: left;
+    }
+/*超出d*/
+.overflowEllipsis
+{
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap!important;
+    overflow: hidden!important;
+}
+/*rowIdCopy*/
+.rowIdCopy
+{
+    vertical-align: middle;
+}
+
+    .rowIdCopy input
+    {
+        float: left;
+    }
+
+    .rowIdCopy .btn-copy
+    {
+        float: left;
+        position: relative;
+        width: 22px;
+    }
+
+    .rowIdCopy img
+    {
+        height: 18px;
+        cursor: pointer;
+    }
+
+    .rowIdCopy .icon-copy
+    {
+        font-size: 15px;
+        margin: 5px 3px 0 3px;
+    }
+
+        .rowIdCopy .icon-copy:hover
+        {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+            opacity: 1;
+            position: static;
+            cursor: pointer;
+        }
+
+    .rowIdCopy .zclip
+    {
+        min-height: 12px!important;
+        min-width: 12px!important;
+    }
+
+        .rowIdCopy .zclip embed
+        {
+            min-height: 12px!important;
+            min-width: 12px!important;
+        }
+
+input[type="number"]
+{
+    height: 32px;
+}
+
+.OptionsTable th, .OptionsTable td
+{
+    padding: 8px;
+    text-align:center;
+}
+
+.options_ctl_Table th, .options_ctl_Table td
+{
+    padding: 8px;
+    text-align:center;
+}
+
+.AttributeValuePanel .AttributeField fieldset .errors
+{
+    color: rgb(209, 110, 108);
+}
+
+.AttributeValuePanel .AttributeField fieldset.has-error .form-control
+{
+    border-color: rgb(209, 110, 108)!important;
+}
+
+.AttributeValuePanel .AttributeField fieldset.has-error .control-label
+{
+    color: rgb(209, 110, 108);
+}
+
+.AttributeValuePanel .AttributeFieldContainer
+{
+    overflow-y: auto;
+}
+
+/*规格*/
+.ProductSpecificationValueGrid th,
+.ProductSpecificationValueGrid td
+{
+    vertical-align: middle!important;
+    text-align: center!important;
+    padding: 8px;
+}
+
+.ProductSpecificationValueGrid .control_imageField
+{
+    min-width: 150px;
+}
+
+.ProductSpecificationValueGrid .control_btn
+{
+    min-width: 100px;
+}
+
+.ProductSpecificationValueGrid button
+{
+    margin-left: 1px;
+}
+
+.ProductSpecificationValueGrid .charGrid .imageColumn
+{
+    display: none;
+}
+
+.ProductSpecificationValueGrid .imageGrid .imageColumn
+{
+    display: table-cell;
+}
+/*图片控件*/
+.control_imageField_container
+{
+    min-width: 110px;
+}
+
+    .control_imageField_container .control_imageField_container_imageDiv
+    {
+        border: solid 1px #ccc;
+        text-align: center;
+        float: left;
+        padding: 1px;
+    }
+
+    .control_imageField_container .control_imageField_toobbar
+    {
+        width: 60px;
+        float: left;
+        display: table;
+        margin-left: 8px;
+    }
+
+    .control_imageField_container .control_imageField_toobbar_div
+    {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+
+/*商品*/
+.product-photo .photo-list
+{
+    max-height: 200px;
+    min-height: 90px;
+    overflow: auto;
+    padding: 2px 0px 5px 0px;
+    border-bottom: 1px solid #ddd;
+    margin-right: 5px;
+}
+
+    .product-photo .photo-list .photo-item
+    {
+        cursor: pointer;
+        padding: 5px 0px 5px 0px;
+        margin: 0 6px 6px 0;
+        float: left;
+        list-style: none;
+        position: relative;
+        width: 95px;
+        background: #fff;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box;
+        -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+        .product-photo .photo-list .photo-item .photo-btnClose
+        {
+            position: absolute;
+            left: 80px;
+            float: right;
+            font-size: 21px;
+            top: 0px;
+            font-weight: bold;
+            line-height: 1;
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            opacity: .2;
+            filter: alpha(opacity=20);
+            padding: 0;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            -webkit-appearance: none;
+            font-family: Helvetica, arial, sans-serif;
+            display: none;
+        }
+
+        .product-photo .photo-list .photo-item .photo-thumb
+        {
+            margin: auto;
+            text-align: center;
+            vertical-align: middle;
+            width: 64px;
+            height: 64px;
+            line-height: 60px;
+        }
+
+        .product-photo .photo-list .photo-item .photo-name
+        {
+            font-size: 12px;
+            margin-top: 3px;
+            text-align: center;
+            font-family: Helvetica, arial, sans-serif;
+            overflow: hidden;
+            white-space: nowrap;
+            -o-text-overflow: ellipsis;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+        }
+
+.product-photo .photo-bigImage-container
+{
+    padding: 5px;
+}
+
+.product-photo .photo-bigImage
+{
+    width: 100%;
+    max-height: 550px;
+    overflow: auto;
+    min-height: 350px;
+    line-height: 350px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.product-photo .photo-list .photo-item:hover
+{
+    background: #ddd;
+}
+
+    .product-photo .photo-list .photo-item:hover .photo-btnClose,
+    .product-photo .photo-list .photo-li-selected .photo-btnClose
+    {
+        display: block;
+    }
+
+.product-photo .photo-list .photo-li-selected
+{
+    background: #DFE9FD;
+}
+
+.product-photo .photo-list .photo-item .photo-btnClose:hover
+{
+    opacity: 0.5;
+    filter: alpha(opacity=40);
+    color: red;
+}
+
+#selectSpecification .alert
+{
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#selectSpecification .btn-SelectSpec
+{
+    margin-left: 85px;
+}
+
+#selectSpecification .spec-value-ul
+{
+    max-height: 80px;
+}
+
+    #selectSpecification .spec-value-ul li
+    {
+        list-style: none;
+        float: left;
+        border: solid 1px #ccc;
+        margin: 0px 5px 5px 0px;
+        cursor: pointer;
+    }
+
+        #selectSpecification .spec-value-ul li.charli
+        {
+            padding: 1px 5px;
+        }
+
+        #selectSpecification .spec-value-ul li.imgli
+        {
+            padding: 1px;
+        }
+
+        #selectSpecification .spec-value-ul li:hover
+        {
+            background-color: rgb(255, 153, 0);
+        }
+
+#selectSpecification .imgtd img
+{
+    border: solid 1px #ccc;
+    padding: 1px;
+}
+
+#selectSpecification table td
+{
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+#selectSpecification table .productImagetd img
+{
+    border: solid 1px #ccc;
+    padding: 1px;
+}
+
+#selectSpecification table .productImagetd .imgDiv
+{
+    position: relative;
+    float: left;
+    padding: 5px;
+    margin: 2px 2px;
+}
+
+#selectSpecification table .productImagetd button[name="selectProductImage"]
+{
+    margin: 5px;
+    float: left;
+}
+
+#selectSpecification table .productImagetd .imgDiv:hover
+{
+    background-color: #EEE;
+}
+
+    #selectSpecification table .productImagetd .imgDiv:hover .close
+    {
+        display: block;
+    }
+
+#selectSpecification table .productImagetd .imgDiv .close
+{
+    display: none;
+    position: absolute;
+    top: -3px;
+    left: 28px;
+}
+
+#selectSpecification table th
+{
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px;
+}
+
+#selectSpecification table td .trtoolbar button
+{
+    margin-left: 2px;
+}
+
+#selectSpecification .btn-group .dropdown-menu
+{
+    max-height: 250px;
+    overflow: auto;
+}
+
+table.specGoodslist,
+table.compostGoodslist
+{
+    position: relative;
+}
+
+.specGoodslist td,
+.compostGoodslist td
+{
+    text-align: center!important;
+    vertical-align: middle!important;
+    position: relative;
+}
+
+.specGoodslist .chartd,
+.compostGoodslist .chartd
+{
+    border: solid 1px #ccc;
+    cursor: pointer;
+    padding: 4px;
+    font-size: 14px;
+    background-color: #F3F3F3;
+    display: block;
+    max-height: 60px;
+    overflow: hidden;
+    max-width: 100px;
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+
+.compostGoodslist .productGoodsName
+{
+    cursor: pointer;
+    font-size: 12px;
+    display: block;
+    overflow: hidden;
+    max-width: 120px;
+}
+
+.compostGoodslist .imgtd,
+.specGoodslist .imgtd
+{
+    cursor: pointer;
+    padding: 1px;
+}
+
+    .specGoodslist .imgtd img
+    {
+        border: solid 1px #ccc;
+    }
+
+.specGoodslist td,
+.compostGoodslist td
+{
+    min-width: 105px;
+    padding: 4px;
+}
+
+.productPublishTimeRow .chardiv
+{
+    background-color: #fff!important;
+    border: none!important;
+}
+
+.productPublishTimeRow .toolbar
+{
+    background-color: #fff!important;
+    border: none!important;
+    padding: 0px!important;
+}
+
+    .productPublishTimeRow .toolbar button
+    {
+        margin-left: 8px;
+    }
+
+.productPublishTimeRow .form_datetime
+{
+    float: left;
+}
+
+.form_datetime input
+{
+    background-color: #fff!important;
+}
+
+.product-category-combotree .combo
+{
+    border-color: #D4D4D4;
+    background-color: #fff;
+    width: 100%!important;
+    height: 32px!important;
+    position: relative;
+}
+
+.product-category-combotree select
+{
+    height: 32px;
+    float: left;
+}
+
+.product-category-combotree .combo input
+{
+    padding: 4px 7px;
+    font-size: 14px;
+    padding-left: 5px;
+    height: 32px!important;
+    line-height: 32px!important;
+    width: 100%!important;
+    background-color: #fff!important;
+}
+
+.product-category-combotree .combo span
+{
+    top: 0px;
+    position: absolute;
+    right: 0px;
+}
+
+.product-category-combotree .combo .combo-arrow
+{
+    height: 30px!important;
+}
+
+.specGoodslist .select-spec-value,
+.compostGoodslist .select-spec-value
+{
+    z-index: 65535;
+    position: absolute;
+    padding-top: 4px;
+}
+
+    .specGoodslist .select-spec-value .goods-spec-box,
+    .compostGoodslist .select-spec-value .goods-spec-box
+    {
+        background: #fff;
+        margin: 0;
+        width: 260px;
+        padding: 6px;
+        border: 1px #6479A5 solid;
+        overflow: hidden;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+.compostGoodslist tr:last-child .goods-price-container
+{
+    bottom: 40px;
+}
+
+.specGoodslist tr:last-child .select-spec-value,
+.compostGoodslist tr:last-child .select-spec-value
+{
+    bottom: 40px;
+}
+
+.select-spec-value .goods-spec-box li
+{
+    float: left;
+    margin-left: 3px;
+    margin-top: 3px;
+    list-style: none;
+    border: solid 1px #ccc;
+    display: list-item;
+    cursor: pointer;
+}
+
+    .select-spec-value .goods-spec-box li span
+    {
+        padding: 4px;
+    }
+
+    .select-spec-value .goods-spec-box li.noclick
+    {
+        cursor: not-allowed;
+        color: #ccc;
+    }
+
+.select2-result-label .item
+{
+    overflow: hidden;
+}
+
+.select2-result-label .itemImg
+{
+    width: 42px;
+    height: 42px;
+    border: 1px silver solid;
+    float: left;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.select2-result-label .itemTitle
+{
+    float: left;
+    padding: 4px 7px;
+    line-height: 12px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    width: 160px;
+}
+
+#SelectCompostPorduct .goods-ul
+{
+    max-height: 80px;
+}
+
+    #SelectCompostPorduct .goods-ul li
+    {
+        list-style: none;
+        float: left;
+        border: solid 1px #ccc;
+        margin: 0 5px 5px 0;
+        cursor: pointer;
+        padding: 3px;
+    }
+
+        #SelectCompostPorduct .goods-ul li:hover
+        {
+            background-color: rgb(255, 153, 0);
+        }
+
+#SelectCompostPorduct table th
+{
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px;
+}
+
+#SelectCompostPorduct table td
+{
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+    -ms-word-break: break-word;
+    word-break: break-word;
+}
+
+#SelectCompostPorduct table .trtoolbar button
+{
+    margin-left: 2px;
+}
+
+#SelectCompostPorduct table td .imgdiv
+{
+    border: solid 1px #ccc;
+    width: 42px;
+    margin: auto;
+    line-height: 38px;
+    vertical-align: middle;
+    height: 42px;
+}
+
+#SelectCompostPorduct #tabhead li a
+{
+    overflow: hidden;
+}
+
+    #SelectCompostPorduct #tabhead li a span
+    {
+        overflow: hidden;
+        white-space: nowrap;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        max-width: 150px;
+        display: block;
+        float: left;
+    }
+
+    #SelectCompostPorduct #tabhead li a i
+    {
+        float: left;
+        cursor: pointer;
+    }
+
+
+    .compostGoodslist .CompostGoods-MarketPriceTd input[name="MarketPrice"]
+    {
+        width: 80px;
+        float: left;
+    }
+
+    .compostGoodslist .CompostGoods-MarketPriceTd button[name="btn-calculateMarketPrice"]
+    {
+        float: left;
+        margin-top: 3px;
+        margin-left: 3px;
+    }
+
+.specGoodslist .CompostGoods-MarketPriceTd button[name="btn-calculateMarketPrice"]
+{
+    display: none;
+}
+
+.specGoodslist .CompostGoods-PriceTd .price-comment
+{
+    display: none;
+}
+
+.compostGoodslist .CompostGoods-PriceTd .price-comment
+{
+    float: left;
+    margin-top: 6px;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.compostGoodslist .CompostGoods-PriceTd
+{
+    width: 110px;
+}
+
+    .compostGoodslist .CompostGoods-PriceTd input[name="Price"]
+    {
+        width: 90px;
+        float: left;
+    }
+
+.compostGoodslist .goods-price-container
+{
+    z-index: 65535;
+    position: absolute;
+    margin-left: 120px;
+}
+
+.compostGoodslist .goods-price-box
+{
+    background: #fff;
+    margin: 0;
+    width: 260px;
+    padding: 6px;
+    border: 1px #6479A5 solid;
+    overflow: hidden;
+}
+
+    .compostGoodslist .goods-price-box li
+    {
+        border-bottom: 1px solid rgb(197, 208, 220);
+        margin-bottom: 5px;
+    }
+
+    .compostGoodslist .goods-price-box .goods-price-pname
+    {
+        max-width: 240px;
+        text-align: left;
+        display: block;
+        overflow: hidden;
+    }
+
+    .compostGoodslist .goods-price-box .goods-price-goods
+    {
+        text-align: left;
+        display: block;
+    }
+
+    .compostGoodslist .goods-price-box .goods-price-gname
+    {
+        max-width: 180px;
+        text-align: left;
+        display: block;
+        overflow: hidden;
+        float: left;
+    }
+
+#searchForm .form-group
+{
+    min-height: 34px;
+}
+
+#PromotionAddEdit .products-ul
+{
+    margin: 5px 0 0 0;
+    border: 1px solid #E1E4E7;
+    max-height: 300px;
+    overflow: auto;
+}
+
+#PromotionAddEdit .products-ul li
+{
+    padding: 2px 5px;
+    list-style: none;
+    font-size: 14px;
+}
+
+#PromotionAddEdit .products-ul li:hover
+{
+    background-color: #F7F2C3;
+}
+
+#PromotionAddEdit .products-ul li span
+{
+    margin-right: 10px;
+}
+
+#PromotionAddEdit .products-ul li .icon-remove
+{
+    color: rgb(250, 106, 106);
+    cursor: pointer;
+}
+
+ #OrderAddEdit .orderTable td
+{
+    border-top: none;
+    border-bottom: 1px solid #E9E9E9;
+    font-size: 16px;
+}
+
+#OrderAddEdit .orderTable .tdTitle
+{
+    text-align: right;
+    width: 40%;
+    border-right: 1px solid #E9E9E9;
+}
+
+#OrderAddEdit .orderTable .user_coupon
+{
+    width: 120px;
+    height: 45px;
+    font-size: 12px;
+    border: 1px dashed #BDBDBD;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    margin: 5px;
+    padding: 4px;
+    list-style: none;
+}
+
+#OrderAddEdit .orderTable .user_coupon:hover
+{
+    background-color: #FFEEE2;
+}
+
+#OrderAddEdit .orderTable .user_coupon_select
+{
+    background-color: #FFEEE2;
+    border: 1px dashed #f00;
+}
+.orderInfo .Title
+{
+    font-size: 14px;
+}
+.orderInfo .Content
+{
+    font-weight: bold;
+    font-size: 18px;
+}
