@@ -38,3 +38,5 @@ BaseFeatureDemo/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 /Utils/bin/Debug/Suijing.Utils.pdb
 /Utils/bin/Debug/log4net.dll
 /Utils/bin/Debug/log4net.xml
+/MyMvcDemo/Log/LogDebugger
+/MyMvcDemo/Log/LogError
