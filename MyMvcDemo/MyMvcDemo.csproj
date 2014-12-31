@@ -185,13 +185,12 @@
     <Content Include="Content\libs\angularJS\angular.min.js" />
     <Content Include="Content\libs\angularJS\controller.js" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_chk.html" />
-    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_ngblur.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_curd2.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_curd.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_dsl.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_exp.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_form.html" />
-    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_chk3.html" />
+    <Content Include="Content\TestDemo\AngularJS-master\angularjs\demo_index.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\detail.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\index.html" />
     <Content Include="Content\TestDemo\AngularJS-master\angularjs\js\angular-route.js" />

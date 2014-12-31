@@ -1,10 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-      @*  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=F24558769cbdc9f25bd3ba1e7ef90c46"></script>*@
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        @Url.CombresLink("baseCss")
+
         <!--[if lte IE 8]>
             <link rel="stylesheet" href="~/Content/libs/ace/css/ace.min.css" />
             <link rel="stylesheet" href="~/Content/libs/ace/css/ace-rtl.min.css" />
@@ -22,17 +18,56 @@
         @RenderSection("head", false)
        
 
-        <!--[if lt IE 9]>
-            <script src="~/content/libs/HTML5Shiv-v3.7.0/html5shiv.js"></script>
-            <script src="~/content/libs/responsejs/respond.min.js"></script>
-        <![endif]-->
 
-    </head>
+    <!--[if lte IE 9]>
+			<link rel="stylesheet" href="~/Content/libs/ace/css/ace-part2.min.css" />
+		<![endif]-->
 
-<body>
+
+    <!--[if lte IE 9]>
+		  <link rel="stylesheet" href="~/Content/libs/ace/css/ace-ie.min.css" />
+		<![endif]-->
+
+    <!--[if lte IE 8]>
+		<script src="~/Content/libs/ace/js/html5shiv.min.js"></script>
+		<script src="~/Content/libs/ace/js/respond.min.js"></script>
+       <![endif]-->
+    @Url.CombresLink("siteCss")
+
+    @Url.CombresLink("framework")
+    @RenderSection("head", false)
+
+
+
+    <!--[if lte IE 9]>
+		<script src="~/Content/libs/ace/js/html5shiv.min.js"></script>
+		<script src="~/Content/libs/ace/js/respond.min.js"></script>
+       <![endif]-->
+
+</head>
+
+<body class="no-skin">
     @RenderBody()
 
+    <!--[if !IE]>
+      <script src="~/Content/libs/ace/js/jquery/jquery-2.1.1.min.js"></script>
+        <![endif]-->
 
+    <!--[if IE]>
+		<script src="~/Content/libs/ace/js/jquery/jquery-1.11.1.min.js"></script>
+		<![endif]-->
+
+    <!--[if !IE]>
+		  <script type="text/javascript">
+        window.jQuery || document.write("<script src='~/Content/libs/ace/js/jquery.min.js'>" + "<" + "/script>");
+    </script>
+     <![endif]-->
+
+    <!--[if IE]>
+		<script type="text/javascript">
+		 window.jQuery || document.write("<script src='~/Content/libs/ace/js/jquery1x.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
     <!--[if lte IE 8]>
 		    <script src="~/content/libs/excanvas.min.js"></script>
 	    <![endif]-->

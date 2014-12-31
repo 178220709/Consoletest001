@@ -17,18 +17,22 @@
                 remoteChangeMonitorInterval="60"
                 >
     <resourceSet name="baseCss" type="css" minifierRef="off">
-      <resource path="~/Content/libs/bootstrap-3.0.3/css/bootstrap.min.css"/>
-      <resource path="~/Content/css/font-awesome.min.css"/>
-      <resource path="~/Content/libs/jQueryjqGrid-4.5.2/css/ui.jqgrid.css"/>
-      <resource path="~/Content/libs/jquery.gritter/css/jquery.gritter.css"/>
-      <resource path="~/Content/libs/select-2-3.4.3/select2.css"/>
-      <resource path="~/Content/libs/select-2-3.4.3/select2-bootstrap.css"/>
+      <!--ace-start-->
+      <resource path="~/Content/libs/ace/bootstrap/3.2.0/css/bootstrap.css"/>
       <resource path="~/Content/libs/ace/css/ace.min.css"/>
       <resource path="~/Content/libs/ace/css/ace-rtl.min.css"/>
       <resource path="~/Content/libs/ace/css/ace-skins.min.css"/>
-      <resource path="~/Content/libs/bootstrap-datepicker/css/datepicker.css"/>
-      <resource path="~/Content/libs/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"/>
-      <resource path="~/Content\libs\qunit\qunit.css"/>
+      <resource path="~/Content/libs/ace/font-awesome/4.1.0/css/font-awesome.css"/>
+      
+      <!--<resource path="~/Content/libs/bootstrap-datepicker/css/datepicker.css"/>
+      <resource path="~/Content/libs/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"/>-->
+      <!--ace-end-->
+      <!--<resource path="~/Content/libs/jQueryjqGrid-4.5.2/css/ui.jqgrid.css"/>
+      <resource path="~/Content/libs/jquery.gritter/css/jquery.gritter.css"/>
+      <resource path="~/Content/libs/select-2-3.4.3/select2.css"/>
+      <resource path="~/Content/libs/select-2-3.4.3/select2-bootstrap.css"/>
+
+      <resource path="~/Content/libs/qunit/qunit.css"/>-->
     </resourceSet>
     
     <resourceSet name="siteCss" type="css">
@@ -37,7 +41,7 @@
     </resourceSet>
     
     <resourceSet name="login" type="js">
-      <resource path="~/Content/libs/jquery-1.10.2/jquery-1.10.2.min.js"/>
+      <resource path="~/Content/libs/ace\js\jquery\jquery-1.11.1.min.js"/>
       <resource path="~/content/libs/seajs-2.3.0/sea-debug.js"/>
       <resource path="~/Content/libs/jquery.cookie-1.4.0/jquery.cookie.js"/>
       <resource path="~/Content/libs/jquery.validate-v1.11.1/jquery.validate.min.js"/>
@@ -49,17 +53,32 @@
     </resourceSet>
 
     <resourceSet name="framework" type="js"  minifierRef="off">
-      <resource path="~/App_Data/jsConfigs.js" />
-      <resource path="~/Content/libs/ace/ace-extra.min.js"/>
-      <resource path="~/Content/libs/jquery-1.10.2/jquery-1.10.2.min.js"/>
+      <!--<resource path="~/App_Data/jsConfigs.js" />-->
+      <resource path="~/Content/libs/ace/js/ace-extra.min.js"/>
+      <resource path="~/Content/libs/jquery/jquery-2.1.1.js"/>
+      <!--<resource path="~/Content/libs/ace\js\jquery\jquery-1.11.1.min.js"/>-->
       <resource path="~/content/libs/seajs-2.3.0/sea-debug.js"/>
       <resource path="~/Content/libs/jquery.cookie-1.4.0/jquery.cookie.js"/>
-      <resource path="~/content/libs/jquery-1.10.2/jquery-migrate-1.2.1.min.js"/>
-      <resource path="~/content/libs/bootstrap-3.0.3/js/bootstrap.min.js"/>
-      <!--<resource path="~/content/libs/bootstrap-3.0.0/bootstrap-typeahead.js"/>-->
       <resource path="~/Content/libs/blockUI-2.57/jquery.blockUI.js"/>
-      <resource path="~/Content/libs/ace/ace-elements.min.js"/>
-      <resource path="~/Content/libs/ace/ace.min.js"/>
+      <!--ace-start-->
+      <resource path="~/content/libs/ace/bootstrap/3.2.0/js/bootstrap.min.js"/>
+      <resource path="~/Content/libs/ace/js/jquery-ui.custom.min.js"/>
+      <resource path="~/Content/libs/ace/js/jquery.ui.touch-punch.min.js"/>
+      <resource path="~/Content/libs/ace/js/jquery.easypiechart.min.js"/>
+      <resource path="~/Content/libs/ace/js/jquery.sparkline.min.js"/>
+      <resource path="~/Content/libs/ace/js/flot/jquery.flot.min.js"/>
+      <resource path="~/Content/libs/ace/js/flot/jquery.flot.pie.min.js"/>
+      <resource path="~/Content/libs/ace/js/flot/jquery.flot.resize.min.js"/>
+      <resource path="~/Content/libs/ace/js/ace-elements.min.js"/>
+      <resource path="~/Content/libs/ace/js/ace.min.js"/>
+      <!--<resource path="~/Content/libs/ace/js/date-time/bootstrap-datepicker.min.js"/>
+      <resource path="~/Content/libs/ace/js/date-time/bootstrap-datepicker.zh-CN.js"/>
+      <resource path="~/Content/libs/ace/js/date-time/bootstrap-datetimepicker.min.js"/>
+      <resource path="~/Content/libs/ace/js/date-time/bootstrap-datetimepicker.zh-CN.js"/>-->
+
+      <!--ace-end-->
+
+
       <resource path="~/Content/libs/jquery.gritter/js/jquery.gritter.min.js"/>
       <resource path="~/content/libs/underscore-1.4.4/underscore-min.js"/>
       <resource path="~/content/libs/underscore-1.4.4/underscore.string.min-2.3.js"/>
@@ -69,23 +88,14 @@
       <resource path="~/Content/libs/select-2-3.4.3/select2.min.js" />
       <resource path="~/Content/libs/select-2-3.4.3/select2_locale_zh-CN.js" />
       <resource path="~/Content/libs/fuelux/fuelux.spinner.min.js"/>
-      <resource path="~/Content/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"/>
-      <resource path="~/Content/libs/bootstrap-datepicker/bootstrap-datepicker.zh-CN.js"/>
-      <resource path="~/Content/libs/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"/>
-      <resource path="~/Content/libs/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"/>
-      <resource path="~/scripts/datetimepicker.defaults.js"/>
+     
+  
       <resource path="~/scripts/util.js"/>
       <resource path="~/scripts/defaults.js" />
-      <resource path="~/scripts/validations.js" />
+      <!--<resource path="~/scripts/validations.js" />-->
       <resource path="~/scripts/select2.defaults.js"/>      
-      <resource path="~/Content/libs/jquery.zclip.1.1.1/jquery.zclip.js"/>      
-      <resource path="~/scripts/ux/jq.imageField.js"/>
-      <resource path="~/scripts/doCopyUtil.js"/>      
-      <resource path="~/Content/libs/jquery-ui-1.10.4/js/jquery-ui-1.10.4.custom.min.js"/>
-      <resource path="~/Content/libs/jquery.scrolltable/jquery.scrolltable.js"/>
-      <resource path="~/scripts/ux/jq.optionField.js"/>
+
       <resource path="~/Content/libs/tpl/jsrender.js"/>
-      <resource path="~/Content/libs/headroom.js"/>
       <resource path="~/scripts/Extend/jquery.form.js"/>
       <resource path="~/Content/libs/qunit/qunit.js"/>
     
