@@ -6,9 +6,18 @@ using System.Threading.Tasks;
 
 namespace MyProject.HotelRecord.Entity
 {
-   public class Record
+
+
+    public class BaseEntity
     {
-       public int Id { get; set; }
+        public int Id { get; set; }
+
+
+
+    }
+    public class Record : BaseEntity
+    {
+     
        public string Name  { get; set; }
        public string CtfTp  { get; set; }
        public string Code { get; set; }

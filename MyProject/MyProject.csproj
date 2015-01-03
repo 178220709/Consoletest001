@@ -49,6 +49,12 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -83,6 +89,7 @@
     <Compile Include="HotelRecord\Entity\cdsgus.cs" />
     <Compile Include="HotelRecord\Entity\Mapper.cs" />
     <Compile Include="HotelRecord\Entity\Record.cs" />
+    <Compile Include="HotelRecord\MongoDBDal\MyContext.cs" />
     <Compile Include="HotelRecord\SqlDal\MyContext.cs" />
     <Compile Include="MyHtmlAgility\Core\DownloadImages.cs" />
     <Compile Include="MyHtmlAgility\Core\MyAgilityHelp.cs" />
