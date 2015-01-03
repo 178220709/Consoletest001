@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html ng-app="test">
+<head>
+    <title>angularJs-checkbox</title>
+</head>
+<body>
+    <div ng-controller="CheckCtrl">
+        <label>选中测试<input type="checkbox" ng-model="chk" ng-click="check(chk)" /></label>
+        <label>
+            联动测试<input type="checkbox" ng-model="chk2" ng-click="check2(chk2)" />
+        </label>
+        <p>model chk is : {{chk}}</p>
+        <p>current chk is : {{result}}</p>
+        <p>current val is : {{result2}}</p>
+
+        <label>
+            自主修改测试<input type="checkbox" ng-model="chk" ng-click="check3(chk2)" />
+        </label>
+
+
+    </div>
+
+    <div>
+        传统js测试<input type="checkbox" id="chkTest" value="checkbox1" onclick="clickTest(this)" />
+        <p>current chk is : <b id="txtResult"> </b></p>
+    </div>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript">
+        var test = angular.module('test', []);
+        test.controller('CheckCtrl', function ($scope) {
+            //设置checkbox默认不选中
+            $scope.chk = false;
+            $scope.chk2 = false;
+           
+            $scope.check = function (val) {
+                // !val ? alert('选中') : alert('未选中');
+                $scope.result = $scope.chk;
+                $scope.result2 = val;
+                console.log("check is call");
+            };
+            $scope.check2 = function (val) {
+                $scope.chk = !val;
+            };
+
+            $scope.check3 = function (val) {
+                $scope.chk = !val;
+            };
+        });
+
+        function clickTest(obj) {
+            document.getElementById("txtResult").innerHTML = obj.checked;
+        }
+    </script>
+</body>
+</html>
