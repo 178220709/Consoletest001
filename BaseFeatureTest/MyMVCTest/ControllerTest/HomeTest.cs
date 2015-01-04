@@ -11,7 +11,7 @@ namespace BaseFeatureTest.MyMVCTest.ControllerTest
         [TestMethod]
         public void XmlStrInjectionTest()
         {
-            var ms = HomeHelper.GetIndexModules();
+            var ms = ControllerHelper.GetIndexModules();
         }  
 
     }
