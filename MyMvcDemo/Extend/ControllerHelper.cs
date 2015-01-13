@@ -9,39 +9,33 @@ using Omu.ValueInjecter;
 
 namespace MyMvcDemo.Extend
 {
-    public  static  class HomeHelper
+    public  static  class ControllerHelper
     {
         public static IEnumerable<ModuleDTO> GetIndexModules( )
         {
-            IList<ModuleDTO> modules = new List<ModuleDTO>();
-
             Assembly assembly = Assembly.GetExecutingAssembly();
             var typeArr = assembly.GetTypes().Where(a => a.FullName.StartsWith("MyMvcDemo.Controllers")).ToList()
                 .Where(a => typeof(Controller).IsAssignableFrom(a)).ToList();
             //循环所有的controller 取出用特性标记的action
-            foreach (Type t in typeArr)
-            {
-                if (t.HasAttribute<ModuleAttribute>())
-                {
-                    t.GetControllerActionAndFillList( modules);
-                }
-            }
+            IList<ModuleDTO> modules = typeArr.Where(t => t.HasAttribute<ModuleAttribute>())
+                .Select(t => t.GetControllerActionAndFillList())
+                .Where(module => module != null).ToList();
             return modules.OrderBy(a=>a.Sort).ToList();
         }
 
-        public static void GetControllerActionAndFillList(this Type type, IList<ModuleDTO> modules)
+        public static ModuleDTO GetControllerActionAndFillList(this Type type)
         {
+           
             if (!typeof(Controller).IsAssignableFrom(type))
             {
-                return ;
+                return null;
             }
             var controllerName = type.Name.Replace("Controller","");
             var parentAttr = type.GetAttribute<ModuleAttribute>();
             var actions = type.GetMethods().Where(a => a.HasAttribute<ModuleAttribute>()).ToList();
-            var actions2 = type.GetMethods().Where(a => a.GetType().HasAttribute<ModuleAttribute>()).ToList();
             if (!actions .Any())
             {
-                return;
+                return null;
             }
             var parentModule = new ModuleDTO()
             {
@@ -54,15 +48,15 @@ namespace MyMvcDemo.Extend
                     var attr = a.GetAttribute<ModuleAttribute>();
                     attr.Name = attr.Name ?? a.Name;
                     child.InjectFrom(attr);
-                    child.VName = controllerName + a.Name;
+                    child.VName = controllerName +"_"+ a.Name;
                     child.Url = string.Format("/{0}/{1}", controllerName, a.Name);
                     return child;
                 }).ToList()
             };
-            modules.Add(parentModule);
+            return parentModule;
         }
 
-        public static bool HasMyAttribute<T>(this MemberInfo type) where T : Attribute
+        private static bool HasMyAttribute<T>(this MemberInfo type) where T : Attribute
         {
             var attributes = type.GetCustomAttributes(typeof(T), false);
             if (attributes.Length > 0)
@@ -71,7 +65,7 @@ namespace MyMvcDemo.Extend
             }
             return false;
         }
-        public static T GetAttribute<T>(this MemberInfo type) where T : Attribute
+        private static T GetAttribute<T>(this MemberInfo type) where T : Attribute
         {
             var attributes = type.GetCustomAttributes(typeof(T), false);
             if (attributes.Length > 0)

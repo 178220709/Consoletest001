@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title>@ViewBag.Title</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        @RenderSection("head", false)
+    </head>
+
+<body @RenderSection("body-attr", false)>
+    @RenderBody()
+
+    <script src="~/Content/libs/underscore/underscore.js"></script>
+    <script src="~/Content/libs/jquery-ui-1.10.4/js/jquery-1.10.2.js"></script>
+    @RenderSection("foot", false)
+</body>
+</html>
+
+
