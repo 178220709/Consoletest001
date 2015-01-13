@@ -3,51 +3,91 @@
 <head>
     <meta charset="utf-8">
     <title>Refactored date examples</title>
-    <script src="prettydate.js"></script>
-    <script>
-        window.onload = function () {
-            var links = document.getElementsByTagName("a");
-            for (var i = 0; i < links.length; i++) {
-                if (links[i].title) {
-                    var date = prettyDate("2008-01-28T22:25:00Z",
-                        links[i].title);
-                    if (date) {
-                        links[i].innerHTML = date;
-                    }
-                }
-            }
-        };
-    </script>
+
+
 </head>
-    <body>
+<body>
 
-        <ul>
-            <li class="entry">
-                <p>blah blah blah...</p>
-                <small class="extra">
-                    Posted <span class="time">
-                               <a href="/2008/01/blah/57/" title="2008-01-28T20:24:17Z">
-                                   <span>January 28th, 2008</span>
-                               </a>
-                           </span>
-                    by <span class="author"><a href="/john/">John Resig</a></span>
-                </small>
-            </li>
-            <!-- more list items -->
-        </ul>
 
-    </body>
-    
+
     <script>
+        //类继承测试 2013年10月21日10:49:56
+        function classTest() {
+            //父类
+            function Foo() {
+                //私有属性和方法
+                var _privateName = 'privateName';
+                function _privateMethod() {
+                    var private_name = 'privateMethod';
+                    return private_name;
+                }
 
-        var test = function(parameters) {
-            var sum = 0;
-            $("tbody").eq(1).find("tr").each(function() {
-                var str = $(this).find("td:eq(2)").text();
-                sum += parseInt(str.replace("元",""));
-            });
-            console.log(sum);
-        };
+                //特权属性和方法
+                this.this_name = 'this_name';
+                this.thisMethod = function() {
+                    var this_method = 'thisMethod';
+                    return this_method;
+                };
+            };
 
+            //公共属性和方法
+            Foo.prototype.public_name = 'public_name';
+            Foo.prototype.publicMethod = function () {
+                var public_method = 'public_method';
+                return public_method;
+            };
+
+            //公共静态属性和方法
+            Foo.static_name = 'static_name';
+            Foo.staticMethod = function () {
+                var static_method = 'static_method';
+                return static_method;
+            };
+
+            //子类继承，类式继承
+            function SubFoo() {
+            }
+            SubFoo.prototype = new Foo();
+
+            //子类继承，原型继承
+            var extend = function(parentObj) {
+                var _f = function() {};
+                //这句是原型式继承最核心的地方，函数的原型对象为对象字面量
+                _f.prototype = parentObj;
+                return new _f;
+            };
+
+            var sub_foo = new SubFoo();
+            var sub_foo2 = extend(Foo);
+
+            console.log(sub_foo == sub_foo2);//false
+
+            console.log(sub_foo._privateName);//undefined
+            console.log(sub_foo._privateMethod);//undefined
+            console.log(sub_foo.this_name);//this_name
+            console.log(sub_foo.thisMethod);//function (){....}
+            console.log(sub_foo.public_name);//public_name
+            console.log(sub_foo.publicMethod);//function (){....}
+            console.log(sub_foo.static_name);//undefined
+            console.log(sub_foo.staticMethod);//undefined
+
+            console.log('--------------------------------------');
+
+            console.log(sub_foo2._privateName);//undefined
+            console.log(sub_foo2._privateMethod);//undefined
+            console.log(sub_foo2.this_name);//undefined
+            console.log(sub_foo2.thisMethod);//undefined
+            console.log(sub_foo2.public_name);//undefined
+            console.log(sub_foo2.publicMethod);//undefined
+            console.log(sub_foo2.static_name);//static_name
+            console.log(sub_foo2.staticMethod);//function (){....}
+        }
+
+      
     </script>
+
+    <input type="button" name="name" value=" classTest" onclick="classTest();" />
+
+</body>
+
 </html>
