@@ -14,7 +14,12 @@ namespace MyProject.HotelRecord.Entity
            DateTime.TryParse(str, out dt);
            return dt;
        }
-
+       private static int ParseToInt(string str)
+       {
+           int result = 0;
+           int.TryParse(str, out result);
+           return result;
+       }
 
        public static Record TransCdsgus(cdsgus model)
        {
@@ -22,7 +27,7 @@ namespace MyProject.HotelRecord.Entity
            {
                Address = model.Address,
                Name = model.Name,
-               BirthDay = string.IsNullOrWhiteSpace(model.Birthday) ? 0 : Convert.ToInt32(model.Birthday),
+               BirthDay = ParseToInt(model.Birthday),
                Code = model.CtfId,
                CtfTp = model.CtfTp,
                Email = model.EMail,

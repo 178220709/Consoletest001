@@ -30,10 +30,10 @@ namespace MyProject.HotelRecord.MongoDBDal
         #region 在集合中添加实体对象
         public virtual WriteConcernResult AddEdit(T entity)
         {
-            if (entity.Id < 1)
-            {
-                entity.Id = NewId;
-            }
+            //if (entity.Id < 1)
+            //{
+            //    entity.Id = NewId;
+            //}
          return Collections.Save(entity);
         }
         #endregion
@@ -52,10 +52,10 @@ namespace MyProject.HotelRecord.MongoDBDal
            
             foreach (var entity in enumerable)
             {
-                if (entity.Id < 1)
-                {
-                    entity.Id = NewId;
-                }
+                //if (entity.Id < 1)
+                //{
+                //    entity.Id = NewId;
+                //}
             }
             return  Collections.InsertBatch(enumerable);
         }

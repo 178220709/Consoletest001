@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web.Caching;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyProject.HotelRecord.Entity;
+using MyProject.HotelRecord.Manager;
 using MyProject.HotelRecord.MongoDBDal;
 using MyProject.HotelRecord.SqlDal;
 using Suijing.Utils;
@@ -38,8 +39,8 @@ namespace BaseFeatureTest.EFDemo
                 Code = "888888888888888"
             };
             se.AddEdit(entity);
-           var en = se.Entities.First(a => a.Name == entity.Name);
-           Assert.IsTrue(en.Code == entity.Code);
+           var en = se.Entities.Where(a => a.Name == entity.Name).ToList();
+           Assert.IsTrue(en.First().Code == entity.Code);
         }
 
         [TestMethod()]
@@ -54,6 +55,13 @@ namespace BaseFeatureTest.EFDemo
             var alre = se.AddList(priList);
             var list = se.Entities.ToList();
             Assert.IsTrue(list.Count == 9);
+        }   
+        
+        [TestMethod()]
+        public void ManagerTest()
+        {
+            QueryHotel query = new QueryHotel();
+            query.Test1();
         }
     }
 }
