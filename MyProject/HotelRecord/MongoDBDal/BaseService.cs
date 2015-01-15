@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Core.Objects;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using MongoDB.Driver.Linq;
 using MyProject.HotelRecord.Entity;
 
-namespace MyProject.HotelRecord.SqlDal
+namespace MyProject.HotelRecord.MongoDBDal
 {
     public class BaseService<T> where T : BaseEntity
     {
@@ -33,20 +28,36 @@ namespace MyProject.HotelRecord.SqlDal
         #endregion
 
         #region 在集合中添加实体对象
-        public virtual void Add(T entity)
+        public virtual WriteConcernResult AddEdit(T entity)
         {
             if (entity.Id < 1)
             {
                 entity.Id = NewId;
             }
-            Collections.Save(entity);
+         return Collections.Save(entity);
         }
         #endregion
 
         #region 根据Id删除实体对象
-        public virtual void Delete(int id)
+        public virtual WriteConcernResult Delete(int id)
         {
-            Collections.Remove(Query.EQ("_id", id), RemoveFlags.Single);
+            return Collections.Remove(Query.EQ("_id", id), RemoveFlags.Single);
+        }
+        #endregion 
+        
+        #region 
+        public virtual IEnumerable<WriteConcernResult> AddList(IEnumerable<T> list)
+        {
+            var enumerable = list as IList<T> ?? list.ToList();
+           
+            foreach (var entity in enumerable)
+            {
+                if (entity.Id < 1)
+                {
+                    entity.Id = NewId;
+                }
+            }
+            return  Collections.InsertBatch(enumerable);
         }
         #endregion
 

@@ -11,9 +11,6 @@ namespace MyProject.HotelRecord.Entity
     public class BaseEntity
     {
         public int Id { get; set; }
-
-
-
     }
     public class Record : BaseEntity
     {
