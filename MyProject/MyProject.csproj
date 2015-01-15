@@ -89,6 +89,7 @@
     <Compile Include="HotelRecord\Entity\cdsgus.cs" />
     <Compile Include="HotelRecord\Entity\Mapper.cs" />
     <Compile Include="HotelRecord\Entity\Record.cs" />
+    <Compile Include="HotelRecord\Manager\QueryHotel.cs" />
     <Compile Include="HotelRecord\MongoDBDal\BaseService.cs" />
     <Compile Include="HotelRecord\MongoDBDal\RecordService.cs" />
     <Compile Include="HotelRecord\SqlDal\MyContext.cs" />

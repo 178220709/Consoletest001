@@ -11,7 +11,7 @@ namespace BaseFeatureDemo.Base.ThreadDemo.ThreadNew
     public class TaskDemo
     {
         [TestMethod]
-        public  static void Main1()
+        public static void Main1()
         {
             Action<object> printMessage = o =>
             {
@@ -58,7 +58,7 @@ namespace BaseFeatureDemo.Base.ThreadDemo.ThreadNew
             {
                 for (var i = 0; i < 1000; i++)
                 {
-                    loop += i;
+                    loop += 1;
                     Thread.Sleep(5);
                 }
 
@@ -68,6 +68,7 @@ namespace BaseFeatureDemo.Base.ThreadDemo.ThreadNew
             var loopResut = task1.Result;
             var task2 = new Task<long>(obj =>
             {
+
                 long res = 0;
                 var looptimes = (int)obj;
                 for (var i = 0; i < looptimes; i++)
@@ -78,7 +79,7 @@ namespace BaseFeatureDemo.Base.ThreadDemo.ThreadNew
                 return res;
             }, loopResut);
 
-            task2.Start();
+            // task2.Start();
             var resultTask2 = task2.Result;
 
             Console.WriteLine("Task1's result:{0}\nTask2's result:{1}",
@@ -93,18 +94,39 @@ namespace BaseFeatureDemo.Base.ThreadDemo.ThreadNew
 
             Action<object> doAction = (i) =>
             {
-                Console.WriteLine( " Thread{0} is start at {1}   ",i, TestHelper.GetCurrentTime());
-                Thread.Sleep(random.Next(100,800));
+                Console.WriteLine(" Thread{0} is start at {1}   ", i, TestHelper.GetCurrentTime());
+                Thread.Sleep(random.Next(100, 800));
                 Console.WriteLine(" Thread{0} is over at {1}   ", i, TestHelper.GetCurrentTime());
             };
 
             for (var i = 0; i < 16; i++)
             {
-                Task task = new Task(doAction,i);
+                Task task = new Task(doAction, i);
                 Console.WriteLine(" MainThread is open task{0} at {1}   ", i, TestHelper.GetCurrentTime());
                 task.Start();
             }
-            Thread.Sleep(20*1000);
+            Thread.Sleep(20 * 1000);
+
+        }
+
+        public static void Main4()
+        {
+            var task1 = Task.Factory.StartNew(() =>
+            {
+                Thread.Sleep(3000);
+                Console.WriteLine("Done!(3s)");
+            });
+            var task2 = Task.Factory.StartNew(() =>
+            {
+                Thread.Sleep(5000);
+                Console.WriteLine("Done!(5s)");
+            });
+            //等待任一作業完成後繼續
+            Task.WaitAny(task1, task2);
+            Console.WriteLine("WaitAny Passed");
+            //等待兩項作業都完成才會繼續執行
+            Task.WaitAll(task1, task2);
+            Console.WriteLine("WaitAll Passed");
 
         }
 
