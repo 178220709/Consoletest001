@@ -61,7 +61,7 @@ namespace BaseFeatureTest.EFDemo
         public void ManagerTest()
         {
             QueryHotel query = new QueryHotel();
-            query.Test1();
+            query.TransDataToMG();
         }
     }
 }

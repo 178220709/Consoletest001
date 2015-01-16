@@ -23,7 +23,7 @@ namespace BaseFeatureDemo
         {
 
             QueryHotel query = new QueryHotel();
-            query.Test1();
+            query.TransDataToMG();
         }
     }
 }

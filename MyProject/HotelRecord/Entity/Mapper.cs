@@ -8,13 +8,13 @@ namespace MyProject.HotelRecord.Entity
 {
    public static class Mapper
     {
-       private static DateTime ParseDateTime(string str)
+       public static DateTime ParseDateTime(string str)
        {
            DateTime dt;
            DateTime.TryParse(str, out dt);
            return dt;
        }
-       private static int ParseToInt(string str)
+       public static int ParseToInt(string str)
        {
            int result = 0;
            int.TryParse(str, out result);
@@ -25,6 +25,7 @@ namespace MyProject.HotelRecord.Entity
        {
            return new Record()
            {
+               OldId = model.id,
                Address = model.Address,
                Name = model.Name,
                BirthDay = ParseToInt(model.Birthday),
