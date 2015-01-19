@@ -12,6 +12,7 @@ using BaseFeatureDemo.Base.Reg;
 using BaseFeatureDemo.Base.ThreadDemo.ThreadBase;
 using BaseFeatureDemo.Base.ThreadDemo.ThreadNew;
 using BaseFeatureDemo.MyGame;
+using MyProject.HotelRecord.Manager;
 using MyProject.TestHelper;
 
 namespace BaseFeatureDemo
@@ -20,9 +21,9 @@ namespace BaseFeatureDemo
     {
         static void Main(string[] args)
         {
-          
-           // SudokuDemo.Main1();
-            TaskDemo.Main2();
+
+            QueryHotel query = new QueryHotel();
+            query.TransDataToMG();
         }
     }
 }

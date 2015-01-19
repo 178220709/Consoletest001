@@ -8,21 +8,27 @@ namespace MyProject.HotelRecord.Entity
 {
    public static class Mapper
     {
-       private static DateTime ParseDateTime(string str)
+       public static DateTime ParseDateTime(string str)
        {
            DateTime dt;
            DateTime.TryParse(str, out dt);
            return dt;
        }
-
+       public static int ParseToInt(string str)
+       {
+           int result = 0;
+           int.TryParse(str, out result);
+           return result;
+       }
 
        public static Record TransCdsgus(cdsgus model)
        {
            return new Record()
            {
+               OldId = model.id,
                Address = model.Address,
                Name = model.Name,
-               BirthDay = string.IsNullOrWhiteSpace(model.Birthday) ? 0 : Convert.ToInt32(model.Birthday),
+               BirthDay = ParseToInt(model.Birthday),
                Code = model.CtfId,
                CtfTp = model.CtfTp,
                Email = model.EMail,
