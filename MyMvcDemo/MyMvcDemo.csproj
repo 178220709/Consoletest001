@@ -2696,13 +2696,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Pages\MyJSDemo\Base\Base.js" />
     <Content Include="Views\QUnitTests\Sample.js" />
-    <Content Include="Scripts\defaults.js" />
     <Content Include="Scripts\Extend\jquery.form.js" />
     <Content Include="Scripts\Extend\lambdaJS.js" />
-    <Content Include="Scripts\index.cshtml.js" />
     <Content Include="Views\QUnitTests\index.cshtml" />
     <Content Include="Views\QUnitTests\_PageStart.cshtml" />
     <Content Include="Views\QUnitTests\_Layout.cshtml" />
@@ -2713,16 +2710,9 @@
     <Content Include="Content\libs\qunit\qunit.js" />
     <Content Include="Scripts\ux\jq.optionField.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Scripts\jquery.jqGrid.defaults.js" />
-    <Content Include="Scripts\login.js" />
-    <Content Include="Scripts\select2.defaults.js" />
     <Content Include="Scripts\util.js" />
     <Content Include="Scripts\ux\jq.photoAlbumField.js" />
-    <Content Include="Scripts\validations.js" />
     <Content Include="Scripts\ux\jq.imageField.js" />
-    <Content Include="Scripts\treeUtil.js" />
-    <Content Include="Scripts\doCopyUtil.js" />
-    <Content Include="Scripts\datetimepicker.defaults.js" />
     <Content Include="Scripts\checkDataUtil.js" />
     <Content Include="Content\TestDemo\Hook.js-master\hook-bg.png" />
     <Content Include="Content\TestDemo\Hook.js-master\hook-bgs.png" />
@@ -3080,6 +3070,9 @@
   <ItemGroup>
     <Content Include="Content\TestDemo\avalon-master\examples\firstavalon\nbproject\private\private.properties" />
     <Content Include="Content\TestDemo\avalon-master\examples\firstavalon\nbproject\project.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MyJSDemo\Base.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -27,6 +27,12 @@ namespace MyMvcDemo.Controllers
         public ActionResult Closure1()
         {
             return View();
+        } 
+        
+        [Module(Name = "Closure", CSS = MyConstants.Bootstrap.Icon.User)]
+        public ActionResult Base()
+        {
+            return View();
         }   
           
 
