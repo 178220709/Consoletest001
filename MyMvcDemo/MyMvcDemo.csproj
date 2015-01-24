@@ -2696,6 +2696,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\Pages\MyJSDemo\Base\Base.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\Base1.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\Base2.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\jsProtoType.js" />
