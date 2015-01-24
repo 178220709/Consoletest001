@@ -42,11 +42,11 @@ namespace MyProject.HotelRecord.Manager
                    // Date = ParseDateTime(model.Version)
                     OldDate = model.Version
                 }).ToList();
-               msList.ForEach(a =>
-                {
-                    a.BirthDay = Mapper.ParseToInt(a.OldBirthDay);
-                    a.Date = Mapper.ParseDateTime(a.OldDate);
-                });
+                msList.ForEach(a =>
+                 {
+                     a.BirthDay = Mapper.ParseToInt(a.OldBirthDay);
+                     a.Date = Mapper.ParseDateTime(a.OldDate);
+                 });
                // RecordService.Instance.AddList(mgList);
                 Trace.WriteLine("next dealing is :" + cIndex);
                // Trace.WriteLine();
