@@ -2780,11 +2780,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Scripts\Pages\MyJSDemo\Base\Base.js" />
-    <Content Include="Scripts\Pages\MyJSDemo\Base\Base1.js" />
-    <Content Include="Scripts\Pages\MyJSDemo\Base\Base2.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\jsProtoType.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\ValueAndRefernce.js" />
+    <Content Include="Scripts\Pages\MyJSDemo\Base\Base2.js" />
+    <Content Include="Scripts\Pages\MyJSDemo\Base\Base1.js" />
+ 
     <Content Include="Views\QUnitTests\Sample.js" />
     <Content Include="Scripts\Extend\jquery.form.js" />
     <Content Include="Scripts\Extend\lambdaJS.js" />

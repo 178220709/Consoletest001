@@ -84,6 +84,7 @@
     <Compile Include="Base\Yield\YieldTest1.cs" />
     <Compile Include="Base\Delegate\PredicateDemo.cs" />
     <Compile Include="Base\Delegate\TimeControl.cs" />
+    <Compile Include="Encrypt\Authcode.cs" />
     <Compile Include="Encrypt\HASHDemo.cs" />
     <Compile Include="Image\ImageDemo.cs" />
     <Compile Include="Encrypt\RSAManager.cs" />
