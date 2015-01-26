@@ -31,3 +31,7 @@ Chinese.prototype.getNation = function () {
 
 var c = new Chinese("liyatang", "China");
 console.log(c.getName());
+
+var p = new Person();
+var res = (p.__proto__ == Person.prototype);
+
