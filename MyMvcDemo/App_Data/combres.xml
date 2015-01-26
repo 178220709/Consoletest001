@@ -46,7 +46,7 @@
       <resource path="~/Content\libs\avalon\avalon.js"/>
     
       <resource path="~/content/libs/seajs-2.3.0/sea-debug.js"/>
-      <resource path="~/Content/libs/jquery.cookie-1.4.0/jquery.cookie.js"/>
+      <resource path="~/Content/libs/jquery.cookie/jquery.cookie.js"/>
       <!--<resource path="~/Content/libs/blockUI-2.57/jquery.blockUI.js"/>-->
       <!--ace-start-->
       <resource path="~/Content\libs\AdminLTE\bootstrap\js\bootstrap.min.js"/>

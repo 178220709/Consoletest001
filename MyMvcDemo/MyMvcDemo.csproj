@@ -2772,7 +2772,7 @@
     <Content Include="Content\libs\jquery-ui-1.10.4\js\jquery-ui-1.10.4.custom.min.js" />
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\libs\HTML5Shiv-v3.7.0\html5shiv.js" />
-    <Content Include="Content\libs\jquery.cookie-1.4.0\jquery.cookie.js" />
+    <Content Include="Content\libs\jquery.cookie\jquery.cookie.js" />
     <Content Include="Content\libs\jquery.validate-v1.11.1\jquery.validate.min.js" />
     <Content Include="Content\libs\json2\json2.js" />
     <Content Include="Content\libs\moment-2.1\moment.min.js" />
