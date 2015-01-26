@@ -1,9 +1,7 @@
-﻿using System;
-using System.ComponentModel;
-using System.IO;
+﻿using System.ComponentModel;
 using Omu.ValueInjecter;
 
-namespace Suijing.Utils
+namespace Suijing.Utils.sysTools
 {
     public  class CreateDataHepler
     {

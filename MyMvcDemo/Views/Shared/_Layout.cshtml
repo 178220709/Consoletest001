@@ -1,5 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
+    <head>
+        <title>@ViewBag.Title</title>
 
         <!--[if lte IE 8]>
             <link rel="stylesheet" href="~/Content/libs/ace/css/ace.min.css" />
@@ -19,34 +21,34 @@
        
 
 
-    <!--[if lte IE 9]>
-			<link rel="stylesheet" href="~/Content/libs/ace/css/ace-part2.min.css" />
-		<![endif]-->
+        <!--[if lte IE 9]>
+            <link rel="stylesheet" href="~/Content/libs/ace/css/ace-part2.min.css" />
+        <![endif]-->
 
 
-    <!--[if lte IE 9]>
-		  <link rel="stylesheet" href="~/Content/libs/ace/css/ace-ie.min.css" />
-		<![endif]-->
+        <!--[if lte IE 9]>
+            <link rel="stylesheet" href="~/Content/libs/ace/css/ace-ie.min.css" />
+        <![endif]-->
 
-    <!--[if lte IE 8]>
-		<script src="~/Content/libs/ace/js/html5shiv.min.js"></script>
-		<script src="~/Content/libs/ace/js/respond.min.js"></script>
-       <![endif]-->
-    @Url.CombresLink("siteCss")
+        <!--[if lte IE 8]>
+            <script src="~/Content/libs/ace/js/html5shiv.min.js"></script>
+            <script src="~/Content/libs/ace/js/respond.min.js"></script>
+        <![endif]-->
+        @Url.CombresLink("siteCss")
 
-    @Url.CombresLink("framework")
-    @RenderSection("head", false)
+        @Url.CombresLink("framework")
+        @RenderSection("head", false)
 
 
 
-    <!--[if lte IE 9]>
-		<script src="~/Content/libs/ace/js/html5shiv.min.js"></script>
-		<script src="~/Content/libs/ace/js/respond.min.js"></script>
-       <![endif]-->
+        <!--[if lte IE 9]>
+            <script src="~/Content/libs/ace/js/html5shiv.min.js"></script>
+            <script src="~/Content/libs/ace/js/respond.min.js"></script>
+        <![endif]-->
 
-</head>
+    </head>
 
-<body class="no-skin">
+    <body class="no-skin">
     @RenderBody()
 
     <!--[if !IE]>

@@ -43,6 +43,7 @@
       <HintPath>..\packages\valueinjecter.2.3.3\lib\net35\Omu.ValueInjecter.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -52,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigTools\ConfigHelper.cs" />
     <Compile Include="sysTools\CreateDataHepler.cs" />
     <Compile Include="sysTools\LogHepler.cs" />
     <Compile Include="WebTools\CacheHepler.cs" />

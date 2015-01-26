@@ -10,6 +10,7 @@ using MyProject.HotelRecord.Manager;
 using MyProject.HotelRecord.MongoDBDal;
 using MyProject.HotelRecord.SqlDal;
 using Suijing.Utils;
+using Suijing.Utils.sysTools;
 using Suijing.Utils.WebTools;
 
 namespace BaseFeatureTest.EFDemo    

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Suijing.Utils
+namespace Suijing.Utils.sysTools
 {
     public  class LogHepler
     {
