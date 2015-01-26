@@ -9,6 +9,24 @@
     <_PublishTargetUrl>D:\code\WebSite\mvcDemo</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="App_Data/appSettings.config">
+      <publishTime>01/26/2015 22:42:18</publishTime>
+    </File>
+    <File Include="App_Data/combres.xml">
+      <publishTime>01/27/2015 00:25:35</publishTime>
+    </File>
+    <File Include="App_Data/combres_full_with_annotation.xml">
+      <publishTime>07/16/2014 23:20:16</publishTime>
+    </File>
+    <File Include="App_Data/combres_minimal.xml">
+      <publishTime>07/16/2014 23:20:16</publishTime>
+    </File>
+    <File Include="App_Data/jsConfigs.js">
+      <publishTime>09/05/2014 10:13:44</publishTime>
+    </File>
+    <File Include="App_Data/MimeTypes.json">
+      <publishTime>07/16/2014 23:20:16</publishTime>
+    </File>
     <File Include="bin/AjaxMin.dll">
       <publishTime>06/22/2014 17:44:50</publishTime>
     </File>
