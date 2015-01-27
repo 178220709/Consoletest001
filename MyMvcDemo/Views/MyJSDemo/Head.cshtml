@@ -10,7 +10,7 @@
         new IndexColumnModel(){Name = "Closure  ",Url = Url.Action("Closure1")},
     };
     var cntr = ViewContext.Controller;
-    var module = cntr.GetType().GetControllerActionAndFillList();
+    var module = cntr.GetType().GetControllerActions();
 }
 
 

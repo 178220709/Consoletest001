@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigTools\ConfigHelper.cs" />
+    <Compile Include="sysTools\CollectionHepler.cs" />
     <Compile Include="sysTools\CreateDataHepler.cs" />
     <Compile Include="sysTools\LogHepler.cs" />
     <Compile Include="WebTools\CacheHepler.cs" />

@@ -18,12 +18,12 @@ namespace MyMvcDemo.Extend
                 .Where(a => typeof(Controller).IsAssignableFrom(a)).ToList();
             //循环所有的controller 取出用特性标记的action
             IList<ModuleDTO> modules = typeArr.Where(t => t.HasAttribute<ModuleAttribute>())
-                .Select(t => t.GetControllerActionAndFillList())
+                .Select(t => t.GetControllerActions())
                 .Where(module => module != null).ToList();
             return modules.OrderBy(a=>a.Sort).ToList();
         }
 
-        public static ModuleDTO GetControllerActionAndFillList(this Type type)
+        public static ModuleDTO GetControllerActions(this Type type)
         {
            
             if (!typeof(Controller).IsAssignableFrom(type))
