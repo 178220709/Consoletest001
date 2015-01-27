@@ -1,4 +1,0 @@
-angularjs
-=========
-
-angularjs demo

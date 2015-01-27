@@ -10,391 +10,430 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Data/appSettings.config">
-      <publishTime>01/26/2015 22:42:18</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="App_Data/combres.xml">
-      <publishTime>01/27/2015 00:25:35</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="App_Data/combres_full_with_annotation.xml">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="App_Data/combres_minimal.xml">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="App_Data/jsConfigs.js">
-      <publishTime>09/05/2014 10:13:44</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="App_Data/MimeTypes.json">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="bin/AjaxMin.dll">
-      <publishTime>06/22/2014 17:44:50</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/Combres.dll">
-      <publishTime>06/22/2014 17:44:42</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/Combres.Mvc.dll">
-      <publishTime>06/22/2014 17:44:42</publishTime>
+      <publishTime>12/24/2014 19:08:33</publishTime>
     </File>
     <File Include="bin/dotless.Core.dll">
-      <publishTime>06/22/2014 17:44:43</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/EcmaScript.NET.modified.dll">
-      <publishTime>06/22/2014 17:44:53</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>12/25/2014 22:40:55</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>12/25/2014 22:40:55</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/Fasterflect.dll">
-      <publishTime>06/22/2014 17:44:44</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/HtmlAgilityPack.dll">
-      <publishTime>06/18/2014 22:10:21</publishTime>
+      <publishTime>12/24/2014 19:08:32</publishTime>
     </File>
     <File Include="bin/ImageResizer.dll">
-      <publishTime>06/22/2014 17:44:41</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/ImageResizer.FluentExtensions.dll">
-      <publishTime>06/22/2014 17:44:39</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/ImageResizer.FluentExtensions.Mvc.dll">
-      <publishTime>06/22/2014 17:44:39</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/ImageResizer.Mvc.dll">
-      <publishTime>06/22/2014 17:44:41</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/ImageResizer.Plugins.DiskCache.dll">
-      <publishTime>06/22/2014 17:44:42</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/log4net.dll">
-      <publishTime>11/20/2014 21:37:58</publishTime>
+      <publishTime>12/24/2014 19:08:32</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>06/22/2014 17:44:39</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/MongoDB.Bson.dll">
-      <publishTime>11/03/2014 14:56:08</publishTime>
+      <publishTime>01/04/2015 09:16:23</publishTime>
     </File>
     <File Include="bin/MongoDB.Driver.dll">
-      <publishTime>11/03/2014 14:56:08</publishTime>
+      <publishTime>01/04/2015 09:16:23</publishTime>
     </File>
     <File Include="bin/MyMvcDemo.dll">
-      <publishTime>01/27/2015 00:26:28</publishTime>
+      <publishTime>01/27/2015 17:43:21</publishTime>
     </File>
     <File Include="bin/MyProject.dll">
-      <publishTime>01/26/2015 20:51:17</publishTime>
+      <publishTime>01/27/2015 17:41:38</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>06/17/2014 22:48:52</publishTime>
+      <publishTime>01/27/2015 17:11:42</publishTime>
     </File>
     <File Include="bin/Omu.ValueInjecter.dll">
-      <publishTime>06/22/2014 17:44:43</publishTime>
+      <publishTime>12/24/2014 19:08:32</publishTime>
     </File>
     <File Include="bin/ServiceStack.Text.dll">
-      <publishTime>06/22/2014 17:44:48</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/ServiceStack.Text.EnumMemberSerializer.dll">
-      <publishTime>06/22/2014 17:44:44</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/Suijing.Utils.dll">
-      <publishTime>01/26/2015 22:44:28</publishTime>
+      <publishTime>01/27/2015 17:41:38</publishTime>
+    </File>
+    <File Include="bin/System.EnterpriseServices.dll">
+      <publishTime>03/18/2010 19:31:26</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>07/09/2013 11:04:48</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>12/24/2014 19:08:34</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>07/09/2013 11:04:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Entity.dll">
+      <publishTime>03/18/2010 19:31:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.Extensions.dll">
+      <publishTime>03/18/2010 19:31:26</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>06/22/2014 17:44:39</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>12/24/2014 19:08:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>06/22/2014 17:44:38</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>06/22/2014 17:44:44</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Deployment.dll">
-      <publishTime>06/22/2014 17:44:39</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.dll">
-      <publishTime>06/22/2014 17:44:39</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Razor.dll">
-      <publishTime>06/22/2014 17:44:39</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/WebActivator.dll">
-      <publishTime>06/22/2014 17:44:44</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/Yahoo.Yui.Compressor.dll">
-      <publishTime>06/22/2014 17:44:53</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.Formatting.resources.dll">
+      <publishTime>12/24/2014 19:08:35</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.resources.dll">
+      <publishTime>07/09/2013 11:34:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.WebRequest.resources.dll">
+      <publishTime>07/09/2013 11:34:40</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Web.Helpers.resources.dll">
-      <publishTime>06/22/2014 17:45:27</publishTime>
+      <publishTime>12/24/2014 19:08:35</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.resources.dll">
+      <publishTime>12/24/2014 19:08:35</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.WebHost.resources.dll">
+      <publishTime>12/24/2014 19:08:35</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Web.Mvc.resources.dll">
-      <publishTime>06/22/2014 17:45:27</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
-      <publishTime>06/22/2014 17:45:31</publishTime>
+      <publishTime>12/24/2014 19:08:34</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Web.WebPages.Deployment.resources.dll">
-      <publishTime>06/22/2014 17:45:27</publishTime>
+      <publishTime>12/24/2014 19:08:35</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Web.WebPages.Razor.resources.dll">
-      <publishTime>06/22/2014 17:45:27</publishTime>
+      <publishTime>12/24/2014 19:08:35</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Web.WebPages.resources.dll">
-      <publishTime>06/22/2014 17:45:27</publishTime>
+      <publishTime>12/24/2014 19:08:35</publishTime>
     </File>
     <File Include="combres.readme">
-      <publishTime>07/16/2014 23:20:17</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Content/css/bootstrapicon/fontawesome-webfont.svg">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/css/bootstrapicon/fontawesome-webfontd41d.eot">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/css/bootstrapicon/fontawesome-webfontf77b.eot">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/css/bootstrapicon/fontawesome-webfontf77b.ttf">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/css/bootstrapicon/fontawesome-webfontf77b.woff">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/css/fm.css">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/css/font-awesome.min.css">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/css/mime_icons.css">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/css/rewriteEasyui.css">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/css/rewriteJQGrid.css">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/css/style.css">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/imgs/copy.png">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/imgs/icons/down.png">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/imgs/icons/ui-icons_2e83ff_256x240.png">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/imgs/icons/ui-icons_469bdd_256x240.png">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/imgs/icons/up.png">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/imgs/paste.png">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/imgs/photo.png">
-      <publishTime>01/26/2015 23:32:42</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/imgs/spinner-md.gif">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/bootstrap/css/bootstrap-theme.css">
-      <publishTime>01/26/2015 23:45:36</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/bootstrap/css/bootstrap-theme.css.map">
-      <publishTime>01/26/2015 23:45:36</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/bootstrap/css/bootstrap-theme.min.css">
-      <publishTime>01/26/2015 23:45:36</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/bootstrap/css/bootstrap.css">
-      <publishTime>01/26/2015 23:45:36</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/bootstrap/css/bootstrap.css.map">
-      <publishTime>01/26/2015 23:45:36</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/bootstrap/css/bootstrap.min.css">
-      <publishTime>01/26/2015 23:45:36</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/bootstrap/fonts/glyphicons-halflings-regular.eot">
-      <publishTime>01/26/2015 23:45:39</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/bootstrap/fonts/glyphicons-halflings-regular.svg">
-      <publishTime>01/26/2015 23:45:40</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/bootstrap/fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>01/26/2015 23:45:40</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/bootstrap/fonts/glyphicons-halflings-regular.woff">
-      <publishTime>01/26/2015 23:45:41</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/bootstrap/js/bootstrap.js">
-      <publishTime>01/26/2015 23:45:41</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/bootstrap/js/bootstrap.min.js">
-      <publishTime>01/26/2015 23:45:41</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/bootstrap/js/npm.js">
-      <publishTime>01/26/2015 23:45:41</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/css/AdminLTE.css">
-      <publishTime>01/26/2015 23:28:53</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/js/app.js">
-      <publishTime>01/26/2015 22:28:09</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/js/jquery.js">
-      <publishTime>01/26/2015 23:46:47</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/angularJS/angular-route.js">
-      <publishTime>12/13/2014 22:59:27</publishTime>
+      <publishTime>12/24/2014 18:43:47</publishTime>
     </File>
     <File Include="Content/libs/angularJS/angular-route.min.js">
-      <publishTime>12/13/2014 22:59:27</publishTime>
+      <publishTime>12/24/2014 18:43:47</publishTime>
     </File>
     <File Include="Content/libs/angularJS/angular.js">
-      <publishTime>12/13/2014 22:59:27</publishTime>
+      <publishTime>12/24/2014 18:43:47</publishTime>
     </File>
     <File Include="Content/libs/angularJS/angular.min.js">
-      <publishTime>12/13/2014 22:59:27</publishTime>
+      <publishTime>12/24/2014 18:43:47</publishTime>
     </File>
     <File Include="Content/libs/angularJS/angular.min.js.map">
-      <publishTime>12/13/2014 22:59:27</publishTime>
+      <publishTime>12/24/2014 18:43:47</publishTime>
     </File>
     <File Include="Content/libs/angularJS/controller.js">
-      <publishTime>12/13/2014 22:59:27</publishTime>
+      <publishTime>12/24/2014 18:43:47</publishTime>
     </File>
     <File Include="Content/libs/artDialog-6.0/css/ui-dialog.css">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/artDialog-6.0/src/dialog-config.js">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/artDialog-6.0/src/dialog-plus.js">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/artDialog-6.0/src/dialog.js">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/artDialog-6.0/src/drag.js">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/artDialog-6.0/src/popup.js">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/avalon/avalon.js">
-      <publishTime>01/27/2015 00:05:50</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/avalon/avalon.modern.js">
-      <publishTime>01/27/2015 00:05:50</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/HTML5Shiv-v3.7.0/html5shiv.js">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/animated-overlay.gif">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/ui-bg_flat_10_000000_40x100.png">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/ui-icons_222222_256x240.png">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/ui-icons_228ef1_256x240.png">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/ui-icons_ef8c08_256x240.png">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/ui-icons_ffd27a_256x240.png">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/images/ui-icons_ffffff_256x240.png">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/jquery-ui-1.10.4.custom.css">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/js/jquery-1.10.2.js">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/js/jquery-ui-1.10.4.custom.js">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Content/libs/jquery-ui-1.10.4/js/jquery-ui-1.10.4.custom.min.js">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Content/libs/jquery.cookie/jquery.cookie.js">
-      <publishTime>01/27/2015 00:25:15</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/jquery.validate-v1.11.1/jquery.validate.min.js">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Content/libs/json2/json2.js">
-      <publishTime>07/16/2014 23:20:17</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Content/libs/moment-2.1/moment.min.js">
-      <publishTime>07/16/2014 23:20:17</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Content/libs/moment-2.1/zh-cn.js">
-      <publishTime>07/16/2014 23:20:17</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Content/libs/qunit/qunit.css">
-      <publishTime>10/29/2014 23:51:28</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Content/libs/qunit/qunit.js">
-      <publishTime>11/01/2014 23:03:59</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Content/libs/seajs-2.3.0/sea-debug.js">
-      <publishTime>01/13/2015 22:07:12</publishTime>
+      <publishTime>01/26/2015 17:24:27</publishTime>
     </File>
     <File Include="Content/libs/seajs-2.3.0/sea.js">
-      <publishTime>01/13/2015 22:07:12</publishTime>
+      <publishTime>01/26/2015 17:24:27</publishTime>
     </File>
     <File Include="Content/libs/underscore/underscore-min.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/04/2015 09:07:08</publishTime>
     </File>
     <File Include="Content/libs/underscore/underscore-min.map">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/04/2015 09:07:08</publishTime>
     </File>
     <File Include="Content/libs/underscore/underscore.js">
-      <publishTime>01/26/2015 23:58:41</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/libs/underscore/underscore.string.js">
-      <publishTime>01/26/2015 23:59:49</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Content/TestDemo/angular-1.3.8/angular-animate.js">
       <publishTime>01/03/2015 23:03:21</publishTime>
@@ -7720,547 +7759,547 @@
       <publishTime>11/20/2014 19:27:03</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/.gitignore">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/avalon.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/avalon.mobile.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/avalon.modern.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/bin/AspNet40.EXE">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/bin/bin/AspNet40.EXE">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/compiler.jar">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/%24fire.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/%24fire2.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/%24fire3.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/%24watch.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/architecture.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/attr.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/avalon.bubble.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/avalon.repeat.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/avalon.repeat.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/class.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 11:34:56</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/class1.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 11:30:28</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/class2.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 12:45:40</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/class3.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/css0.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/css1.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/css2.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/css3.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/data.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/dialog.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/dialog1.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/dialog2.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/duplex1.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 13:26:43</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/duplex2.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 14:50:15</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/duplex3.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 14:51:46</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/duplex4.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/duplex5.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 15:13:01</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/duplex6.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 15:20:30</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/duplex7.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 16:03:37</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/duplex8.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/firstavalon/index.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:40:57</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/firstavalon/main.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:40:57</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/firstavalon/modules/aaa/aaa.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:40:57</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/firstavalon/modules/aaa/aaa.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:40:57</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/firstavalon/nbproject/private/private.properties">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:40:57</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/firstavalon/nbproject/private/private.xml">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:40:57</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/firstavalon/nbproject/project.properties">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:40:57</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/firstavalon/nbproject/project.xml">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:40:57</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/firstavalon/vendor/avalon/avalon.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:40:57</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/firstavalon/vendor/jquery/jquery-2.1.1.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:40:57</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/firstavalon/vendor/require/css.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:40:57</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/firstavalon/vendor/require/domReady.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:40:57</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/firstavalon/vendor/require/require.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:40:57</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/firstavalon/vendor/require/text.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:40:57</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/grid.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/href.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/html.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/if0.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/if1.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/if2.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/if3.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/if3tmpl.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/if4.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/images/book">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/images/ecosphere.jpg">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/images/example.jpg">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/images/loading.gif">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/include.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/include2.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/include2aaa.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/include2bbb.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/include3.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/includeTemplate1.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/includeTemplate2.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/includeTemplate3.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/index.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/loading.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/on0.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 13:52:54</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/on1.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/on2.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/on3.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/on4.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/on5.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat0.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat1.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat10.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat11.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat12.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat13.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat14.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat15.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat16.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat17.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat18.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat2.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat3.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat4.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat5.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat6.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat7.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat8.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/repeat9.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/sanisize.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/skipArray.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/svg.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/tabs.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/test1.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/test2.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/test3.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/test4.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/test5.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/text6.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/todos.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/todos2.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/tree.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/validation.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/examples/visible.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/index.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/min/avalon.min.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/min/avalon.mobile.min.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/min/avalon.modern.min.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/min/avalon.observe.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/min/avalon.shim.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/README.md">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/server.exe">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/%24%24combo.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/00 inter.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/01 variable.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/01 variable.modern.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/01 variable.share.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/02 core.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/02 core.modern.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/03 es5.shim.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/04 dom.polyfill.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/04 dom.polyfill.modern.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/05 configuration.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/06 EventBus.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/06 findNodes.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/06 findNodes.modern.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/07 modelFactory.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/07 modelFactory.shim.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/08 Collection.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/09 dispatcher.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/10 HTML.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/10 HTML.modern.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/12 scan.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/12 scanAttr.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/12 scanAttr.modern.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/12 scanNode.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/12 scanTag.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/12 scanTag.modern.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/12 scanText.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/13 dom.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/13 dom.modern.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/14 parser.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/14 parser.modern.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/14 parser.share.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/attr.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/attr.modern.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/class.hover.active.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/controller.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/css.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/data.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/duplex.1.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/duplex.2.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/duplex.2.modern.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/duplex.3.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/html.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/if.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/important.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/include.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/on.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/repeat.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/skip.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/text.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/text.modern.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/visible.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/15 directive/widget.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/16 filter.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/17 loader.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/18 domReady.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/18 domReady.modern.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/18 domReady.noop.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/19 outer.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/avalon-master/src/20 touch.js">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/06/2015 10:11:50</publishTime>
     </File>
     <File Include="Content/TestDemo/examples-seajs/.gitignore">
       <publishTime>01/13/2015 22:07:53</publishTime>
@@ -8611,178 +8650,178 @@
       <publishTime>08/11/2014 20:53:35</publishTime>
     </File>
     <File Include="Content/TestDemo/JsDemo/getIP.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/04/2015 16:53:21</publishTime>
     </File>
     <File Include="Content/TestDemo/JsDemo/index.html">
-      <publishTime>01/13/2015 21:48:50</publishTime>
+      <publishTime>01/14/2015 14:10:49</publishTime>
     </File>
     <File Include="Content/TestDemo/QUnitDemo/1_1hello.html">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/04/2015 16:53:17</publishTime>
     </File>
     <File Include="Content/TestDemo/QUnitDemo/fullDiv.html">
-      <publishTime>11/01/2014 22:37:29</publishTime>
+      <publishTime>12/24/2014 18:43:47</publishTime>
     </File>
     <File Include="Content/TestDemo/QUnitDemo/index.html">
-      <publishTime>08/21/2014 09:08:36</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/TestDemo/QUnitDemo/prettydate.js">
-      <publishTime>08/21/2014 09:08:57</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Content/TestDemo/QUnitDemo/test.html">
-      <publishTime>08/21/2014 09:10:36</publishTime>
+      <publishTime>12/14/2014 17:13:25</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>07/16/2014 23:20:17</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>12/14/2014 17:28:34</publishTime>
+      <publishTime>01/27/2015 17:31:36</publishTime>
     </File>
     <File Include="Scripts/checkDataUtil.js">
-      <publishTime>11/01/2014 23:20:12</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Scripts/Extend/jquery.form.js">
-      <publishTime>07/16/2014 23:20:17</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Scripts/Extend/lambdaJS.js">
-      <publishTime>07/16/2014 23:20:17</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Scripts/Pages/Branches/addEdit.js">
-      <publishTime>07/16/2014 23:20:17</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Scripts/Pages/Branches/attributeList.js">
-      <publishTime>07/16/2014 23:20:17</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Scripts/Pages/Branches/list.js">
-      <publishTime>07/16/2014 23:20:17</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Scripts/Pages/Home/jsClass.js">
-      <publishTime>07/16/2014 23:20:17</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Scripts/Pages/MyJSDemo/Base/Base.js">
-      <publishTime>01/24/2015 16:57:40</publishTime>
+      <publishTime>01/26/2015 17:24:27</publishTime>
     </File>
     <File Include="Scripts/Pages/MyJSDemo/Base/Base1.js">
-      <publishTime>01/20/2015 22:04:50</publishTime>
+      <publishTime>01/19/2015 17:05:28</publishTime>
     </File>
     <File Include="Scripts/Pages/MyJSDemo/Base/Base2.js">
-      <publishTime>01/26/2015 20:56:21</publishTime>
+      <publishTime>01/20/2015 14:03:33</publishTime>
     </File>
     <File Include="Scripts/Pages/MyJSDemo/Base/jsProtoType.js">
-      <publishTime>01/20/2015 22:04:50</publishTime>
+      <publishTime>01/19/2015 17:11:32</publishTime>
     </File>
     <File Include="Scripts/Pages/MyJSDemo/Base/ValueAndRefernce.js">
-      <publishTime>01/20/2015 22:04:50</publishTime>
+      <publishTime>01/19/2015 16:45:42</publishTime>
     </File>
     <File Include="Scripts/util.js">
-      <publishTime>11/01/2014 23:46:26</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Scripts/ux/jq.imageField.js">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Scripts/ux/jq.optionField.js">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Scripts/ux/jq.photoAlbumField.js">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>12/14/2014 17:19:09</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Views/AngularJS/chkDemo.cshtml">
-      <publishTime>12/25/2014 22:46:08</publishTime>
+      <publishTime>12/26/2014 09:27:59</publishTime>
     </File>
     <File Include="Views/AngularJS/Head.cshtml">
-      <publishTime>12/25/2014 22:40:21</publishTime>
+      <publishTime>12/26/2014 09:27:59</publishTime>
     </File>
     <File Include="Views/AngularJS/Index.cshtml">
-      <publishTime>12/14/2014 00:07:35</publishTime>
+      <publishTime>12/24/2014 18:43:47</publishTime>
     </File>
     <File Include="Views/AngularJS/ModelBind.cshtml">
-      <publishTime>01/03/2015 23:03:22</publishTime>
+      <publishTime>12/26/2014 09:27:59</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>01/26/2015 22:59:32</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Views/Home/Index1.cshtml">
-      <publishTime>12/26/2014 21:06:55</publishTime>
+      <publishTime>12/31/2014 10:34:18</publishTime>
     </File>
     <File Include="Views/Home/JStest.cshtml">
-      <publishTime>07/26/2014 00:15:12</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Views/MyJSDemo/Base.cshtml">
-      <publishTime>01/20/2015 22:04:50</publishTime>
+      <publishTime>01/19/2015 17:06:39</publishTime>
     </File>
     <File Include="Views/MyJSDemo/Closure1.cshtml">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/04/2015 09:25:52</publishTime>
     </File>
     <File Include="Views/MyJSDemo/DateTime.cshtml">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/04/2015 09:16:22</publishTime>
     </File>
     <File Include="Views/MyJSDemo/Head.cshtml">
-      <publishTime>01/20/2015 22:04:50</publishTime>
+      <publishTime>01/19/2015 16:09:53</publishTime>
     </File>
     <File Include="Views/MyJSDemo/Index.cshtml">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/04/2015 09:15:43</publishTime>
     </File>
     <File Include="Views/MyQunitDemo/hello.cshtml">
-      <publishTime>11/02/2014 00:29:42</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Views/PrintDemo/Hello.cshtml">
-      <publishTime>12/25/2014 22:25:37</publishTime>
+      <publishTime>12/23/2014 15:38:03</publishTime>
     </File>
     <File Include="Views/QUnitTests/index.cshtml">
-      <publishTime>08/14/2014 22:56:51</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Views/QUnitTests/Sample.js">
-      <publishTime>08/14/2014 22:56:50</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Views/QUnitTests/_Layout.cshtml">
-      <publishTime>08/14/2014 22:56:51</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Views/QUnitTests/_PageStart.cshtml">
-      <publishTime>12/25/2014 22:25:37</publishTime>
+      <publishTime>12/23/2014 15:34:53</publishTime>
     </File>
     <File Include="Views/seaJSDemo/hello.cshtml">
-      <publishTime>12/14/2014 17:19:09</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Views/seaJSDemo/index.cshtml">
-      <publishTime>12/14/2014 17:19:09</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
-      <publishTime>07/16/2014 23:20:17</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Views/Shared/_AngularJSLayout.cshtml">
-      <publishTime>12/14/2014 00:09:16</publishTime>
+      <publishTime>12/24/2014 18:43:47</publishTime>
     </File>
     <File Include="Views/Shared/_BaseJSLayout.cshtml">
-      <publishTime>01/13/2015 23:35:42</publishTime>
+      <publishTime>01/04/2015 09:11:17</publishTime>
     </File>
     <File Include="Views/Shared/_ContentLayout.cshtml">
-      <publishTime>10/25/2014 17:54:28</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Views/Shared/_IndexHead.cshtml">
-      <publishTime>01/20/2015 22:04:50</publishTime>
+      <publishTime>01/19/2015 16:20:03</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>01/26/2015 21:14:43</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Views/Shared/_LteBaseLayout.cshtml">
-      <publishTime>01/26/2015 23:59:12</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Views/Shared/_LteMenuLayout.cshtml">
-      <publishTime>01/27/2015 00:18:25</publishTime>
+      <publishTime>01/27/2015 09:11:38</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>07/16/2014 23:20:17</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Views/Weixin/Index.cshtml">
-      <publishTime>07/24/2014 00:49:56</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Views/Weixin/JStest.cshtml">
-      <publishTime>07/24/2014 00:49:56</publishTime>
+      <publishTime>12/14/2014 17:13:26</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/26/2015 20:51:20</publishTime>
+      <publishTime>01/27/2015 17:41:41</publishTime>
     </File>
   </ItemGroup>
 </Project>
