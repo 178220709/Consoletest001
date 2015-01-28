@@ -10,7 +10,7 @@ namespace MyMvcDemo.Controllers
     public class SeaJSDemoController : Controller
     {
         [HttpGet]
-        [Module(Name = "Index", CSS = MyConstants.Bootstrap.Icon.Globe)]
+        [Module(Name = "SeaJSDemo", CSS = MyConstants.Bootstrap.Icon.Globe)]
         public ActionResult Hello()
         {
             return View();

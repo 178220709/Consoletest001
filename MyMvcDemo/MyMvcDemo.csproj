@@ -635,6 +635,7 @@
     <None Include="Properties\PublishProfiles\MVCDemo.pubxml" />
     <Content Include="Views\Shared\_LteBaseLayout.cshtml" />
     <Content Include="Views\Shared\_LteMenuLayout.cshtml" />
+    <Content Include="Views\seaJSDemo\Head.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
