@@ -1,0 +1,20 @@
+﻿@using Microsoft.Ajax.Utilities
+@using MyMvcDemo.Extend
+
+@{
+    var heads = new List<IndexColumnModel>()
+    {
+        new IndexColumnModel(){Name = "Hello",Url = Url.Action("Hello")},
+        //new IndexColumnModel(){Name = "hello world",Url = Url.Action("Index")},
+        //new IndexColumnModel(){Name = "DateTime",Url = Url.Action("DateTime")},
+        //new IndexColumnModel(){Name = "Closure  ",Url = Url.Action("Closure1")},
+    };
+    var cntr = ViewContext.Controller;
+    var module = ControllerHelper.GetControllerActions(cntr.GetType());
+}
+
+
+
+
+@Html.Partial("_IndexHead", heads)
+

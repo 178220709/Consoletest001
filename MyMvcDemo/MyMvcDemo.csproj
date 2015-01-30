@@ -485,6 +485,7 @@
     <Content Include="Scripts\Pages\MyJSDemo\Base\Base1.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\Base2.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\jsProtoType.js" />
+    <Content Include="Scripts\Pages\MyJSDemo\Base\ValueAndRefernce2.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\ValueAndRefernce.js" />
     <Content Include="Views\QUnitTests\Sample.js" />
     <Content Include="Scripts\Extend\jquery.form.js" />
