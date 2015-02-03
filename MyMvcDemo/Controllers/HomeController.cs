@@ -25,7 +25,7 @@ namespace MyMvcDemo.Controllers
             return View(model);
         }
 
-        [Module(Name = "Index1", CSS = MyConstants.Bootstrap.Icon.Globe)]
+        [Module(Name = "LTEDemo1", CSS = MyConstants.Bootstrap.Icon.Globe)]
         public ActionResult Index1()
         {
             return View();

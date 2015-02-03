@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,9 +19,9 @@
                 $id: "test",
                 a: 1,
                 callback: function() {
-                   model.$fire("down!b", new Date - 0)
+                    model.$fire("down!b", new Date - 0);
                 }
-            })
+            });
             var son = avalon.define({
                 $id: "son",
                 b: 10
