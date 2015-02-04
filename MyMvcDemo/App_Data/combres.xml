@@ -34,11 +34,11 @@
 
     <resourceSet name="framework" type="js"  minifierRef="off">
       <!--<resource path="~/App_Data/jsConfigs.js" />-->
-      <resource path="~/Content\libs\AdminLTE\js\jquery.js"/>
-      <resource path="~/Content\libs\avalon\avalon.js"/>
-    
       <resource path="~/content/libs/seajs-2.3.0/sea-debug.js"/>
-      <resource path="~/Content/libs/jquery.cookie/jquery.cookie.js"/>
+      <resource path="~/Content\libs\AdminLTE\js\jquery.js"/>
+      <!--<resource path="~/Content\libs\avalon\avalon.js"/>-->
+     
+      <!--<resource path="~/Content/libs/jquery.cookie/jquery.cookie.js"/>-->
       <!--<resource path="~/Content/libs/blockUI-2.57/jquery.blockUI.js"/>-->
       <!--ace-start-->
       <resource path="~/Content\libs\AdminLTE\bootstrap\js\bootstrap.min.js"/>
@@ -46,11 +46,11 @@
       <!--ace-end-->
 
 
-      <resource path="~/content/libs/underscore/underscore-min.js"/>
+      <!--<resource path="~/content/libs/underscore/underscore-min.js"/>
       <resource path="~/content/libs/underscore/underscore.string.js"/>
       <resource path="~/Content/libs/json2/json2.js" />
       <resource path="~/Content/libs/moment-2.1/moment.min.js" />
-      <resource path="~/Content/libs/moment-2.1/zh-cn.js" />
+      <resource path="~/Content/libs/moment-2.1/zh-cn.js" />-->
       <!--<resource path="~/Content/libs/select-2-3.4.3/select2.min.js" />
       <resource path="~/Content/libs/select-2-3.4.3/select2_locale_zh-CN.js" />
       <resource path="~/Content/libs/fuelux/fuelux.spinner.min.js"/>-->

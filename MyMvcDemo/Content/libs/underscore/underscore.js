@@ -1412,4 +1412,10 @@
       return _;
     });
   }
+  if (typeof define === 'function' && define.cmd) {
+      define(function (require, exports, module) {
+          module.exports = _;
+      });
+  }
+
 }.call(this));
