@@ -612,7 +612,6 @@
     <Content Include="Content\TestDemo\JsDemo\getIP.html" />
     <Content Include="Content\TestDemo\QUnitDemo\fullDiv.html" />
     <Compile Include="Controllers\AngularJSController.cs" />
-    <Compile Include="Controllers\ModuleController.cs" />
     <Compile Include="Controllers\PrintDemoController.cs" />
     <Compile Include="Controllers\SeaJSDemoController.cs" />
     <Compile Include="Extend\JsonControllerEX\JsonTypeAttribute.cs" />

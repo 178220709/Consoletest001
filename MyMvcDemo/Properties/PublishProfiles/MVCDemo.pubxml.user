@@ -82,7 +82,7 @@
       <publishTime>11/03/2014 14:56:08</publishTime>
     </File>
     <File Include="bin/MyMvcDemo.dll">
-      <publishTime>01/27/2015 21:36:02</publishTime>
+      <publishTime>02/02/2015 15:58:16</publishTime>
     </File>
     <File Include="bin/MyProject.dll">
       <publishTime>01/27/2015 20:49:30</publishTime>
@@ -8712,6 +8712,9 @@
     <File Include="Scripts/Pages/MyJSDemo/Base/ValueAndRefernce.js">
       <publishTime>01/20/2015 22:04:50</publishTime>
     </File>
+    <File Include="Scripts/Pages/MyJSDemo/Base/ValueAndRefernce2.js">
+      <publishTime>02/02/2015 15:55:21</publishTime>
+    </File>
     <File Include="Scripts/util.js">
       <publishTime>11/01/2014 23:46:26</publishTime>
     </File>
@@ -8740,7 +8743,7 @@
       <publishTime>01/03/2015 23:03:22</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>01/26/2015 22:59:32</publishTime>
+      <publishTime>02/02/2015 15:55:21</publishTime>
     </File>
     <File Include="Views/Home/Index1.cshtml">
       <publishTime>12/26/2014 21:06:55</publishTime>
@@ -8749,7 +8752,7 @@
       <publishTime>07/26/2014 00:15:12</publishTime>
     </File>
     <File Include="Views/MyJSDemo/Base.cshtml">
-      <publishTime>01/20/2015 22:04:50</publishTime>
+      <publishTime>02/02/2015 15:55:21</publishTime>
     </File>
     <File Include="Views/MyJSDemo/Closure1.cshtml">
       <publishTime>01/13/2015 23:35:42</publishTime>
@@ -8758,7 +8761,7 @@
       <publishTime>01/13/2015 23:35:42</publishTime>
     </File>
     <File Include="Views/MyJSDemo/Head.cshtml">
-      <publishTime>01/27/2015 20:39:21</publishTime>
+      <publishTime>02/02/2015 15:55:21</publishTime>
     </File>
     <File Include="Views/MyJSDemo/Index.cshtml">
       <publishTime>01/13/2015 23:35:42</publishTime>
@@ -8780,6 +8783,9 @@
     </File>
     <File Include="Views/QUnitTests/_PageStart.cshtml">
       <publishTime>12/25/2014 22:25:37</publishTime>
+    </File>
+    <File Include="Views/seaJSDemo/Head.cshtml">
+      <publishTime>02/02/2015 15:55:21</publishTime>
     </File>
     <File Include="Views/seaJSDemo/hello.cshtml">
       <publishTime>12/14/2014 17:19:09</publishTime>
@@ -8812,7 +8818,7 @@
       <publishTime>01/27/2015 21:35:59</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>07/16/2014 23:20:17</publishTime>
+      <publishTime>02/02/2015 15:55:21</publishTime>
     </File>
     <File Include="Views/Weixin/Index.cshtml">
       <publishTime>07/24/2014 00:49:56</publishTime>
