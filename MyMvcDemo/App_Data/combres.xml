@@ -25,7 +25,7 @@
     
     <resourceSet name="siteCss" type="css">
       <resource path="~/Content/css/style.css"/>
-      <resource path="~/Content/css/rewriteJQGrid.css"/>
+      <!--<resource path="~/Content/css/rewriteJQGrid.css"/>-->
     </resourceSet>
     
     <resourceSet name="login" type="js">

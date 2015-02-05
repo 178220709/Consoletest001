@@ -24,6 +24,16 @@ namespace MyMvcDemo.Controllers
             model.Modules = ControllerHelper.GetIndexModules();
             return View(model);
         }
+         [Module(Name = "首页", CSS = MyConstants.Bootstrap.Icon.Globe)]
+        public ActionResult IndexContent()
+        {
+            return View();
+        }
+         [Module(Name = "目录", CSS = MyConstants.Bootstrap.Icon.Globe)]
+        public ActionResult ContextContent()
+        {
+            return View();
+        }
 
         [Module(Name = "LTEDemo1", CSS = MyConstants.Bootstrap.Icon.Globe)]
         public ActionResult Index1()
@@ -36,5 +46,8 @@ namespace MyMvcDemo.Controllers
         {
             return PartialView();
         }
+
+       
+
     }
 }

@@ -23,14 +23,7 @@ namespace BaseFeatureDemo
         static void Main(string[] args)
         {
 
-            //QueryHotel query = new QueryHotel();
-            //query.TransDataToMG();
-            var souList = new List<string> {"123456","111111","Aa111111"};
-             var resultList = souList.AsEnumerable().Select(Authcode.ConvertToSHA1).ToList();
-
-
-
-          var testList=  Enumerable.Range(0, 100).Select(a => new {Index = a, name = "aa" + a});
+          ListDemo.Main1();
         }
     }
 }

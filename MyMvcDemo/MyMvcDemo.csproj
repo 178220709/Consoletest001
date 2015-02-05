@@ -383,6 +383,8 @@
     <Content Include="Content\libs\angularJS\angular.js" />
     <Content Include="Content\libs\angularJS\angular.min.js" />
     <Content Include="Content\libs\angularJS\controller.js" />
+    <Content Include="Content\libs\avalon\mmHistory.js" />
+    <Content Include="Content\libs\avalon\mmRouter.js" />
     <Content Include="Content\libs\avalon\avalon.js" />
     <Content Include="Content\libs\avalon\avalon.modern.js" />
     <Content Include="Content\libs\avalon\avalon.modern.shim.js" />
@@ -475,6 +477,31 @@
     <Content Include="Content\TestDemo\avalon-master\examples\includeTemplate3.html" />
     <Content Include="Content\TestDemo\avalon-master\examples\index.html" />
     <Content Include="Content\TestDemo\avalon-master\examples\loading.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\avalon.mmRouter.doc.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\avalon.mmRouter.ex.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\avalon.mmRouter.ex1.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\avalon.mmRouter.ex2.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\avalon.mmRouter.ex3.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\avalon.mmRouter.ex4.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\avalon.mmRouter.ex5.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\avalon.mmRouter.ex6.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\avalon.mmRouter.ex7.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\avalon.mmRouter.js" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\contacts.detail.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\contacts.detail.item.edit.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\contacts.detail.item.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\contacts.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\contacts.list.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\mmHistory.js" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\mmRouter-menu.css" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\mmRouter.js" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\mmState.js" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\ui\a.jpg" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\ui\ex.css" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\ui\home.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\ui\list.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\ui\login.html" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\ui\user.html" />
     <Content Include="Content\TestDemo\avalon-master\examples\on0.html" />
     <Content Include="Content\TestDemo\avalon-master\examples\on1.html" />
     <Content Include="Content\TestDemo\avalon-master\examples\on2.html" />
@@ -1118,6 +1145,7 @@
     <Content Include="Scripts\Pages\MyJSDemo\Base\jsProtoType.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\ValueAndRefernce2.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\ValueAndRefernce.js" />
+    <Content Include="Scripts\Public\webUtil.js" />
     <Content Include="Views\QUnitTests\Sample.js" />
     <Content Include="Scripts\Extend\jquery.form.js" />
     <Content Include="Scripts\Extend\lambdaJS.js" />
@@ -1325,10 +1353,14 @@
     <Content Include="Content\TestDemo\seajs\docs\examples-master\static\ng-todo\package.json" />
     <Content Include="Content\TestDemo\seajs\docs\examples-master\static\todo\Makefile" />
     <Content Include="Content\TestDemo\seajs\docs\examples-master\static\todo\package.json" />
+    <Content Include="Content\TestDemo\avalon-master\examples\mmRouter\README.md" />
     <None Include="Properties\PublishProfiles\MVCDemo.pubxml" />
     <Content Include="Views\Shared\_LteBaseLayout.cshtml" />
     <Content Include="Views\Shared\_LteMenuLayout.cshtml" />
     <Content Include="Views\seaJSDemo\Head.cshtml" />
+    <Content Include="Views\Home\indexContent.cshtml" />
+    <Content Include="Views\Home\ContextContent.cshtml" />
+    <Content Include="Views\Shared\LTEPartial\_LteTopTip.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
