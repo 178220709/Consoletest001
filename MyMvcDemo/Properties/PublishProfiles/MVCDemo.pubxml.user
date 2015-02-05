@@ -13,7 +13,7 @@
       <publishTime>01/27/2015 20:34:57</publishTime>
     </File>
     <File Include="App_Data/combres.xml">
-      <publishTime>01/27/2015 20:54:52</publishTime>
+      <publishTime>02/05/2015 20:16:58</publishTime>
     </File>
     <File Include="App_Data/combres_full_with_annotation.xml">
       <publishTime>07/16/2014 23:20:16</publishTime>
@@ -82,10 +82,10 @@
       <publishTime>11/03/2014 14:56:08</publishTime>
     </File>
     <File Include="bin/MyMvcDemo.dll">
-      <publishTime>02/02/2015 15:58:16</publishTime>
+      <publishTime>02/05/2015 22:09:41</publishTime>
     </File>
     <File Include="bin/MyProject.dll">
-      <publishTime>01/27/2015 20:49:30</publishTime>
+      <publishTime>02/05/2015 20:22:17</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>01/27/2015 20:46:17</publishTime>
@@ -100,7 +100,7 @@
       <publishTime>06/22/2014 17:44:44</publishTime>
     </File>
     <File Include="bin/Suijing.Utils.dll">
-      <publishTime>01/27/2015 21:36:01</publishTime>
+      <publishTime>02/05/2015 20:22:17</publishTime>
     </File>
     <File Include="bin/System.EnterpriseServices.dll">
       <publishTime>03/18/2010 19:31:26</publishTime>
@@ -217,7 +217,7 @@
       <publishTime>07/16/2014 23:20:16</publishTime>
     </File>
     <File Include="Content/css/style.css">
-      <publishTime>07/16/2014 23:20:16</publishTime>
+      <publishTime>02/05/2015 20:16:58</publishTime>
     </File>
     <File Include="Content/imgs/copy.png">
       <publishTime>07/16/2014 23:20:16</publishTime>
@@ -285,8 +285,551 @@
     <File Include="Content/libs/AdminLTE/css/AdminLTE.css">
       <publishTime>01/26/2015 23:28:53</publishTime>
     </File>
+    <File Include="Content/libs/AdminLTE/css/bootstrap-slider/slider.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/colorpicker/bootstrap-colorpicker.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/colorpicker/bootstrap-colorpicker.min.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/datatables/dataTables.bootstrap.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/datatables/images/sort_asc.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/datatables/images/sort_asc_disabled.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/datatables/images/sort_both.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/datatables/images/sort_desc.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/datatables/images/sort_desc_disabled.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/datepicker/datepicker3.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/daterangepicker/daterangepicker-bs3.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/font-awesome.min.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/all.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/aero%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/aero.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/aero.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/blue%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/blue.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/blue.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/flat%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/flat.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/flat.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/green%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/green.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/green.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/grey%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/grey.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/grey.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/orange%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/orange.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/orange.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/pink%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/pink.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/pink.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/purple%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/purple.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/purple.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/red%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/red.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/red.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/yellow%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/yellow.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/yellow.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/flat/_all.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/futurico/futurico%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/futurico/futurico.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/futurico/futurico.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/line/aero.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/line/blue.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/line/green.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/line/grey.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/line/line%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/line/line.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/line/line.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/line/orange.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/line/pink.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/line/purple.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/line/red.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/line/yellow.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/line/_all.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/aero%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/aero.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/aero.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/blue%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/blue.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/blue.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/green%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/green.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/green.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/grey%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/grey.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/grey.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/minimal%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/minimal.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/minimal.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/orange%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/orange.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/orange.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/pink%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/pink.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/pink.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/purple%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/purple.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/purple.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/red%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/red.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/red.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/yellow%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/yellow.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/yellow.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/minimal/_all.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/polaris/polaris%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/polaris/polaris.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/polaris/polaris.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/aero%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/aero.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/aero.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/blue%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/blue.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/blue.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/green%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/green.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/green.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/grey%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/grey.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/grey.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/orange%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/orange.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/orange.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/pink%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/pink.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/pink.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/purple%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/purple.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/purple.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/red%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/red.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/red.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/square%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/square.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/square.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/yellow%402x.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/yellow.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/yellow.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/iCheck/square/_all.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/animated-overlay.gif">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-bg_flat_55_fbec88_40x100.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-bg_glass_75_d0e5f5_1x400.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-bg_glass_85_dfeffc_1x400.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-bg_inset-hard_100_f5f8f9_1x100.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-bg_inset-hard_100_fcfdfd_1x100.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-icons_217bc0_256x240.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-icons_469bdd_256x240.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-icons_6da8d5_256x240.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-icons_d8e7f3_256x240.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/images/ui-icons_f9bd01_256x240.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/ionicons.min.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/ionslider/ion.rangeSlider.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/ionslider/ion.rangeSlider.skinFlat.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/ionslider/ion.rangeSlider.skinNice.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/jvectormap/jquery-jvectormap-1.2.2.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/morris/morris.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/timepicker/bootstrap-timepicker.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/css/timepicker/bootstrap-timepicker.min.css">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/ajax-loader.gif">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/ajax-loader1.gif">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/avatar.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/avatar04.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/avatar2.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/avatar3.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/avatar5.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/blur-background04.jpg">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/blur-background08.jpg">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/blur-background09.jpg">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/bootstrap-colorpicker/alpha-horizontal.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/bootstrap-colorpicker/alpha.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/bootstrap-colorpicker/hue-horizontal.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/bootstrap-colorpicker/hue.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/bootstrap-colorpicker/saturation.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/credit/american-express.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/credit/cirrus.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/credit/mastercard.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/credit/mestro.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/credit/paypal.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/credit/paypal2.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/credit/visa.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/icons.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/sprite-skin-flat.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/sprite-skin-nice.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/user-bg.png">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/user.jpg">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/img/user2.jpg">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
     <File Include="Content/libs/AdminLTE/js/app.js">
       <publishTime>01/26/2015 22:28:09</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/js/dashboard.js">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/AdminLTE/js/demo.js">
+      <publishTime>02/05/2015 20:16:58</publishTime>
     </File>
     <File Include="Content/libs/AdminLTE/js/jquery.js">
       <publishTime>01/26/2015 23:46:47</publishTime>
@@ -332,6 +875,18 @@
     </File>
     <File Include="Content/libs/avalon/avalon.modern.js">
       <publishTime>01/27/2015 00:05:50</publishTime>
+    </File>
+    <File Include="Content/libs/avalon/avalon.modern.shim.js">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/avalon/avalon.shim.js">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/avalon/mmHistory.js">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Content/libs/avalon/mmRouter.js">
+      <publishTime>02/05/2015 20:16:58</publishTime>
     </File>
     <File Include="Content/libs/HTML5Shiv-v3.7.0/html5shiv.js">
       <publishTime>01/03/2015 23:03:22</publishTime>
@@ -430,7 +985,7 @@
       <publishTime>01/13/2015 23:35:42</publishTime>
     </File>
     <File Include="Content/libs/underscore/underscore.js">
-      <publishTime>01/26/2015 23:58:41</publishTime>
+      <publishTime>02/05/2015 20:16:58</publishTime>
     </File>
     <File Include="Content/libs/underscore/underscore.string.js">
       <publishTime>01/26/2015 23:59:49</publishTime>
@@ -8694,6 +9249,9 @@
     <File Include="Scripts/Pages/Branches/list.js">
       <publishTime>07/16/2014 23:20:17</publishTime>
     </File>
+    <File Include="Scripts/Pages/Home/index.js">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
     <File Include="Scripts/Pages/Home/jsClass.js">
       <publishTime>07/16/2014 23:20:17</publishTime>
     </File>
@@ -8714,6 +9272,9 @@
     </File>
     <File Include="Scripts/Pages/MyJSDemo/Base/ValueAndRefernce2.js">
       <publishTime>02/02/2015 15:55:21</publishTime>
+    </File>
+    <File Include="Scripts/Public/webUtil.js">
+      <publishTime>02/05/2015 20:16:58</publishTime>
     </File>
     <File Include="Scripts/util.js">
       <publishTime>11/01/2014 23:46:26</publishTime>
@@ -8742,11 +9303,17 @@
     <File Include="Views/AngularJS/ModelBind.cshtml">
       <publishTime>01/03/2015 23:03:22</publishTime>
     </File>
+    <File Include="Views/Home/ContextContent.cshtml">
+      <publishTime>02/05/2015 20:32:38</publishTime>
+    </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>02/02/2015 15:55:21</publishTime>
+      <publishTime>02/05/2015 20:16:58</publishTime>
     </File>
     <File Include="Views/Home/Index1.cshtml">
-      <publishTime>12/26/2014 21:06:55</publishTime>
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
+    <File Include="Views/Home/indexContent.cshtml">
+      <publishTime>02/05/2015 20:16:58</publishTime>
     </File>
     <File Include="Views/Home/JStest.cshtml">
       <publishTime>07/26/2014 00:15:12</publishTime>
@@ -8796,6 +9363,9 @@
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>07/16/2014 23:20:17</publishTime>
     </File>
+    <File Include="Views/Shared/LTEPartial/_LteTopTip.cshtml">
+      <publishTime>02/05/2015 20:16:58</publishTime>
+    </File>
     <File Include="Views/Shared/_AngularJSLayout.cshtml">
       <publishTime>12/14/2014 00:09:16</publishTime>
     </File>
@@ -8812,10 +9382,10 @@
       <publishTime>01/26/2015 21:14:43</publishTime>
     </File>
     <File Include="Views/Shared/_LteBaseLayout.cshtml">
-      <publishTime>01/26/2015 23:59:12</publishTime>
+      <publishTime>02/05/2015 20:16:58</publishTime>
     </File>
     <File Include="Views/Shared/_LteMenuLayout.cshtml">
-      <publishTime>01/27/2015 21:35:59</publishTime>
+      <publishTime>02/05/2015 20:16:58</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>02/02/2015 15:55:21</publishTime>
@@ -8827,7 +9397,7 @@
       <publishTime>07/24/2014 00:49:56</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/27/2015 21:41:57</publishTime>
+      <publishTime>02/05/2015 21:13:18</publishTime>
     </File>
   </ItemGroup>
 </Project>

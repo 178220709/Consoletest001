@@ -39,6 +39,12 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Fizzler">
+      <HintPath>..\packages\Fizzler.1.0.0\lib\net35\Fizzler.dll</HintPath>
+    </Reference>
+    <Reference Include="Fizzler.Systems.HtmlAgilityPack">
+      <HintPath>..\packages\Fizzler.Systems.HtmlAgilityPack.1.0.0\lib\net35\Fizzler.Systems.HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net40\HtmlAgilityPack.dll</HintPath>
     </Reference>
@@ -100,6 +106,7 @@
     <Compile Include="MyHtmlAgility\Core\MyAgilityHelp.cs" />
     <Compile Include="MyHtmlAgility\Core\HttpWebResponseUtility.cs" />
     <Compile Include="MyHtmlAgility\Core\MyHtmlAgilityBase.cs" />
+    <Compile Include="MyHtmlAgility\Core\WebDownloader.cs" />
     <Compile Include="MyHtmlAgility\Core\WebTestEx.cs" />
     <Compile Include="ManiaSongs\CommonDictionary.cs" />
     <Compile Include="ManiaSongs\SongDal.cs" />
