@@ -394,8 +394,6 @@
     <Content Include="Content\libs\underscore\underscore-min.js" />
     <Content Include="Content\libs\underscore\underscore.js" />
     <Content Include="Content\libs\underscore\underscore.string.js" />
-    <Content Include="Content\TestDemo\JsDemo\getIP.html" />
-    <Content Include="Content\TestDemo\QUnitDemo\fullDiv.html" />
     <Compile Include="Controllers\AngularJSController.cs" />
     <Compile Include="Controllers\PrintDemoController.cs" />
     <Compile Include="Controllers\SeaJSDemoController.cs" />
@@ -483,10 +481,6 @@
     <Content Include="Content\libs\moment-2.1\moment.min.js" />
     <Content Include="Content\libs\moment-2.1\zh-cn.js" />
     <Content Include="Content\libs\qunit\qunit.css" />
-    <Content Include="Content\TestDemo\JsDemo\index.html" />
-    <Content Include="Content\TestDemo\QUnitDemo\test.html" />
-    <Content Include="Content\TestDemo\QUnitDemo\index.html" />
-    <Content Include="Content\TestDemo\QUnitDemo\prettydate.js" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\Pages\Home\index.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\Base.js" />
@@ -558,7 +552,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\JStest.cshtml" />
+    <Content Include="Views\Home\LteDemo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\AngularJS\Index.cshtml" />
@@ -585,9 +579,6 @@
     <Content Include="Views\Shared\_ContentLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\TestDemo\QUnitDemo\1_1hello.html" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Content\libs\angularJS\angular.min.js.map" />
   </ItemGroup>
   <ItemGroup>
@@ -607,7 +598,9 @@
   <ItemGroup>
     <Content Include="Views\AngularJS\chkDemo.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\TestDemo\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_BaseJSLayout.cshtml" />
   </ItemGroup>
@@ -641,6 +634,35 @@
     <Content Include="Views\Home\indexContent.cshtml" />
     <Content Include="Views\Home\ContextContent.cshtml" />
     <Content Include="Views\Shared\LTEPartial\_LteTopTip.cshtml" />
+    <Content Include="Views\LteDemos\calendar.cshtml" />
+    <Content Include="Views\LteDemos\charts\empty.cshtml" />
+    <Content Include="Views\LteDemos\charts\flot.cshtml" />
+    <Content Include="Views\LteDemos\charts\inline.cshtml" />
+    <Content Include="Views\LteDemos\charts\morris.cshtml" />
+    <Content Include="Views\LteDemos\empty.cshtml" />
+    <Content Include="Views\LteDemos\examples\404.cshtml" />
+    <Content Include="Views\LteDemos\examples\500.cshtml" />
+    <Content Include="Views\LteDemos\examples\blank.cshtml" />
+    <Content Include="Views\LteDemos\examples\invoice.cshtml" />
+    <Content Include="Views\LteDemos\examples\lockscreen.cshtml" />
+    <Content Include="Views\LteDemos\examples\login.cshtml" />
+    <Content Include="Views\LteDemos\examples\register.cshtml" />
+    <Content Include="Views\LteDemos\forms\advanced.cshtml" />
+    <Content Include="Views\LteDemos\forms\editors.cshtml" />
+    <Content Include="Views\LteDemos\forms\empty.cshtml" />
+    <Content Include="Views\LteDemos\forms\general.cshtml" />
+    <Content Include="Views\LteDemos\mailbox.cshtml" />
+    <Content Include="Views\LteDemos\tables\data.cshtml" />
+    <Content Include="Views\LteDemos\tables\empty.cshtml" />
+    <Content Include="Views\LteDemos\tables\simple.cshtml" />
+    <Content Include="Views\LteDemos\UI\buttons.cshtml" />
+    <Content Include="Views\LteDemos\UI\empty.cshtml" />
+    <Content Include="Views\LteDemos\UI\general.cshtml" />
+    <Content Include="Views\LteDemos\UI\icons.cshtml" />
+    <Content Include="Views\LteDemos\UI\jquery-ui.cshtml" />
+    <Content Include="Views\LteDemos\UI\sliders.cshtml" />
+    <Content Include="Views\LteDemos\UI\timeline.cshtml" />
+    <Content Include="Views\LteDemos\widgets.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

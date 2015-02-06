@@ -42,9 +42,9 @@ namespace MyMvcDemo.Controllers
         }
 
 
-        public ActionResult JStest(int state, [ModelBinder(typeof(JsonBinder<int>))] IEnumerable<int> goodsIds)
+        public ActionResult LteDemo(string path,string name)
         {
-            return PartialView();
+            return View();
         }
 
        
