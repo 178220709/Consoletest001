@@ -22,6 +22,7 @@ define(["avalon/mmHistory"], function (require) {
             }
         }
         return {
+            hash:url,
             path: path,
             query: query
         }

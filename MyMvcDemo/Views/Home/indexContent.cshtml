@@ -1,31 +1,35 @@
-﻿@model MyProject.WeixinModel.Model.CheckModel
+﻿
 @{
     Layout = "";
 }
 
 
-<div class="span12">
-    <h3 class="text-center">
-        hi 这是我自娱自乐的前端网站展示平台
-    </h3>
-    <p>
-        网站开发语言为C# && .NET Framework 4.0（因为阿里云虚拟主机不支持4.5 只好降级）
-    </p>
-    @*<p>
-            代码分享在 <a href="http://git.oschina.net/jsonsong" target="_blank">oschina</a>
-        </p>*@
-    <p>
-        主体脚手架为<a href="https://github.com/almasaeed2010/AdminLTE" target="_blank">AdminLTE</a>
-    </p>
-    <p>
-        js加载使用的seajs web框架用的avalon
-    </p>
+ <!-- Content Header (Page header) -->
+@Html.Partial("LTEPartial/_LteCrumbsSection")
 
-    <p>
-        使用阿里云的免费虚拟服务主机发布
-    </p>
 
-    <p>
-        内容还在建设中，至于要干点什么。。。我也不知道啊！
-    </p>
-</div>
+<section class="content" >
+    <div class="span12">
+        <h3 class="text-center">
+            hi 这是我自娱自乐的前端网站展示平台
+        </h3>
+        <p>
+            网站开发语言为C# && .NET Framework 4.0（因为阿里云虚拟主机不支持4.5 只好降级）
+        </p>
+        @*<p>
+                代码分享在 <a href="http://git.oschina.net/jsonsong" target="_blank">oschina</a>
+            </p>*@
+        <p>
+            主体脚手架为<a href="https://github.com/almasaeed2010/AdminLTE" target="_blank">AdminLTE</a>
+        </p>
+        <p>
+            js加载使用的seajs web框架用的avalon
+        </p>
+        <p>
+            使用阿里云的免费虚拟服务主机发布
+        </p>
+        <p>
+            内容还在建设中，至于要干点什么。。。我也不知道啊！
+        </p>
+    </div>
+</section>

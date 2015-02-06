@@ -42,9 +42,14 @@ namespace MyMvcDemo.Controllers
         }
 
 
-        public ActionResult LteDemo(string path,string name)
+        public ActionResult LteDemo(string path)
         {
-            return View();
+            if (string.IsNullOrEmpty(path))
+            {
+                return View("LteDemos/index");
+            }
+            var viewPath = string.Format("LteDemos/{0}", path.Replace(".html",""));
+            return View(viewPath);
         }
 
        

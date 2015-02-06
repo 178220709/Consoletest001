@@ -9,25 +9,12 @@
     seajs.use("page/home/index");
 </script>
 
-<aside class="right-side">
+<aside class="right-side" ms-include-src="{{contentUrl}}">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            {{pageName}}
-            <small>{{pageDescription}}</small>
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li ms-repeat-item="crumbs" ms-class="avtive:$last"><a ms-href="{{item.url}}">{{item.name}}</a></li>
-        </ol>
-    </section>
-    
-    <!-- Main content -->
-    <section class="content" ms-include-src="{{contentUrl}}">
-        
-    
+    @Html.Partial("LTEPartial/_LteCrumbsSection")
 
-    </section>
+    <!-- Main content -->
+    <section class="content" ms-include-src="{{contentUrl}}"></section>
     <!-- /.content -->
 </aside><!-- /.right-side -->
 

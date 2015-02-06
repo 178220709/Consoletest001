@@ -339,10 +339,9 @@ var util = (function () {
         if (opts) {
             var index = 0;
             for (var name in opts) {
-                url += index = 0 ? "?" : "&" + name + opts[name];
+                url += index == 0 ? "?" : "&" + name + opts[name];
                 index++;
             }
-
         }
         window.open(url);
     };
