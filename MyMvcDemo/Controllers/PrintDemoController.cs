@@ -6,7 +6,7 @@ using Suijing.Utils.Constants;
 
 namespace MyMvcDemo.Controllers
 {
-      [Module(CSS = MyConstants.Bootstrap.Icon.Globe,Sort = -2)]
+      [Module(CSS = MyConstants.Bootstrap.Icon.Globe,Sort = 50)]
     public class PrintDemoController : Controller
     {
         [HttpGet]

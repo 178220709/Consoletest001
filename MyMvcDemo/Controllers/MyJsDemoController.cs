@@ -6,7 +6,7 @@ using Suijing.Utils.Constants;
 
 namespace MyMvcDemo.Controllers
 {
-    [Module(CSS = MyConstants.Bootstrap.Icon.Globe)]
+    [Module(CSS = MyConstants.Bootstrap.Icon.Globe,Sort = 20)]
     public class MyJsDemoController : Controller
     {
         [HttpGet]
@@ -27,9 +27,9 @@ namespace MyMvcDemo.Controllers
         public ActionResult Closure1()
         {
             return View();
-        } 
-        
-        [Module(Name = "Closure", CSS = MyConstants.Bootstrap.Icon.User)]
+        }
+
+        [Module(Name = "Base", CSS = MyConstants.Bootstrap.Icon.User)]
         public ActionResult Base()
         {
             return View();
