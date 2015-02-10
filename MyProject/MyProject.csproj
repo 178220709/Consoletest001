@@ -105,6 +105,7 @@
     <Compile Include="MyHtmlAgility\Core\DownloadImages.cs" />
     <Compile Include="MyHtmlAgility\Core\MyAgilityHelp.cs" />
     <Compile Include="MyHtmlAgility\Core\HttpWebResponseUtility.cs" />
+    <Compile Include="MyHtmlAgility\Core\IMyHtmlAgilityBase.cs" />
     <Compile Include="MyHtmlAgility\Core\MyHtmlAgilityBase.cs" />
     <Compile Include="MyHtmlAgility\Core\WebDownloader.cs" />
     <Compile Include="MyHtmlAgility\Core\WebTestEx.cs" />
