@@ -42,7 +42,7 @@
       <!--<resource path="~/Content/libs/blockUI-2.57/jquery.blockUI.js"/>-->
       <!--ace-start-->
       <resource path="~/Content\libs\AdminLTE\bootstrap\js\bootstrap.min.js"/>
-      <resource path="~/Content\libs\AdminLTE\js\app.js"/>
+      <!--<resource path="~/Content\libs\AdminLTE\js\app.js"/>-->
       <!--ace-end-->
 
 

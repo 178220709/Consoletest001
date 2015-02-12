@@ -20,8 +20,8 @@ define(function(require, exports, module) {
         } else {
             // indexModel.contentUrl = this.path;  //动态修改pageUrl属性值
             if (_.contains(hash, "LteDemo")) {
-                seajs.use("lte/dashboard");
-                seajs.use("lte/demo");
+              //  seajs.use("lte/dashboard");
+               // seajs.use("lte/demo");
                
             }
             indexModel.contentUrl = hash;
