@@ -1,13 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using MongoDB.Driver.Linq;
-using MyProject.HotelRecord.Entity;
 
-namespace MyProject.HotelRecord.MongoDBDal
+namespace MyProject.MongoDBDal
 {
+
+    public class BaseEntity
+    {
+        public ObjectId Id { get; set; }
+
+
+    }
     public class BaseService<T> where T : BaseEntity
     {
 

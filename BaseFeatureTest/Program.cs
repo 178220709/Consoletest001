@@ -11,6 +11,7 @@ using log4net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyMvcDemo.Extend;
 using MyProject.HotelRecord.Manager;
+using MyProject.MyHtmlAgility.Project.Haha;
 using Omu.ValueInjecter;
 using Suijing.Utils;
 
@@ -21,8 +22,7 @@ namespace BaseFeatureTest
     {
         public static void Main(string[] args)
         {
-           var query = new QueryHotel();
-            query.TransDataToMG();
+           HahaWebReader.Main1();
         }
     }
  

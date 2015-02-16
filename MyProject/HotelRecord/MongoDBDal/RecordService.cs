@@ -5,6 +5,7 @@ using System.Xml;
 using BaseFeatureDemo.XML;
 using MongoDB.Driver;
 using MyProject.HotelRecord.Entity;
+using MyProject.MongoDBDal;
 
 namespace MyProject.HotelRecord.MongoDBDal
 {

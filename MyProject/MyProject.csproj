@@ -99,14 +99,13 @@
     <Compile Include="HotelRecord\Entity\Mapper.cs" />
     <Compile Include="HotelRecord\Entity\Record.cs" />
     <Compile Include="HotelRecord\Manager\QueryHotel.cs" />
-    <Compile Include="HotelRecord\MongoDBDal\BaseService.cs" />
     <Compile Include="HotelRecord\MongoDBDal\RecordService.cs" />
     <Compile Include="HotelRecord\SqlDal\MyContext.cs" />
+    <Compile Include="MongoDBDal\BaseService.cs" />
     <Compile Include="MyHtmlAgility\Core\DownloadImages.cs" />
-    <Compile Include="MyHtmlAgility\Core\MyAgilityHelp.cs" />
+    <Compile Include="MyHtmlAgility\Core\NormalHtmlHelper.cs" />
     <Compile Include="MyHtmlAgility\Core\HttpWebResponseUtility.cs" />
-    <Compile Include="MyHtmlAgility\Core\IMyHtmlAgilityBase.cs" />
-    <Compile Include="MyHtmlAgility\Core\MyHtmlAgilityBase.cs" />
+    <Compile Include="MyHtmlAgility\Core\WebTaskFactory.cs" />
     <Compile Include="MyHtmlAgility\Core\WebDownloader.cs" />
     <Compile Include="MyHtmlAgility\Core\WebTestEx.cs" />
     <Compile Include="ManiaSongs\CommonDictionary.cs" />
@@ -114,6 +113,8 @@
     <Compile Include="ManiaSongs\SongInfo.cs" />
     <Content Include="MyHtmlAgility\XPathDemo\demoXML.xml" />
     <Compile Include="MyHtmlAgility\ProjectTest\GetContentFromLteDemo.cs" />
+    <Compile Include="MyHtmlAgility\Project\Haha\HahaWebReader.cs" />
+    <Compile Include="MyHtmlAgility\Project\Haha\HahaJokeService.cs" />
     <Compile Include="MyHtmlAgility\XPathDemo\XPathDemo.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,6 +149,12 @@
   <ItemGroup>
     <Folder Include="MyHtmlAgility\Project\51job\" />
     <Folder Include="SignalRProject\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Suijing.Utils.csproj">
+      <Project>{EA4D5D5E-E6F8-4487-A65A-752C05E9F7B1}</Project>
+      <Name>Suijing.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

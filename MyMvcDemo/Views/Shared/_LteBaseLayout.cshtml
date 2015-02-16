@@ -52,10 +52,10 @@
         //seajs config的base配置文件
         seajs.config({
             base: "@HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority)",
-           
             paths: {
-                "lte": "Content/libs/AdminLTE/js",
+                "libs": "Content/libs",
                 "avalon": "Content/libs/avalon",
+                "lte": "Content/libs/AdminLTE",
                 "page": "Scripts/Pages"
             }
         });
@@ -65,10 +65,9 @@
         <script>
             //seajs config的本地 配置
             seajs.config({
-                paths: {
-                    "underscore": "Content/libs/underscore",
-                 
-                    "jquery": "Content/libs/AdminLTE/js"
+                alias: {
+                    "underscore.js": "Content/libs/underscore",
+                    "jquery.js": "libs/AdminLTE/js/jquery.js"
                 },
             });
         </script>
@@ -78,10 +77,9 @@
     {
         <script>
             seajs.config({
-                paths: {
-                    "underscore": "http://cdn.staticfile.org/underscore.js/1.7.0",
-                
-                    "jquery": "http://cdn.staticfile.org/jquery/2.1.1-rc2",
+                alias: {
+                    "underscore.js": "http://cdn.staticfile.org/underscore.js/1.7.0/underscore.js",
+                    "jquery.js": "http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.js",
                 },
             });
         </script>
@@ -91,9 +89,8 @@
     <script>
         seajs.config({
             alias: {
-                "jquery": "jquery/jquery.js"
+               
             },
-          
         });
 
     </script>

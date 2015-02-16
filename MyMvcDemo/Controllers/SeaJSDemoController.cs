@@ -14,8 +14,12 @@ namespace MyMvcDemo.Controllers
         public ActionResult Hello()
         {
             return View();
-        }   
-          
+        }
 
+        [Module(Name = "SeaJSDemo", CSS = MyConstants.Bootstrap.Icon.Globe)]
+        public ActionResult Underscore()
+        {
+            return View();
+        }  
     }
 }

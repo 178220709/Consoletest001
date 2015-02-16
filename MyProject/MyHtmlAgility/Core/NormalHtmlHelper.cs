@@ -1,45 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls.WebParts;
-using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using HtmlAgilityPack;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.WebTesting;
-using MongoDB.Driver.Builders;
-using MyProject.TestHelper;
-using NPOI.SS.Formula.Functions;
+
 
 namespace MyProject.MyHtmlAgility.Core
 {
-    [TestClass]
-    public abstract class MyHtmlAgilityBase :IMyHtmlAgilityBase
+    public static class NormalHtmlHelper
     {
-        public string LoginUrl { get; set; }
-        public string Url { get; set; }
-
-        public virtual bool Logining()
+        private static string GetDocHtmlStr(string url, Encoding encoding = null)
         {
-            return true;
-        }
-
-        public WebBrowser ThisBrowser { get; private set; }
-
-        public virtual void InitBrowser()
-        {
-            ThisBrowser = new WebBrowser();
-        }
-
-
-        public virtual string GetDocHtmlStr(string url, Encoding encoding=null )
-        {
-            if (  encoding == null)
+            if (encoding == null)
             {
                 encoding = Encoding.UTF8;
             }
@@ -73,7 +47,23 @@ namespace MyProject.MyHtmlAgility.Core
             return result;
         }
 
+        public static HtmlDocument GetDocumentNode(string url, Encoding encoding = null)
+        {
+            if (encoding==null)
+            {
+                encoding = Encoding.UTF8;
+            }
+            string strContent = GetDocHtmlStr(url, encoding);
+            var htmlDoc = new HtmlAgilityPack.HtmlDocument
+            {
+                OptionAddDebuggingAttributes = false,
+                OptionAutoCloseOnEnd = true,
+                OptionFixNestedTags = true,
+                OptionReadEncoding = true
+            };
 
-
+            htmlDoc.LoadHtml(strContent);
+            return htmlDoc;
+        }
     }
 }

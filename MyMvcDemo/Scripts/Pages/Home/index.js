@@ -1,10 +1,12 @@
 ﻿
 define(function(require, exports, module) {
-    var avalon = require("avalon/mmRouter.js");
-    var _ = require("underscore/underscore.string");
+    var avalon = require("libs/avalon/mmRouter.js");
+    var avalon2 = require("libs/avalon/mmRouter.jss");
+    var _ = require("libs/underscore/underscore.string");
+     _ = require("libs/underscore/underscore");
     var indexModel = avalon.define("msTopContent", function (vm) {
         vm.showContent = true;//content is load over 
-        vm.crumbs = [{url:"hahaha",name:"name1"},{url:"ha22a",name:"name2"}];//the crumbs on the top 
+        vm.crumbs = [{url:"#!",name:"name1"},{url:"ha22a",name:"name2"}];//the crumbs on the top 
         vm.contentUrl = "home/indexContent"; 
       
         vm.pageName = "Home"; 
@@ -22,7 +24,6 @@ define(function(require, exports, module) {
             if (_.contains(hash, "LteDemo")) {
               //  seajs.use("lte/dashboard");
                // seajs.use("lte/demo");
-               
             }
             indexModel.contentUrl = hash;
         }

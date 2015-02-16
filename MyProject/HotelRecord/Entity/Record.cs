@@ -5,15 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using MyProject.MongoDBDal;
 
 namespace MyProject.HotelRecord.Entity
 {
 
 
-    public class BaseEntity
-    {
-        public ObjectId Id { get; set; }
-    }
+  
     public class Record : BaseEntity
     {
 

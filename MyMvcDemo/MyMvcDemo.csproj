@@ -602,6 +602,7 @@
     <Content Include="Content\libs\moment-2.1\zh-cn.js" />
     <Content Include="Content\libs\qunit\qunit.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\Pages\SeaJsDemo\underscoreTest.js" />
     <Content Include="Scripts\Pages\Home\index.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\Base.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\Base1.js" />
@@ -788,6 +789,7 @@
     <Content Include="Views\Home\LteDemos\widgets.cshtml" />
     <Content Include="Views\Shared\LTEPartial\_LteDemoIndex.cshtml" />
     <Content Include="Views\Shared\LTEPartial\_LteCrumbsSection.cshtml" />
+    <Content Include="Views\seaJSDemo\underscore.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

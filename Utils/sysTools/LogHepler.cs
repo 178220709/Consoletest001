@@ -8,6 +8,7 @@ namespace Suijing.Utils.sysTools
         private static readonly log4net.ILog logdebugger = log4net.LogManager.GetLogger("logdebugger");
 
         private static readonly log4net.ILog logerror = log4net.LogManager.GetLogger("logerror");
+        private static readonly log4net.ILog logWebReader = log4net.LogManager.GetLogger("logWebReader");
 
         public static void SetConfig()
         {
@@ -32,6 +33,14 @@ namespace Suijing.Utils.sysTools
             if(logerror.IsErrorEnabled)
             {
                 logerror.Error(info,se);
+            }
+        }
+
+        public static void WriteWebReader(string info)
+        {
+            if (logerror.IsDebugEnabled)
+            {
+                logerror.Debug(info);
             }
         }
 
