@@ -12,6 +12,11 @@ namespace Suijing.Utils.sysTools
 
         public static void SetConfig()
         {
+            if (File.Exists(@"D:\code\GitCode\HelloCSharp\MyMvcDemo"))
+            {
+                log4net.Config.XmlConfigurator.Configure(new FileInfo(@"D:\code\GitCode\HelloCSharp\MyMvcDemo")); 
+                return;
+            }
             log4net.Config.XmlConfigurator.Configure();
         }
 
@@ -38,9 +43,9 @@ namespace Suijing.Utils.sysTools
 
         public static void WriteWebReader(string info)
         {
-            if (logerror.IsDebugEnabled)
+            if (logWebReader.IsDebugEnabled)
             {
-                logerror.Debug(info);
+                logWebReader.Debug(info);
             }
         }
 

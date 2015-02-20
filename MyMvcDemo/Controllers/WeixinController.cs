@@ -1,9 +1,15 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
 using System.Web.Mvc;
+using System.Xml;
+using System.Xml.Serialization;
+using MyProject.MyHtmlAgility.Project.Haha;
 using MyProject.WeixinModel.Extend;
 using MyProject.WeixinModel.Injection;
 using MyProject.WeixinModel.Model;
 using Omu.ValueInjecter;
+using Suijing.Utils.sysTools;
 
 namespace MyMvcDemo.Controllers
 {
@@ -20,6 +26,7 @@ namespace MyMvcDemo.Controllers
                 var postStr = System.Text.Encoding.UTF8.GetString(b);
                 if (!string.IsNullOrEmpty(postStr))
                 {
+                    LogHepler.WriteLog(postStr);
                     return responseMsg(postStr);
                 }
             }
@@ -37,41 +44,54 @@ namespace MyMvcDemo.Controllers
 
         public string responseMsg(string postStr)
         {
-            System.Xml.XmlDocument postObj = new System.Xml.XmlDocument();
-            postObj.LoadXml(postStr);
-            
-            var FromUserNameList = postObj.GetElementsByTagName("FromUserName");
-            string FromUserName = string.Empty;
-            for (int i = 0; i < FromUserNameList.Count; i++)
+            var text = new TextMessage();
+            var result = postStr;
+            try
             {
-                if (FromUserNameList[i].ChildNodes[0].NodeType == System.Xml.XmlNodeType.CDATA)
+                text.InjectFrom<XmlStrInjection>(postStr);
+                if (text.Content == "haha")
                 {
-                    FromUserName = FromUserNameList[i].ChildNodes[0].Value;
+                    result = string.Join("\n", HahaWebReader.GetRecommand().Select(a => a.Content));
                 }
+               
             }
-            var toUsernameList = postObj.GetElementsByTagName("ToUserName");
-            string ToUserName = string.Empty;
-            for (int i = 0; i < toUsernameList.Count; i++)
+            catch (Exception ex)
             {
-                if (toUsernameList[i].ChildNodes[0].NodeType == System.Xml.XmlNodeType.CDATA)
-                {
-                    ToUserName = toUsernameList[i].ChildNodes[0].Value;
-                }
+                result = ex.Message;
             }
-            var keywordList = postObj.GetElementsByTagName("Content");
-            string Content = string.Empty;
-            for (int i = 0; i < keywordList.Count; i++)
-            {
-                if (keywordList[i].ChildNodes[0].NodeType == System.Xml.XmlNodeType.CDATA)
-                {
-                    Content = keywordList[i].ChildNodes[0].Value;
-                }
-            }
-            var time = DateTime.Now;
-            var textpl = "<xml><ToUserName><![CDATA[" + FromUserName + "]]></ToUserName>" +
-                "<FromUserName><![CDATA[" + ToUserName + "]]></FromUserName>" +
+           
+            //var FromUserNameList = postObj.GetElementsByTagName("FromUserName");
+            //string FromUserName = string.Empty;
+            //for (int i = 0; i < FromUserNameList.Count; i++)
+            //{
+            //    if (FromUserNameList[i].ChildNodes[0].NodeType == System.Xml.XmlNodeType.CDATA)
+            //    {
+            //        FromUserName = FromUserNameList[i].ChildNodes[0].Value;
+            //    }
+            //}
+            //var toUsernameList = postObj.GetElementsByTagName("ToUserName");
+            //string ToUserName = string.Empty;
+            //for (int i = 0; i < toUsernameList.Count; i++)
+            //{
+            //    if (toUsernameList[i].ChildNodes[0].NodeType == System.Xml.XmlNodeType.CDATA)
+            //    {
+            //        ToUserName = toUsernameList[i].ChildNodes[0].Value;
+            //    }
+            //}
+            //var keywordList = postObj.GetElementsByTagName("Content");
+            //string Content = string.Empty;
+            //for (int i = 0; i < keywordList.Count; i++)
+            //{
+            //    if (keywordList[i].ChildNodes[0].NodeType == System.Xml.XmlNodeType.CDATA)
+            //    {
+            //        Content = keywordList[i].ChildNodes[0].Value;
+            //    }
+            //}
+          
+            var textpl = "<xml><ToUserName><![CDATA[" + text.FromUserName + "]]></ToUserName>" +
+                "<FromUserName><![CDATA[" + text.ToUserName + "]]></FromUserName>" +
                 "<CreateTime>" + DateTime.Now.ToShortTimeString() + "</CreateTime><MsgType><![CDATA[text]]></MsgType>" +
-                "<Content><![CDATA[欢迎来到微信世界---" + Content + "]]></Content><FuncFlag>0</FuncFlag></xml> ";
+                "<Content><![CDATA[欢迎来到微信世界---" + result + "]]></Content><FuncFlag>0</FuncFlag></xml> ";
 
             return textpl;
         }

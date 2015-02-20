@@ -42,7 +42,7 @@ namespace MyProject.MyHtmlAgility.Project.Haha
         }
 
         [TestMethod]
-        public static void Main1()
+        public static List<ReadResult> GetRecommand()
         {
             var urls = new List<string>();
             const string url = "http://www.haha.mx/joke/1660764";
@@ -58,7 +58,8 @@ namespace MyProject.MyHtmlAgility.Project.Haha
                .ToList().ForEach(urls.Add);
             var reader = new HahaWebReader();
             var factory = new WebTaskFactory(reader);
-            factory.StartAndCallBack(urls.Distinct().ToList());
+         return factory.StartAndCallBack(urls.Distinct().ToList());
+
         }
 
         [TestMethod]

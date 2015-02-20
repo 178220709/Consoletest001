@@ -26,25 +26,27 @@ namespace MyProject.MyHtmlAgility.Core
         }
 
 
-        public void StartAndCallBack(IList<string> urls)
+        public List<ReadResult> StartAndCallBack(IList<string> urls)
         {
             if (!urls.Any())
-                return;
+                return null;
 
-            LogHepler.WriteWebReader(string.Format("开始爬取{0}条数据:{1} ...", urls.Count, string.Join("", urls.Take(3))));
+            LogHepler.WriteWebReader(string.Format("开始爬取{0}条数据:\n {1} ...", urls.Count, string.Join("\n", urls.Take(3))));
             try
             {
                 var res = urls.Select(a => _reader.GetHtmlContent(a))
                     .Where(a => !string.IsNullOrWhiteSpace(a.Content))
                     .ToList();
                 _reader.FireTaskCallBack(res);
+                return res;
             }
             catch (Exception ex)
             {
                 LogHepler.WriteWebReader("出现异常:" + ex.Message); 
-                return;
+                return null;
             }
             LogHepler.WriteWebReader("成功爬取并执行完毕");
+           
         }
 
         private IList<ReadResult> GetHtmlContents(IList<string> urls)

@@ -1,6 +1,8 @@
 ﻿using System;
+using System.IO;
 using System.Linq.Expressions;
 using System.Xml.Linq;
+using System.Xml.Serialization;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyProject.WeixinModel.Extend;
 using MyProject.WeixinModel.Injection;

@@ -14,6 +14,7 @@ using MyProject.HotelRecord.Manager;
 using MyProject.MyHtmlAgility.Project.Haha;
 using Omu.ValueInjecter;
 using Suijing.Utils;
+using Suijing.Utils.sysTools;
 
 namespace BaseFeatureTest
 {
@@ -22,7 +23,9 @@ namespace BaseFeatureTest
     {
         public static void Main(string[] args)
         {
-           HahaWebReader.Main1();
+
+            LogHepler.SetConfig();
+           HahaWebReader.GetRecommand();
         }
     }
  
