@@ -23,7 +23,33 @@ namespace MyMvcDemo.Filters
         public bool RequiresSuperAdmin { get; set; }
 
         private bool isTimeOut { get; set; }
-       
+        protected override bool AuthorizeCore(HttpContextBase httpContext)
+        {
+
+            return true;
+            
+            //取得当前登录用户
+            object user = null;
+
+            if (!base.AuthorizeCore(httpContext) || user == null)
+            {
+                isTimeOut = true;
+            }
+
+            //bool result = base.AuthorizeCore(httpContext) && //确保用户已登录
+            //                user != null && //用户不为null
+            //                !user.IsDeleted &&
+            //                user.IsActive;
+
+            ////需要超管认证？
+            //if (this.RequiresSuperAdmin)
+            //{
+            //    result = result && user.IsSuper; //确认用户是超管
+            //}
+
+           
+        }
+
 
         protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)
         {
