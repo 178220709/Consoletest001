@@ -28,16 +28,23 @@ namespace MyProject.MyHtmlAgility.Project.Haha
 
         public override void FireTaskCallBack(IList<ReadResult> res)
         {
-            var manager = HahaJokeService.Instance;
-            foreach (var re in res)
+            try
             {
-                if (manager.Entities.Any(a => a.Url == re.Url))
+                var manager = HahaJokeService.Instance;
+                foreach (var re in res)
                 {
-                    continue;
+                    if (manager.Entities.Any(a => a.Url == re.Url))
+                    {
+                        continue;
+                    }
+                    var en = new JokeEntity();
+                    en.InjectFrom(re);
+                    manager.AddEdit(en);
                 }
-                var en = new JokeEntity();
-                en.InjectFrom(re);
-                manager.AddEdit(en);
+            }
+            catch (Exception)
+            {
+                return;
             }
         }
 

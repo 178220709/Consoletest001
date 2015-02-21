@@ -1,7 +1,7 @@
 ﻿
 define(function(require, exports, module) {
     var avalon = require("libs/avalon/mmRouter.js");
-    var avalon2 = require("libs/avalon/mmRouter.jss");
+    var avalon2 = require("libs/avalon/mmRouter.js");
     var _ = require("libs/underscore/underscore.string");
      _ = require("libs/underscore/underscore");
     var indexModel = avalon.define("msTopContent", function (vm) {

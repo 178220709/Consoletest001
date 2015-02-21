@@ -1,0 +1,13 @@
+﻿
+
+@{
+    ViewBag.Title = "title";
+    Layout = "";
+    var reader = new MyProject.MyHtmlAgility.Project.Haha.HahaWebReader();
+    var model = reader.GetHtmlContent("http://www.haha.mx/joke/1661561");
+    
+}
+
+<h2>title</h2>
+
+@Html.Raw(model.Content)

@@ -14,13 +14,14 @@ namespace MyProject.WeixinModel
     [TestClass]
     public class WeixinTest
     {
-        public const string MsgDemo1 = "<xml><ToUserName><![CDATA[gh_a413ed7b46b6]]></ToUserName>" +
-                                       "<FromUserName><![CDATA[oinzFjmCt9LdPgmnEnvBShE0W5Qk]]></FromUserName>" +
-                                       "<CreateTime>1406179796</CreateTime>" +
-                                       "<MsgType><![CDATA[text]]></MsgType>" +
-                                       "<Content><![CDATA[this is client msg]]></Content>" +
-                                       "<MsgId>6039496236316578696</MsgId>" +
-                                       "</xml>";
+        private string MsgDemo1 = " <xml><ToUserName><![CDATA[gh_a413ed7b46b6]]></ToUserName>" +
+                              " <FromUserName><![CDATA[oinzFjmCt9LdPgmnEnvBShE0W5Qk]]></FromUserName>" +
+                              " <CreateTime>1424484704</CreateTime>" +
+                              " <MsgType><![CDATA[text]]></MsgType>" +
+                              " <Content><![CDATA[改成]]></Content>" +
+                              " <MsgId>6118115217535609681</MsgId>" +
+                              " </xml> ";
+
         [TestMethod]
         public void XmlStrInjectionTest()
         {

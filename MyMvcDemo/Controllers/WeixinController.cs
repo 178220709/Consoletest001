@@ -8,6 +8,7 @@ using MyProject.MyHtmlAgility.Project.Haha;
 using MyProject.WeixinModel.Extend;
 using MyProject.WeixinModel.Injection;
 using MyProject.WeixinModel.Model;
+using Newtonsoft.Json;
 using Omu.ValueInjecter;
 using Suijing.Utils.sysTools;
 
@@ -45,15 +46,18 @@ namespace MyMvcDemo.Controllers
         public string responseMsg(string postStr)
         {
             var text = new TextMessage();
-            var result = postStr;
+            var result = "";
             try
             {
                 text.InjectFrom<XmlStrInjection>(postStr);
-                if (text.Content == "haha")
+                if (text.Content.ToLower() == "haha")
                 {
                     result = string.Join("\n", HahaWebReader.GetRecommand().Select(a => a.Content));
                 }
-               
+                if (text.Content.ToLower() == "test")
+                {
+                    result = JsonConvert.SerializeObject(text);
+                }
             }
             catch (Exception ex)
             {

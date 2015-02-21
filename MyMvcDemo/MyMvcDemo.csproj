@@ -374,6 +374,7 @@
     <Content Include="Content\libs\AdminLTE\img\user-bg.png" />
     <Content Include="Content\libs\AdminLTE\img\user.jpg" />
     <Content Include="Content\libs\AdminLTE\img\user2.jpg" />
+    <Content Include="Content\libs\AdminLTE\js\appIndex.js" />
     <Content Include="Content\libs\AdminLTE\js\app.js" />
     <Content Include="Content\libs\AdminLTE\js\dashboard.js" />
     <Content Include="Content\libs\AdminLTE\js\demo.js" />
@@ -515,6 +516,7 @@
     <Content Include="Content\libs\underscore\underscore.js" />
     <Content Include="Content\libs\underscore\underscore.string.js" />
     <Compile Include="Controllers\AngularJSController.cs" />
+    <Compile Include="Controllers\SpiderController.cs" />
     <Compile Include="Controllers\PrintDemoController.cs" />
     <Compile Include="Controllers\SeaJSDemoController.cs" />
     <Compile Include="Extend\JsonControllerEX\JsonTypeAttribute.cs" />
@@ -526,6 +528,7 @@
     <Compile Include="Controllers\WeixinController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extend\ControllerHelper.cs" />
+    <Compile Include="Extend\ViewLog.cs" />
     <Compile Include="Extend\RazorEx.cs" />
     <Compile Include="Extend\WeixinEx.cs" />
     <Compile Include="Extensions.cs" />
@@ -664,7 +667,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyProject\MyProject.csproj">
-      <Project>{54CB55D4-E806-4B76-9900-0B0B8FFD6D16}</Project>
+      <Project>{54cb55d4-e806-4b76-9900-0b0b8ffd6d16}</Project>
       <Name>MyProject</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utils\Suijing.Utils.csproj">
@@ -790,6 +793,8 @@
     <Content Include="Views\Shared\LTEPartial\_LteDemoIndex.cshtml" />
     <Content Include="Views\Shared\LTEPartial\_LteCrumbsSection.cshtml" />
     <Content Include="Views\seaJSDemo\underscore.cshtml" />
+    <Content Include="Views\Spider\Haha.cshtml" />
+    <Content Include="Views\Spider\Test.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -809,9 +814,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3033</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:4001/</IISUrl>
-          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://localhost:4001/</IISAppRootUrl>
+          <IISUrl>http://t0.jsonsong.com</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
