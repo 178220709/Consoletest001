@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Management;
@@ -90,6 +91,30 @@ namespace MyProject.SystemInfo
         }
 
 
+        public static string GetProcessInfo()
+        {  try
+            {
+                string s = "";
+                System.Int32 processid;
+                Process process;
+                //Retrieve the additional information about a specific process
+                processid = int.Parse(GetCpuID());
+                process = System.Diagnostics.Process.GetProcessById(processid);
+                s = s + "该进程的总体优先级类别:" + Convert.ToString(process.PriorityClass) + " \r\n";
+                s = s + "由该进程打开的句柄数:" + process.HandleCount + "\r\n";
+                s = s + "该进程的主窗口标题:" + process.MainWindowTitle + "\r\n";
+                s = s + " 该进程允许的最小工作集大小:" + process.MinWorkingSet.ToString() + " \r\n";
+                s = s + "该进程允许的最大工作集大小:" + process.MaxWorkingSet.ToString() + " \r\n";
+                s = s + "该进程的分页内存大小:" + process.PagedMemorySize + "\r\n";
+                s = s + "该进程的峰值分页内存大小:" + process.PeakPagedMemorySize + "\r\n";
+                return s; 
+                
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
     }
 
 }
