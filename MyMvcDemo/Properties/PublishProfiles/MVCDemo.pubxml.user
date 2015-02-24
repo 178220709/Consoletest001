@@ -31,10 +31,10 @@
       <publishTime>06/22/2014 17:44:50</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>02/21/2015 22:43:22</publishTime>
+      <publishTime>02/24/2015 16:21:34</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>02/21/2015 22:43:21</publishTime>
+      <publishTime>02/24/2015 16:21:33</publishTime>
     </File>
     <File Include="bin/Combres.dll">
       <publishTime>06/22/2014 17:44:42</publishTime>
@@ -94,10 +94,10 @@
       <publishTime>11/03/2014 14:56:08</publishTime>
     </File>
     <File Include="bin/MyMvcDemo.dll">
-      <publishTime>02/21/2015 22:43:18</publishTime>
+      <publishTime>02/24/2015 16:21:30</publishTime>
     </File>
     <File Include="bin/MyProject.dll">
-      <publishTime>02/21/2015 22:43:17</publishTime>
+      <publishTime>02/24/2015 16:21:29</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>01/27/2015 20:46:17</publishTime>
@@ -112,7 +112,7 @@
       <publishTime>06/22/2014 17:44:44</publishTime>
     </File>
     <File Include="bin/Suijing.Utils.dll">
-      <publishTime>02/21/2015 01:41:46</publishTime>
+      <publishTime>02/24/2015 15:44:57</publishTime>
     </File>
     <File Include="bin/System.EnterpriseServices.dll">
       <publishTime>03/18/2010 19:31:26</publishTime>
@@ -9616,7 +9616,7 @@
       <publishTime>01/27/2015 20:19:08</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>02/21/2015 22:43:19</publishTime>
+      <publishTime>02/24/2015 16:21:31</publishTime>
     </File>
     <File Include="Scripts/checkDataUtil.js">
       <publishTime>11/01/2014 23:20:12</publishTime>
@@ -9637,7 +9637,7 @@
       <publishTime>07/16/2014 23:20:17</publishTime>
     </File>
     <File Include="Scripts/Pages/Home/index.js">
-      <publishTime>02/21/2015 21:55:33</publishTime>
+      <publishTime>02/24/2015 15:01:43</publishTime>
     </File>
     <File Include="Scripts/Pages/Home/jsClass.js">
       <publishTime>07/16/2014 23:20:17</publishTime>
@@ -9871,7 +9871,7 @@
       <publishTime>01/26/2015 21:14:43</publishTime>
     </File>
     <File Include="Views/Shared/_LteBaseLayout.cshtml">
-      <publishTime>02/21/2015 21:54:29</publishTime>
+      <publishTime>02/24/2015 14:06:53</publishTime>
     </File>
     <File Include="Views/Shared/_LteMenuLayout.cshtml">
       <publishTime>02/06/2015 22:28:50</publishTime>
@@ -9881,6 +9881,9 @@
     </File>
     <File Include="Views/Spider/Test.cshtml">
       <publishTime>02/21/2015 22:25:37</publishTime>
+    </File>
+    <File Include="Views/System/LogIndex.cshtml">
+      <publishTime>02/24/2015 14:59:59</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>02/02/2015 15:55:21</publishTime>
@@ -9892,7 +9895,7 @@
       <publishTime>07/24/2014 00:49:56</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/21/2015 22:27:35</publishTime>
+      <publishTime>02/24/2015 15:44:59</publishTime>
     </File>
   </ItemGroup>
 </Project>

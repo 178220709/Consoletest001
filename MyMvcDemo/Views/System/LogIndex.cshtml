@@ -1,0 +1,45 @@
+﻿@using MyMvcDemo.Extend
+@model LogModel
+
+@{
+    ViewBag.Title = "Log";
+    Layout = "";
+}
+
+
+
+<div ms-controller="mscContent">
+
+    <h2>Log:{{selectLog}}</h2>
+
+    <select ms-duplex="selectLog">
+        @foreach (var item in ViewLogHelp.GetLogFiles())
+        {
+            <option value="@item">@item</option>
+        }
+
+    </select>
+
+    <div>
+        {{LogContext}}
+    </div>
+</div>
+
+
+<script>
+    var avalon = seajs.require("avalon.js");
+    var vmodel = avalon.define({
+        $id: "mscContent",
+        selectLog: "",
+        LogContext: ""
+    });
+    vmodel.$watch("selectLog", function (newValue, b) {
+        $.post("@Url.Action("GetLogByFullName", "System")", { fullName: newValue }, function (result) {
+            vmodel.LogContext = result.result;
+        });
+    });
+
+    $(function() {
+        avalon.scan();
+    });
+</script>

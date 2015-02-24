@@ -83,6 +83,9 @@
   <ItemGroup>
     <Compile Include="EFDemo\MongoDBTest.cs" />
     <Compile Include="EFDemo\EFTest.cs" />
+    <Compile Include="UtilsTest\FileEncodingTest.cs" />
+    <Compile Include="UtilsTest\SysteminfoHelperTest.cs" />
+    <Compile Include="UtilsTest\LogTest.cs" />
     <Compile Include="UtilsTest\JsonTest.cs" />
     <Compile Include="Json\JsonTest.cs" />
     <Compile Include="MyMVCTest\ControllerTest\HomeTest.cs" />

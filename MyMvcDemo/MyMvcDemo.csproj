@@ -517,8 +517,9 @@
     <Content Include="Content\libs\underscore\underscore.string.js" />
     <Compile Include="Controllers\AngularJSController.cs" />
     <Compile Include="Controllers\SpiderController.cs" />
-    <Compile Include="Controllers\PrintDemoController.cs" />
+    <Compile Include="Controllers\SystemController.cs" />
     <Compile Include="Controllers\SeaJSDemoController.cs" />
+    <Compile Include="Extend\JsonControllerEX\JsonAjaxResult.cs" />
     <Compile Include="Extend\JsonControllerEX\JsonTypeAttribute.cs" />
     <Compile Include="Controllers\MyQunitDemo.cs" />
     <Compile Include="Extend\ConfigHelper.cs" />
@@ -528,7 +529,7 @@
     <Compile Include="Controllers\WeixinController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extend\ControllerHelper.cs" />
-    <Compile Include="Extend\ViewLog.cs" />
+    <Compile Include="Extend\ViewLogHelp.cs" />
     <Compile Include="Extend\RazorEx.cs" />
     <Compile Include="Extend\WeixinEx.cs" />
     <Compile Include="Extensions.cs" />
@@ -544,6 +545,7 @@
     <Compile Include="Models\Base\BaseModel.cs" />
     <Compile Include="Models\Base\IndexColumnModel.cs" />
     <Compile Include="Models\IndexModel.cs" />
+    <Compile Include="Models\System\LogModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="ControllerBase.cs" />
@@ -795,6 +797,8 @@
     <Content Include="Views\seaJSDemo\underscore.cshtml" />
     <Content Include="Views\Spider\Haha.cshtml" />
     <Content Include="Views\Spider\Test.cshtml" />
+    <Content Include="Views\System\LogIndex.cshtml" />
+    <Content Include="Views\System\SysInfoIndex.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
