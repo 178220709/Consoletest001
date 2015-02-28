@@ -1,0 +1,67 @@
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
+using MyMvcDemo.Extend;
+using MyMvcDemo.Models;
+using MyProject.WeixinModel.Model;
+using Suijing.Utils.Constants;
+
+namespace MyMvcDemo.Controllers
+{
+      [Module(CSS = MyConstants.Bootstrap.Icon.Globe,Sort = 80,Name = "系统调试")]
+    public class SystemController : Controller
+    {
+        [HttpGet]
+        [Module(Name = "Log", CSS = MyConstants.Bootstrap.Icon.Globe)]
+        public ActionResult LogIndex(string path,string name)
+        {
+           
+            return View();
+        }
+        [HttpGet]
+        [Module(Name = "SysInfo", CSS = MyConstants.Bootstrap.Icon.Globe)]
+        public ActionResult SysInfoIndex(string path, string name)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public JsonResult GetLog(string path, string name)
+        {
+            if (string.IsNullOrWhiteSpace(path) || string.IsNullOrWhiteSpace(name))
+            {
+                return Json(new ResponseJsonModel
+                {
+                    success = false,
+                    msg = "非法参数"
+                });
+            }
+
+            return Json(new ResponseJsonModel
+            {
+                success = true,
+                result = ViewLogHelp.GetrFileContent(path, name)
+            });
+        }   
+
+
+        [HttpPost]
+        public JsonResult GetLogByFullName(string fullName)
+        {
+            if (string.IsNullOrWhiteSpace(fullName) )
+            {
+                return Json(new ResponseJsonModel
+                {
+                    success = false,
+                    msg = "非法参数"
+                });
+            }
+
+            return Json(new ResponseJsonModel
+            {
+                success = true,
+                result = ViewLogHelp.GetrFileContent(fullName)
+            });
+        }   
+
+    }
+}
