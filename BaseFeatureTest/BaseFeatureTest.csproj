@@ -94,6 +94,7 @@
     <Compile Include="ThisTestTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebTools\RestHelperTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BaseFeatureDemo\BaseFeatureDemo.csproj">
