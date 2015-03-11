@@ -66,6 +66,7 @@
     <Compile Include="FastActivator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringExtension.cs" />
+    <Compile Include="WebTools\RestHelper.cs" />
     <Compile Include="WebTools\DataCache.cs" />
   </ItemGroup>
   <ItemGroup>

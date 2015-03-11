@@ -799,6 +799,8 @@
     <Content Include="Views\Spider\Test.cshtml" />
     <Content Include="Views\System\LogIndex.cshtml" />
     <Content Include="Views\System\SysInfoIndex.cshtml" />
+    <Content Include="Views\Spider\Hahatop.cshtml" />
+    <Content Include="Views\System\HttpDebugger.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -21,6 +21,13 @@ namespace MyMvcDemo.Controllers
         public ActionResult SysInfoIndex(string path, string name)
         {
             return View();
+        } 
+          
+        [HttpGet]
+        [Module(Name = "HttpDebugger", CSS = MyConstants.Bootstrap.Icon.Globe)]
+        public ActionResult HttpDebugger(string path, string name)
+        {
+            return View();
         }
 
         [HttpPost]
