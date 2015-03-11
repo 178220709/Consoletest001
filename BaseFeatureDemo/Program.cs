@@ -8,6 +8,7 @@ using BaseFeatureDemo.Base;
 using BaseFeatureDemo.Base.CLR;
 using BaseFeatureDemo.Base.Delegate;
 using BaseFeatureDemo.Base.File;
+using BaseFeatureDemo.Base.Linq;
 using BaseFeatureDemo.Base.Reg;
 using BaseFeatureDemo.Base.ThreadDemo.ThreadBase;
 using BaseFeatureDemo.Base.ThreadDemo.ThreadNew;
@@ -23,7 +24,7 @@ namespace BaseFeatureDemo
         static void Main(string[] args)
         {
 
-          ListDemo.Main1();
+            ExpressDemo.Main1();
         }
     }
 }

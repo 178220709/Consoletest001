@@ -14,7 +14,6 @@ namespace MyMvcDemo.Controllers
         [Module(Name = "Log", CSS = MyConstants.Bootstrap.Icon.Globe)]
         public ActionResult LogIndex(string path,string name)
         {
-           
             return View();
         }
         [HttpGet]
