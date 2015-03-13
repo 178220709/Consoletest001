@@ -2,21 +2,22 @@
 @{
     Layout = "~/Views/Shared/_LteMenuLayout.cshtml";
 }
-
 <script>
-    //seajs.use("underscore/underscore");
-    //seajs.use("underscore/underscore.string");
     seajs.use("page/home/index");
 </script>
 
-<aside class="right-side" ms-include-src="{{contentUrl}}">
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="min-height: 438px;" >
     <!-- Content Header (Page header) -->
     @Html.Partial("LTEPartial/_LteCrumbsSection")
 
     <!-- Main content -->
-    <section class="content" ms-include-src="{{contentUrl}}"></section>
-    <!-- /.content -->
-</aside><!-- /.right-side -->
+    <section class="content" ms-include-src="{{contentUrl}}">
+
+        <!-- Your Page Content Here -->
+
+    </section><!-- /.content -->
+</div><!-- /.content-wrapper -->
 
 
 

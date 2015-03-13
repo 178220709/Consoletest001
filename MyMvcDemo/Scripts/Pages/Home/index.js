@@ -1,6 +1,6 @@
 ﻿
 define(function(require, exports, module) {
-    var avalon = require("libs/avalon/mmRouter.js");
+    var avalon = require("avalon.js");
    
     var _ = require("libs/underscore/underscore.string");
      _ = require("libs/underscore/underscore");
@@ -16,26 +16,23 @@ define(function(require, exports, module) {
     avalon.router.get("/*path", callback); //劫持url hash并触发回调
     avalon.history.start(); //历史记录堆栈管理
     function callback(el, e) {
-        avalon.templateCache = {};
-
-
         var hash = avalon.history.fragment;
+        //不缓存每次都重新加载 供测试
+       //delete avalon.templateCache[hash];
 
-        if (this.path === "/"  ) {
+        if (this.path === "/") {
             indexModel.contentUrl = "home/indexContent";
         } else {
-            // indexModel.contentUrl = this.path;  //动态修改pageUrl属性值
             if (_.contains(hash, "LteDemo")) {
-              //  seajs.use("lte/dashboard");
-               // seajs.use("lte/demo");
             }
             avalon.router.setLastPath(hash);
             indexModel.contentUrl = hash;
+
         }
     }
 
     $(function() {
-        avalon.scan();
+        avalon.scan(document.getElementById("divTopContent"), indexModel);
         var lastPath = avalon.router.getLastPath();
         indexModel.contentUrl = lastPath;
     });     

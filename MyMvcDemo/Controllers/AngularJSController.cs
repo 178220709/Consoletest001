@@ -4,7 +4,7 @@ using Suijing.Utils.Constants;
 
 namespace MyMvcDemo.Controllers
 {
-    [Module(CSS = MyConstants.Bootstrap.Icon.Globe,Sort = 30)]
+    [Module(CSS = MyConstants.Bootstrap.Icon.Globe,Sort = 31)]
     public class AngularJSController : JsonNetController
     {
         [Module(CSS = MyConstants.Bootstrap.Icon.Globe)]
