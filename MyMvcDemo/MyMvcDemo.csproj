@@ -891,6 +891,8 @@
     <Content Include="Content\libs\moment-2.1\zh-cn.js" />
     <Content Include="Content\libs\qunit\qunit.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\Pages\AvalonDemo\bind.js" />
+    <Content Include="Scripts\Pages\AvalonDemo\hello.js" />
     <Content Include="Scripts\Pages\SeaJsDemo\underscoreTest.js" />
     <Content Include="Scripts\Pages\Home\index.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\Base.js" />
@@ -904,8 +906,6 @@
     <Content Include="Scripts\Extend\jquery.form.js" />
     <Content Include="Scripts\Extend\lambdaJS.js" />
     <Content Include="Views\AvalonDemo\index.cshtml" />
-    <Content Include="Views\AvalonDemo\_PageStart.cshtml" />
-    <Content Include="Views\AvalonDemo\_Layout.cshtml" />
     <Content Include="Scripts\Pages\Home\jsClass.js" />
     <Content Include="Scripts\Pages\Branches\attributeList.js" />
     <Content Include="Scripts\Pages\Branches\addEdit.js" />
@@ -1170,6 +1170,9 @@
     <Content Include="Views\Spider\Hahatop.cshtml" />
     <Content Include="Views\System\HttpDebugger.cshtml" />
     <Content Include="Views\AvalonDemo\Hello.cshtml" />
+    <Content Include="Views\AvalonDemo\Head.cshtml" />
+    <Content Include="Views\AvalonDemo\Base.cshtml" />
+    <Content Include="Views\AvalonDemo\Bind.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

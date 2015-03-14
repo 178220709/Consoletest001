@@ -56,6 +56,13 @@ namespace MyMvcDemo.Extend
             return parentModule;
         }
 
+        public static ModuleDTO GetControllerActions(WebViewPage page)
+        {
+            var cntr = page.ViewContext.Controller;
+            var module = GetControllerActions(cntr.GetType());
+            return module;
+        }
+
         private static bool HasMyAttribute<T>(this MemberInfo type) where T : Attribute
         {
             var attributes = type.GetCustomAttributes(typeof(T), false);

@@ -9,8 +9,8 @@
         new IndexColumnModel(){Name = "DateTime",Url = Url.Action("DateTime")},
         new IndexColumnModel(){Name = "Closure  ",Url = Url.Action("Closure1")},
     };
-    var cntr = ViewContext.Controller;
-    var module = ControllerHelper.GetControllerActions(cntr.GetType());
+  
+    var module = ControllerHelper.GetControllerActions(this);
 }
 
 

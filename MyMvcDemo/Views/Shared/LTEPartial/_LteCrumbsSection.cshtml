@@ -4,8 +4,16 @@
         <small>{{pageDescription}}</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li ms-repeat-item="crumbs" ms-class="avtive:$last"><a ms-href="{{item.url}}">{{item.name}}</a></li>
+        <li><a href="#!"><i class="fa fa-dashboard"></i> Home</a></li>
+
+        <li ms-repeat-item="crumbs" @*ms-class="avtive:$last"*@>
+            <a ms-href="#!{{item.url}}">{{item.name}}</a>
+        </li> 
+        
+        <li class="avtive">
+            <a ms-href="#">{{pageName}}</a>
+        </li>
+
     </ol>
 </section>
 

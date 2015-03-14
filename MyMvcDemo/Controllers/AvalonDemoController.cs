@@ -14,8 +14,12 @@ namespace MyMvcDemo.Controllers
         public ActionResult Hello()
         {
             return View();
-        }   
-          
+        }
 
+
+          public ActionResult Index(string pageName)
+          {
+                  return View(pageName);
+          }
     }
 }
