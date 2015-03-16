@@ -11,6 +11,10 @@ define(function(require, exports, module) {
       
         vm.pageName = "Home"; 
         vm.pageDescription = "";
+        vm.refresh = function() {
+            
+        };
+
     });
 
     avalon.router.get("/*path", callback); //劫持url hash并触发回调

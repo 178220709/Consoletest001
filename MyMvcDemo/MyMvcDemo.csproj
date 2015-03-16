@@ -1173,6 +1173,8 @@
     <Content Include="Views\AvalonDemo\Head.cshtml" />
     <Content Include="Views\AvalonDemo\Base.cshtml" />
     <Content Include="Views\AvalonDemo\Bind.cshtml" />
+    <Content Include="Views\AvalonDemo\Demo.cshtml" />
+    <Content Include="Views\Home\Waiting.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

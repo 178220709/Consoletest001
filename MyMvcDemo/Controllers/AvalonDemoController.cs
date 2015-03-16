@@ -16,6 +16,12 @@ namespace MyMvcDemo.Controllers
             return View();
         }
 
+        [HttpGet]
+        [Module(Name = "Demo", CSS = MyConstants.Bootstrap.Icon.Globe)]
+        public ActionResult Demo()
+        {
+            return View();
+        }
 
           public ActionResult Index(string pageName)
           {
