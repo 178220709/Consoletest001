@@ -2,7 +2,9 @@
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
+using System.Xml;
 using MyMvcDemo.Extend;
+using MyMvcDemo.Models;
 using MyProject.MyHtmlAgility.Project.Haha;
 using MyProject.WeixinModel.Model;
 using Suijing.Utils.Constants;
@@ -23,14 +25,29 @@ namespace MyMvcDemo.Controllers
         [Module(Name = "哈哈top16", CSS = MyConstants.Bootstrap.Icon.Globe)]
         public ActionResult HahaTop()
         {
-            var list = HahaJokeService.Instance.Entities.Take(() => 16).ToList(); 
+            var list = HahaJokeService.Instance.Entities.Take( 16).ToList(); 
             return View(list);
         }
-       [Module(Name = "test", CSS = MyConstants.Bootstrap.Icon.Globe)]
-        public ActionResult Test()
+       [Module(Name = "哈哈List", CSS = MyConstants.Bootstrap.Icon.Globe)]
+        public ActionResult HahaList()
         {
-          
             return View();
-        }   
+        }
+
+
+        #region ajax交互区
+
+       [HttpPost]
+       public JsonResult GetHahaList(HahaPagerModel model )
+       {
+           model.Rows = HahaJokeService.Instance.Entities.Skip(model.Skip).Take(model.PageSize).ToList();
+           return Json(model);
+       }
+
+       #endregion
+
+
+
+
     }
 }

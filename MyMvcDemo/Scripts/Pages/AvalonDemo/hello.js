@@ -2,7 +2,7 @@
 define(function(require, exports, module) {
     var avalon = require("avalon.js");
     console.log("init page");
-    var model = avalon.define("ctrlContent", function (vm) {
+    var model = avalon.define("ctrlAvalonDemoHello", function (vm) {
         vm.str = "this is str ";
         vm.number = 888;
         vm.radio = true;

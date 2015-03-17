@@ -788,12 +788,16 @@
     <Content Include="Content\libs\angularJS\angular.js" />
     <Content Include="Content\libs\angularJS\angular.min.js" />
     <Content Include="Content\libs\angularJS\controller.js" />
+    <Content Include="Content\libs\avalon\class1.html" />
     <Content Include="Content\libs\avalon\mmHistory.js" />
     <Content Include="Content\libs\avalon\mmRouter.js" />
     <Content Include="Content\libs\avalon\avalon.js" />
     <Content Include="Content\libs\avalon\avalon.modern.js" />
     <Content Include="Content\libs\avalon\avalon.modern.shim.js" />
     <Content Include="Content\libs\avalon\avalon.shim.js" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\css\font-awesome.css" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\css\font-awesome.min.css" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\libs\seajs-2.3.0\sea-debug.js" />
     <Content Include="Content\libs\seajs-2.3.0\sea.js" />
     <Content Include="Content\libs\underscore\underscore-min.js" />
@@ -824,11 +828,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="JsonNetController.cs" />
+    <Compile Include="Models\Base\BasePagerModel.cs" />
     <Compile Include="Models\Base\IndexColumnConst.cs" />
     <Compile Include="Models\CustomAuthorize.cs" />
     <Compile Include="Models\Base\BaseModel.cs" />
     <Compile Include="Models\Base\IndexColumnModel.cs" />
     <Compile Include="Models\IndexModel.cs" />
+    <Compile Include="Models\Spider\HahaPagerModel.cs" />
     <Compile Include="Models\System\LogModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Constants.cs" />
@@ -893,6 +899,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\Pages\AvalonDemo\bind.js" />
     <Content Include="Scripts\Pages\AvalonDemo\hello.js" />
+    <Content Include="Scripts\Pages\Spider\hahaList.js" />
     <Content Include="Scripts\Pages\SeaJsDemo\underscoreTest.js" />
     <Content Include="Scripts\Pages\Home\index.js" />
     <Content Include="Scripts\Pages\MyJSDemo\Base\Base.js" />
@@ -1124,6 +1131,37 @@
     <Content Include="Content\libs\AdminLTE-2.0.3\plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="Content\libs\AdminLTE-2.0.3\plugins\input-mask\phone-codes\phone-codes.json" />
     <Content Include="Content\libs\AdminLTE-2.0.3\README.md" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\fonts\FontAwesome.otf" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\less\animated.less" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\less\bordered-pulled.less" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\less\core.less" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\less\fixed-width.less" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\less\font-awesome.less" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\less\icons.less" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\less\larger.less" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\less\list.less" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\less\mixins.less" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\less\path.less" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\less\rotated-flipped.less" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\less\stacked.less" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\less\variables.less" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\scss\font-awesome.scss" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\scss\_animated.scss" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\scss\_bordered-pulled.scss" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\scss\_core.scss" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\scss\_fixed-width.scss" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\scss\_icons.scss" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\scss\_larger.scss" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\scss\_list.scss" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\scss\_mixins.scss" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\scss\_path.scss" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\scss\_rotated-flipped.scss" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\scss\_stacked.scss" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\scss\_variables.scss" />
     <None Include="Properties\PublishProfiles\MVCDemo.pubxml" />
     <Content Include="Views\Shared\_LteBaseLayout.cshtml" />
     <Content Include="Views\Shared\_LteMenuLayout.cshtml" />
@@ -1175,6 +1213,7 @@
     <Content Include="Views\AvalonDemo\Bind.cshtml" />
     <Content Include="Views\AvalonDemo\Demo.cshtml" />
     <Content Include="Views\Home\Waiting.cshtml" />
+    <Content Include="Views\Spider\HahaList.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

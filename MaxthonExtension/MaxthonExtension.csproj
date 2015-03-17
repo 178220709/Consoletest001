@@ -1017,6 +1017,7 @@
     <Content Include="TestDemo\avalon-master\bin\AspNet40.EXE" />
     <Content Include="TestDemo\avalon-master\bin\bin\AspNet40.EXE" />
     <Content Include="TestDemo\avalon-master\compiler.jar" />
+    <Content Include="TestDemo\avalon-master\examples\ifloop.html" />
     <Content Include="TestDemo\avalon-master\examples\%24fire.html" />
     <Content Include="TestDemo\avalon-master\examples\%24fire2.html" />
     <Content Include="TestDemo\avalon-master\examples\%24fire3.html" />
