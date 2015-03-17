@@ -40,7 +40,10 @@ namespace MyMvcDemo.Controllers
         {
             return View();
         }
-
+        public ActionResult Waiting()
+        {
+            return View();
+        }
 
         public ActionResult LteDemo(string path)
         {
