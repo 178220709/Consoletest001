@@ -17,9 +17,9 @@ define(function(require, exports, module) {
                     seajs.cache[key].destroy();
                 }
             }
-            var currentUrl = vm.contentUrl;
-            vm.contentUrl = "home/waiting";
-            vm.contentUrl = currentUrl;
+            //var currentUrl = vm.contentUrl;
+            //vm.contentUrl = "home/waiting";
+            vm.contentUrl = vm.contentUrl;
         };
 
     });

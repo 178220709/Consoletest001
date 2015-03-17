@@ -57,26 +57,15 @@
                     model.num = (100 * Math.random()).toFixed(0);
                     model.className = this.className;
                 },
+                addw: function (str) {
+                    var num = parseInt(str);
+                    model.w += num;
+                },
                 str: "classTest"
             });
 
 
-            var model2 = avalon.define(function () {
-                var vm = {}
-                vm.$id = "ctrlSpiderHahaList",
-                vm.list = [];
-                vm.pageIndex = 1;
-                vm.current = {};
-                vm.str = "ctrlSpiderHahaList";
-                vm.refreshClick = function () {
-                  
-                }
-                vm.getClass = function (index) {
-                    return  "class"+ index;
-                }
-
-                return vm;
-            } ()  );
+          
 
             $(function (parameters) {
                     avalon.scan();
@@ -106,18 +95,13 @@
             <button ms-click="remove" type="button">remove</button>
         </div>
         
-        
-        
-        
-        <div ms-controller="ctrlSpiderHahaList">
-            <div class="row">
-                <div class="col-xs-12" ms-class="test{{str}}" ms-attr-test="test{{pageIndex | myfilter}}"
-                     ms-class-1="{{getClass(pageIndex)}}" ms-attr-test3="tset{{pageIndex | myfilter}}">
-                </div>
-            </div>
+        <div>
+            <input type="number"  ms-duplex="w"/>
+            <button ms-click="addw(-1)" type="button">w++</button>
         </div>
         
         
+      
 
     </body>
 </html>

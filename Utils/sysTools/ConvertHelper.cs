@@ -146,6 +146,30 @@ namespace Suijing.Utils
         {
             int.TryParse(str, out def);
             return def;
+        }  
+        
+        /// <summary>
+        /// 进1 除法
+        /// </summary>
+        /// <param name="totle"></param>
+        /// <param name="size"></param>
+        /// <returns></returns>
+        public static int Add1Div(int totle , int size )
+        {
+            if (size==0 || totle==0)
+            {
+                return 0;
+            }
+            var result = totle/size;
+            if (totle%size==0)
+            {
+                return result;
+            }
+            else
+            {
+                return result +1; 
+            }
+
         }
     }
 }

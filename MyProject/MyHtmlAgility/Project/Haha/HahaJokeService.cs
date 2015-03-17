@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using MongoDB.Driver;
 using MyProject.MongoDBDal;
 
@@ -31,7 +32,23 @@ namespace MyProject.MyHtmlAgility.Project.Haha
           return Collections.RemoveAll();
         }
 
-
+        /// <summary>
+        /// 更新content
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool UpdateHaha(JokeEntity model)
+        {
+            var manager = HahaJokeService.Instance;
+            var entity = manager.Entities.FirstOrDefault(a => a.Flag == model.Flag);
+            if (entity == null)
+            {
+                return false;
+            }
+            entity.Content = model.Content;
+            manager.AddEdit(entity);
+            return true;
+        }
     }
 
     public class JokeEntity : BaseEntity

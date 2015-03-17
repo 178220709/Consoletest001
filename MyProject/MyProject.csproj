@@ -113,6 +113,7 @@
     <Compile Include="ManiaSongs\SongInfo.cs" />
     <Content Include="MyHtmlAgility\XPathDemo\demoXML.xml" />
     <Compile Include="MyHtmlAgility\ProjectTest\GetContentFromLteDemo.cs" />
+    <Compile Include="MyHtmlAgility\ProjectTest\FixHahaJokeFlag.cs" />
     <Compile Include="MyHtmlAgility\Project\Haha\HahaWebReader.cs" />
     <Compile Include="MyHtmlAgility\Project\Haha\HahaJokeService.cs" />
     <Compile Include="MyHtmlAgility\XPathDemo\XPathDemo.cs" />

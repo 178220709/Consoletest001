@@ -40,8 +40,19 @@ namespace MyMvcDemo.Controllers
        [HttpPost]
        public JsonResult GetHahaList(HahaPagerModel model )
        {
+           model.Total = HahaJokeService.Instance.Entities.Count();
            model.Rows = HahaJokeService.Instance.Entities.Skip(model.Skip).Take(model.PageSize).ToList();
            return Json(model);
+       }
+
+       [ValidateInput(false)]
+       [HttpPost]
+       public JsonResult UpdateHaha(JokeEntity model )
+       {
+           return Json(new ResponseJsonModel()
+           {
+               success = HahaJokeService.Instance.UpdateHaha(model)
+           });
        }
 
        #endregion

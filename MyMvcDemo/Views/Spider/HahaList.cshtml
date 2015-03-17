@@ -17,13 +17,10 @@
             <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">哈哈笑话列表</h3>
+                    <span style="margin-left: 300px;">共 {{pageCount}} 页 第 {{pageIndex}} 页</span>
                     <div class="box-tools">
                         <div class="input-group">
-                            <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search" ms-duplex="pageIndex">
-
-                            <div class="input-group-btn">
-                                <button class="btn btn-sm btn-default" ms-click="refreshClick"><i class="fa fa-search"></i></button>
-                            </div>
+                            <input type="number" min="1" ms-attr-max="pageCount" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search" ms-duplex="pageIndex">
                         </div>
                     </div>
                 </div><!-- /.box-header -->
@@ -40,8 +37,12 @@
                             <tr ms-repeat-row="list" ms-click="trClick(row)">
                                 <td ms-class="test{{PageIndex}}">{{row._id}}</td>
                                 <td>{{row.Flag}}</td>
-                                <td>{{row.Url}}</td>
-                                <td ms-attr-title="row.Content | html">{{row.Content}}</td>
+                                <td>  <a  target="_blank" ms-href="{{row.Url}}">{{row.Url}}</a> </td>
+                                <td >
+                                    <div  style="text-overflow: ellipsis ; overflow: hidden ; white-space: nowrap">
+                                        <i class="fa fa-at" ms-attr-title="row.Content"></i>  {{getContent( row.Content)}}
+                                    </div>
+                                </td>
                                 <td><span class="label " ms-class-1="{{getWeightClass(row.Weight)}}">{{row.Weight}}</span></td>
                             </tr>
                           
@@ -52,6 +53,13 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-md-8">
+            <textarea style="width: 100%;height: 100px;" ms-duplex="current.Content"> </textarea> <br />
+            <label  title="更新内容"  >
+                更新内容
+                <button ms-click="updateClick(current)"> <i class="fa fa-refresh"></i></button>
+            </label> 
+        </div>
         <div class="col-md-8">
             {{current.Content|html}}
         </div>
