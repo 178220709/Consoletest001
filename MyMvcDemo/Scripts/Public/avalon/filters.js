@@ -14,7 +14,20 @@ define(function(require, exports, module) {
             }
         }
     };
-   
+
+    o.getColorLevel = function (weight) {
+        if (weight < 0) {
+            return "label-danger";
+        }
+        if (weight == 0) {
+            return "label-warning";
+        }
+        if (weight > 0 && weight < 100) {
+            return "label-primary";
+        }
+        return "label-success";
+    };
+
 
 
     module.exports = o;

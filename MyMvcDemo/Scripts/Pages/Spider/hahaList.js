@@ -18,24 +18,14 @@ define(function (require, exports, module) {
         vm.pageIndex = 1;
         vm.pageCount = 1;
         vm.current = {};
-        vm.getWeightClass = function(weight) {
-            if (weight<0) {
-                return "label-danger";
-            }
-            if (weight == 0) {
-                return "label-warning";
-            }
-            if (weight > 0 && weight <100 ) {
-                return "label-primary";
-            }
-            return "label-success";
-        };
+        vm.getWeightClass = filters.getColorLevel;
         vm.trClick = function (row) {
             vm.current = row;
         };
         vm.refreshClick = function() {
             getList(vm.pageIndex, function(data) {
                 vm.list = data.Rows;
+                vm.pageCount = data.PageCount;
                 vm.current = _.first(vm.list);
             });
         };
@@ -45,10 +35,6 @@ define(function (require, exports, module) {
             //row是avalon设置监听过的复杂对象  不能直接去序列化它
             var m1 = row;
             var m2 = row.$model;
-            var m3 = {
-                Flag: row.Flag,
-                Content: row.Content,
-            };
           
             $.post("spider/updateHaha", m2, function (data) {
                 if (data.success) {
