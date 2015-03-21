@@ -13,19 +13,13 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
     [TestClass]
     public class YouminWebReader :WebTaskReader
     {
-        public override ReadResult GetHtmlContent(string url)
+        public override ReadResult GetHtmlContent(string url )
         {
-            var re = new ReadResult(url);
-            var doc = NormalHtmlHelper.GetDocumentNode(url);
-            var divContent = doc.DocumentNode.QuerySelector(".list.joke.joke-item");
-            re.Content = divContent.QuerySelector(".clearfix.mt-15").OuterHtml;
-            var divFooterA = divContent.QuerySelectorAll(".clearfix.mt-20.joke-item-footer .fl a").ToArray();
-            var zan = ConvertHelper.ConvertStrToInt(divFooterA[0].InnerText);
-            var bishi = ConvertHelper.ConvertStrToInt(divFooterA[1].InnerText);
-            re.Weight = ((zan + bishi) / 100) * (zan - bishi * 3);
-            return re;
-        }
+            var parstialReader = new YouminParstialReader(url);
+            parstialReader.StartReadAll();
 
+            return parstialReader.OutputResult();
+        }
         public override void FireTaskCallBack(IList<ReadResult> res)
         {
             try
@@ -54,49 +48,33 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
         {
             var urls = new List<string>();
             const string url = "http://www.gamersky.com/ent/";
-            var doc = NormalHtmlHelper.GetDocumentNode(url);
-            doc.DocumentNode.QuerySelector(".recommand-joke-main-list-thumbnail")
-                .QuerySelectorAll(".joke-text.word-wrap")
-                .Select(a=>a.QuerySelector("a"))
-                .Select(a =>  "http://www.haha.mx"+ a.GetAttributeValue("href",""))
-                .ToList().ForEach(urls.Add);
 
-            doc.DocumentNode.QuerySelector(".recommand-joke-main-list-text")
-               .QuerySelectorAll("a").Select(a => "http://www.haha.mx" + a.GetAttributeValue("href", ""))
-               .ToList().ForEach(urls.Add);
+
+            var doc = NormalHtmlHelper.GetDocumentNode(url);
+
+              doc.DocumentNode.QuerySelectorAll(".Lpic").ToList()
+                  .ForEach(ul => ul.QuerySelectorAll("li .t2 a")
+                  .AsParallel()
+                  .ForAll(a => urls.Add(a.GetAttributeValue("href", ""))));
+                  
             var reader = new YouminWebReader();
             var factory = new WebTaskFactory(reader);
-         return factory.StartAndCallBack(urls.Distinct().ToList());
+         return  null;
+         return  factory.StartAndCallBack(urls.Distinct().ToList());
 
         }
 
         [TestMethod]
         public void Test1()
         {
-            // 测试文字笑话
-            const string url = "http://www.haha.mx/joke/1660764";
-            var doc = NormalHtmlHelper.GetDocumentNode(url);
-            var divContent = doc.DocumentNode.QuerySelector(".list.joke.joke-item");
-           
-            var content = divContent.QuerySelector(".clearfix.mt-15");
-            var divFooterA = divContent.QuerySelectorAll(".clearfix.mt-20.joke-item-footer .fl a").ToArray();
-            var zan = ConvertHelper.ConvertStrToInt(divFooterA[0].InnerText);
-            var bishi = ConvertHelper.ConvertStrToInt(divFooterA[1].InnerText);
-            var weight = ((zan + bishi) / 100) * (zan - bishi * 3);
+            // 测试
+            string str = "http://www.gamersky.com/ent/201503/529106.shtml";
+            GetHtmlContent(str);
         }
         [TestMethod]
         public void Test2()
         {
-            // 测试图片笑话
-            const string url = "http://www.haha.mx/joke/1661700";
-            var doc = NormalHtmlHelper.GetDocumentNode(url);
-            var divContent = doc.DocumentNode.QuerySelector(".list.joke.joke-item");
-
-            var content = divContent.QuerySelector(".clearfix.mt-15");
-            var divFooterA = divContent.QuerySelectorAll(".clearfix.mt-20.joke-item-footer .fl a").ToArray();
-            var zan = ConvertHelper.ConvertStrToInt(divFooterA[0].InnerText);
-            var bishi = ConvertHelper.ConvertStrToInt(divFooterA[1].InnerText);
-            var weight = ((zan + bishi) / 100) * (zan - bishi*3);
+          
         }
     }
 }
