@@ -33,7 +33,7 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
                         continue;
                     }
                     var en = new BaseSpiderEntity();
-                    en.Flag = ConvertHelper.ConvertStrToInt(re.Url.Substring(re.Url.LastIndexOf('/')+1));
+                    en.Flag = GetFlagFromUrl(re.Url);
                     en.InjectFrom(re);
                   var writeConcernResult =  manager.AddEdit(en);
                 }

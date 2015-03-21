@@ -38,7 +38,7 @@ namespace MyProject.MyHtmlAgility.Project.Haha
                         continue;
                     }
                     var en = new BaseSpiderEntity();
-                    en.Flag = ConvertHelper.ConvertStrToInt(re.Url.Substring(re.Url.LastIndexOf('/')+1));
+                    en.Flag = re.Url.Substring(re.Url.LastIndexOf('/')+1);
                     en.InjectFrom(re);
                     manager.AddEdit(en);
                 }

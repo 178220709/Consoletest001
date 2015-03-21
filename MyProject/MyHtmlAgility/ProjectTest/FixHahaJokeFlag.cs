@@ -32,9 +32,9 @@ namespace  MyProject.MyHtmlAgility.ProjectTest
 
             manager.Entities.ToList().ForEach(a =>
             {
-                if (a.Flag==0)
+                if ( string.IsNullOrEmpty(a.Flag))
                 {
-                    a.Flag = ConvertHelper.ConvertStrToInt(a.Url.Substring(a.Url.LastIndexOf('/') + 1));
+                    a.Flag = a.Url.Substring(a.Url.LastIndexOf('/') + 1);
                     manager.AddEdit(a);
                 }
             });
