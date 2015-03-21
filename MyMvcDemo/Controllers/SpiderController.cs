@@ -5,8 +5,8 @@ using System.Web.Mvc;
 using System.Xml;
 using MyMvcDemo.Extend;
 using MyMvcDemo.Models;
+using MyProject.MyHtmlAgility.Core;
 using MyProject.MyHtmlAgility.Project.Haha;
-using MyProject.WeixinModel.Model;
 using Suijing.Utils.Constants;
 
 namespace MyMvcDemo.Controllers
@@ -47,7 +47,7 @@ namespace MyMvcDemo.Controllers
 
        [ValidateInput(false)]
        [HttpPost]
-       public JsonResult UpdateHaha(JokeEntity model )
+       public JsonResult UpdateHaha(BaseSpiderEntity model )
        {
            return Json(new ResponseJsonModel()
            {

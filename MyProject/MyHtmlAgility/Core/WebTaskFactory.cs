@@ -12,9 +12,6 @@ using Suijing.Utils.sysTools;
 
 namespace MyProject.MyHtmlAgility.Core
 {
-
-
-
     public class WebTaskFactory
     {
         public int ThreadSize = 5;
@@ -46,14 +43,6 @@ namespace MyProject.MyHtmlAgility.Core
                 return null;
             }
             LogHepler.WriteWebReader("成功爬取并执行完毕");
-           
-        }
-
-        private IList<ReadResult> GetHtmlContents(IList<string> urls)
-        {
-            if (!urls.Any())
-                return null;
-            return urls.Select(a => _reader.GetHtmlContent(a)).Where(a=>!string.IsNullOrWhiteSpace(a.Content)).ToList();
         }
     }
 
@@ -69,6 +58,7 @@ namespace MyProject.MyHtmlAgility.Core
             Date = DateTime.Now;
         }
         public string  Url { get; set; }
+        public string  Title { get; set; }
         public string  Content { get; set; }
         public string  StyleStr { get; set; }
         public DateTime  Date { get; set; }
@@ -83,7 +73,16 @@ namespace MyProject.MyHtmlAgility.Core
     /// </summary>
     public abstract class WebTaskReader : IWebTaskReader, IWebTaskCallBack
     {
+        /// <summary>
+        /// 通过url 获取内容 子类Reader去具体实现 由工厂类调用
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
         public abstract ReadResult GetHtmlContent(string url);
+        /// <summary>
+        /// 工厂类执行获取任务后,会调用 子类Reader实现的回调  
+        /// </summary>
+        /// <param name="res"></param>
         public abstract void FireTaskCallBack(IList<ReadResult> res);
     }
 

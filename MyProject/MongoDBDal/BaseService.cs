@@ -11,8 +11,6 @@ namespace MyProject.MongoDBDal
     public class BaseEntity
     {
         public ObjectId Id { get; set; }
-
-
     }
     public class BaseService<T> where T : BaseEntity
     {

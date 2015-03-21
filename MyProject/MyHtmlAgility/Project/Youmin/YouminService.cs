@@ -3,34 +3,29 @@ using MongoDB.Driver;
 using MyProject.MongoDBDal;
 using MyProject.MyHtmlAgility.Core;
 
-namespace MyProject.MyHtmlAgility.Project.Haha
+namespace MyProject.MyHtmlAgility.Project.Youmin
 {
-    public class HahaJokeService : BaseService<BaseSpiderEntity>
+    public class YouminService : BaseService<BaseSpiderEntity>
     {
-        private const string _CollectionName = "HahaJoke";
-        private HahaJokeService(string collectionName)
+        private const string _CollectionName = "Youmin";
+        private YouminService(string collectionName)
             : base(collectionName)
         {
         }
-        private static HahaJokeService _Instance;
+        private static YouminService _Instance;
 
-        public static HahaJokeService Instance
+        public static YouminService Instance
         {
             get
             {
                 if (_Instance==null)
                 {
-                    _Instance = new HahaJokeService(_CollectionName);
+                    _Instance = new YouminService(_CollectionName);
                 }
                 return _Instance;
             }
         }
 
-        public CommandResult DeleteAll()
-        {
-          //  return Collections.Drop();
-          return Collections.RemoveAll();
-        }
 
         /// <summary>
         /// 更新content
@@ -39,7 +34,7 @@ namespace MyProject.MyHtmlAgility.Project.Haha
         /// <returns></returns>
         public bool UpdateHaha(BaseSpiderEntity model)
         {
-            var manager = HahaJokeService.Instance;
+            var manager = YouminService.Instance;
             var entity = manager.Entities.FirstOrDefault(a => a.Flag == model.Flag);
             if (entity == null)
             {

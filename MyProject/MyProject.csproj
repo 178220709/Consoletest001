@@ -104,6 +104,7 @@
     <Compile Include="HotelRecord\SqlDal\MyContext.cs" />
     <Compile Include="MongoDBDal\BaseService.cs" />
     <Compile Include="MyHtmlAgility\Core\DownloadImages.cs" />
+    <Compile Include="MyHtmlAgility\Core\BaseSpiderEntity.cs" />
     <Compile Include="MyHtmlAgility\Core\NormalHtmlHelper.cs" />
     <Compile Include="MyHtmlAgility\Core\HttpWebResponseUtility.cs" />
     <Compile Include="MyHtmlAgility\Core\WebTaskFactory.cs" />
@@ -114,6 +115,8 @@
     <Content Include="MyHtmlAgility\XPathDemo\demoXML.xml" />
     <Compile Include="MyHtmlAgility\ProjectTest\GetContentFromLteDemo.cs" />
     <Compile Include="MyHtmlAgility\ProjectTest\FixHahaJokeFlag.cs" />
+    <Compile Include="MyHtmlAgility\Project\Youmin\YouminService.cs" />
+    <Compile Include="MyHtmlAgility\Project\Youmin\YouminWebReader.cs" />
     <Compile Include="MyHtmlAgility\Project\Haha\HahaWebReader.cs" />
     <Compile Include="MyHtmlAgility\Project\Haha\HahaJokeService.cs" />
     <Compile Include="MyHtmlAgility\XPathDemo\XPathDemo.cs" />

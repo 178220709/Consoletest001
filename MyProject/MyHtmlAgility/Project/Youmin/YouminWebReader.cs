@@ -8,10 +8,10 @@ using MyProject.MyHtmlAgility.Core;
 using Omu.ValueInjecter;
 using Suijing.Utils;
 
-namespace MyProject.MyHtmlAgility.Project.Haha
+namespace MyProject.MyHtmlAgility.Project.Youmin
 {
     [TestClass]
-    public class HahaWebReader :WebTaskReader
+    public class YouminWebReader :WebTaskReader
     {
         public override ReadResult GetHtmlContent(string url)
         {
@@ -30,7 +30,7 @@ namespace MyProject.MyHtmlAgility.Project.Haha
         {
             try
             {
-                var manager = HahaJokeService.Instance;
+                var manager = YouminService.Instance;
                 foreach (var re in res)
                 {
                     if (manager.Entities.Any(a => a.Url == re.Url))
@@ -53,7 +53,7 @@ namespace MyProject.MyHtmlAgility.Project.Haha
         public static List<ReadResult> GetRecommand()
         {
             var urls = new List<string>();
-            const string url = "http://www.haha.mx/joke/1660764";
+            const string url = "http://www.gamersky.com/ent/";
             var doc = NormalHtmlHelper.GetDocumentNode(url);
             doc.DocumentNode.QuerySelector(".recommand-joke-main-list-thumbnail")
                 .QuerySelectorAll(".joke-text.word-wrap")
@@ -64,7 +64,7 @@ namespace MyProject.MyHtmlAgility.Project.Haha
             doc.DocumentNode.QuerySelector(".recommand-joke-main-list-text")
                .QuerySelectorAll("a").Select(a => "http://www.haha.mx" + a.GetAttributeValue("href", ""))
                .ToList().ForEach(urls.Add);
-            var reader = new HahaWebReader();
+            var reader = new YouminWebReader();
             var factory = new WebTaskFactory(reader);
          return factory.StartAndCallBack(urls.Distinct().ToList());
 
