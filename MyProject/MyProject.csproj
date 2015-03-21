@@ -116,6 +116,7 @@
     <Content Include="MyHtmlAgility\XPathDemo\demoXML.xml" />
     <Compile Include="MyHtmlAgility\ProjectTest\GetContentFromLteDemo.cs" />
     <Compile Include="MyHtmlAgility\ProjectTest\FixHahaJokeFlag.cs" />
+    <Compile Include="MyHtmlAgility\ProjectTest\TestWebReader.cs" />
     <Compile Include="MyHtmlAgility\Project\Youmin\YouminService.cs" />
     <Compile Include="MyHtmlAgility\Project\Youmin\YouminParstialReader.cs" />
     <Compile Include="MyHtmlAgility\Project\Youmin\YouminWebReader.cs" />

@@ -22,7 +22,11 @@ namespace MyProject.MyHtmlAgility.Core
             _reader = reader;
         }
 
-
+        /// <summary>
+        /// 根据传过来的urls集合,并行抓取url对应的内容,抓取方法由WebTaskReader子类实现
+        /// </summary>
+        /// <param name="urls"></param>
+        /// <returns></returns>
         public List<ReadResult> StartAndCallBack(IList<string> urls)
         {
             if (!urls.Any())
@@ -31,7 +35,7 @@ namespace MyProject.MyHtmlAgility.Core
             LogHepler.WriteWebReader(string.Format("开始爬取{0}条数据:\n {1} ...", urls.Count, string.Join("\n", urls.Take(3))));
             try
             {
-                var res = urls.Select(a => _reader.GetHtmlContent(a))
+                var res = urls.AsParallel().Select(a => _reader.GetHtmlContent(a))
                     .Where(a => !string.IsNullOrWhiteSpace(a.Content))
                     .ToList();
                 _reader.FireTaskCallBack(res);

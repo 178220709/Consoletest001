@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using Fizzler.Systems.HtmlAgilityPack;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyProject.MyHtmlAgility.Core;
+using NPOI.SS.Formula.Functions;
 using Omu.ValueInjecter;
 using Suijing.Utils;
 
@@ -34,13 +35,21 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
                     var en = new BaseSpiderEntity();
                     en.Flag = ConvertHelper.ConvertStrToInt(re.Url.Substring(re.Url.LastIndexOf('/')+1));
                     en.InjectFrom(re);
-                    manager.AddEdit(en);
+                  var writeConcernResult =  manager.AddEdit(en);
                 }
             }
             catch (Exception)
             {
                 return;
             }
+        }
+
+        private string GetFlagFromUrl(string url)
+        {
+            var flag = "";
+            var tags = url.Split('/');
+            var tag2 = tags.Skip(tags.Length - 2).Take(2).ToArray();
+            return tag2[0] + tag2[1].TrimEnd(".shtml".ToArray());
         }
 
         [TestMethod]
@@ -59,8 +68,8 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
                   
             var reader = new YouminWebReader();
             var factory = new WebTaskFactory(reader);
-         return  null;
-         return  factory.StartAndCallBack(urls.Distinct().ToList());
+       //  return  null;
+         return  factory.StartAndCallBack(urls.Distinct().Take(1).ToList());
 
         }
 
@@ -69,12 +78,19 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
         {
             // 测试
             string str = "http://www.gamersky.com/ent/201503/529106.shtml";
-            GetHtmlContent(str);
+          var re =  GetHtmlContent(str);
         }
         [TestMethod]
         public void Test2()
         {
-          
+            string str = "http://www.gamersky.com/ent/201503/529106.shtml";
+            var flag = GetFlagFromUrl(str);
+        } 
+        
+        [TestMethod]
+        public void Test3()
+        {
+            var list = GetRecommand();
         }
     }
 }
