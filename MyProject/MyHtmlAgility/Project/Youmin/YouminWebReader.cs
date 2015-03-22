@@ -45,7 +45,7 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
             }
         }
 
-        private string GetFlagFromUrl(string url)
+        internal static string GetFlagFromUrl(string url)
         {
             var flag = "";
             var tags = url.Split('/');

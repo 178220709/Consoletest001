@@ -26,6 +26,11 @@ namespace MyProject.MyHtmlAgility.Project.Haha
             }
         }
 
-
+      
     }
 }
+
+//将Flag 转换为string类型
+//    db.HahaJoke.find().forEach(function(x){
+//x.Flag=x.Flag+"";
+//db.HahaJoke.save(x)})

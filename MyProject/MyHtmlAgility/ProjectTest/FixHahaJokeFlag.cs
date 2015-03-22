@@ -11,6 +11,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.WebTesting;
 using MongoDB.Driver.Linq;
 using MyProject.MyHtmlAgility.Project.Haha;
+using MyProject.MyHtmlAgility.Project.SpiderBase;
+using MyProject.MyHtmlAgility.Project.Youmin;
 using MyProject.TestHelper;
 using Newtonsoft.Json;
 using NPOI.SS.Formula.Functions;
@@ -28,13 +30,13 @@ namespace  MyProject.MyHtmlAgility.ProjectTest
         [TestMethod]
         public void FixFlag()
         {
-            var manager = HahaJokeService.Instance;
+            var manager = SpiderServiceFactory.GetByTypeId(2);
 
             manager.Entities.ToList().ForEach(a =>
             {
-                if ( string.IsNullOrEmpty(a.Flag))
+                if ( string.IsNullOrEmpty(a.Flag) || a.Flag=="0")
                 {
-                    a.Flag = a.Url.Substring(a.Url.LastIndexOf('/') + 1);
+                    a.Flag =   YouminWebReader.GetFlagFromUrl(a.Url) ;
                     manager.AddEdit(a);
                 }
             });
