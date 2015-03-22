@@ -297,6 +297,17 @@
     <Content Include="Content\libs\AdminLTE-2.0.3\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.css" />
     <Content Include="Content\libs\AdminLTE-2.0.3\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.js" />
     <Content Include="Content\libs\AdminLTE-2.0.3\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.min.css" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\plugins\HubSpot-messenger\css\messenger-spinner.css" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\plugins\HubSpot-messenger\css\messenger-theme-air.css" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\plugins\HubSpot-messenger\css\messenger-theme-block.css" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\plugins\HubSpot-messenger\css\messenger-theme-flat.css" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\plugins\HubSpot-messenger\css\messenger-theme-future.css" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\plugins\HubSpot-messenger\css\messenger-theme-ice.css" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\plugins\HubSpot-messenger\css\messenger.css" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\plugins\HubSpot-messenger\js\messenger-theme-flat.js" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\plugins\HubSpot-messenger\js\messenger-theme-future.js" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\plugins\HubSpot-messenger\js\messenger.js" />
+    <Content Include="Content\libs\AdminLTE-2.0.3\plugins\HubSpot-messenger\js\messenger.min.js" />
     <Content Include="Content\libs\AdminLTE-2.0.3\plugins\chartjs\Chart.js" />
     <Content Include="Content\libs\AdminLTE-2.0.3\plugins\chartjs\Chart.min.js" />
     <Content Include="Content\libs\AdminLTE-2.0.3\plugins\ckeditor\adapters\jquery.js" />
@@ -834,7 +845,7 @@
     <Compile Include="Models\Base\BaseModel.cs" />
     <Compile Include="Models\Base\IndexColumnModel.cs" />
     <Compile Include="Models\IndexModel.cs" />
-    <Compile Include="Models\Spider\HahaPagerModel.cs" />
+    <Compile Include="Models\Spider\SpiderPagerModel.cs" />
     <Compile Include="Models\System\LogModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Constants.cs" />
@@ -1190,6 +1201,7 @@
     <Content Include="Views\AvalonDemo\Demo.cshtml" />
     <Content Include="Views\Home\Waiting.cshtml" />
     <Content Include="Views\Spider\HahaList.cshtml" />
+    <Content Include="Views\Shared\LTEPartial\_LtePlugins.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

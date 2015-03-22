@@ -5,7 +5,7 @@ define(function (require, exports, module) {
     var pagerInit = require("public/avalon/page.js");
 
     var getList = function(pageIndex,callback) {
-        $.post("spider/getHahaList", { PageSize: 4, PageIndex: pageIndex }, function (data) {
+        $.post("spider/getList", { PageSize: 4, PageIndex: pageIndex }, function (data) {
             if (_.isFunction(callback)) {
                 callback(data);
             }
@@ -31,12 +31,27 @@ define(function (require, exports, module) {
         };
         vm.getContent = filters.getHahaContent;
         vm.changePage = pager.changePage;
+        vm.del = function (row,delFun) {
+            if (confirm("sure?")) {
+
+
+                if (_.isFunction(delFun)) {
+                    delFun();
+                }
+            }
+            $.post("spider/Delete", row.Flag, function (data) {
+                if (data.success) {
+                    alert("更新成功");
+                } else {
+                    alert("更新错误");
+                }
+            });
+        };
         vm.updateClick = function (row) {
             //row是avalon设置监听过的复杂对象  不能直接去序列化它
             var m1 = row;
             var m2 = row.$model;
-          
-            $.post("spider/updateHaha", m2, function (data) {
+            $.post("spider/update", m2, function (data) {
                 if (data.success) {
                     alert("更新成功");
                 } else {

@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Runtime.Remoting.Messaging;
 using System.Text;
-using System.Threading.Tasks;
-using Fizzler.Systems.HtmlAgilityPack;
-using HtmlAgilityPack;
+using MyProject.MyHtmlAgility.Core;
 using Suijing.Utils.sysTools;
 
-namespace MyProject.MyHtmlAgility.Core
+namespace MyProject.MyHtmlAgility.Project.SpiderBase
 {
     /// <summary>
     /// 用于分页内容(一篇帖子分成几十个页面)的爬取  

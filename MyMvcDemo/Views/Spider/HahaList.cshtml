@@ -8,7 +8,7 @@
 <h2>HahaList</h2>
 
 <script>
-    seajs.use("page/Spider/HahaList.js");
+    seajs.use("page/Spider/HahaList.js?_=0.01");
 </script>
 
 <div ms-controller="ctrlSpiderHahaList">
@@ -35,7 +35,7 @@
                                 <th>Weight</th>
                             </tr>
                             <tr ms-repeat-row="list" ms-click="trClick(row)">
-                                <td ms-class="test{{PageIndex}}">{{row._id}}</td>
+                                <td ms-class="test{{PageIndex}}"> <i class="fa fa-close button" ms-click="del(row,$remove)"></i>  </td>
                                 <td  >{{row.Flag}}</td>
                                 <td>  <a  target="_blank" ms-href="{{row.Url}}">{{row.Url}}</a> </td>
                                 <td >

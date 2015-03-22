@@ -104,10 +104,10 @@
     <Compile Include="HotelRecord\SqlDal\MyContext.cs" />
     <Compile Include="MongoDBDal\BaseService.cs" />
     <Compile Include="MyHtmlAgility\Core\DownloadImages.cs" />
-    <Compile Include="MyHtmlAgility\Core\BaseSpiderEntity.cs" />
+    <Compile Include="MyHtmlAgility\Project\SpiderBase\BaseSpiderEntity.cs" />
     <Compile Include="MyHtmlAgility\Core\NormalHtmlHelper.cs" />
     <Compile Include="MyHtmlAgility\Core\HttpWebResponseUtility.cs" />
-    <Compile Include="MyHtmlAgility\Core\BaseParstialReader.cs" />
+    <Compile Include="MyHtmlAgility\Project\SpiderBase\BaseParstialReader.cs" />
     <Compile Include="MyHtmlAgility\Core\WebTaskFactory.cs" />
     <Compile Include="MyHtmlAgility\Core\WebDownloader.cs" />
     <Compile Include="ManiaSongs\CommonDictionary.cs" />
@@ -117,6 +117,8 @@
     <Compile Include="MyHtmlAgility\ProjectTest\GetContentFromLteDemo.cs" />
     <Compile Include="MyHtmlAgility\ProjectTest\FixHahaJokeFlag.cs" />
     <Compile Include="MyHtmlAgility\ProjectTest\TestWebReader.cs" />
+    <Compile Include="MyHtmlAgility\Project\SpiderBase\SpiderServiceFactory.cs" />
+    <Compile Include="MyHtmlAgility\Project\SpiderBase\SpiderService.cs" />
     <Compile Include="MyHtmlAgility\Project\Youmin\YouminService.cs" />
     <Compile Include="MyHtmlAgility\Project\Youmin\YouminParstialReader.cs" />
     <Compile Include="MyHtmlAgility\Project\Youmin\YouminWebReader.cs" />

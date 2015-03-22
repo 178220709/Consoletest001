@@ -1,7 +1,7 @@
 ﻿using System;
 using MyProject.MongoDBDal;
 
-namespace MyProject.MyHtmlAgility.Core
+namespace MyProject.MyHtmlAgility.Project.SpiderBase
 {
     public class BaseSpiderEntity : BaseEntity
     {

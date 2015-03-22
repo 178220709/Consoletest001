@@ -42,6 +42,10 @@ namespace MyProject.MongoDBDal
         }
         #endregion
 
+        public CommandResult DeleteAll()
+        {
+            return Collections.RemoveAll();
+        }
         #region 根据Id删除实体对象
         public virtual WriteConcernResult Delete(int id)
         {

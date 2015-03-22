@@ -1,0 +1,12 @@
+﻿
+@*消息弹窗 插件*@
+<link href="~/Content/libs/AdminLTE-2.0.3/plugins/HubSpot-messenger/css/messenger.css" rel="stylesheet" />
+<link href="~/Content/libs/AdminLTE-2.0.3/plugins/HubSpot-messenger/css/messenger-theme-future.css" rel="stylesheet" />
+<script src="~/Content/libs/AdminLTE-2.0.3/plugins/HubSpot-messenger/js/messenger.js"></script>
+<script src="~/Content/libs/AdminLTE-2.0.3/plugins/HubSpot-messenger/js/messenger-theme-future.js"></script>
+
+<script>
+    window.alert = function(str) {
+        Messenger().post(str);
+    }
+</script>
