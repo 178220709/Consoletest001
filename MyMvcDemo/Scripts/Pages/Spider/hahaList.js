@@ -31,21 +31,17 @@ define(function (require, exports, module) {
         };
         vm.getContent = filters.getHahaContent;
         vm.changePage = pager.changePage;
-        vm.del = function (row,delFun) {
+        vm.del = function (row) {
             if (confirm("sure?")) {
-
-
-                if (_.isFunction(delFun)) {
-                    delFun();
-                }
+                $.post("spider/Delete", { Flag: row.Flag }, function (data) {
+                    if (data.success) {
+                        alert("Delete成功");
+                        model.updateClick();
+                    } else {
+                        alert("Delete错误");
+                    }
+                });
             }
-            $.post("spider/Delete", row.Flag, function (data) {
-                if (data.success) {
-                    alert("更新成功");
-                } else {
-                    alert("更新错误");
-                }
-            });
         };
         vm.updateClick = function (row) {
             //row是avalon设置监听过的复杂对象  不能直接去序列化它

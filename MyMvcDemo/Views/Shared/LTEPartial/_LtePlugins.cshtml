@@ -6,7 +6,14 @@
 <script src="~/Content/libs/AdminLTE-2.0.3/plugins/HubSpot-messenger/js/messenger-theme-future.js"></script>
 
 <script>
+    //设置 alert插件弹出位置和主题
+    Messenger.options = {
+        extraClasses: 'messenger-fixed messenger-on-top messenger-on-right',
+        theme: 'flat'
+    };
     window.alert = function(str) {
         Messenger().post(str);
-    }
+    };
 </script>
+
+
