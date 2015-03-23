@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\clone\ColonBehindDemo.cs" />
+    <Compile Include="Base\CLR\StringDemo.cs" />
     <Compile Include="Base\CLR\ConditionalDemo.cs" />
     <Compile Include="Base\Delegate\CloserDemo2.cs" />
     <Compile Include="Base\Delegate\CloserDemo.cs" />

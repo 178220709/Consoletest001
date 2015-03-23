@@ -70,7 +70,7 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
             var reader = new YouminWebReader();
             var factory = new WebTaskFactory(reader);
        //  return  null;
-         return  factory.StartAndCallBack(urls.Distinct().Take(1).ToList());
+         return  factory.StartAndCallBack(urls.Distinct().ToList());
 
         }
 

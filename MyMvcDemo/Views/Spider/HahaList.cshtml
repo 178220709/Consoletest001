@@ -36,8 +36,8 @@
                                 <th>Content</th>
                                 <th>Weight</th>
                             </tr>
-                            <tr ms-repeat-row="list" ms-click="trClick(row)">
-                                <td ms-class="test{{PageIndex}}"> <i class="fa fa-close button" ms-click="del(row,$remove)"></i>  </td>
+                            <tr ms-repeat-row="list" ms-click="trClick(row)" ms-class-1="bg-gray-active:row.Flag==current.Flag">
+                                <td> <i class="fa fa-close btn" ms-click="del(row,$remove)"></i>  </td>
                                 <td>{{row.Flag}}</td>
                                 <td>  <a target="_blank" ms-href="{{row.Url}}">{{row.Url}}</a> </td>
                                 <td>

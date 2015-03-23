@@ -37,7 +37,7 @@ define(function (require, exports, module) {
                 $.post("spider/Delete", { Flag: row.Flag, typeId: model.typeId }, function (data) {
                     if (data.success) {
                         alert("Delete成功");
-                        model.updateClick();
+                        model.refreshClick();
                     } else {
                         alert("Delete错误");
                     }
