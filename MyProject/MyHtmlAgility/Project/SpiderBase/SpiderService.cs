@@ -41,5 +41,10 @@ namespace MyProject.MyHtmlAgility.Project.SpiderBase
             var re = this.Collections.Remove(Query.EQ("Flag", flag), RemoveFlags.Single);
             return re.Ok;
         }
+
+        //public bool ExistUrl(string s)
+        //{
+           
+        //}
     }
 }

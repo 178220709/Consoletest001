@@ -66,7 +66,13 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
                   .ForEach(ul => ul.QuerySelectorAll("li .t2 a")
                   .AsParallel()
                   .ForAll(a => urls.Add(a.GetAttributeValue("href", ""))));
-                  
+
+
+            var urlsValid = urls.Where(a => !YouminService.Instance.ExistUrl(a)).ToList();
+            //如果系统中已经有了 则不会去爬取
+          
+
+
             var reader = new YouminWebReader();
             var factory = new WebTaskFactory(reader);
        //  return  null;

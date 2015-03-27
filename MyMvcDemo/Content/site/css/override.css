@@ -1,0 +1,14 @@
+﻿
+/*菜单栏高度*/
+.navbar-static-top {
+    height: 88px;
+}
+
+/*左菜单栏 上部padding == 菜单栏高度*/
+.main-sidebar {
+    padding-top: 88px;
+}
+
+.breadcrumb li {
+    font-size: 14px;
+}

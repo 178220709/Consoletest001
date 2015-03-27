@@ -907,6 +907,9 @@
     <Content Include="Content\libs\moment-2.1\moment.min.js" />
     <Content Include="Content\libs\moment-2.1\zh-cn.js" />
     <Content Include="Content\libs\qunit\qunit.css" />
+    <Content Include="Content\site\css\override.css" />
+    <Content Include="Content\site\img\icon01.png" />
+    <Content Include="Content\site\img\icon02.png" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\Pages\AvalonDemo\bind.js" />
     <Content Include="Scripts\Pages\AvalonDemo\hello.js" />
@@ -1155,7 +1158,7 @@
     <Content Include="Views\seaJSDemo\Head.cshtml" />
     <Content Include="Views\Home\indexContent.cshtml" />
     <Content Include="Views\Home\ContextContent.cshtml" />
-    <Content Include="Views\Shared\LTEPartial\_LteTopTip.cshtml" />
+    <Content Include="Views\Shared\LTEPartial\_LteTopTip1.cshtml" />
     <Content Include="Views\Home\LteDemos\calendar.cshtml" />
     <Content Include="Views\Home\LteDemos\charts\empty.cshtml" />
     <Content Include="Views\Home\LteDemos\charts\flot.cshtml" />
@@ -1202,6 +1205,8 @@
     <Content Include="Views\Home\Waiting.cshtml" />
     <Content Include="Views\Spider\HahaList.cshtml" />
     <Content Include="Views\Shared\LTEPartial\_LtePlugins.cshtml" />
+    <Content Include="Views\Shared\_LteMenuLayout1.cshtml" />
+    <Content Include="Views\Shared\LTEPartial\_LteTopTip.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
