@@ -910,9 +910,12 @@
     <Content Include="Content\site\css\override.css" />
     <Content Include="Content\site\img\icon01.png" />
     <Content Include="Content\site\img\icon02.png" />
+    <Content Include="Content\site\img\navbg.png" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\Pages\AvalonDemo\bind.js" />
     <Content Include="Scripts\Pages\AvalonDemo\hello.js" />
+    <Content Include="Scripts\Pages\Home\index1.js" />
+    <Content Include="Scripts\Pages\System\HttpDebugger.js" />
     <Content Include="Scripts\Pages\Spider\hahaList.js" />
     <Content Include="Scripts\Pages\SeaJsDemo\underscoreTest.js" />
     <Content Include="Scripts\Pages\Home\index.js" />
@@ -936,7 +939,7 @@
     <Content Include="Content\libs\qunit\qunit.js" />
     <Content Include="Scripts\ux\jq.optionField.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Scripts\util.js" />
+    <Content Include="Scripts\Public\util.js" />
     <Content Include="Scripts\ux\jq.photoAlbumField.js" />
     <Content Include="Scripts\ux\jq.imageField.js" />
     <Content Include="Scripts\checkDataUtil.js" />

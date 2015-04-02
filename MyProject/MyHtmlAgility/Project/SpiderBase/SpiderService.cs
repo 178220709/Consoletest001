@@ -42,9 +42,10 @@ namespace MyProject.MyHtmlAgility.Project.SpiderBase
             return re.Ok;
         }
 
-        //public bool ExistUrl(string s)
-        //{
-           
-        //}
+      
+        public bool ExistUrl(string s)
+        {
+           return Entities.Count(a => a.Url == s) > 0;
+        }
     }
 }
