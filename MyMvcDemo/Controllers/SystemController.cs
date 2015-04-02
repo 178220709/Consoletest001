@@ -2,7 +2,9 @@
 using System.Web.Mvc;
 using MyMvcDemo.Extend;
 using MyMvcDemo.Models;
+using MyProject.MyHtmlAgility.Project.FromNode;
 using MyProject.WeixinModel.Model;
+using Newtonsoft.Json;
 using Suijing.Utils.Constants;
 
 namespace MyMvcDemo.Controllers
@@ -29,6 +31,19 @@ namespace MyMvcDemo.Controllers
         {
             return View();
         }
+
+
+
+        [HttpPost]
+        public ContentResult GetHttpResult(string url , string paras)
+        {
+            var dic = JsonConvert.DeserializeObject<IDictionary<string, string>>(paras);
+            var result = HttpRestHelper.GetPost(url, dic);
+
+          return Content(result);
+        }   
+
+
 
         [HttpPost]
         public JsonResult GetLog(string path, string name)

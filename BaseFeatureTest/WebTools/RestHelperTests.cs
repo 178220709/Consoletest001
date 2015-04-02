@@ -29,9 +29,10 @@ namespace Suijing.Utils.WebTools.Tests
             string url = "http://localhost:18080/api/haha/getList";
             var paras = new Dictionary<string, string>()
             {
-                {"pageSize", "9"}
+                {"pageSize", "9"},
+                {"pageIndex", "1"}
             };
-
+            var jsonStr = paras.ToJson();
             var res = HttpWebResponseUtility.CreatePostHttpResponse(url, paras, 5000, "", Encoding.UTF8, null);
             var reader = new StreamReader(res.GetResponseStream(), Encoding.UTF8);
             var result = reader.ReadToEnd();
@@ -43,8 +44,8 @@ namespace Suijing.Utils.WebTools.Tests
         {
             //string url = "http://jsonsong.duapp.com/spider/haha";
             string url = "http://localhost:18080/api/haha/getList";
-           
-            var res = HttpRestHelper.GetPost(url, new{pageSize=9});
+
+            var res = HttpRestHelper.GetPost(url, HttpRestHelper.ObjToParas(new { pageSize = 9 }));
           
 
         }

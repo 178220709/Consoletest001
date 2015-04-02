@@ -7,6 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyProject.MyHtmlAgility.Core;
 using MyProject.MyHtmlAgility.Project.SpiderBase;
 using NPOI.SS.Formula.Functions;
+using NPOI.SS.Util;
 using Omu.ValueInjecter;
 using Suijing.Utils;
 
@@ -79,7 +80,6 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
          return  factory.StartAndCallBack(urls.Distinct().ToList());
 
         }
-
         [TestMethod]
         public void Test1()
         {

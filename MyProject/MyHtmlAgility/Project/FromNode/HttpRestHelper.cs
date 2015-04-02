@@ -16,9 +16,9 @@ namespace MyProject.MyHtmlAgility.Project.FromNode
 
 
 
-        public static string GetPost(string url, object obj)
+        public static string GetPost(string url, IDictionary<string, string> paras)
         {
-            IDictionary<string, string> paras = ObjToParas(obj);
+           // IDictionary<string, string> paras = ObjToParas(obj);
             try
             {
                 var res = HttpWebResponseUtility.CreatePostHttpResponse(url, paras, 5000, "", Encoding.UTF8, null);
@@ -29,11 +29,9 @@ namespace MyProject.MyHtmlAgility.Project.FromNode
             {
                 return ex.Message;
             }
-           
-           
         }
 
-        private static IDictionary<string, string> ObjToParas(object target)
+        public static IDictionary<string, string> ObjToParas(object target)
         {
             IDictionary<string, string> dic = new Dictionary<string, string>( );
             var targetPros = target.GetProps();

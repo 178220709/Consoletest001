@@ -12,6 +12,7 @@
 <script>
     seajs.use("page/System/HttpDebugger.js", function (page) {
         page.initPage();
+        page.VM.postURL = '@Url.Action("GetHttpResult","System")';
     });
 </script>
 
