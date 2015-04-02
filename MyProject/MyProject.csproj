@@ -104,6 +104,7 @@
     <Compile Include="HotelRecord\SqlDal\MyContext.cs" />
     <Compile Include="MongoDBDal\BaseService.cs" />
     <Compile Include="MyHtmlAgility\Core\DownloadImages.cs" />
+    <Compile Include="MyHtmlAgility\Project\FromNode\HttpRestHelper.cs" />
     <Compile Include="MyHtmlAgility\Project\SpiderBase\BaseSpiderEntity.cs" />
     <Compile Include="MyHtmlAgility\Core\NormalHtmlHelper.cs" />
     <Compile Include="MyHtmlAgility\Core\HttpWebResponseUtility.cs" />

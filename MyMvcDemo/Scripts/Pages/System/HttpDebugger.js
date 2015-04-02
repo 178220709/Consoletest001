@@ -16,9 +16,10 @@ define(function (require, exports, module) {
         vm.getTarget = function() {
             vm.target = getTarget();
         };
-        vm.postClick = function() {
-            $.post(model.url, { queryData: util.getQueryString("queryData"), direction: util.getQueryString("direction") }, function(data) {
-                $scope.pros = data.rows;
+        vm.postClick = function () {
+            var target = getTarget();
+            $.post(target, {}, function (data) {
+                vm.result   =  JSON.stringify(data);
             });
         };
 
