@@ -1210,6 +1210,7 @@
     <Content Include="Views\Shared\LTEPartial\_LtePlugins.cshtml" />
     <Content Include="Views\Shared\_LteMenuLayout1.cshtml" />
     <Content Include="Views\Shared\LTEPartial\_LteTopTip.cshtml" />
+    <Content Include="Views\Home\test.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

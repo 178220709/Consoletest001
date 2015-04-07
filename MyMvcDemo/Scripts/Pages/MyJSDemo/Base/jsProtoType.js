@@ -28,3 +28,21 @@
 
 }();
 
+var main2 = function (windows) {
+
+    function Person() {
+        console.log("in 'Person'");
+    }
+    function Woman() {
+        console.log("in 'Woman'");
+    }
+
+    var woman = new Woman();//in 'Woman'
+    woman.constructor;//function Woman(){console.log("in 'woman'");}
+
+    var person = new Person();//in 'Person'
+    person.constructor;//function Person(){console.log("in 'person'");}
+
+
+}();
+
