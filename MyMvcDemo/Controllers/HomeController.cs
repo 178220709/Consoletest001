@@ -44,7 +44,10 @@ namespace MyMvcDemo.Controllers
         {
             return View();
         }
-
+        public ActionResult Test()
+        {
+            return View();
+        }
         public ActionResult LteDemo(string path)
         {
             if (string.IsNullOrEmpty(path))

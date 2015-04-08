@@ -3,11 +3,13 @@
     Layout = "~/Views/Shared/_LteMenuLayout.cshtml";
 }
 <script>
-    seajs.use("page/home/index");
+    seajs.use("page/home/index", function(page) {
+        
+    });
 </script>
 
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper" style="min-height: 438px;" >
+<div class="content-wrapper" style="min-height: 438px!important;" >
     <!-- Content Header (Page header) -->
     @Html.Partial("LTEPartial/_LteCrumbsSection")
 
