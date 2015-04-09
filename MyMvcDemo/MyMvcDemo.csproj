@@ -794,11 +794,29 @@
     <Content Include="Content\libs\AdminLTE-2.0.3\plugins\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="Content\libs\AdminLTE-2.0.3\plugins\timepicker\bootstrap-timepicker.min.js" />
     <Content Include="Content\libs\AdminLTE-2.0.3\starter.html" />
+    <Content Include="Content\libs\angularJS\angular-animate.js" />
+    <Content Include="Content\libs\angularJS\angular-animate.min.js" />
+    <Content Include="Content\libs\angularJS\angular-aria.js" />
+    <Content Include="Content\libs\angularJS\angular-aria.min.js" />
+    <Content Include="Content\libs\angularJS\angular-cookies.js" />
+    <Content Include="Content\libs\angularJS\angular-cookies.min.js" />
+    <Content Include="Content\libs\angularJS\angular-csp.css" />
+    <Content Include="Content\libs\angularJS\angular-loader.js" />
+    <Content Include="Content\libs\angularJS\angular-loader.min.js" />
+    <Content Include="Content\libs\angularJS\angular-messages.js" />
+    <Content Include="Content\libs\angularJS\angular-messages.min.js" />
+    <Content Include="Content\libs\angularJS\angular-mocks.js" />
+    <Content Include="Content\libs\angularJS\angular-resource.js" />
+    <Content Include="Content\libs\angularJS\angular-resource.min.js" />
     <Content Include="Content\libs\angularJS\angular-route.js" />
     <Content Include="Content\libs\angularJS\angular-route.min.js" />
+    <Content Include="Content\libs\angularJS\angular-sanitize.js" />
+    <Content Include="Content\libs\angularJS\angular-sanitize.min.js" />
+    <Content Include="Content\libs\angularJS\angular-scenario.js" />
+    <Content Include="Content\libs\angularJS\angular-touch.js" />
+    <Content Include="Content\libs\angularJS\angular-touch.min.js" />
     <Content Include="Content\libs\angularJS\angular.js" />
     <Content Include="Content\libs\angularJS\angular.min.js" />
-    <Content Include="Content\libs\angularJS\controller.js" />
     <Content Include="Content\libs\avalon\class1.html" />
     <Content Include="Content\libs\avalon\mmHistory.js" />
     <Content Include="Content\libs\avalon\mmRouter.js" />
@@ -915,6 +933,7 @@
     <Content Include="Scripts\Pages\AvalonDemo\bind.js" />
     <Content Include="Scripts\Pages\AvalonDemo\hello.js" />
     <Content Include="Scripts\Pages\Home\index1.js" />
+    <Content Include="Scripts\Pages\AngularJS\httpDemo.js" />
     <Content Include="Scripts\Pages\System\HttpDebugger.js" />
     <Content Include="Scripts\Pages\Spider\hahaList.js" />
     <Content Include="Scripts\Pages\SeaJsDemo\underscoreTest.js" />
@@ -1013,9 +1032,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_ContentLayout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\libs\angularJS\angular.min.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_IndexHead.cshtml" />
@@ -1155,6 +1171,16 @@
     <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\fonts\FontAwesome.otf" />
+    <Content Include="Content\libs\angularJS\angular-animate.min.js.map" />
+    <Content Include="Content\libs\angularJS\angular-aria.min.js.map" />
+    <Content Include="Content\libs\angularJS\angular-cookies.min.js.map" />
+    <Content Include="Content\libs\angularJS\angular-loader.min.js.map" />
+    <Content Include="Content\libs\angularJS\angular-messages.min.js.map" />
+    <Content Include="Content\libs\angularJS\angular-resource.min.js.map" />
+    <Content Include="Content\libs\angularJS\angular-route.min.js.map" />
+    <Content Include="Content\libs\angularJS\angular-sanitize.min.js.map" />
+    <Content Include="Content\libs\angularJS\angular-touch.min.js.map" />
+    <Content Include="Content\libs\angularJS\angular.min.js.map" />
     <None Include="Properties\PublishProfiles\MVCDemo.pubxml" />
     <Content Include="Views\Shared\_LteBaseLayout.cshtml" />
     <Content Include="Views\Shared\_LteMenuLayout.cshtml" />
@@ -1210,6 +1236,7 @@
     <Content Include="Views\Shared\LTEPartial\_LtePlugins.cshtml" />
     <Content Include="Views\Shared\_LteMenuLayout1.cshtml" />
     <Content Include="Views\Shared\LTEPartial\_LteTopTip.cshtml" />
+    <Content Include="Views\AngularJS\httpDemo.cshtml" />
     <Content Include="Views\Home\test.cshtml" />
   </ItemGroup>
   <PropertyGroup>
