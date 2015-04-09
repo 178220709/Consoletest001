@@ -28,6 +28,10 @@ namespace MyProject.MyHtmlAgility.Project.SpiderBase
       
         protected abstract void GetTitleInfo();
         protected abstract void GetCurrent();
+        /// <summary>
+        /// 根据当前doc 判断是否已经是最后一页，如果是 返回false 如果不是 ，更新CurrentUrl和doc
+        /// </summary>
+        /// <returns></returns>
         protected abstract bool CheckAndMoveNext();
 
         public ReadResult OutputResult()
@@ -42,14 +46,12 @@ namespace MyProject.MyHtmlAgility.Project.SpiderBase
             try
             {
                 GetTitleInfo();
-                //count 仅用于标记次数 仅用于避免死循环 实际页面逻辑判断在PageId处理 
-                int count = 0;
+                //PageId 仅用于标记次数，避免死循环 实际页面逻辑判断在CheckAndMoveNext处理 
                 do
                 {
                      GetCurrent();
-                     count++;
-                } while ( CheckAndMoveNext() && count<Limit);
-
+                     PageId++;
+                } while (CheckAndMoveNext() && PageId <= Limit);
             }
             catch (Exception ex)
             {
