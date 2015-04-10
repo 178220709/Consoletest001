@@ -105,6 +105,10 @@
     <Compile Include="Base\Linq\LinqDemo.cs" />
     <Compile Include="Base\Linq\LinqXMLDemo.cs" />
     <Compile Include="MyGame\CheckStrEquation.cs" />
+    <Compile Include="MyGame\Core\CoreTest.cs" />
+    <Compile Include="MyGame\Core\CIRCLE.cs" />
+    <Compile Include="MyGame\Number\Nod1298.cs" />
+    <Compile Include="MyGame\Core\CoreDemo.cs" />
     <Compile Include="MyGame\Number\SudokuDemo.cs" />
     <Compile Include="MyGame\Number\Combine.cs" />
     <Compile Include="MyGame\MyMath.cs" />

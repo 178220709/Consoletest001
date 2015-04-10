@@ -72,12 +72,10 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
             var urlsValid = urls.Where(a => !YouminService.Instance.ExistUrl(a)).ToList();
             //如果系统中已经有了 则不会去爬取
           
-
-
             var reader = new YouminWebReader();
             var factory = new WebTaskFactory(reader);
        //  return  null;
-         return  factory.StartAndCallBack(urls.Distinct().ToList());
+            return factory.StartAndCallBack(urlsValid.Distinct().ToList());
 
         }
         [TestMethod]

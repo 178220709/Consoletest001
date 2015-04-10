@@ -14,6 +14,7 @@ using BaseFeatureDemo.Base.ThreadDemo.ThreadBase;
 using BaseFeatureDemo.Base.ThreadDemo.ThreadNew;
 using BaseFeatureDemo.Encrypt;
 using BaseFeatureDemo.MyGame;
+using BaseFeatureDemo.MyGame.Number;
 using MyProject.HotelRecord.Manager;
 using MyProject.TestHelper;
 
@@ -24,7 +25,7 @@ namespace BaseFeatureDemo
         static void Main(string[] args)
         {
 
-            ExpressDemo.Main1();
+            Nod1298.Main1(args);
         }
     }
 }

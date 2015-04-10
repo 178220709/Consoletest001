@@ -4,15 +4,8 @@
         <title>@ViewBag.Title</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      @*  @Url.CombresLink("baseCss")*@
-      
-      @*  @Url.CombresLink("siteCss")*@
-  
-        @*  @Url.CombresLink("framework")*@
-        
-        
-        
-        <script src="~/Content/libs/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+
+        <script src="~/Content/libs/jquery-ui-1.10.4/js/jquery-1.10.2.js"></script>
         <script src="~/Content/libs/angularJS/angular.js"></script>
         @RenderSection("head", false)
        
@@ -21,10 +14,6 @@
 <body @RenderSection("body-attr", false)>
     @RenderBody()
 
-
-    <!--[if lte IE 8]>
-            <script src="~/content/libs/excanvas.min.js"></script>
-        <![endif]-->
     @RenderSection("foot", false)
 </body>
 </html>
