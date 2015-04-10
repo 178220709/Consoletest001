@@ -25,7 +25,8 @@ namespace BaseFeatureDemo
         static void Main(string[] args)
         {
 
-            Nod1298.Main1(args);
+            Nod1305.Main2(args);
+            Nod1305.Main1(args);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace BaseFeatureDemo.MyGame.Number
@@ -39,6 +40,8 @@ namespace BaseFeatureDemo.MyGame.Number
             return Math.Sqrt(Math.Pow((start.X - end.X), 2) + Math.Pow((start.Y - end.Y), 2));
         }
 
+       
+
         /// <summary>
         /// 点到直线的最短距离
         /// </summary>
@@ -75,26 +78,46 @@ namespace BaseFeatureDemo.MyGame.Number
 
     public class Nod1298
     {
-        public static Point GetOffsetPoint(Point start, Point end)
+        public static Point GetOffsetPoint(Point p1, Point p2)
         {
-            return new Point(1,1);
+            if (Math.Abs((p1.X - p2.X)) < 0.0001)
+            {
+                return new Point(p1.X, p1.Y+(p2.Y-p1.Y)/100);
+            }
+            else
+            {
+                var K = (p1.Y - p2.Y) / (p1.X - p2.X);
+                var off = (p2.X - p1.X)/1000;
+                return new Point(p1.X + off, p1.Y + off * K);
+            }
         }
 
 
 
         private static double GetMinLenght(Point p, Line line)
         {
-            var m1 = Math.Min(Util.GetLenght(p, line.Start), Util.GetLenght(p, line.Start));
-            return Math.Min(m1, Util.GetLenght(p, line));
+            var len1 = Util.GetLenght(p, line.Start);
+            var len2 = Util.GetLenght(p, line.End);
+            var min1 = Math.Min(len1, len2);
+            Point offPoint = len1<len2 ? GetOffsetPoint(line.Start, line.End) : GetOffsetPoint(line.End,line.Start);
+            var offLen = Util.GetLenght(p, offPoint);
+            if (offLen < min1)//点在线段宽拓补范围内
+            {
+                return Util.GetLenght(p, line);
+            }
+            else
+            {
+                return min1;
+            }
         }
         private static double GetMaxLenght(Point p, Line line)
         {
-            return Math.Max(Util.GetLenght(p, line.Start), Util.GetLenght(p, line.Start));
+            return Math.Max(Util.GetLenght(p, line.Start), Util.GetLenght(p, line.End));
         }
        public static void Main1(string[] args)
         {
             int count = int.Parse(Console.ReadLine());
-           
+            var results = new List<string>();
             for (int i = 0; i < count; i++)
             {
                 var lineStr = Console.ReadLine();
@@ -105,22 +128,32 @@ namespace BaseFeatureDemo.MyGame.Number
                 var ps =
                     Enumerable.Range(0, 3)
                         .Select(a => Util.GetPointFromStr(Console.ReadLine())).ToArray();
-                var l1 = new Line(ps[0], ps[1]);
-                var l2 = new Line(ps[0], ps[2]);
-                var l3 = new Line(ps[1], ps[2]);
-                 
-               
-     
-  
-                if (lenghts.All(l => l < radius) || lenghts.All(l => l < radius))
+                var lines = new List<Line>()
                 {
-                    Console.WriteLine("No");
+                    new Line(ps[0], ps[1]),
+                    new Line(ps[0], ps[2]),
+                    new Line(ps[1], ps[2])
+                };
+                //圆心到线段最小距离全部大于半径 或者 最大距离 全部小于半径 则不相交
+               
+                var r1= lines.Select(a => GetMinLenght(center, a)).All(a => a > radius);
+                var r2= lines.Select(a => GetMaxLenght(center, a)).All(a => a < radius);
+               
+                if (r1 || r2)
+                {
+                    results.Add("No");
                 }
                 else
                 {
-                    Console.WriteLine("Yes");
+                    results.Add("Yes");
                 }
             }
+            results.ForEach(Console.WriteLine);
+
+          var ws =   File.CreateText("test.txt");
+          results.ForEach(ws.WriteLine);
+          ws.Flush();
+          ws.Close();
         }
     }
 }

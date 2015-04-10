@@ -107,6 +107,7 @@
     <Compile Include="MyGame\CheckStrEquation.cs" />
     <Compile Include="MyGame\Core\CoreTest.cs" />
     <Compile Include="MyGame\Core\CIRCLE.cs" />
+    <Compile Include="MyGame\Number\Nod1305.cs" />
     <Compile Include="MyGame\Number\Nod1298.cs" />
     <Compile Include="MyGame\Core\CoreDemo.cs" />
     <Compile Include="MyGame\Number\SudokuDemo.cs" />
