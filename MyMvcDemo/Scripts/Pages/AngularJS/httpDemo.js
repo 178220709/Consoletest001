@@ -4,8 +4,6 @@
 
 var phonecatApp = angular.module('phonecatApp', []);
 
-
-
 phonecatApp.controller('PhoneListCtrl', ['$scope', '$http', function ($scope, $http) {
     var getList = function (pageIndex) {
         $http.post('/spider/getList', { PageSize: 10, PageIndex: $scope.pageIndex, typeId: 1 }).success(function (data) {
