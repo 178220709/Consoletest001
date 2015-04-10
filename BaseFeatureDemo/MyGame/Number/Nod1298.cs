@@ -39,6 +39,20 @@ namespace BaseFeatureDemo.MyGame.Number
             return Math.Sqrt(Math.Pow((start.X - end.X), 2) + Math.Pow((start.Y - end.Y), 2));
         }
 
+        /// <summary>
+        /// 点到直线的最短距离
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="line"></param>
+        /// <returns></returns>
+        public static double GetLenght(Point p, Line line)
+        {
+            var A = (line.End.Y - line.Start.Y);
+            var B = (line.Start.X - line.End.X);
+            var C = (line.End.X*line.Start.Y) - (line.Start.X*line.End.Y);
+            return (Math.Abs(A*p.X + B*p.Y + C)/Math.Sqrt(Math.Pow(A, 2) + Math.Pow(B, 2)));
+        }
+
         public static Point GetPointFromStr(string str)
         {
             string[] temp = str.Split(' ');
@@ -61,6 +75,22 @@ namespace BaseFeatureDemo.MyGame.Number
 
     public class Nod1298
     {
+        public static Point GetOffsetPoint(Point start, Point end)
+        {
+            return new Point(1,1);
+        }
+
+
+
+        private static double GetMinLenght(Point p, Line line)
+        {
+            var m1 = Math.Min(Util.GetLenght(p, line.Start), Util.GetLenght(p, line.Start));
+            return Math.Min(m1, Util.GetLenght(p, line));
+        }
+        private static double GetMaxLenght(Point p, Line line)
+        {
+            return Math.Max(Util.GetLenght(p, line.Start), Util.GetLenght(p, line.Start));
+        }
        public static void Main1(string[] args)
         {
             int count = int.Parse(Console.ReadLine());
@@ -72,11 +102,16 @@ namespace BaseFeatureDemo.MyGame.Number
                 Point center = new Point(l1s[0].td(), l1s[1].td());
                 var radius = l1s[2].td();
 
-                var lenghts =
+                var ps =
                     Enumerable.Range(0, 3)
-                        .Select(a => Util.GetPointFromStr(Console.ReadLine()))
-                        .Select(p => Util.GetLenght(p, center))
-                        .ToList();
+                        .Select(a => Util.GetPointFromStr(Console.ReadLine())).ToArray();
+                var l1 = new Line(ps[0], ps[1]);
+                var l2 = new Line(ps[0], ps[2]);
+                var l3 = new Line(ps[1], ps[2]);
+                 
+               
+     
+  
                 if (lenghts.All(l => l < radius) || lenghts.All(l => l < radius))
                 {
                     Console.WriteLine("No");
