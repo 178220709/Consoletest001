@@ -930,6 +930,7 @@
     <Content Include="Content\site\img\icon02.png" />
     <Content Include="Content\site\img\navbg.png" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\Pages\AngularJS\FilterDemo.js" />
     <Content Include="Scripts\Pages\AvalonDemo\bind.js" />
     <Content Include="Scripts\Pages\AvalonDemo\hello.js" />
     <Content Include="Scripts\Pages\Home\index1.js" />
@@ -1238,6 +1239,7 @@
     <Content Include="Views\Shared\LTEPartial\_LteTopTip.cshtml" />
     <Content Include="Views\AngularJS\httpDemo.cshtml" />
     <Content Include="Views\Home\test.cshtml" />
+    <Content Include="Views\AngularJS\FilterDemo.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

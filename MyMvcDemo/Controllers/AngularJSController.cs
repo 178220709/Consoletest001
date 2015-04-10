@@ -29,6 +29,11 @@ namespace MyMvcDemo.Controllers
         public ActionResult HttpDemo()
         {
             return View();
+        }  
+        [Module(CSS = MyConstants.Bootstrap.Icon.Globe)]
+        public ActionResult FilterDemo()
+        {
+            return View();
         }
     }
 }
