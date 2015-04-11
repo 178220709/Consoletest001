@@ -6,15 +6,15 @@ using ServiceStack.Redis;
 namespace MyProject.RedisDemo
 {
     [TestClass]
-    public class SimpleRedisDemo
+    public class Demo001 : DemoBase
     {
         [TestMethod]
         public void SimpleDemo()
         {
-            string host = "localhost";
+          
             string elementKey = "testKeyRedis";
 
-            using (RedisClient redisClient = new RedisClient(host))
+            using (RedisClient redisClient = new RedisClient(_Host))
             {
                 if (redisClient.Get<string>(elementKey) == null)
                 {

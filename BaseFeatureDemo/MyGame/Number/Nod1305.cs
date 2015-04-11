@@ -35,7 +35,7 @@ namespace BaseFeatureDemo.MyGame.Number
         {
             var sum1 = A.Count(a => a == 1);
             var sum2 = A.Count(a => a == 2);
-            return sum1 * (A.Count - 1) + sum2 / 2;
+            return sum1 * (A.Count - 1) + sum2 * (sum2-1) / 2;
         }
         private static uint getSum(List<uint> A)
         {
@@ -62,7 +62,7 @@ namespace BaseFeatureDemo.MyGame.Number
             var A2 = new List<uint>(){1,2,1,1};     // 3 1 4
             var A3 = new List<uint>(){1,2,2,1};     // 2 2 4
             var A4 = new List<uint>(){1,2,3,1,1,1}; // 4 1 6
-            var A5 = new List<uint>(){1,2,2,3,3,3,3,3,3}; // 4 1 6
+            var A5 = new List<uint>(){1,2,2,2,3,2,2,3,3}; // 4 1 6
 
             var r1 = getSum(A1);
             var r2 = getSum(A2);
@@ -80,7 +80,7 @@ namespace BaseFeatureDemo.MyGame.Number
                 A.Add(uint.Parse(Console.ReadLine()));
             }
            
-            Console.WriteLine(getSum(A));
+            Console.WriteLine(getSum0(A));
         }
     }
 }

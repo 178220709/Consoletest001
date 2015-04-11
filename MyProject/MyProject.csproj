@@ -141,6 +141,9 @@
     <Compile Include="MyHtmlAgility\XPathDemo\XPathDemo.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedisDemo\DemoBase.cs" />
+    <Compile Include="RedisDemo\Demo002.cs" />
+    <Compile Include="RedisDemo\Demo001.cs" />
     <Compile Include="RedisDemo\BaseDal.cs" />
     <Compile Include="SystemInfo\SysteminfoHelper.cs" />
     <Compile Include="TestHelper\TestHelper.cs" />
