@@ -30,7 +30,8 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
 
         protected override void GetCurrent()
         {
-            _doc.QuerySelectorAll(".left_got #gspaging p").ToList().ForEach(a=> ContentBuilder.Append(a.OuterHtml));
+            _doc.QuerySelectorAll(".left_got #gspaging p").ToList()
+                .ForEach(a=> ContentBuilder.Append(a.OuterHtml));
         }
 
         protected override bool CheckAndMoveNext()
