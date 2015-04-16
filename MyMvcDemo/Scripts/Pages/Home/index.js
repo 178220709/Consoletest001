@@ -1,4 +1,5 @@
 ﻿
+
 define(function(require, exports, module) {
     var avalon = require("avalon.js");
    
@@ -12,8 +13,16 @@ define(function(require, exports, module) {
         vm.refresh = function() {
            
         };
+        vm.indexRender = function () {
 
+
+
+
+            $(".content-wrapper, .right-side").css('min-height', getContentHeight() - 112);
+        };
     });
+    
+    
 
     avalon.router.get("/*path", callback); //劫持url hash并触发回调
     avalon.history.start(); //历史记录堆栈管理

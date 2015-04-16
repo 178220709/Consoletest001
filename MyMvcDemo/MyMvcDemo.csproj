@@ -947,6 +947,7 @@
     <Content Include="Scripts\Pages\MyJSDemo\Base\ValueAndRefernce.js" />
     <Content Include="Scripts\Public\avalon\page.js" />
     <Content Include="Scripts\Public\avalon\filters.js" />
+    <Content Include="Scripts\Public\webCommon.js" />
     <Content Include="Scripts\Public\webUtil.js" />
     <Content Include="Views\AvalonDemo\Sample.js" />
     <Content Include="Scripts\Extend\jquery.form.js" />
