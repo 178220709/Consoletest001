@@ -134,7 +134,7 @@
     <Compile Include="MyHtmlAgility\Project\SpiderBase\SpiderServiceFactory.cs" />
     <Compile Include="MyHtmlAgility\Project\SpiderBase\SpiderService.cs" />
     <Compile Include="MyHtmlAgility\Project\Youmin\YouminService.cs" />
-    <Compile Include="MyHtmlAgility\Project\Youmin\YouminParstialReader.cs" />
+    <Compile Include="MyHtmlAgility\Project\Youmin\YouminPartialReader.cs" />
     <Compile Include="MyHtmlAgility\Project\Youmin\YouminWebReader.cs" />
     <Compile Include="MyHtmlAgility\Project\Haha\HahaWebReader.cs" />
     <Compile Include="MyHtmlAgility\Project\Haha\HahaJokeService.cs" />

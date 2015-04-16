@@ -18,7 +18,7 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
     {
         public override ReadResult GetHtmlContent(string url )
         {
-            var parstialReader = new YouminParstialReader(url);
+            var parstialReader = new YouminPartialReader(url);
             parstialReader.StartReadAll();
 
             return parstialReader.OutputResult();

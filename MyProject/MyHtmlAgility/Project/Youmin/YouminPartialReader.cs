@@ -13,12 +13,12 @@ using Suijing.Utils;
 namespace MyProject.MyHtmlAgility.Project.Youmin
 {
     [TestClass]
-    public class YouminParstialReader : BaseParstialReader
+    public class YouminPartialReader : BaseParstialReader
     {
         private HtmlNode _doc;
 
 
-        public YouminParstialReader(string baseUrl) : base(baseUrl)
+        public YouminPartialReader(string baseUrl) : base(baseUrl)
         {
             _doc = NormalHtmlHelper.GetDocumentNode(this.BaseUrl).DocumentNode;
         }
