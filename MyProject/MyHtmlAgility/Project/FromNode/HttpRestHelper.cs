@@ -12,10 +12,6 @@ namespace MyProject.MyHtmlAgility.Project.FromNode
 {
     public static class HttpRestHelper
     {
-
-
-
-
         public static string GetPost(string url, IDictionary<string, string> paras)
         {
            // IDictionary<string, string> paras = ObjToParas(obj);

@@ -117,6 +117,10 @@
     <Compile Include="HotelRecord\SqlDal\MyContext.cs" />
     <Compile Include="MongoDBDal\BaseService.cs" />
     <Compile Include="MyHtmlAgility\Core\DownloadImages.cs" />
+    <Compile Include="MyHtmlAgility\ProjectTest\MyHtmlAgilityTest\SyncTest.cs" />
+    <Compile Include="MyHtmlAgility\Project\SpiderCommon\SpiderRestDto.cs" />
+    <Compile Include="MyHtmlAgility\Project\SpiderCommon\SpiderConstant.cs" />
+    <Compile Include="MyHtmlAgility\Project\SpiderCommon\SyncSpiderHelper.cs" />
     <Compile Include="MyHtmlAgility\Project\FromNode\HttpRestHelper.cs" />
     <Compile Include="MyHtmlAgility\Project\SpiderBase\BaseSpiderEntity.cs" />
     <Compile Include="MyHtmlAgility\Core\NormalHtmlHelper.cs" />

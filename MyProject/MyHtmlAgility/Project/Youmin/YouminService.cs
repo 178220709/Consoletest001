@@ -9,7 +9,7 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
 {
     internal class YouminService 
     {
-        private const string _CollectionName = "Youmin";
+        private const string _CollectionName = "sp_youmin";
 
         private static SpiderService _Instance;
 

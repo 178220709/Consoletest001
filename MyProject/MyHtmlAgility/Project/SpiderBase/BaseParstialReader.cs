@@ -29,7 +29,7 @@ namespace MyProject.MyHtmlAgility.Project.SpiderBase
         protected abstract void GetTitleInfo();
         protected abstract void GetCurrent();
         /// <summary>
-        /// 根据当前doc 判断是否已经是最后一页，如果是 返回false 如果不是 ，更新CurrentUrl和doc
+        /// 根据当前doc 判断是否还有下一页（next）  如果有 ，更新CurrentUrl和doc 返回true
         /// </summary>
         /// <returns></returns>
         protected abstract bool CheckAndMoveNext();

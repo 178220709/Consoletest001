@@ -10,7 +10,7 @@ namespace MyProject.MyHtmlAgility.Project.SpiderBase
         public string Title { get; set; }
         public string Content { get; set; }
         public string StyleStr { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime AddedTime { get; set; }
         public int Weight { get; set; }
 
     }

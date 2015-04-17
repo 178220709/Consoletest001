@@ -9,7 +9,7 @@ namespace MyProject.MyHtmlAgility.Project.Haha
 {
     internal class HahaJokeService 
     {
-        protected const string _CollectionName = "HahaJoke";
+        protected const string _CollectionName = "sp_haha";
        
 
         private static SpiderService _Instance;
@@ -30,7 +30,8 @@ namespace MyProject.MyHtmlAgility.Project.Haha
     }
 }
 
-//将Flag 转换为string类型
-//    db.HahaJoke.find().forEach(function(x){
-//x.Flag=x.Flag+"";
-//db.HahaJoke.save(x)})
+/*将Flag 转换为string类型
+    db.sp_haha.find().forEach(function(x){
+x.Flag=x.Flag+"";
+db.HahaJoke.save(x)})
+*/

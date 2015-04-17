@@ -4,18 +4,16 @@ using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using MyProject.MongoDBDal;
 using MyProject.MyHtmlAgility.Project.Haha;
+using MyProject.MyHtmlAgility.Project.SpiderCommon;
 using MyProject.MyHtmlAgility.Project.Youmin;
 
 namespace MyProject.MyHtmlAgility.Project.SpiderBase
 {
-    public  class SpiderServiceFactory  
+    public  class SpiderServiceFactory
     {
-        private  static readonly Dictionary<int , SpiderService>  DicServices = new Dictionary<int, SpiderService>()
-        {
-            {1, HahaJokeService.Instance},
-            {2, YouminService.Instance}
-        };
-        public static SpiderService GetByTypeId(int typeId )
+        private static readonly Dictionary<int, SpiderService> DicServices = SpiderConstant.DicServices;
+        private static readonly Dictionary<int, string> CnNameDictionary = SpiderConstant.CnNameDictionary;
+        public static SpiderService GetByTypeId(int typeId)
         {
             if (DicServices.ContainsKey(typeId))
             {
@@ -32,5 +30,8 @@ namespace MyProject.MyHtmlAgility.Project.SpiderBase
             int type = typeId ?? 1;
             return GetByTypeId(type);
         }
+
+
+
     }
 }
