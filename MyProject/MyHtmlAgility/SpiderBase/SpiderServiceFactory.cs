@@ -1,13 +1,7 @@
 using System.Collections.Generic;
-using System.Linq;
-using MongoDB.Driver;
-using MongoDB.Driver.Builders;
-using MyProject.MongoDBDal;
-using MyProject.MyHtmlAgility.Project.Haha;
-using MyProject.MyHtmlAgility.Project.SpiderCommon;
-using MyProject.MyHtmlAgility.Project.Youmin;
+using MyProject.MyHtmlAgility.SpiderCommon;
 
-namespace MyProject.MyHtmlAgility.Project.SpiderBase
+namespace MyProject.MyHtmlAgility.SpiderBase
 {
     public  class SpiderServiceFactory
     {

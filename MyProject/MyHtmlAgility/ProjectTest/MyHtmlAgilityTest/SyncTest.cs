@@ -11,9 +11,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.WebTesting;
 using MongoDB.Driver.Linq;
 using MyProject.MyHtmlAgility.Project.Haha;
-using MyProject.MyHtmlAgility.Project.SpiderBase;
-using MyProject.MyHtmlAgility.Project.SpiderCommon;
 using MyProject.MyHtmlAgility.Project.Youmin;
+using MyProject.MyHtmlAgility.SpiderCommon;
 using MyProject.TestHelper;
 using Newtonsoft.Json;
 using NPOI.SS.Formula.Functions;
@@ -39,25 +38,24 @@ namespace  MyProject.MyHtmlAgility.ProjectTest
         [TestMethod]
         public void SyncTest1()
         {
-            paras["cnName"] = "sp_haha";
+            paras["cnName"] = "spider";
             SyncSpiderHelper.StartSync(paras);
-        } 
-        
-        [TestMethod]
-        public void FixWeight()
-        {
-            var manager = HahaJokeService.Instance;
-            var reader = new HahaWebReader();
-            manager.Entities.ToList().ForEach(a =>
-            {
-                if (a.Weight==0)
-                {
-                    var newEn = reader.GetHtmlContent(a.Url);
-                    a.Weight = newEn.Weight;
-                    manager.AddEdit(a);
-                }
-              
-            });
         }
+
+
+        [TestMethod]
+        public void UniqTest1()
+        {
+            //去重
+            var instance = SyncSpiderHelper.GetSpiderCn("spider");
+            var tarUrl =
+                instance.Entities.ToList().GroupBy(a => a.Url)
+                    .Where(g => g.Count() > 1)
+                    .SelectMany(g => g.ToList().Skip(1).Select(i => i.Id)).ToList();
+            tarUrl.ForEach(a => instance.Delete(a));
+        }
+
+        
+  
     }
 }

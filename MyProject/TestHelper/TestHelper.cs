@@ -31,11 +31,14 @@ namespace MyProject.TestHelper
             HttpContext.Current = new HttpContext(wr);
         }
 
-        public static object GetCurrentTime()
+        public static string GetCurrentTime()
         {
-            throw new NotImplementedException();
+            return DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         }
 
-      
+        public static void Log(string str)
+        {
+            Console.WriteLine(str);
+        }
     }
 }

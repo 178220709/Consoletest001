@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
-using System.Net;
 using System.Text;
-using HtmlAgilityPack;
 using MyProject.MyHtmlAgility.Core;
 using Omu.ValueInjecter;
 
-namespace MyProject.MyHtmlAgility.Project.FromNode
+namespace MyProject.MyHtmlAgility.FromNode
 {
     public static class HttpRestHelper
     {

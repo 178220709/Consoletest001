@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using MyMvcDemo.Extend;
 using MyMvcDemo.Models;
-using MyProject.MyHtmlAgility.Project.FromNode;
+using MyProject.MyHtmlAgility.FromNode;
 using MyProject.WeixinModel.Model;
 using Newtonsoft.Json;
 using Suijing.Utils.Constants;

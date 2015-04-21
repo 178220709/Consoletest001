@@ -34,11 +34,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
@@ -68,9 +70,11 @@
     <Compile Include="Base\CLR\ConditionalDemo.cs" />
     <Compile Include="Base\Delegate\CloserDemo2.cs" />
     <Compile Include="Base\Delegate\CloserDemo.cs" />
+    <Compile Include="Base\Disposable\DisposableDemo.cs" />
     <Compile Include="Base\Enum\EnumDemo.cs" />
     <Compile Include="Base\File\FileDemo.cs" />
     <Compile Include="Base\Linq\ExpressDemo.cs" />
+    <Compile Include="Base\Path\PathDemo.cs" />
     <Compile Include="Base\Reflect\SealedApplication.cs" />
     <Compile Include="Base\Reg\RegexTestDemmo.cs" />
     <Compile Include="Base\Reg\RegexDemmo.cs" />
@@ -152,6 +156,10 @@
     <ProjectReference Include="..\MyProject\MyProject.csproj">
       <Project>{54CB55D4-E806-4B76-9900-0B0B8FFD6D16}</Project>
       <Name>MyProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Suijing.Utils.csproj">
+      <Project>{EA4D5D5E-E6F8-4487-A65A-752C05E9F7B1}</Project>
+      <Name>Suijing.Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

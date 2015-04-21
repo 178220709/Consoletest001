@@ -3,7 +3,7 @@ using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using MyProject.MongoDBDal;
 
-namespace MyProject.MyHtmlAgility.Project.SpiderBase
+namespace MyProject.MyHtmlAgility.SpiderBase
 {
     public  class SpiderService : BaseService<BaseSpiderEntity>
     {

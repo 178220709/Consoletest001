@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 using BaseFeatureDemo.Base;
 using BaseFeatureDemo.Base.CLR;
 using BaseFeatureDemo.Base.Delegate;
+using BaseFeatureDemo.Base.Disposable;
 using BaseFeatureDemo.Base.File;
 using BaseFeatureDemo.Base.Linq;
+using BaseFeatureDemo.Base.Path;
 using BaseFeatureDemo.Base.Reg;
 using BaseFeatureDemo.Base.ThreadDemo.ThreadBase;
 using BaseFeatureDemo.Base.ThreadDemo.ThreadNew;
@@ -25,8 +27,7 @@ namespace BaseFeatureDemo
         static void Main(string[] args)
         {
 
-            Nod1305.Main2(args);
-            Nod1305.Main1(args);
+            PathDemo.Main1();
         }
     }
 }

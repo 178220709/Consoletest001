@@ -3,7 +3,7 @@ using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using MyProject.MongoDBDal;
 using MyProject.MyHtmlAgility.Core;
-using MyProject.MyHtmlAgility.Project.SpiderBase;
+using MyProject.MyHtmlAgility.SpiderBase;
 
 namespace MyProject.MyHtmlAgility.Project.Youmin
 {

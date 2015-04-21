@@ -4,8 +4,8 @@ define(function (require, exports, module) {
     var util = require("public/util.js");
 
     var model = avalon.define("ctrlSystemHttpDebugger", function (vm) {
-        vm.paras = [{ key: "pageIndex", value: 1 }, { key: "pageSize", value: 10 }];
-        vm.url = "http://localhost:18080/api/haha/getList";
+        vm.paras = [{ key: "pageIndex", value: 1 }, { key: "pageSize", value: 10 }, { key: "cnName", value: "spider" }];
+        vm.url = "http://localhost:18080/api/spider/getSpiderList";
         vm.target = "";
         vm.result = "";
         vm.postURL = "";

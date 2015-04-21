@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using MyProject.MyHtmlAgility.Core;
+﻿using System.Collections.Generic;
 using MyProject.MyHtmlAgility.Project.Haha;
-using MyProject.MyHtmlAgility.Project.SpiderBase;
 using MyProject.MyHtmlAgility.Project.Youmin;
+using MyProject.MyHtmlAgility.SpiderBase;
 
-namespace MyProject.MyHtmlAgility.Project.SpiderCommon
+namespace MyProject.MyHtmlAgility.SpiderCommon
 {
     /// <summary>
     /// 同步远程的数据

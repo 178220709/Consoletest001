@@ -1,10 +1,13 @@
 ﻿using System;
-using MyProject.MongoDBDal;
+using JsonSong.SpiderApp.Base;
 
-namespace MyProject.MyHtmlAgility.Project.SpiderBase
+namespace JsonSong.SpiderApp.Data
 {
-    public class BaseSpiderEntity : BaseEntity
+    
+    public class SpiderEntity : BaseEntity
     {
+        
+        public int TypeId { get; set; }
         public string Flag { get; set; }
         public string Url { get; set; }
         public string Title { get; set; }
@@ -12,6 +15,5 @@ namespace MyProject.MyHtmlAgility.Project.SpiderBase
         public string StyleStr { get; set; }
         public DateTime AddedTime { get; set; }
         public int Weight { get; set; }
-
     }
 }

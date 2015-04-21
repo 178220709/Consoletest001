@@ -33,11 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Fizzler">
       <HintPath>..\packages\Fizzler.1.0.0\lib\net35\Fizzler.dll</HintPath>
@@ -118,31 +120,29 @@
     <Compile Include="MongoDBDal\BaseService.cs" />
     <Compile Include="MyHtmlAgility\Core\DownloadImages.cs" />
     <Compile Include="MyHtmlAgility\ProjectTest\MyHtmlAgilityTest\SyncTest.cs" />
-    <Compile Include="MyHtmlAgility\Project\SpiderCommon\SpiderRestDto.cs" />
-    <Compile Include="MyHtmlAgility\Project\SpiderCommon\SpiderConstant.cs" />
-    <Compile Include="MyHtmlAgility\Project\SpiderCommon\SyncSpiderHelper.cs" />
-    <Compile Include="MyHtmlAgility\Project\FromNode\HttpRestHelper.cs" />
-    <Compile Include="MyHtmlAgility\Project\SpiderBase\BaseSpiderEntity.cs" />
+    <Compile Include="MyHtmlAgility\SpiderCommon\SpiderRestDto.cs" />
+    <Compile Include="MyHtmlAgility\SpiderCommon\SpiderConstant.cs" />
+    <Compile Include="MyHtmlAgility\SpiderCommon\SyncSpiderHelper.cs" />
+    <Compile Include="MyHtmlAgility\FromNode\HttpRestHelper.cs" />
+    <Compile Include="MyHtmlAgility\SpiderBase\BaseSpiderEntity.cs" />
     <Compile Include="MyHtmlAgility\Core\NormalHtmlHelper.cs" />
     <Compile Include="MyHtmlAgility\Core\HttpWebResponseUtility.cs" />
-    <Compile Include="MyHtmlAgility\Project\SpiderBase\BaseParstialReader.cs" />
+    <Compile Include="MyHtmlAgility\SpiderBase\BaseParstialReader.cs" />
     <Compile Include="MyHtmlAgility\Core\WebTaskFactory.cs" />
     <Compile Include="MyHtmlAgility\Core\WebDownloader.cs" />
     <Compile Include="ManiaSongs\CommonDictionary.cs" />
     <Compile Include="ManiaSongs\SongDal.cs" />
     <Compile Include="ManiaSongs\SongInfo.cs" />
-    <Content Include="MyHtmlAgility\XPathDemo\demoXML.xml" />
     <Compile Include="MyHtmlAgility\ProjectTest\GetContentFromLteDemo.cs" />
     <Compile Include="MyHtmlAgility\ProjectTest\FixHahaJokeFlag.cs" />
     <Compile Include="MyHtmlAgility\ProjectTest\TestWebReader.cs" />
-    <Compile Include="MyHtmlAgility\Project\SpiderBase\SpiderServiceFactory.cs" />
-    <Compile Include="MyHtmlAgility\Project\SpiderBase\SpiderService.cs" />
+    <Compile Include="MyHtmlAgility\SpiderBase\SpiderServiceFactory.cs" />
+    <Compile Include="MyHtmlAgility\SpiderBase\SpiderService.cs" />
     <Compile Include="MyHtmlAgility\Project\Youmin\YouminService.cs" />
     <Compile Include="MyHtmlAgility\Project\Youmin\YouminPartialReader.cs" />
     <Compile Include="MyHtmlAgility\Project\Youmin\YouminWebReader.cs" />
     <Compile Include="MyHtmlAgility\Project\Haha\HahaWebReader.cs" />
     <Compile Include="MyHtmlAgility\Project\Haha\HahaJokeService.cs" />
-    <Compile Include="MyHtmlAgility\XPathDemo\XPathDemo.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RedisDemo\DemoBase.cs" />
@@ -172,13 +172,16 @@
     <Compile Include="XML\xmlTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="EFDemo\" />
     <Folder Include="MyHtmlAgility\Project\51job\" />
     <Folder Include="SignalRProject\" />
   </ItemGroup>

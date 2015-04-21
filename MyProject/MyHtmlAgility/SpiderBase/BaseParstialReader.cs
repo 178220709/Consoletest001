@@ -3,7 +3,7 @@ using System.Text;
 using MyProject.MyHtmlAgility.Core;
 using Suijing.Utils.sysTools;
 
-namespace MyProject.MyHtmlAgility.Project.SpiderBase
+namespace MyProject.MyHtmlAgility.SpiderBase
 {
     /// <summary>
     /// 用于分页内容(一篇帖子分成几十个页面)的爬取  

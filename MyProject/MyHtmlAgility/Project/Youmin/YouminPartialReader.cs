@@ -6,7 +6,7 @@ using Fizzler.Systems.HtmlAgilityPack;
 using HtmlAgilityPack;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyProject.MyHtmlAgility.Core;
-using MyProject.MyHtmlAgility.Project.SpiderBase;
+using MyProject.MyHtmlAgility.SpiderBase;
 using Omu.ValueInjecter;
 using Suijing.Utils;
 

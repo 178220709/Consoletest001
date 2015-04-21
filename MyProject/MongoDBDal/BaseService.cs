@@ -47,7 +47,7 @@ namespace MyProject.MongoDBDal
             return Collections.RemoveAll();
         }
         #region 根据Id删除实体对象
-        public virtual WriteConcernResult Delete(int id)
+        public virtual WriteConcernResult Delete(ObjectId id)
         {
             return Collections.Remove(Query.EQ("_id", id), RemoveFlags.Single);
         }

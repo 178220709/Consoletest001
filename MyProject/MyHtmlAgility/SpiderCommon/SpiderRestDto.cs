@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using MyProject.MyHtmlAgility.Core;
-using MyProject.MyHtmlAgility.Project.Haha;
-using MyProject.MyHtmlAgility.Project.SpiderBase;
-using MyProject.MyHtmlAgility.Project.Youmin;
 
-namespace MyProject.MyHtmlAgility.Project.SpiderCommon
+namespace MyProject.MyHtmlAgility.SpiderCommon
 {
     /// <summary>
     /// 同步远程的数据 使用的实体

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MyProject.MyHtmlAgility.Core;
-using MyProject.MyHtmlAgility.Project.FromNode;
+using MyProject.MyHtmlAgility.FromNode;
 using Suijing.Utils.WebTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Suijing.Utils.WebTools.Tests

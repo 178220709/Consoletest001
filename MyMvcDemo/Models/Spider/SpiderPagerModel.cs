@@ -3,7 +3,7 @@ using System.Net;
 using System.Web;
 using MyProject.MongoDBDal;
 using MyProject.MyHtmlAgility.Core;
-using MyProject.MyHtmlAgility.Project.SpiderBase;
+using MyProject.MyHtmlAgility.SpiderBase;
 
 
 namespace MyMvcDemo.Models
