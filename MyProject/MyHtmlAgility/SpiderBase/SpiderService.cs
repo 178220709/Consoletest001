@@ -2,6 +2,8 @@ using System.Linq;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using MyProject.MongoDBDal;
+using MyProject.MyHtmlAgility.Core;
+using Omu.ValueInjecter;
 
 namespace MyProject.MyHtmlAgility.SpiderBase
 {
@@ -13,6 +15,45 @@ namespace MyProject.MyHtmlAgility.SpiderBase
            
         }
 
+        private static SpiderService _spiderService;
+
+        public static SpiderService Instance
+        {
+            get
+            {
+                if (_spiderService==null)
+                {
+                    _spiderService = new SpiderService("spider");
+                }
+                return _spiderService;
+            }
+        }
+
+
+        public  IQueryable<BaseSpiderEntity> GetQueryByTypeId(int typeId)
+        {
+            return this.Entities.Where(a => a.TypeId == typeId);
+        }
+
+        public  IQueryable<BaseSpiderEntity> GetQueryByTypeId(int? typeId)
+        {
+            var type = typeId ?? 1;
+            return GetQueryByTypeId(type);
+        }
+
+
+        public void AddNoRepeat( ReadResult re, int typeId=1)
+        {
+            if (this.Entities.Any(a => a.Url == re.Url))
+            {
+               return ;
+            }
+            var en = new BaseSpiderEntity {TypeId = typeId};
+            en.InjectFrom(re);
+            this.AddEdit(en);
+        }
+
+
         /// <summary>
         /// ¸üÐÂcontent
         /// </summary>
@@ -21,7 +62,7 @@ namespace MyProject.MyHtmlAgility.SpiderBase
         public bool UpdateContent(BaseSpiderEntity model)
         {
 
-            var entity = this.Entities.FirstOrDefault(a => a.Flag == model.Flag);
+            var entity = this.Entities.FirstOrDefault(a => a.Url == model.Url);
             if (entity == null)
             {
                 return false;
@@ -36,9 +77,9 @@ namespace MyProject.MyHtmlAgility.SpiderBase
         //x.Flag=x.Flag+"";
         //db.HahaJoke.save(x)})
 
-        public bool DeleteByFlag(string flag)
+        public bool DeleteByUrl(string url)
         {
-            var re = this.Collections.Remove(Query.EQ("Flag", flag), RemoveFlags.Single);
+            var re = this.Collections.Remove(Query.EQ("Url", url), RemoveFlags.Single);
             return re.Ok;
         }
 

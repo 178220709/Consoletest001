@@ -1,11 +1,20 @@
 ﻿using System.Data.Entity;
+using System.Linq;
 using JsonSong.SpiderApp.Data;
 
 namespace JsonSong.SpiderApp.Base
 {
-    public partial class SpiderDbContext : DbContext
+    public partial class MyDbContext : DbContext
     {
-        public SpiderDbContext()
+        private static MyDbContext _instance = new MyDbContext();
+
+        public static IQueryable<T> GetQuery<T>() where T: BaseEntity
+        {
+            return _instance.Set<T>();
+        }
+
+
+        public MyDbContext()
             : base("conn")
         {
             

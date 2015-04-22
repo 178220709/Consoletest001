@@ -58,11 +58,13 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="MongoDB.Bson">
-      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
+    <Reference Include="MongoDB.Bson, Version=1.10.0.62, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\mongocsharpdriver.1.10.0\lib\net35\MongoDB.Bson.dll</HintPath>
     </Reference>
-    <Reference Include="MongoDB.Driver">
-      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
+    <Reference Include="MongoDB.Driver, Version=1.10.0.62, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\mongocsharpdriver.1.10.0\lib\net35\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -133,16 +135,14 @@
     <Compile Include="ManiaSongs\CommonDictionary.cs" />
     <Compile Include="ManiaSongs\SongDal.cs" />
     <Compile Include="ManiaSongs\SongInfo.cs" />
-    <Compile Include="MyHtmlAgility\ProjectTest\GetContentFromLteDemo.cs" />
+    <Compile Include="XML\GetContentFromLteDemo.cs" />
     <Compile Include="MyHtmlAgility\ProjectTest\FixHahaJokeFlag.cs" />
     <Compile Include="MyHtmlAgility\ProjectTest\TestWebReader.cs" />
     <Compile Include="MyHtmlAgility\SpiderBase\SpiderServiceFactory.cs" />
     <Compile Include="MyHtmlAgility\SpiderBase\SpiderService.cs" />
-    <Compile Include="MyHtmlAgility\Project\Youmin\YouminService.cs" />
     <Compile Include="MyHtmlAgility\Project\Youmin\YouminPartialReader.cs" />
     <Compile Include="MyHtmlAgility\Project\Youmin\YouminWebReader.cs" />
     <Compile Include="MyHtmlAgility\Project\Haha\HahaWebReader.cs" />
-    <Compile Include="MyHtmlAgility\Project\Haha\HahaJokeService.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RedisDemo\DemoBase.cs" />

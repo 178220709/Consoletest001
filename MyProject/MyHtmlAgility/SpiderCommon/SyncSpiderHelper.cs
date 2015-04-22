@@ -21,7 +21,8 @@ namespace MyProject.MyHtmlAgility.SpiderCommon
         {
             paras = paras ?? new Dictionary<string, string>();
             paras["pageSize"] = "100";
-            paras["cnName"] = "spider";
+            paras["cnName"] = "sp_youmin";
+            typeId = 2;
             var url = SpiderConstant.RemoteUrl;
             // const string url = "http://localhost:18080/api/spider/GetSpiderList";
             int sum = 0;
@@ -35,6 +36,7 @@ namespace MyProject.MyHtmlAgility.SpiderCommon
                 var dto = JsonConvert.DeserializeObject<SpiderRestDto>(postStr);
                 pageTotal = dto.count/dto.pageSize + 1;
                 var list = MapFromDTO(dto,typeId).Where(a => !instance.ExistUrl(a.Url)).ToList();
+
                 instance.AddList(list);
                 pageIndex++;
                 paras["pageIndex"] = pageIndex.ToString();

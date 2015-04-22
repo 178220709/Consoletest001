@@ -10,15 +10,7 @@ namespace MyProject.MyHtmlAgility.SpiderCommon
     /// </summary>
     public static class SpiderConstant
     {
-        /// <summary>
-        /// 本地 mongo服务的引用字典
-        /// </summary>
-        public static readonly Dictionary<int, SpiderService> DicServices = new Dictionary<int, SpiderService>()
-        {
-            {1, HahaJokeService.Instance},
-            {2, YouminService.Instance}
-        };
-
+        
         public const string RemoteUrl = "http://jsonsong.duapp.com/api/spider/GetSpiderList";
 
 

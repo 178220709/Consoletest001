@@ -21,7 +21,7 @@ namespace JsonSong.SpiderApp.Test
         [TestMethod]
         public void AddTest1()
         {
-            using (var context = new SpiderDbContext())
+            using (var context = new MyDbContext())
             {
                 var en = new SpiderEntity()
                 {

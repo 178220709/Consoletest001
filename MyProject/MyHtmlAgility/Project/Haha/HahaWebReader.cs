@@ -12,7 +12,7 @@ using Suijing.Utils;
 namespace MyProject.MyHtmlAgility.Project.Haha
 {
     [TestClass]
-    public class HahaWebReader :WebTaskReader
+    public class HahaWebReader : WebTaskReader
     {
         public override ReadResult GetHtmlContent(string url)
         {
@@ -29,28 +29,12 @@ namespace MyProject.MyHtmlAgility.Project.Haha
 
         public override void FireTaskCallBack(IList<ReadResult> res)
         {
-            try
+            var manager = SpiderService.Instance;
+            foreach (var re in res)
             {
-                var manager = HahaJokeService.Instance;
-                foreach (var re in res)
-                {
-                    if (manager.Entities.Any(a => a.Url == re.Url))
-                    {
-                        continue;
-                    }
-                    var en = new BaseSpiderEntity();
-                    en.Flag = re.Url.Substring(re.Url.LastIndexOf('/')+1);
-                    en.InjectFrom(re);
-                    manager.AddEdit(en);
-                }
-            }
-            catch (Exception)
-            {
-                return;
+                manager.AddNoRepeat(re, 1);
             }
         }
-
-       
 
 
 
@@ -62,8 +46,8 @@ namespace MyProject.MyHtmlAgility.Project.Haha
             var doc = NormalHtmlHelper.GetDocumentNode(url);
             doc.DocumentNode.QuerySelector(".recommand-joke-main-list-thumbnail")
                 .QuerySelectorAll(".joke-text.word-wrap")
-                .Select(a=>a.QuerySelector("a"))
-                .Select(a =>  "http://www.haha.mx"+ a.GetAttributeValue("href",""))
+                .Select(a => a.QuerySelector("a"))
+                .Select(a => "http://www.haha.mx" + a.GetAttributeValue("href", ""))
                 .ToList().ForEach(urls.Add);
 
             doc.DocumentNode.QuerySelector(".recommand-joke-main-list-text")
@@ -71,7 +55,7 @@ namespace MyProject.MyHtmlAgility.Project.Haha
                .ToList().ForEach(urls.Add);
             var reader = new HahaWebReader();
             var factory = new WebTaskFactory(reader);
-         return factory.StartAndCallBack(urls.Distinct().ToList());
+            return factory.StartAndCallBack(urls.Distinct().ToList());
 
         }
 
@@ -82,7 +66,7 @@ namespace MyProject.MyHtmlAgility.Project.Haha
             const string url = "http://www.haha.mx/joke/1660764";
             var doc = NormalHtmlHelper.GetDocumentNode(url);
             var divContent = doc.DocumentNode.QuerySelector(".list.joke.joke-item");
-           
+
             var content = divContent.QuerySelector(".clearfix.mt-15");
             var divFooterA = divContent.QuerySelectorAll(".clearfix.mt-20.joke-item-footer .fl a").ToArray();
             var zan = ConvertHelper.ConvertStrToInt(divFooterA[0].InnerText);
@@ -101,7 +85,15 @@ namespace MyProject.MyHtmlAgility.Project.Haha
             var divFooterA = divContent.QuerySelectorAll(".clearfix.mt-20.joke-item-footer .fl a").ToArray();
             var zan = ConvertHelper.ConvertStrToInt(divFooterA[0].InnerText);
             var bishi = ConvertHelper.ConvertStrToInt(divFooterA[1].InnerText);
-            var weight = ((zan + bishi) / 100) * (zan - bishi*3);
+            var weight = ((zan + bishi) / 100) * (zan - bishi * 3);
         }
     }
 }
+
+
+
+/*将Flag 转换为string类型
+    db.sp_haha.find().forEach(function(x){
+x.Flag=x.Flag+"";
+db.HahaJoke.save(x)})
+*/

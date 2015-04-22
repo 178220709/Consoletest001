@@ -39,6 +39,7 @@ namespace MyProject.MyHtmlAgility.Core
                     .Where(a => !string.IsNullOrWhiteSpace(a.Content))
                     .ToList();
                 _reader.FireTaskCallBack(res);
+                LogHepler.WriteWebReader("成功爬取并执行完毕");
                 return res;
             }
             catch (Exception ex)
@@ -46,7 +47,6 @@ namespace MyProject.MyHtmlAgility.Core
                 LogHepler.WriteWebReader("出现异常:" + ex.Message); 
                 return null;
             }
-            LogHepler.WriteWebReader("成功爬取并执行完毕");
         }
     }
 
@@ -59,13 +59,12 @@ namespace MyProject.MyHtmlAgility.Core
         public ReadResult(string url)
         {
             Url = url;
-            Date = DateTime.Now;
         }
         public string  Url { get; set; }
         public string  Title { get; set; }
         public string  Content { get; set; }
         public string  StyleStr { get; set; }
-        public DateTime  Date { get; set; }
+       
         public dynamic  Extend { get; set; }
 
         public int  Weight { get; set; }

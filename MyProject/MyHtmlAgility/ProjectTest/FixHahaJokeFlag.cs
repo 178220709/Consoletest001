@@ -30,33 +30,13 @@ namespace  MyProject.MyHtmlAgility.ProjectTest
         [TestMethod]
         public void FixFlag()
         {
-            var manager = SpiderServiceFactory.GetByTypeId(2);
-
-            manager.Entities.ToList().ForEach(a =>
-            {
-                if ( string.IsNullOrEmpty(a.Flag) || a.Flag=="0")
-                {
-                    a.Flag =   YouminWebReader.GetFlagFromUrl(a.Url) ;
-                    manager.AddEdit(a);
-                }
-            });
+          
         } 
         
         [TestMethod]
         public void FixWeight()
         {
-            var manager = HahaJokeService.Instance;
-            var reader = new HahaWebReader();
-            manager.Entities.ToList().ForEach(a =>
-            {
-                if (a.Weight==0)
-                {
-                    var newEn = reader.GetHtmlContent(a.Url);
-                    a.Weight = newEn.Weight;
-                    manager.AddEdit(a);
-                }
-              
-            });
+           
         }
     }
 }

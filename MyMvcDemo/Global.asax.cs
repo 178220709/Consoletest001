@@ -16,7 +16,7 @@ namespace MyMvcDemo
         protected void Application_Start()
         {
             JsConfig.IncludeNullValues = true;
-            JsConfig.DateHandler = JsonDateHandler.ISO8601;
+          //  JsConfig.DateHandler = JsonDateHandler.ISO8601;
             JsConfig<DateTime>.SerializeFn = dt => dt.ToString("s");
             JsConfig<DateTime?>.SerializeFn = dt => dt != null ? dt.Value.ToString("s") : "null";
             JsConfig.ExcludeTypeInfo = true;
@@ -29,6 +29,13 @@ namespace MyMvcDemo
             LogHepler.SetConfig();
             LogHepler.WriteLog("the mvcDemo is start up");
             ImageResizer.Configuration.Config.Current.Pipeline.AuthorizeImage += Pipeline_AuthorizeImage;
+
+
+
+
+         
+
+
         }
 
         //保证ImageResizer只有在登录后才能被访问

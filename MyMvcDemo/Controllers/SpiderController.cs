@@ -25,12 +25,7 @@ namespace MyMvcDemo.Controllers
             return View(list);
         }
         [HttpGet]
-        [Module(Name = "哈哈top16", CSS = MyConstants.Bootstrap.Icon.Globe)]
-        public ActionResult HahaTop(int? typeId)
-        {
-            var list = SpiderServiceFactory.GetByTypeId(typeId).Entities.Take(16).ToList();
-            return View(list);
-        }
+       
         [Module(Name = "List", CSS = MyConstants.Bootstrap.Icon.Globe)]
         public ActionResult HahaList()
         {
@@ -42,9 +37,9 @@ namespace MyMvcDemo.Controllers
         [HttpPost]
         public JsonResult GetList(SpiderPagerModel model, int? typeId)
         {
-            var ins = SpiderServiceFactory.GetByTypeId(typeId);
-            model.Total = ins.Entities.Count();
-            model.Rows = ins.Entities.Skip(model.Skip).Take(model.PageSize).ToList();
+            var query = SpiderService.Instance. GetQueryByTypeId(typeId);
+            model.Total = query.Count();
+            model.Rows = query.Skip(model.Skip).Take(model.PageSize).ToList();
             return Json(model);
         }
 
@@ -54,16 +49,16 @@ namespace MyMvcDemo.Controllers
         {
             return Json(new ResponseJsonModel()
             {
-                success = SpiderServiceFactory.GetByTypeId(typeId).UpdateContent(model)
+                success = SpiderService.Instance.UpdateContent(model)
             });
         }
 
         [HttpPost]
-        public JsonResult Delete(string flag, int? typeId)
+        public JsonResult Delete(string url, int? typeId)
         {
             return Json(new ResponseJsonModel()
             {
-                success = SpiderServiceFactory.GetByTypeId(typeId).DeleteByFlag(flag)
+                success = SpiderService.Instance.DeleteByUrl(url)
             });
         }
 

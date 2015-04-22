@@ -55,7 +55,16 @@ namespace  MyProject.MyHtmlAgility.ProjectTest
             tarUrl.ForEach(a => instance.Delete(a));
         }
 
-        
+        [TestMethod]
+        public void CleanTest1()
+        {
+            //删除权重太低的数据
+            var instance = SyncSpiderHelper.GetSpiderCn("spider");
+            var tarList = instance.Entities.Where(a => a.Weight < 0.1).ToList();
+
+            tarList.ForEach(a => instance.Delete(a.Id));
+        }
+
   
     }
 }

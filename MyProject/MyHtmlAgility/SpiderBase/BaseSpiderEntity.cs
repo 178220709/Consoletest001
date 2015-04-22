@@ -5,6 +5,10 @@ namespace MyProject.MyHtmlAgility.SpiderBase
 {
     public class BaseSpiderEntity : BaseEntity
     {
+        public BaseSpiderEntity()
+        {
+            AddedTime = DateTime.Now;
+        }
         public int TypeId { get; set; }
         public string Flag { get; set; }
         public string Url { get; set; }

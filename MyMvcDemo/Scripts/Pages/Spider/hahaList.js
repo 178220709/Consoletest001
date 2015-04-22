@@ -34,7 +34,7 @@ define(function (require, exports, module) {
         vm.changePage = pager.changePage;
         vm.del = function (row) {
             if (confirm("sure?")) {
-                $.post("spider/Delete", { Flag: row.Flag, typeId: model.typeId }, function (data) {
+                $.post("spider/Delete", { url: row.Url, typeId: model.typeId }, function (data) {
                     if (data.success) {
                         alert("Delete成功");
                         model.refreshClick();

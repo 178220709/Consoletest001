@@ -23,26 +23,13 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
 
             return parstialReader.OutputResult();
         }
+
         public override void FireTaskCallBack(IList<ReadResult> res)
         {
-            try
+            var manager = SpiderService.Instance;
+            foreach (var re in res)
             {
-                var manager = YouminService.Instance;
-                foreach (var re in res)
-                {
-                    if (manager.Entities.Any(a => a.Url == re.Url))
-                    {
-                        continue;
-                    }
-                    var en = new BaseSpiderEntity();
-                    en.Flag = GetFlagFromUrl(re.Url);
-                    en.InjectFrom(re);
-                  var writeConcernResult =  manager.AddEdit(en);
-                }
-            }
-            catch (Exception)
-            {
-                return;
+                manager.AddNoRepeat(re, 2);
             }
         }
 
@@ -69,7 +56,7 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
                   .ForAll(a => urls.Add(a.GetAttributeValue("href", ""))));
 
 
-            var urlsValid = urls.Where(a => !YouminService.Instance.ExistUrl(a)).ToList();
+            var urlsValid = urls.Where(a => !SpiderService.Instance.ExistUrl(a)).ToList();
             //如果系统中已经有了 则不会去爬取
           
             var reader = new YouminWebReader();
