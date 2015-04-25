@@ -104,6 +104,7 @@
     <Compile Include="Encrypt\DataProtector.cs" />
     <Compile Include="Encrypt\Authcode.cs" />
     <Compile Include="Encrypt\HASHDemo.cs" />
+    <Compile Include="Express\LinqProviderDemo.cs" />
     <Compile Include="Image\ImageDemo.cs" />
     <Compile Include="Encrypt\RSAManager.cs" />
     <Compile Include="Base\Linq\LinqDemo.cs" />

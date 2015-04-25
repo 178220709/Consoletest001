@@ -32,7 +32,7 @@ namespace MyProject.MyHtmlAgility.SpiderBase
 
         public  IQueryable<BaseSpiderEntity> GetQueryByTypeId(int typeId)
         {
-            return this.Entities.Where(a => a.TypeId == typeId);
+            return this.Entities.Where(a => a.Valid &&  a.TypeId == typeId);
         }
 
         public  IQueryable<BaseSpiderEntity> GetQueryByTypeId(int? typeId)
@@ -79,8 +79,14 @@ namespace MyProject.MyHtmlAgility.SpiderBase
 
         public bool DeleteByUrl(string url)
         {
-            var re = this.Collections.Remove(Query.EQ("Url", url), RemoveFlags.Single);
-            return re.Ok;
+            var entity = this.Entities.FirstOrDefault(a => a.Url == url);
+            if (entity == null)
+            {
+                return false;
+            }
+            entity.Valid = false;
+            this.AddEdit(entity);
+            return true;
         }
 
       

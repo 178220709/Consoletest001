@@ -3,6 +3,13 @@
     ViewBag.Title = "title";
     Layout = "";
 }
+    
+
+<style>
+    .table-hover {
+        font-size: 14px!important
+    }
+</style>
 <h2>HahaList</h2>
 <script>
     seajs.use("page/Spider/HahaList.js?_=0.01");
@@ -61,11 +68,22 @@
                 更新内容
                 <button ms-click="updateClick(current)"> <i class="fa fa-refresh"></i></button>
             </label>
-        </div>
-        <div class="col-md-8">
-            {{current.Content|html}}
+            
+            <input type="button" value="next" style="margin-left: 100px;" ms-click="nextClick(1)" />
         </div>
     </div>
-
+    <div ms-if="!IsPartial" class="row">
+        {{current.Content|html}}
+    </div>
+    <div ms-if="IsPartial" class="row">
+        <div  class="row" ms-repeat-p="pList">
+            {{p|html}}
+        </div>
+        
+        <div ></div>
+    </div>
+    <div class="row">
+        <label   style="margin-left: 100px;" onclick="console.log('bottom is click')" ms-click="nextClick(2)"  >NEXT</label>
+    </div>
 
 </div>

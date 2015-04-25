@@ -4,12 +4,13 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using MongoDB.Driver.Linq;
-
+using Newtonsoft.Json;
 namespace MyProject.MongoDBDal
 {
 
     public class BaseEntity
     {
+        [JsonIgnore]
         public ObjectId Id { get; set; }
     }
     public class BaseService<T> where T : BaseEntity

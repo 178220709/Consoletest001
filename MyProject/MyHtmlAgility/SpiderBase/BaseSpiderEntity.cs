@@ -17,6 +17,7 @@ namespace MyProject.MyHtmlAgility.SpiderBase
         public string StyleStr { get; set; }
         public DateTime AddedTime { get; set; }
         public int Weight { get; set; }
+        public bool Valid { get; set; }
 
     }
 }

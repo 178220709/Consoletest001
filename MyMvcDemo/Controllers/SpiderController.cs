@@ -10,6 +10,7 @@ using MyProject.MyHtmlAgility.Core;
 using MyProject.MyHtmlAgility.Project.Haha;
 using MyProject.MyHtmlAgility.Project.Youmin;
 using MyProject.MyHtmlAgility.SpiderBase;
+using Newtonsoft.Json;
 using Suijing.Utils.Constants;
 
 namespace MyMvcDemo.Controllers
@@ -25,7 +26,7 @@ namespace MyMvcDemo.Controllers
             return View(list);
         }
         [HttpGet]
-       
+
         [Module(Name = "List", CSS = MyConstants.Bootstrap.Icon.Globe)]
         public ActionResult HahaList()
         {
@@ -37,7 +38,7 @@ namespace MyMvcDemo.Controllers
         [HttpPost]
         public JsonResult GetList(SpiderPagerModel model, int? typeId)
         {
-            var query = SpiderService.Instance. GetQueryByTypeId(typeId);
+            var query = SpiderService.Instance.GetQueryByTypeId(typeId);
             model.Total = query.Count();
             model.Rows = query.Skip(model.Skip).Take(model.PageSize).ToList();
             return Json(model);
@@ -45,8 +46,19 @@ namespace MyMvcDemo.Controllers
 
         [ValidateInput(false)]
         [HttpPost]
-        public JsonResult Update(BaseSpiderEntity model, int? typeId)
+        public JsonResult Update(string modelStr)
         {
+            if (modelStr.ToLower().Contains("script"))
+            {
+                return Json(new ResponseJsonModel()
+                {
+                    success = false,
+                    msg = "不允许有script标记"
+                });
+            }
+
+            var model = JsonConvert.DeserializeObject<BaseSpiderEntity>(modelStr);
+
             return Json(new ResponseJsonModel()
             {
                 success = SpiderService.Instance.UpdateContent(model)

@@ -5,7 +5,7 @@ define(function (require, exports, module) {
     var pagerInit = require("public/avalon/page.js");
 
     var getList = function(pageIndex,callback) {
-        $.post("spider/getList", { PageSize: 4, PageIndex: pageIndex, typeId: model.typeId }, function (data) {
+        $.post("spider/getList", { PageSize: 10, PageIndex: pageIndex, typeId: model.typeId }, function (data) {
             if (_.isFunction(callback)) {
                 callback(data);
             }
@@ -19,6 +19,8 @@ define(function (require, exports, module) {
         vm.pageIndex = 1;
         vm.pageCount = 1;
         vm.current = {};
+        vm.IsPartial = false;
+        vm.pList = [];
         vm.getWeightClass = filters.getColorLevel;
         vm.trClick = function (row) {
             vm.current = row;
@@ -31,7 +33,7 @@ define(function (require, exports, module) {
             });
         };
         vm.getContent = filters.getHahaContent;
-        vm.changePage = pager.changePage;
+      //  vm.changePage = pager.changePage;
         vm.del = function (row) {
             if (confirm("sure?")) {
                 $.post("spider/Delete", { url: row.Url, typeId: model.typeId }, function (data) {
@@ -48,7 +50,7 @@ define(function (require, exports, module) {
             //row是avalon设置监听过的复杂对象  不能直接去序列化它
             var m1 = row;
             var m2 = row.$model;
-            $.post("spider/update", { model: m2, typeId: model.typeId }, function(data) {
+            $.post("spider/update", { modelStr: JSON.stringify(m2) }, function (data) {
                 if (data.success) {
                     alert("更新成功");
                 } else {
@@ -56,6 +58,20 @@ define(function (require, exports, module) {
                 }
             });
         };
+        vm.nextClick = function (p1) {
+            var list = vm.list.$model;
+            var url = vm.current.Url;
+            for (var i = 0; i < list.length; i++) {
+                if (url == list[i].Url) {
+                    if (i == list.length - 1) {
+                        vm.pageIndex = vm.pageIndex + 1;
+                    } else {
+                         vm.current = list[i+1];
+                    }
+                } 
+            }
+        };
+
     });
     model.$watch("pageIndex", function (p1, p2, p3, p4) {
         model.refreshClick();
@@ -63,7 +79,16 @@ define(function (require, exports, module) {
     model.$watch("typeId", function (p1, p2, p3, p4) {
         model.refreshClick();
     });
-
+    model.$watch("current", function (p1) {
+        var content = model.current.Content;
+        var ps = $(content).find("p");
+        if (ps.length>15) {
+            model.IsPartial = true;
+        }
+        model.pList = _.map(ps, function(p) {
+            return $(p).prop("outerHTML");
+        });
+    });
     $(function (parameters) {
         //initpage
         getList(1, function (data) {
