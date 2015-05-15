@@ -27,7 +27,7 @@ namespace BaseFeatureDemo
         static void Main(string[] args)
         {
 
-            PathDemo.Main1();
+            AsyncTaskDemo2.Main1();
         }
     }
 }

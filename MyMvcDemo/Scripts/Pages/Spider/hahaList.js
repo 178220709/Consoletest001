@@ -71,6 +71,9 @@ define(function (require, exports, module) {
                 } 
             }
         };
+        vm.NextPageClick = function () {
+            vm.pageIndex = vm.pageIndex + 1;
+        };
 
     });
     model.$watch("pageIndex", function (p1, p2, p3, p4) {

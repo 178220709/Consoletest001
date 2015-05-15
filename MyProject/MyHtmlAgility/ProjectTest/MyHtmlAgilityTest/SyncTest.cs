@@ -38,8 +38,11 @@ namespace  MyProject.MyHtmlAgility.ProjectTest
         [TestMethod]
         public void SyncTest1()
         {
-            paras["cnName"] = "spider";
-            SyncSpiderHelper.StartSync(paras);
+            paras["cnName"] = "sp_haha";
+            SyncSpiderHelper.StartSync(paras,1);
+
+            paras["cnName"] = "sp_youmin";
+            SyncSpiderHelper.StartSync(paras,2);
         }
 
 

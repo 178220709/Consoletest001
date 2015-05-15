@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -38,7 +39,9 @@ namespace MyProject.TestHelper
 
         public static void Log(string str)
         {
-            Console.WriteLine(str);
+            var show = DateTime.Now.ToString("HH:mm:ss-fff") + str;
+            Console.WriteLine(show);
+            Trace.WriteLine(show);
         }
     }
 }

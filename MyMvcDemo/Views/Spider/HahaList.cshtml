@@ -27,8 +27,12 @@
                         </select>
                     </span>
                     <span style="margin-left: 300px;">共 {{pageCount}} 页 第 {{pageIndex}} 页</span>
+
                     <div class="box-tools">
+                       
                         <div class="input-group">
+                            <input type="button" class="form-control input-sm pull-right" style="width: 150px;" value="Next" ms-click="NextPageClick">
+
                             <input type="number" min="1" ms-attr-max="pageCount" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search" ms-duplex="pageIndex">
                         </div>
                     </div>

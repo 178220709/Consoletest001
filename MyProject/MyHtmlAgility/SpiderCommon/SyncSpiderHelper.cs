@@ -21,17 +21,19 @@ namespace MyProject.MyHtmlAgility.SpiderCommon
         {
             paras = paras ?? new Dictionary<string, string>();
             paras["pageSize"] = "100";
-            paras["cnName"] = "sp_youmin";
-            typeId = 2;
             var url = SpiderConstant.RemoteUrl;
             // const string url = "http://localhost:18080/api/spider/GetSpiderList";
             int sum = 0;
             var pageTotal = 1;
             int pageIndex = 1;
+            paras["pageIndex"] = "1";
+            var instance = GetSpiderCn("spider");
+            //得到最后更新日期
+            paras["AddedTime"] = instance.Entities.OrderByDescending(a => a.AddedTime).First().AddedTime.ToString("yyyy-MM-dd");
             do
             {
                 paras.SetDefault("cnName", SpiderConstant.CnNameDictionary[typeId]);
-                var instance = GetSpiderCn("spider");
+              
                 var postStr = HttpRestHelper.GetPost(url, paras);
                 var dto = JsonConvert.DeserializeObject<SpiderRestDto>(postStr);
                 pageTotal = dto.count/dto.pageSize + 1;
