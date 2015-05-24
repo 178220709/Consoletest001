@@ -131,7 +131,6 @@
     <Compile Include="MyHtmlAgility\Core\HttpWebResponseUtility.cs" />
     <Compile Include="MyHtmlAgility\SpiderBase\BaseParstialReader.cs" />
     <Compile Include="MyHtmlAgility\Core\WebTaskFactory.cs" />
-    <Compile Include="MyHtmlAgility\Core\WebDownloader.cs" />
     <Compile Include="ManiaSongs\CommonDictionary.cs" />
     <Compile Include="ManiaSongs\SongDal.cs" />
     <Compile Include="ManiaSongs\SongInfo.cs" />

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Net;
-using System.Runtime.Remoting.Messaging;
-using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using MyProject.TestHelper;
-
-namespace BaseFeatureDemo.Base.ThreadDemo.ThreadNew
+namespace BaseFeatureDemo.awaitDemo
 {
+   /**
+    * 什么是task
+    * 
+    * 
+    */
     [TestClass]
     public class AsyncTaskDemo
     {
@@ -19,8 +19,6 @@ namespace BaseFeatureDemo.Base.ThreadDemo.ThreadNew
         private static Task<MyResult> startDownload(string url)
         {
             var ttt = new TaskCompletionSource<MyResult>();
-       
-
             var task = new Task<MyResult>(() => new MyResult());
             return task;
         }
@@ -28,8 +26,6 @@ namespace BaseFeatureDemo.Base.ThreadDemo.ThreadNew
         private static void finishDownload(Task<MyResult> task)
         {
             var re = task.Result;
-
-
         }
 
         [TestMethod]

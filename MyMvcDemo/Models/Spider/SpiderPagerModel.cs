@@ -2,7 +2,7 @@
 using System.Net;
 using System.Web;
 using MyProject.MongoDBDal;
-using MyProject.MyHtmlAgility.Core;
+using JsonSong.Spider.Core;
 using MyProject.MyHtmlAgility.SpiderBase;
 
 

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using BaseFeatureDemo.awaitDemo;
 using BaseFeatureDemo.Base;
 using BaseFeatureDemo.Base.CLR;
 using BaseFeatureDemo.Base.Delegate;
@@ -17,6 +19,7 @@ using BaseFeatureDemo.Base.ThreadDemo.ThreadNew;
 using BaseFeatureDemo.Encrypt;
 using BaseFeatureDemo.MyGame;
 using BaseFeatureDemo.MyGame.Number;
+using MyProject.Annotations;
 using MyProject.HotelRecord.Manager;
 using MyProject.TestHelper;
 
@@ -26,8 +29,10 @@ namespace BaseFeatureDemo
     {
         static void Main(string[] args)
         {
-
-            AsyncTaskDemo2.Main1();
+           // DownloadStringTaskAsyncDemo.Main1().Wait();
+            DownloadStringTaskAsyncDemo.Main2();
+            Console.WriteLine("over");
+            Console.ReadLine();
         }
     }
 }
