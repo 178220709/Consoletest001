@@ -10,7 +10,7 @@ using MyProject.MyHtmlAgility.SpiderBase;
 using Omu.ValueInjecter;
 using Suijing.Utils;
 
-namespace MyProject.MyHtmlAgility.Project.Youmin
+namespace JsonSong.Spider.Project.Youmin
 {
     [TestClass]
     public class YouminPartialReader : BaseParstialReader

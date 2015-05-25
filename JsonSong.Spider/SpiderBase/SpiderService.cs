@@ -1,14 +1,14 @@
+using System.Collections.Generic;
 using System.Linq;
-using JsonSong.Spider.SpiderBase;
-using MongoDB.Driver;
-using MongoDB.Driver.Builders;
-using MyProject.MongoDBDal;
+using System.Threading.Tasks;
+using JsonSong.BaseDao.MongoDB;
 using JsonSong.Spider.Core;
+using MongoDB.Driver;
 using Omu.ValueInjecter;
 
-namespace MyProject.MyHtmlAgility.SpiderBase
+namespace JsonSong.Spider.SpiderBase
 {
-    public  class SpiderService : BaseService<BaseSpiderEntity>
+    public  class SpiderService : BaseDao<BaseSpiderEntity>
     {
         public SpiderService(string collectionName)
             : base(collectionName)
@@ -29,29 +29,36 @@ namespace MyProject.MyHtmlAgility.SpiderBase
                 return _spiderService;
             }
         }
+         public  IQueryable<BaseSpiderEntity> GetQuery()
+         {
+             return this.NewCollection.AsQueryable().AsQueryable();
+         }
+         public IQueryable<BaseSpiderEntity> Entities { get { return GetQuery(); } }
+        
+        
 
-
-        public  IQueryable<BaseSpiderEntity> GetQueryByTypeId(int typeId)
+        public async Task<IEnumerable<BaseSpiderEntity>> GetQueryByTypeId(int typeId)
         {
-            return this.Entities.Where(a => a.Valid &&  a.TypeId == typeId);
+            return await FindAsync(a=>a.TypeId==typeId);
         }
 
-        public  IQueryable<BaseSpiderEntity> GetQueryByTypeId(int? typeId)
+        public async Task<IEnumerable<BaseSpiderEntity>> GetQueryByTypeId(int? typeId)
         {
             var type = typeId ?? 1;
-            return GetQueryByTypeId(type);
+            return await GetQueryByTypeId(type);
         }
 
 
-        public void AddNoRepeat( ReadResult re, int typeId=1)
+        public async Task AddNoRepeat( ReadResult re, int typeId=1)
         {
-            if (this.Entities.Any(a => a.Url == re.Url))
+            var entity = await GetByUrlAsync(re.Url);
+            if (entity == null)
             {
-               return ;
+                return ;
             }
             var en = new BaseSpiderEntity {TypeId = typeId};
             en.InjectFrom(re);
-            this.AddEdit(en);
+           await this.InsertOneAsync(en);
         }
 
 
@@ -60,16 +67,16 @@ namespace MyProject.MyHtmlAgility.SpiderBase
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public bool UpdateContent(BaseSpiderEntity model)
+        public async Task<bool> UpdateContent(BaseSpiderEntity model)
         {
 
-            var entity = this.Entities.FirstOrDefault(a => a.Url == model.Url);
+            var entity = await GetByUrlAsync(model.Url);
             if (entity == null)
             {
                 return false;
             }
             entity.Content = model.Content;
-            this.AddEdit(entity);
+            await ReplaceOneAsync(entity);
             return true;
         }
 
@@ -78,22 +85,28 @@ namespace MyProject.MyHtmlAgility.SpiderBase
         //x.Flag=x.Flag+"";
         //db.HahaJoke.save(x)})
 
-        public bool DeleteByUrl(string url)
+        public async Task<bool> DeleteByUrl(string url)
         {
-            var entity = this.Entities.FirstOrDefault(a => a.Url == url);
+            var entity = await GetByUrlAsync(url);
             if (entity == null)
             {
                 return false;
             }
             entity.Valid = false;
-            this.AddEdit(entity);
+            await ReplaceOneAsync(entity);
             return true;
         }
 
       
-        public bool ExistUrl(string s)
+        public  bool ExistUrl(string url)
         {
-           return Entities.Count(a => a.Url == s) > 0;
+            var first = this.NewCollection.AsQueryable().FirstOrDefault(a => a.Url == url);
+            return first != null;
+        }
+
+        public async Task<BaseSpiderEntity> GetByUrlAsync(string url)
+        {
+            return await FindOneAsync(a => a.Url == url); ;
         }
     }
 }

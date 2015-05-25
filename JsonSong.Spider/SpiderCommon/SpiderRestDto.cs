@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MyProject.MyHtmlAgility.SpiderCommon
+namespace JsonSong.Spider.SpiderCommon
 {
     /// <summary>
     /// 同步远程的数据 使用的实体

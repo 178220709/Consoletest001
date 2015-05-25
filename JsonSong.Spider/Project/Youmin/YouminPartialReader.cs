@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
+﻿using System.Linq;
+
 using Fizzler.Systems.HtmlAgilityPack;
 using HtmlAgilityPack;
 using JsonSong.Spider.SpiderBase;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using JsonSong.Spider.Core;
-using MyProject.MyHtmlAgility.SpiderBase;
-using Omu.ValueInjecter;
-using Suijing.Utils;
 
-namespace MyProject.MyHtmlAgility.Project.Youmin
+namespace JsonSong.Spider.Project.Youmin
 {
     [TestClass]
     public class YouminPartialReader : BaseParstialReader

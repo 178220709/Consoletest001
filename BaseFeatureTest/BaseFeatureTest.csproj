@@ -51,16 +51,14 @@
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="MongoDB.Bson, Version=2.0.0.828, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MongoDB.Bson.2.0.0\lib\net45\MongoDB.Bson.dll</HintPath>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\Libs\MongoDB.Bson.dll</HintPath>
     </Reference>
-    <Reference Include="MongoDB.Driver, Version=2.0.0.828, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MongoDB.Driver.2.0.0\lib\net45\MongoDB.Driver.dll</HintPath>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\Libs\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Driver.Core">
-      <HintPath>..\packages\MongoDB.Driver.Core.2.0.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+      <HintPath>..\Libs\MongoDB.Driver.Core.dll</HintPath>
     </Reference>
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
@@ -91,6 +89,8 @@
   <ItemGroup>
     <Compile Include="EFDemo\MongoDBTest.cs" />
     <Compile Include="EFDemo\EFTest.cs" />
+    <Compile Include="MongoTest\ClearnSpot.cs" />
+    <Compile Include="MongoTest\MongoDaoTest.cs" />
     <Compile Include="MOQ\ThisTestTest.cs" />
     <Compile Include="UtilsTest\FileEncodingTest.cs" />
     <Compile Include="UtilsTest\SysteminfoHelperTest.cs" />
@@ -109,6 +109,10 @@
     <ProjectReference Include="..\BaseFeatureDemo\BaseFeatureDemo.csproj">
       <Project>{509303b5-6986-4e2e-befa-45d2abf1cdea}</Project>
       <Name>BaseFeatureDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JsonSong.BaseDao\JsonSong.BaseDao.csproj">
+      <Project>{611838fd-6236-46f7-a8a1-fc64d4d42aca}</Project>
+      <Name>JsonSong.BaseDao</Name>
     </ProjectReference>
     <ProjectReference Include="..\MyMvcDemo\MyMvcDemo.csproj">
       <Project>{582a8372-b8be-44ab-9be0-ad88062799c0}</Project>

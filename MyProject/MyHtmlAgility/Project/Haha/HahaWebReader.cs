@@ -9,7 +9,7 @@ using MyProject.MyHtmlAgility.SpiderBase;
 using Omu.ValueInjecter;
 using Suijing.Utils;
 
-namespace MyProject.MyHtmlAgility.Project.Haha
+namespace JsonSong.Spider.Project.Haha
 {
     [TestClass]
     public class HahaWebReader : WebTaskReader

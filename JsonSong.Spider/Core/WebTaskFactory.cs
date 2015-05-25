@@ -27,7 +27,7 @@ namespace JsonSong.Spider.Core
         /// </summary>
         /// <param name="urls"></param>
         /// <returns></returns>
-        public List<ReadResult> StartAndCallBack(IList<string> urls)
+        public async Task<List<ReadResult>> StartAndCallBack(IList<string> urls)
         {
             if (!urls.Any())
                 return null;
@@ -38,7 +38,7 @@ namespace JsonSong.Spider.Core
                 var res = urls.AsParallel().Select(a => _reader.GetHtmlContent(a))
                     .Where(a => !string.IsNullOrWhiteSpace(a.Content))
                     .ToList();
-                _reader.FireTaskCallBack(res);
+              await  _reader.FireTaskCallBack(res);
                 LogHepler.WriteWebReader("成功爬取并执行完毕");
                 return res;
             }
@@ -86,12 +86,12 @@ namespace JsonSong.Spider.Core
         /// 工厂类执行获取任务后,会调用 子类Reader实现的回调  
         /// </summary>
         /// <param name="res"></param>
-        public abstract void FireTaskCallBack(IList<ReadResult> res);
+        public abstract   Task FireTaskCallBack(IList<ReadResult> res);
     }
 
     public interface IWebTaskCallBack
     {
-        void FireTaskCallBack(IList<ReadResult> res);
+         Task FireTaskCallBack(IList<ReadResult> res);
     }
 
     public interface IWebTaskReader

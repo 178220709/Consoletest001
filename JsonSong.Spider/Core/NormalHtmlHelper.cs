@@ -11,7 +11,7 @@ namespace JsonSong.Spider.Core
 {
     public static class NormalHtmlHelper
     {
-        private static string GetDocHtmlStr(string url, Encoding encoding = null)
+        public static string GetDocHtmlStr(string url, Encoding encoding = null)
         {
             if (encoding == null)
             {

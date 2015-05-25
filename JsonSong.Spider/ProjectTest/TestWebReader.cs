@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using JsonSong.Spider.Core;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MyProject.MyHtmlAgility.ProjectTest
+namespace JsonSong.Spider.ProjectTest
 {
     [TestClass]
     public class TestWebReader : WebTaskReader
@@ -24,33 +24,34 @@ namespace MyProject.MyHtmlAgility.ProjectTest
             return re;
         }
 
-        public override void FireTaskCallBack(IList<ReadResult> res)
+        public override async Task FireTaskCallBack(IList<ReadResult> res)
         {
             try
             {
                 var list = res;
+                await Task.Run(() => Console.WriteLine(list.Count));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return;
+               Console.WriteLine(ex.Message);
             }
         }
 
      
 
-        public static List<ReadResult> GetRecommand()
+        public static async Task<List<ReadResult>> GetRecommand()
         {
             var urls = new List<string>();
             urls.AddRange(Enumerable.Range(0, 10).Select(a => "" + a));
             var reader = new TestWebReader();
             var factory = new WebTaskFactory(reader);
-            return factory.StartAndCallBack(urls.Distinct().ToList());
+            return await factory.StartAndCallBack(urls.Distinct().ToList());
         }
 
         [TestMethod]
-        public void Test1()
+        public async Task Test1()
         {
-            var list = GetRecommand();
+            var list = await GetRecommand();
             string str = "";
             list.ForEach(a => str += a.Content+"\n");
         }

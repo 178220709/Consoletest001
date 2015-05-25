@@ -29,10 +29,7 @@ namespace BaseFeatureDemo
     {
         static void Main(string[] args)
         {
-           // DownloadStringTaskAsyncDemo.Main1().Wait();
-            DownloadStringTaskAsyncDemo.Main2();
-            Console.WriteLine("over");
-            Console.ReadLine();
+           ProxyDemo.ProxyDemo.Main1().Wait();
         }
     }
 }

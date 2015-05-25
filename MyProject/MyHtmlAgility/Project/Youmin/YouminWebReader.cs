@@ -11,7 +11,7 @@ using NPOI.SS.Util;
 using Omu.ValueInjecter;
 using Suijing.Utils;
 
-namespace MyProject.MyHtmlAgility.Project.Youmin
+namespace JsonSong.Spider.Project.Youmin
 {
     [TestClass]
     public class YouminWebReader :WebTaskReader

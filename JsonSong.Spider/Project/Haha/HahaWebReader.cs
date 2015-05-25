@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Forms;
+using System.Threading.Tasks;
 using Fizzler.Systems.HtmlAgilityPack;
+using JsonSong.Spider.SpiderBase;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using JsonSong.Spider.Core;
-using MyProject.MyHtmlAgility.SpiderBase;
-using Omu.ValueInjecter;
 using Suijing.Utils;
 
-namespace MyProject.MyHtmlAgility.Project.Haha
+namespace JsonSong.Spider.Project.Haha
 {
     [TestClass]
     public class HahaWebReader : WebTaskReader
@@ -27,19 +25,19 @@ namespace MyProject.MyHtmlAgility.Project.Haha
             return re;
         }
 
-        public override void FireTaskCallBack(IList<ReadResult> res)
+        public override async Task FireTaskCallBack(IList<ReadResult> res)
         {
             var manager = SpiderService.Instance;
             foreach (var re in res)
             {
-                manager.AddNoRepeat(re, 1);
+              await  manager.AddNoRepeat(re, 1);
             }
         }
 
 
 
         [TestMethod]
-        public static List<ReadResult> GetRecommand()
+        public static async Task<List<ReadResult>> GetRecommand()
         {
             var urls = new List<string>();
             const string url = "http://www.haha.mx/joke/1660764";
@@ -55,7 +53,7 @@ namespace MyProject.MyHtmlAgility.Project.Haha
                .ToList().ForEach(urls.Add);
             var reader = new HahaWebReader();
             var factory = new WebTaskFactory(reader);
-            return factory.StartAndCallBack(urls.Distinct().ToList());
+            return  await factory.StartAndCallBack(urls.Distinct().ToList());
 
         }
 

@@ -70,16 +70,17 @@
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="MongoDB.Bson, Version=2.0.0.828, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MongoDB.Bson, Version=1.10.0.62, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MongoDB.Bson.2.0.0\lib\net45\MongoDB.Bson.dll</HintPath>
+      <HintPath>..\Libs\MongoDB.Bson.dll</HintPath>
     </Reference>
-    <Reference Include="MongoDB.Driver, Version=2.0.0.828, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MongoDB.Driver, Version=1.10.0.62, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MongoDB.Driver.2.0.0\lib\net45\MongoDB.Driver.dll</HintPath>
+      <HintPath>..\Libs\MongoDB.Driver.dll</HintPath>
     </Reference>
-    <Reference Include="MongoDB.Driver.Core">
-      <HintPath>..\packages\MongoDB.Driver.Core.2.0.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    <Reference Include="MongoDB.Driver.Core, Version=0.0.5622.42324, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\MongoDB.Driver.Core.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -144,6 +145,7 @@
     <Compile Include="Encrypt\DataProtector.cs" />
     <Compile Include="Encrypt\Authcode.cs" />
     <Compile Include="Encrypt\HASHDemo.cs" />
+    <Compile Include="ProxyDemo\VpnTest.cs" />
     <Compile Include="Express\LinqProviderDemo.cs" />
     <Compile Include="Image\ImageDemo.cs" />
     <Compile Include="Encrypt\RSAManager.cs" />
@@ -185,6 +187,7 @@
     <Compile Include="Base\ThreadDemo\ThreadSync\WaitEventHandleLog.cs" />
     <Compile Include="Base\ThreadDemo\ThreadSync\WaitEventHandleSample.cs" />
     <Compile Include="Base\ThreadDemo\ThreadSync\WaitHandleDemo.cs" />
+    <Compile Include="ProxyDemo\ProxyDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -194,6 +197,10 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\JsonSong.Spider\JsonSong.Spider.csproj">
+      <Project>{8B51E80F-5B2A-4821-89BD-4A10D49DE877}</Project>
+      <Name>JsonSong.Spider</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyProject\MyProject.csproj">
       <Project>{54CB55D4-E806-4B76-9900-0B0B8FFD6D16}</Project>
       <Name>MyProject</Name>

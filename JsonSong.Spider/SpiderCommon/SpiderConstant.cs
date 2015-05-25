@@ -1,9 +1,6 @@
 ﻿using System.Collections.Generic;
-using MyProject.MyHtmlAgility.Project.Haha;
-using MyProject.MyHtmlAgility.Project.Youmin;
-using MyProject.MyHtmlAgility.SpiderBase;
 
-namespace MyProject.MyHtmlAgility.SpiderCommon
+namespace JsonSong.Spider.SpiderCommon
 {
     /// <summary>
     /// 同步远程的数据

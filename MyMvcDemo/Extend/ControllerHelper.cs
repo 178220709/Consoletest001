@@ -1,11 +1,11 @@
 ﻿using System.Reflection;
-using Fasterflect;
 using MyMvcDemo.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using Omu.ValueInjecter;
+using ServiceStack;
 
 namespace MyMvcDemo.Extend
 {
@@ -32,7 +32,7 @@ namespace MyMvcDemo.Extend
             }
             var controllerName = type.Name.Replace("Controller","");
             var parentAttr = type.GetAttribute<ModuleAttribute>();
-            var actions = type.GetMethods().Where(a => a.HasAttribute<ModuleAttribute>()).ToList();
+            var actions = type.GetMethods().Where(a => a.HasMyAttribute<ModuleAttribute>()).ToList();
             if (!actions .Any())
             {
                 return null;

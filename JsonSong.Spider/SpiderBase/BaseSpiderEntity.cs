@@ -1,4 +1,5 @@
 ﻿using System;
+using JsonSong.BaseDao.MongoDB;
 using MongoDB.Bson;
 
 namespace JsonSong.Spider.SpiderBase
@@ -21,8 +22,5 @@ namespace JsonSong.Spider.SpiderBase
 
     }
 
-    public class BaseEntity
-    {
-        public ObjectId Id { get; set; }
-    }
+
 }

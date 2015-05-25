@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Forms;
+using System.Threading.Tasks;
 using Fizzler.Systems.HtmlAgilityPack;
+using JsonSong.Spider.SpiderBase;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using JsonSong.Spider.Core;
-using MyProject.MyHtmlAgility.SpiderBase;
-using NPOI.SS.Formula.Functions;
-using NPOI.SS.Util;
-using Omu.ValueInjecter;
-using Suijing.Utils;
 
-namespace MyProject.MyHtmlAgility.Project.Youmin
+
+namespace JsonSong.Spider.Project.Youmin
 {
     [TestClass]
     public class YouminWebReader :WebTaskReader
@@ -24,12 +20,12 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
             return parstialReader.OutputResult();
         }
 
-        public override void FireTaskCallBack(IList<ReadResult> res)
+        public override async Task FireTaskCallBack(IList<ReadResult> res)
         {
             var manager = SpiderService.Instance;
             foreach (var re in res)
             {
-                manager.AddNoRepeat(re, 2);
+              await  manager.AddNoRepeat(re, 2);
             }
         }
 
@@ -42,7 +38,7 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
         }
 
         [TestMethod]
-        public static List<ReadResult> GetRecommand()
+        public static async Task<List<ReadResult>> GetRecommand()
         {
             var urls = new List<string>();
             const string url = "http://www.gamersky.com/ent/";
@@ -62,7 +58,7 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
             var reader = new YouminWebReader();
             var factory = new WebTaskFactory(reader);
        //  return  null;
-            return factory.StartAndCallBack(urlsValid.Distinct().ToList());
+            return await factory.StartAndCallBack(urlsValid.Distinct().ToList());
 
         }
         [TestMethod]
@@ -80,9 +76,9 @@ namespace MyProject.MyHtmlAgility.Project.Youmin
         } 
         
         [TestMethod]
-        public void Test3()
+        public async Task Test3()
         {
-            var list = GetRecommand();
+            var list = await GetRecommand();
         }
     }
 }

@@ -46,14 +46,16 @@
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="MongoDB.Bson">
-      <HintPath>..\packages\MongoDB.Bson.2.0.0\lib\net45\MongoDB.Bson.dll</HintPath>
+    <Reference Include="MongoDB.Bson, Version=0.0.5622.42323, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\MongoDB.Bson.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Driver">
-      <HintPath>..\packages\MongoDB.Driver.2.0.0\lib\net45\MongoDB.Driver.dll</HintPath>
+      <HintPath>..\Libs\MongoDB.Driver.dll</HintPath>
     </Reference>
-    <Reference Include="MongoDB.Driver.Core">
-      <HintPath>..\packages\MongoDB.Driver.Core.2.0.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    <Reference Include="MongoDB.Driver.Core, Version=0.0.5622.42324, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\MongoDB.Driver.Core.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -64,6 +66,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,9 +74,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Core\DownloadImages.cs" />
     <Compile Include="Core\HttpWebResponseUtility.cs" />
+    <Compile Include="Core\HtmlAsyncHelper.cs" />
     <Compile Include="Core\NormalHtmlHelper.cs" />
     <Compile Include="Core\WebTaskFactory.cs" />
     <Compile Include="FromNode\HttpRestHelper.cs" />
@@ -87,7 +90,6 @@
     <Compile Include="SpiderBase\BaseParstialReader.cs" />
     <Compile Include="SpiderBase\BaseSpiderEntity.cs" />
     <Compile Include="SpiderBase\SpiderService.cs" />
-    <Compile Include="SpiderBase\SpiderServiceFactory.cs" />
     <Compile Include="SpiderCommon\SpiderConstant.cs" />
     <Compile Include="SpiderCommon\SpiderRestDto.cs" />
     <Compile Include="SpiderCommon\SyncSpiderHelper.cs" />
@@ -99,10 +101,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\JsonSong.BaseDao\JsonSong.BaseDao.csproj">
+      <Project>{611838FD-6236-46F7-A8A1-FC64D4D42ACA}</Project>
+      <Name>JsonSong.BaseDao</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Utils\Suijing.Utils.csproj">
       <Project>{ea4d5d5e-e6f8-4487-a65a-752c05e9f7b1}</Project>
       <Name>Suijing.Utils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

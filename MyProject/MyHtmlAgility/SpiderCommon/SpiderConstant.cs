@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using MyProject.MyHtmlAgility.Project.Haha;
-using MyProject.MyHtmlAgility.Project.Youmin;
+using JsonSong.Spider.Project.Haha;
+using JsonSong.Spider.Project.Youmin;
 using MyProject.MyHtmlAgility.SpiderBase;
 
 namespace MyProject.MyHtmlAgility.SpiderCommon

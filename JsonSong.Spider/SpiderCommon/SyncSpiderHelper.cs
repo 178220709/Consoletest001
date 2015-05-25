@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using JsonSong.Spider.FromNode;
 using JsonSong.Spider.SpiderBase;
-using MyProject.MyHtmlAgility.SpiderBase;
 using Newtonsoft.Json;
 using Suijing.Utils.sysTools;
 
-namespace MyProject.MyHtmlAgility.SpiderCommon
+namespace JsonSong.Spider.SpiderCommon
 {
     /// <summary>
     /// 同步远程的数据
@@ -18,7 +18,7 @@ namespace MyProject.MyHtmlAgility.SpiderCommon
         /// </summary>
         /// <param name="paras"></param>
         /// <param name="typeId"></param>
-        public static void StartSync(IDictionary<string, string> paras, int typeId = 1)
+        public static async Task StartSync(IDictionary<string, string> paras, int typeId = 1)
         {
             paras = paras ?? new Dictionary<string, string>();
             paras["pageSize"] = "100";
@@ -28,7 +28,7 @@ namespace MyProject.MyHtmlAgility.SpiderCommon
             var pageTotal = 1;
             int pageIndex = 1;
             paras["pageIndex"] = "1";
-            var instance = GetSpiderCn("spider");
+            var instance = SpiderService.Instance;
             //得到最后更新日期
             paras["AddedTime"] = instance.Entities.OrderByDescending(a => a.AddedTime).First().AddedTime.ToString("yyyy-MM-dd");
             do
@@ -38,16 +38,16 @@ namespace MyProject.MyHtmlAgility.SpiderCommon
                 var postStr = HttpRestHelper.GetPost(url, paras);
                 var dto = JsonConvert.DeserializeObject<SpiderRestDto>(postStr);
                 pageTotal = dto.count/dto.pageSize + 1;
-                var list = MapFromDTO(dto,typeId).Where(a => !instance.ExistUrl(a.Url)).ToList();
+                var list = MapFromDTO(dto,typeId).Where( a => ! instance.ExistUrl(a.Url)).ToList();
 
-                instance.AddList(list);
+              await  instance.InsertManyAsync(list);
                 pageIndex++;
                 paras["pageIndex"] = pageIndex.ToString();
                 sum += list.Count();
             } while (pageIndex <= pageTotal);
 
             LogHepler.WriteWebReader(string.Format("在{0}从{1}导入{2}条{3}数据",
-                TestHelper.TestHelper.GetCurrentTime(), url, sum, paras["cnName"]));
+               TestHelper.GetCurrentTime(), url, sum, paras["cnName"]));
             int result = sum;
         }
 

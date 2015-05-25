@@ -28,20 +28,7 @@ namespace MyMvcDemo
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             LogHepler.SetConfig();
             LogHepler.WriteLog("the mvcDemo is start up");
-            ImageResizer.Configuration.Config.Current.Pipeline.AuthorizeImage += Pipeline_AuthorizeImage;
 
-
-
-
-         
-
-
-        }
-
-        //保证ImageResizer只有在登录后才能被访问
-        private void Pipeline_AuthorizeImage(IHttpModule sender, HttpContext context, ImageResizer.Configuration.IUrlAuthorizationEventArgs e)
-        {
-            e.AllowAccess = context.Request.IsAuthenticated;
         }
     }
 }

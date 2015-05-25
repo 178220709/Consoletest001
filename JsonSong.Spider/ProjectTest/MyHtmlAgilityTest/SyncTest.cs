@@ -1,22 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Threading;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Fizzler.Systems.HtmlAgilityPack;
-using HtmlAgilityPack;
+using JsonSong.Spider.SpiderCommon;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.WebTesting;
-using MongoDB.Driver.Linq;
-using MyProject.MyHtmlAgility.Project.Haha;
-using MyProject.MyHtmlAgility.Project.Youmin;
-using MyProject.MyHtmlAgility.SpiderCommon;
-using MyProject.TestHelper;
-using Newtonsoft.Json;
-using NPOI.SS.Formula.Functions;
-using Suijing.Utils;
 
 namespace  MyProject.MyHtmlAgility.ProjectTest
 {
@@ -36,37 +21,37 @@ namespace  MyProject.MyHtmlAgility.ProjectTest
 
 
         [TestMethod]
-        public void SyncTest1()
+        public async Task SyncTest1()
         {
             paras["cnName"] = "sp_haha";
-            SyncSpiderHelper.StartSync(paras,1);
+          await  SyncSpiderHelper.StartSync(paras,1);
 
             paras["cnName"] = "sp_youmin";
-            SyncSpiderHelper.StartSync(paras,2);
+          await  SyncSpiderHelper.StartSync(paras,2);
         }
 
 
-        [TestMethod]
-        public void UniqTest1()
-        {
-            //去重
-            var instance = SyncSpiderHelper.GetSpiderCn("spider");
-            var tarUrl =
-                instance.Entities.ToList().GroupBy(a => a.Url)
-                    .Where(g => g.Count() > 1)
-                    .SelectMany(g => g.ToList().Skip(1).Select(i => i.Id)).ToList();
-            tarUrl.ForEach(a => instance.Delete(a));
-        }
+        //[TestMethod]
+        //public void UniqTest1()
+        //{
+        //    //去重
+        //    var instance = SyncSpiderHelper.GetSpiderCn("spider");
+        //    var tarUrl =
+        //        instance.Entities.ToList().GroupBy(a => a.Url)
+        //            .Where(g => g.Count() > 1)
+        //            .SelectMany(g => g.ToList().Skip(1).Select(i => i.Id)).ToList();
+        //    tarUrl.ForEach(a => instance.Delete(a));
+        //}
 
-        [TestMethod]
-        public void CleanTest1()
-        {
-            //删除权重太低的数据
-            var instance = SyncSpiderHelper.GetSpiderCn("spider");
-            var tarList = instance.Entities.Where(a => a.Weight < 0.1).ToList();
+        //[TestMethod]
+        //public void CleanTest1()
+        //{
+        //    //删除权重太低的数据
+        //    var instance = SyncSpiderHelper.GetSpiderCn("spider");
+        //    var tarList = instance.Entities.Where(a => a.Weight < 0.1).ToList();
 
-            tarList.ForEach(a => instance.Delete(a.Id));
-        }
+        //    tarList.ForEach(a => instance.Delete(a.Id));
+        //}
 
   
     }
