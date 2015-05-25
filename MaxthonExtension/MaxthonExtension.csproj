@@ -5419,6 +5419,9 @@
     <Content Include="TestDemo\avalon.oniui\validation\avalon.validation.ex1.html" />
     <Content Include="TestDemo\avalon.oniui\validation\avalon.validation.ex10.html" />
     <Content Include="TestDemo\avalon.oniui\validation\avalon.validation.ex11.html" />
+    <Content Include="TestDemo\avalon.oniui\validation\avalon.validation.ex12.html" />
+    <Content Include="TestDemo\avalon.oniui\validation\avalon.validation.ex13.html" />
+    <Content Include="TestDemo\avalon.oniui\validation\avalon.validation.ex14.html" />
     <Content Include="TestDemo\avalon.oniui\validation\avalon.validation.ex2.html" />
     <Content Include="TestDemo\avalon.oniui\validation\avalon.validation.ex3.html" />
     <Content Include="TestDemo\avalon.oniui\validation\avalon.validation.ex4.html" />
@@ -5605,6 +5608,21 @@
     <Content Include="TestDemo\avalon\src\18 domReady.noop.js" />
     <Content Include="TestDemo\avalon\src\19 outer.js" />
     <Content Include="TestDemo\avalon\src\20 touch.js" />
+    <Content Include="TestDemo\jqPagination-master\css\demo.css" />
+    <Content Include="TestDemo\jqPagination-master\css\jqpagination.css" />
+    <Content Include="TestDemo\jqPagination-master\css\reset.css" />
+    <Content Include="TestDemo\jqPagination-master\index.html" />
+    <Content Include="TestDemo\jqPagination-master\js\demo.js" />
+    <Content Include="TestDemo\jqPagination-master\js\jquery-1.7.2.min.js" />
+    <Content Include="TestDemo\jqPagination-master\js\jquery.jqpagination.js" />
+    <Content Include="TestDemo\jqPagination-master\js\jquery.jqpagination.min.js" />
+    <Content Include="TestDemo\jqPagination-master\js\scripts.js" />
+    <Content Include="TestDemo\jQuery-Paging\example2\easy-paging.html" />
+    <Content Include="TestDemo\jQuery-Paging\example2\jquery.easy-paging.js" />
+    <Content Include="TestDemo\jQuery-Paging\example\easy-paging.html" />
+    <Content Include="TestDemo\jQuery-Paging\example\jquery.easy-paging.js" />
+    <Content Include="TestDemo\jQuery-Paging\jquery.paging.js" />
+    <Content Include="TestDemo\jQuery-Paging\jquery.paging.min.js" />
     <Content Include="TestDemo\JsDemo\getIP.html" />
     <Content Include="TestDemo\JsDemo\index.html" />
     <Content Include="TestDemo\QUnitDemo\1_1hello.html" />
@@ -6936,6 +6954,16 @@
     <Content Include="TestDemo\angular-1.3.15\docs\js\search-worker.min.js.map" />
     <Content Include="TestDemo\angular-1.3.15\errors.json" />
     <Content Include="TestDemo\angular-1.3.15\version.json" />
+    <Content Include="TestDemo\jQuery-Paging\bower.json" />
+    <Content Include="TestDemo\jQuery-Paging\CHANGELOG" />
+    <Content Include="TestDemo\jQuery-Paging\paging.jquery.json" />
+    <Content Include="TestDemo\jQuery-Paging\README.md" />
+    <Content Include="TestDemo\jqPagination-master\CONTRIBUTING.md" />
+    <Content Include="TestDemo\jqPagination-master\css\demo.scss" />
+    <Content Include="TestDemo\jqPagination-master\css\jqpagination.scss" />
+    <Content Include="TestDemo\jqPagination-master\jqpagination.jquery.json" />
+    <Content Include="TestDemo\jqPagination-master\LICENSE" />
+    <Content Include="TestDemo\jqPagination-master\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
