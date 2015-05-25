@@ -12,7 +12,7 @@ namespace BaseFeatureDemo.Base.File
     [TestClass]
     public class FileDemo
     {
-        [TestMethod]
+       
         public static void Main1()
         {
             var runPath = Environment.CurrentDirectory;
@@ -29,6 +29,14 @@ namespace BaseFeatureDemo.Base.File
 
             var domain = AppDomain.CurrentDomain;
             var runtime = domain.BaseDirectory;
+          
+        } 
+        
+        [TestMethod]
+        public  void test2()
+        {
+            var path = System.IO.Path.GetFullPath(
+               System.IO.Directory.GetCurrentDirectory() + "../../../../dbFile/jsonsong.db");
           
         }
 

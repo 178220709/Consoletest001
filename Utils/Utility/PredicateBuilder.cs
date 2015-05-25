@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Feature.Zhaogang.SpartanLv.Common.Utility
+namespace Suijing.Utils.Utility
 {
     /// <summary>
     /// 断言生成器

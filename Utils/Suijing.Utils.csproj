@@ -109,8 +109,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigTools\PathHelper.cs" />
     <Compile Include="ConfigTools\ConfigHelper.cs" />
-    <Compile Include="sysTools\JsonHelper.cs" />
+    <Compile Include="Extention\JsonHelper.cs" />
     <Compile Include="sysTools\CollectionHepler.cs" />
     <Compile Include="sysTools\ConvertHelper.cs" />
     <Compile Include="sysTools\CreateDataHepler.cs" />
