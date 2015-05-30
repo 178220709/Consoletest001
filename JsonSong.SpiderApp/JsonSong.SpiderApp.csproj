@@ -76,6 +76,10 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\JsonSong.Spider\JsonSong.Spider.csproj">
+      <Project>{8B51E80F-5B2A-4821-89BD-4A10D49DE877}</Project>
+      <Name>JsonSong.Spider</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyProject\MyProject.csproj">
       <Project>{54CB55D4-E806-4B76-9900-0B0B8FFD6D16}</Project>
       <Name>MyProject</Name>

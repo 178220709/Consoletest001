@@ -4,7 +4,7 @@ using System.Web.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace MyMvcDemo.Extend
+namespace JsonSong.ManagerUI.Extend
 {
     public class JsonBinder<T> : IModelBinder
     {

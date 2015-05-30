@@ -1,14 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Net;
-using System.Web;
-using MyProject.MongoDBDal;
+﻿using JsonSong.Spider.DataAccess.Entity;
 
-using MyProject.MyHtmlAgility.SpiderBase;
-
-
-namespace MyMvcDemo.Models
+namespace JsonSong.ManagerUI.Models.Spider
 {
-    public class SpiderPagerModel : BasePagerModel<BaseSpiderEntity>
+    public class SpiderPagerModel : BasePagerModel<SpiderLiteEntity>
     {
         public string  Flag { get; set; }
         public string Title { get; set; }

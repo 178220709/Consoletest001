@@ -1,6 +1,6 @@
-﻿using MyMvcDemo.Extend;
+﻿using JsonSong.ManagerUI.Extend;
 
-namespace MyMvcDemo.Models
+namespace JsonSong.ManagerUI.Models
 {
 
     public  class LogModel :BaseModel

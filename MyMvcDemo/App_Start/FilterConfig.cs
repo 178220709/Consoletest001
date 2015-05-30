@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace MyMvcDemo
+namespace JsonSong.ManagerUI
 {
     public class FilterConfig
     {

@@ -31,14 +31,7 @@ namespace BaseFeatureTest.EFDemo
         [TestMethod()]
         public void Test2()
         {
-            var se = RecordService.Instance;
-            Record entity = new Record()
-            {
-                Name = "test",
-                Code = "888888888888888"
-            };
-            se.AddEdit(entity);
-           var list = se.Entities.ToList();
+           
         }
     }
 }

@@ -2,11 +2,11 @@
 using JsonSong.BaseDao.MongoDB;
 using MongoDB.Bson;
 
-namespace JsonSong.Spider.SpiderBase
+namespace JsonSong.Spider.DataAccess.Entity
 {
-    public class BaseSpiderEntity : BaseEntity
+    public class SpiderMongoEntity : BaseMongoEntity
     {
-        public BaseSpiderEntity()
+        public SpiderMongoEntity()
         {
             AddedTime = DateTime.Now;
         }
@@ -21,6 +21,4 @@ namespace JsonSong.Spider.SpiderBase
         public bool Valid { get; set; }
 
     }
-
-
 }

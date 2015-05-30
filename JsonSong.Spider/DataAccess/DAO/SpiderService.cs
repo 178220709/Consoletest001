@@ -3,12 +3,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using JsonSong.BaseDao.MongoDB;
 using JsonSong.Spider.Core;
+using JsonSong.Spider.DataAccess.Entity;
 using MongoDB.Driver;
 using Omu.ValueInjecter;
 
 namespace JsonSong.Spider.SpiderBase
 {
-    public  class SpiderService : BaseDao<BaseSpiderEntity>
+    public  class SpiderService : BaseMongoDao<SpiderMongoEntity>
     {
         public SpiderService(string collectionName)
             : base(collectionName)
@@ -29,20 +30,20 @@ namespace JsonSong.Spider.SpiderBase
                 return _spiderService;
             }
         }
-         public  IQueryable<BaseSpiderEntity> GetQuery()
+         public  IQueryable<SpiderMongoEntity> GetQuery()
          {
              return this.NewCollection.AsQueryable().AsQueryable();
          }
-         public IQueryable<BaseSpiderEntity> Entities { get { return GetQuery(); } }
+         public IQueryable<SpiderMongoEntity> Entities { get { return GetQuery(); } }
         
         
 
-        public async Task<IEnumerable<BaseSpiderEntity>> GetQueryByTypeId(int typeId)
+        public async Task<IEnumerable<SpiderMongoEntity>> GetQueryByTypeId(int typeId)
         {
             return await FindAsync(a=>a.TypeId==typeId);
         }
 
-        public async Task<IEnumerable<BaseSpiderEntity>> GetQueryByTypeId(int? typeId)
+        public async Task<IEnumerable<SpiderMongoEntity>> GetQueryByTypeId(int? typeId)
         {
             var type = typeId ?? 1;
             return await GetQueryByTypeId(type);
@@ -56,7 +57,7 @@ namespace JsonSong.Spider.SpiderBase
             {
                 return ;
             }
-            var en = new BaseSpiderEntity {TypeId = typeId};
+            var en = new SpiderMongoEntity {TypeId = typeId};
             en.InjectFrom(re);
            await this.InsertOneAsync(en);
         }
@@ -67,7 +68,7 @@ namespace JsonSong.Spider.SpiderBase
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public async Task<bool> UpdateContent(BaseSpiderEntity model)
+        public async Task<bool> UpdateContent(SpiderMongoEntity model)
         {
 
             var entity = await GetByUrlAsync(model.Url);
@@ -104,7 +105,7 @@ namespace JsonSong.Spider.SpiderBase
             return first != null;
         }
 
-        public async Task<BaseSpiderEntity> GetByUrlAsync(string url)
+        public async Task<SpiderMongoEntity> GetByUrlAsync(string url)
         {
             return await FindOneAsync(a => a.Url == url); ;
         }

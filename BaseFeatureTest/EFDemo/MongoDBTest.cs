@@ -33,29 +33,13 @@ namespace BaseFeatureTest.EFDemo
         [TestMethod()]
         public void AddAndQuery1()
         {
-            var se = RecordService.Instance;
-            Record entity = new Record()
-            {
-                Name = "test_ayrusyru",
-                Code = "888888888888888"
-            };
-            se.AddEdit(entity);
-           var en = se.Entities.Where(a => a.Name == entity.Name).ToList();
-           Assert.IsTrue(en.First().Code == entity.Code);
+           
         }
 
         [TestMethod()]
         public void AddAndQuery2()
         {
-            int max = int.MaxValue;
-            var se = RecordService.Instance;
-
-            var priList = GetRecords(9).ToList();
-            se.AddList(priList);
-            var dre = se.DeleteAll();
-            var alre = se.AddList(priList);
-            var list = se.Entities.ToList();
-            Assert.IsTrue(list.Count == 9);
+           
         }   
         
         [TestMethod()]

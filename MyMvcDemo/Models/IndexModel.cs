@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MyMvcDemo.Models
+namespace JsonSong.ManagerUI.Models
 {
     public class IndexModel
     {

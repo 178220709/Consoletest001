@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 using Omu.ValueInjecter;
 using Suijing.Utils.sysTools;
 
-namespace MyMvcDemo.Controllers
+namespace JsonSong.ManagerUI.Controllers
 {
     public class WeixinController : Controller
     {
@@ -52,7 +52,7 @@ namespace MyMvcDemo.Controllers
                 text.InjectFrom<XmlStrInjection>(postStr);
                 if (text.Content.ToLower() == "haha")
                 {
-                    result = string.Join("\n", HahaWebReader.GetRecommand().Select(a => a.Content));
+                  //  result = string.Join("\n", HahaWebReader.GetRecommand().Select(a => a.Content));
                 }
                 if (text.Content.ToLower() == "test")
                 {

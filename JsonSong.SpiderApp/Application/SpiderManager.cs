@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using JsonSong.SpiderApp.Base;
 using JsonSong.SpiderApp.Data;
-using JsonSong.Spider.Project.Haha;
-using Omu.ValueInjecter;
+
 
 namespace JsonSong.SpiderApp.Application
 {

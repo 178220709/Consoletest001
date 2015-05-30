@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using JsonSong.BaseDao.MongoDB;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using MyProject.MongoDBDal;
+
 
 namespace MyProject.HotelRecord.Entity
 {
 
 
   
-    public class Record : BaseEntity
+    public class Record : BaseMongoEntity
     {
 
        public int OldId { get; set; }
@@ -38,7 +39,7 @@ namespace MyProject.HotelRecord.Entity
 
 
 
-    public class tempRecord : BaseEntity
+    public class tempRecord : BaseMongoEntity
     {
         public int OldId { get; set; }
         public string Name { get; set; }

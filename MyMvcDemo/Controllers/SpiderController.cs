@@ -1,22 +1,29 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
+using System.Web.Helpers;
+
 using System.Web.Mvc;
-using MyMvcDemo.Extend;
-using MyMvcDemo.Models;
+using System.Web.UI.WebControls;
+using JsonSong.ManagerUI.Extend;
+using JsonSong.ManagerUI.Models.Spider;
+using JsonSong.Spider.DataAccess.DAO;
+using JsonSong.ManagerUI.Models;
+using JsonSong.Spider.DataAccess.Entity;
 using JsonSong.Spider.Project.Haha;
-using MyProject.MyHtmlAgility.SpiderBase;
+using JsonSong.Spider.SpiderBase;
 using Newtonsoft.Json;
 using Suijing.Utils.Constants;
 
-namespace MyMvcDemo.Controllers
+namespace JsonSong.ManagerUI.Controllers
 {
     [Module(CSS = MyConstants.Bootstrap.Icon.Globe, Name = "爬虫", Sort = 80)]
     public class SpiderController : Controller
     {
         [HttpGet]
         [Module(Name = "哈哈最新", CSS = MyConstants.Bootstrap.Icon.Globe)]
-        public ActionResult Haha()
+        public async Task<ActionResult> Haha()
         {
-            var list = HahaWebReader.GetRecommand();
+            var list = await HahaWebReader.GetRecommand();
             return View(list);
         }
         [HttpGet]
@@ -32,7 +39,7 @@ namespace MyMvcDemo.Controllers
         [HttpPost]
         public JsonResult GetList(SpiderPagerModel model, int? typeId)
         {
-            var query = SpiderService.Instance.GetQueryByTypeId(typeId);
+            var query = SpiderLiteDao.Instance.GetQueryByTypeId(typeId).ToList();
             model.Total = query.Count();
             model.Rows = query.Skip(model.Skip).Take(model.PageSize).ToList();
             return Json(model);
@@ -51,11 +58,11 @@ namespace MyMvcDemo.Controllers
                 });
             }
 
-            var model = JsonConvert.DeserializeObject<BaseSpiderEntity>(modelStr);
+            var model = JsonConvert.DeserializeObject<SpiderLiteEntity>(modelStr);
 
             return Json(new ResponseJsonModel()
             {
-                success = SpiderService.Instance.UpdateContent(model)
+                success = SpiderLiteDao.Instance.UpdateContent(model)
             });
         }
 
@@ -64,7 +71,7 @@ namespace MyMvcDemo.Controllers
         {
             return Json(new ResponseJsonModel()
             {
-                success = SpiderService.Instance.DeleteByUrl(url)
+                success = SpiderLiteDao.Instance.DeleteByUrl(url)
             });
         }
 

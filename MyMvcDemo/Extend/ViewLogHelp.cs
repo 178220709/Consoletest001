@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Net.Http;
 using System.Security.Cryptography;
-using MyMvcDemo.Models;
+using JsonSong.ManagerUI.Models;
 using MyProject.WeixinModel.Model;
 using Newtonsoft.Json;
 using ServiceStack.Text;
@@ -13,7 +13,7 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MyMvcDemo.Extend
+namespace JsonSong.ManagerUI.Extend
 {
     public enum LogEnum
     {

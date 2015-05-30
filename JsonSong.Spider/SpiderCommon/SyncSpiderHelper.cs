@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using JsonSong.Spider.DataAccess.Entity;
 using JsonSong.Spider.FromNode;
 using JsonSong.Spider.SpiderBase;
 using Newtonsoft.Json;
@@ -51,9 +52,9 @@ namespace JsonSong.Spider.SpiderCommon
             int result = sum;
         }
 
-        private static List<BaseSpiderEntity> MapFromDTO(SpiderRestDto dto, int typeId)
+        private static List<SpiderMongoEntity> MapFromDTO(SpiderRestDto dto, int typeId)
         {
-            return dto.rows.Select(a => new BaseSpiderEntity()
+            return dto.rows.Select(a => new SpiderMongoEntity()
             {
                 TypeId = typeId,
                 Url = a.url,

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace MyMvcDemo
+namespace JsonSong.ManagerUI
 {
     [Serializable]
     internal class CaptchaImage

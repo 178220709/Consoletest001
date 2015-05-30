@@ -1,20 +1,20 @@
 ﻿using System.Reflection;
-using MyMvcDemo.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using JsonSong.ManagerUI.Models;
 using Omu.ValueInjecter;
 using ServiceStack;
 
-namespace MyMvcDemo.Extend
+namespace JsonSong.ManagerUI.Extend
 {
     public  static  class ControllerHelper
     {
         public static IEnumerable<ModuleDTO> GetIndexModules( )
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
-            var typeArr = assembly.GetTypes().Where(a => a.FullName.StartsWith("MyMvcDemo.Controllers")).ToList()
+            var typeArr = assembly.GetTypes().Where(a => a.FullName.StartsWith("JsonSong.ManagerUI.Controllers")).ToList()
                 .Where(a => typeof(Controller).IsAssignableFrom(a)).ToList();
             //循环所有的controller 取出用特性标记的action
             IList<ModuleDTO> modules = typeArr.Where(t => t.HasAttribute<ModuleAttribute>())

@@ -1,21 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40418.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseFeatureDemo", "BaseFeatureDemo\BaseFeatureDemo.csproj", "{509303B5-6986-4E2E-BEFA-45D2ABF1CDEA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseFeatureTest", "BaseFeatureTest\BaseFeatureTest.csproj", "{D6E81C84-41DA-4AC2-A09D-3D70784BC5B0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E7099568-13C1-4AE0-9394-DE2E9C4CC404}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AliApplication", "AliApplication", "{4693AE2A-EFB0-4D69-8E6F-0B0084347A31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReleaseProject", "ReleaseProject", "{2A0386B6-E0CE-40C2-B71A-9A64893A5049}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseFeatureDemo", "BaseFeatureDemo\BaseFeatureDemo.csproj", "{509303B5-6986-4E2E-BEFA-45D2ABF1CDEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseFeatureTest", "BaseFeatureTest\BaseFeatureTest.csproj", "{D6E81C84-41DA-4AC2-A09D-3D70784BC5B0}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProject", "MyProject\MyProject.csproj", "{54CB55D4-E806-4B76-9900-0B0B8FFD6D16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMvcDemo", "MyMvcDemo\MyMvcDemo.csproj", "{582A8372-B8BE-44AB-9BE0-AD88062799C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSong.ManagerUI", "MyMvcDemo\JsonSong.ManagerUI.csproj", "{582A8372-B8BE-44AB-9BE0-AD88062799C0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Suijing.Utils", "Utils\Suijing.Utils.csproj", "{EA4D5D5E-E6F8-4487-A65A-752C05E9F7B1}"
 EndProject
@@ -23,15 +27,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxthonExtension", "Maxthon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceDemo", "ServiceDemo\ServiceDemo.csproj", "{63D19650-A28C-4A3F-B00D-A67B2CD3F1D9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AliApplication", "AliApplication", "{4693AE2A-EFB0-4D69-8E6F-0B0084347A31}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSong.SpiderApp", "JsonSong.SpiderApp\JsonSong.SpiderApp.csproj", "{70E939B8-2119-4BD5-AA4A-FA6D957D8DB6}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReleaseProject", "ReleaseProject", "{2A0386B6-E0CE-40C2-B71A-9A64893A5049}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSong.Spider", "JsonSong.Spider\JsonSong.Spider.csproj", "{8B51E80F-5B2A-4821-89BD-4A10D49DE877}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSong.BaseDao", "JsonSong.BaseDao\JsonSong.BaseDao.csproj", "{611838FD-6236-46F7-A8A1-FC64D4D42ACA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-UI", "1-UI", "{B621E586-F4D5-4108-86B7-D907FC6B2D5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -150,6 +152,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{582A8372-B8BE-44AB-9BE0-AD88062799C0} = {B621E586-F4D5-4108-86B7-D907FC6B2D5F}
 		{70E939B8-2119-4BD5-AA4A-FA6D957D8DB6} = {4693AE2A-EFB0-4D69-8E6F-0B0084347A31}
 		{8B51E80F-5B2A-4821-89BD-4A10D49DE877} = {2A0386B6-E0CE-40C2-B71A-9A64893A5049}
 		{611838FD-6236-46F7-A8A1-FC64D4D42ACA} = {2A0386B6-E0CE-40C2-B71A-9A64893A5049}

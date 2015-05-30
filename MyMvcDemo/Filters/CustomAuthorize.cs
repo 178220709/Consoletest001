@@ -2,7 +2,7 @@
 using System.Web;
 using System.Web.Mvc;
 
-namespace MyMvcDemo.Filters
+namespace JsonSong.ManagerUI.Filters
 {
 
     internal class CustomAuthorize : AuthorizeAttribute

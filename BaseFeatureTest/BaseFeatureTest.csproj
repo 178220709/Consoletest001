@@ -89,6 +89,7 @@
   <ItemGroup>
     <Compile Include="EFDemo\MongoDBTest.cs" />
     <Compile Include="EFDemo\EFTest.cs" />
+    <Compile Include="LiteDBTest\CrudTest.cs" />
     <Compile Include="MongoTest\ClearnSpot.cs" />
     <Compile Include="MongoTest\MongoDaoTest.cs" />
     <Compile Include="MOQ\ThisTestTest.cs" />
@@ -97,7 +98,6 @@
     <Compile Include="UtilsTest\LogTest.cs" />
     <Compile Include="UtilsTest\JsonTest.cs" />
     <Compile Include="Json\JsonTest.cs" />
-    <Compile Include="MyMVCTest\ControllerTest\HomeTest.cs" />
     <Compile Include="MyStringsFactoryTest.cs" />
     <Compile Include="ProgramtestTest.cs" />
     <Compile Include="ThisTestTest.cs" />
@@ -114,9 +114,13 @@
       <Project>{611838fd-6236-46f7-a8a1-fc64d4d42aca}</Project>
       <Name>JsonSong.BaseDao</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyMvcDemo\MyMvcDemo.csproj">
+    <ProjectReference Include="..\JsonSong.Spider\JsonSong.Spider.csproj">
+      <Project>{8B51E80F-5B2A-4821-89BD-4A10D49DE877}</Project>
+      <Name>JsonSong.Spider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyMvcDemo\JsonSong.ManagerUI.csproj">
       <Project>{582a8372-b8be-44ab-9be0-ad88062799c0}</Project>
-      <Name>MyMvcDemo</Name>
+      <Name>JsonSong.ManagerUI</Name>
     </ProjectReference>
     <ProjectReference Include="..\MyProject\MyProject.csproj">
       <Project>{54cb55d4-e806-4b76-9900-0b0b8ffd6d16}</Project>

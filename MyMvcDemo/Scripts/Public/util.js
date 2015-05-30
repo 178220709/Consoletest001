@@ -1,9 +1,9 @@
 
 define(function (require, exports, module) {
- var host = function () {
+    var host = function () {
         var _host = "";
         var js = document.scripts, jsPath = js[js.length - 1].src;
-        return _host ? _host : jsPath.substring(0, jsPath.indexOf("/WebResources"));
+        return _host ? _host : jsPath.substring(0, jsPath.indexOf("/Scripts"));
         //eg:http://localhost/SpartanLv.Web
     }();
 
@@ -15,13 +15,13 @@ define(function (require, exports, module) {
         if (opts) {
             var index = 0;
             for (var name in opts) {
-                str += (index == 0 ? "?" : "&" ) + name + "=" + opts[name] ;
+                str += (index == 0 ? "?" : "&") + name + "=" + opts[name];
                 index++;
             }
         }
         return str;
     };
- o.getHost = function () {
+    o.getHost = function () {
         return host;
     };
     //path eg: controllerName/actionName

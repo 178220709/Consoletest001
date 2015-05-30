@@ -11,10 +11,10 @@ namespace Suijing.Utils.ConfigTools
     {
         const string ProjectName = "HelloCSharp";
        
-        public static string GetDBPath()
+        public static string GetDBPath(string name)
         {
             var path = System.IO.Path.GetFullPath(
-               System.IO.Directory.GetCurrentDirectory() + "../../../../dbFile/jsonsong.db");
+               System.IO.Directory.GetCurrentDirectory() + string.Format("../../../../dbFile/{0}.db",name) );
              
             return path;
         }

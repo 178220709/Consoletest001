@@ -57,10 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LiteDb\BaseDao.cs" />
-    <Compile Include="LiteDb\BaseEntity.cs" />
-    <Compile Include="MongoDB\BaseEntity.cs" />
-    <Compile Include="MongoDB\BaseDao.cs" />
+    <Compile Include="LiteDb\BaseLiteDao.cs" />
+    <Compile Include="LiteDb\BaseLiteEntity.cs" />
+    <Compile Include="MongoDB\BaseSpiderEntity.cs" />
+    <Compile Include="MongoDB\BaseMongoDao.cs" />
     <Compile Include="MongoDB\DataBaseManager.cs" />
     <Compile Include="Common\Pager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

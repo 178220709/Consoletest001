@@ -1,8 +1,8 @@
 ﻿using System.Web.Mvc;
-using MyMvcDemo.Extend;
+using JsonSong.ManagerUI.Extend;
 using Suijing.Utils.Constants;
 
-namespace MyMvcDemo.Controllers
+namespace JsonSong.ManagerUI.Controllers
 {
     [Module(CSS = MyConstants.Bootstrap.Icon.Globe,Sort = 31)]
     public class AngularJSController : JsonNetController

@@ -1,7 +1,7 @@
-﻿using MyMvcDemo.Filters;
+﻿using JsonSong.ManagerUI.Filters;
 
 
-namespace MyMvcDemo
+namespace JsonSong.ManagerUI
 {
     [CustomAuthorize(false,Order=2)]
     public class AuthController : JsonNetController

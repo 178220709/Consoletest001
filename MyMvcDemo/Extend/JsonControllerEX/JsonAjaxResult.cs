@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Web.Helpers;
 using System.Web.Mvc;
 
-namespace MyMvcDemo.Extend
+namespace JsonSong.ManagerUI.Extend
 {
    
     public class ResponseJsonModel

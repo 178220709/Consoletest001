@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Suijing.Utils;
 
-namespace MyMvcDemo.Extend
+namespace JsonSong.ManagerUI.Extend
 {
     public static  class ConfigHelper
     {
@@ -21,7 +21,7 @@ namespace MyMvcDemo.Extend
 
         public static string GetJsConfigPath()
         {
-            return GlobalConfigHelper.GetProjectPath() + "MyMvcDemo/App_Data/jsConfigs.js";
+            return GlobalConfigHelper.GetProjectPath() + "JsonSong.ManagerUI/App_Data/jsConfigs.js";
         }
 
         /// <summary>

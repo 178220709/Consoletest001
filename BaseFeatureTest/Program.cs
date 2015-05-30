@@ -9,7 +9,7 @@ using System.Web.UI;
 using BaseFeatureDemo.MyGame;
 using log4net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MyMvcDemo.Extend;
+
 using MyProject.HotelRecord.Manager;
 using JsonSong.Spider.Project.Haha;
 using Omu.ValueInjecter;

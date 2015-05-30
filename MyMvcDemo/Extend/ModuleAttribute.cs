@@ -1,7 +1,7 @@
 ﻿using System;
 using Suijing.Utils.Constants;
 
-namespace MyMvcDemo.Extend
+namespace JsonSong.ManagerUI.Extend
 {
     /// <summary>
     /// 标记该controller和里面的action方法是否用于首页菜单

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using MyMvcDemo.Extend;
+using JsonSong.ManagerUI.Extend;
 using MyProject.WeixinModel.Model;
 using Suijing.Utils.Constants;
 
-namespace MyMvcDemo.Controllers
+namespace JsonSong.ManagerUI.Controllers
 {
     [Module(CSS = MyConstants.Bootstrap.Icon.Globe,Sort = 20)]
     public class MyJsDemoController : Controller

@@ -5,7 +5,7 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace BaseFeatureTest.MongoTest
 {
     [BsonIgnoreExtraElements]
-    public class ClearnSpot :BaseEntity
+    public class ClearnSpot :BaseMongoEntity
     {
         /// <summary>
         /// 0待审核 1已审核 2审核驳回

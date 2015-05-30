@@ -4,7 +4,7 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Xml.Linq;
 
-namespace Feature.Zhaogang.SpartanLv.Common.Utility
+namespace Suijing.Utils.Utility
 {
     /// <summary>
     /// 序列化辅助类

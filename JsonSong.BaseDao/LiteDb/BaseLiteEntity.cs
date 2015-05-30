@@ -5,9 +5,9 @@ using System;
 
 namespace JsonSong.BaseDao.LiteDb
 {
-    public abstract class BaseEntity
+    public abstract class BaseLiteEntity
     {
-        protected BaseEntity()
+        protected BaseLiteEntity()
         {
             AddedTime = DateTime.Now;
         }

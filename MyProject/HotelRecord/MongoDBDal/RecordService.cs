@@ -3,13 +3,14 @@ using System.Data;
 using System.Text;
 using System.Xml;
 using BaseFeatureDemo.XML;
+using JsonSong.BaseDao.MongoDB;
 using MongoDB.Driver;
 using MyProject.HotelRecord.Entity;
-using MyProject.MongoDBDal;
+
 
 namespace MyProject.HotelRecord.MongoDBDal
 {
-    public class RecordService : BaseService<Record>
+    public class RecordService : BaseMongoDao<Record>
     {
         private const string _CollectionName = "HotelRecord";
         private RecordService(string collectionName)
@@ -30,11 +31,7 @@ namespace MyProject.HotelRecord.MongoDBDal
             }
         }
 
-        public CommandResult DeleteAll()
-        {
-          //  return Collections.Drop();
-          return Collections.RemoveAll();
-        }
+     
 
 
     }

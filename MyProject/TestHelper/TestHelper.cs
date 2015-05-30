@@ -1,19 +1,11 @@
 ﻿#region Using namespace
 
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Web;
 using System.Web.Hosting;
-using HtmlAgilityPack;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.WebTesting;
 
 #endregion
 

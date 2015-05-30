@@ -10,7 +10,7 @@ using MongoDB.Driver.Core.WireProtocol.Messages;
 
 namespace JsonSong.BaseDao.MongoDB
 {
-    public class BaseDao<TEntity> : IDisposable where TEntity : BaseEntity
+    public class BaseMongoDao<TEntity> : IDisposable where TEntity : BaseMongoEntity
     {
         #region Properties
 
@@ -22,13 +22,13 @@ namespace JsonSong.BaseDao.MongoDB
 
         #region Constructors
 
-        public BaseDao(string cnName="") :
+        public BaseMongoDao(string cnName="") :
             this(cnName,DataBaseManager.ConnectionKey)
         {
            
         }
 
-        public BaseDao(string cnName = "", string key = "")
+        public BaseMongoDao(string cnName = "", string key = "")
         {
             cnName = cnName ?? typeof (TEntity).Name.ToLower();
             var db = DataBaseManager.GetDatabaseByKey(key);

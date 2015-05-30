@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using MyMvcDemo.Extend;
-using MyProject.MyHtmlAgility.FromNode;
+using JsonSong.ManagerUI.Extend;
+using JsonSong.Spider.FromNode;
 using Newtonsoft.Json;
 using Suijing.Utils.Constants;
 
-namespace MyMvcDemo.Controllers
+namespace JsonSong.ManagerUI.Controllers
 {
       [Module(CSS = MyConstants.Bootstrap.Icon.Globe,Sort = 80,Name = "系统调试")]
     public class SystemController : Controller

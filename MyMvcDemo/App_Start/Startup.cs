@@ -3,8 +3,8 @@ using System.Configuration;
 using Owin;
 using Suijing.Utils.sysTools;
 
-//[assembly: OwinStartup(typeof(MyMvcDemo.Startup))]
-namespace MyMvcDemo
+//[assembly: OwinStartup(typeof(JsonSong.ManagerUI.Startup))]
+namespace JsonSong.ManagerUI
 {
 
     public class Startup

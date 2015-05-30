@@ -1,4 +1,4 @@
-﻿namespace MyMvcDemo.Models
+﻿namespace JsonSong.ManagerUI.Models
 {
 
     public  class HomeModel 

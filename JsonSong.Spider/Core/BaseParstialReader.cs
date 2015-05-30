@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Text;
-using JsonSong.Spider.Core;
 using Suijing.Utils.sysTools;
 
-namespace JsonSong.Spider.SpiderBase
+namespace JsonSong.Spider.Core
 {
     /// <summary>
     /// 用于分页内容(一篇帖子分成几十个页面)的爬取  

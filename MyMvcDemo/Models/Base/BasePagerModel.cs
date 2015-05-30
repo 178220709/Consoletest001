@@ -6,7 +6,7 @@ using System.Web;
 using Newtonsoft.Json;
 using Suijing.Utils;
 
-namespace MyMvcDemo.Models
+namespace JsonSong.ManagerUI.Models
 {
     [Serializable]
     public class BasePagerModel<T> where T : new()

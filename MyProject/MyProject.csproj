@@ -59,7 +59,6 @@
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MongoDB.Bson, Version=1.10.0.62, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\mongocsharpdriver.1.10.0\lib\net35\MongoDB.Bson.dll</HintPath>
@@ -121,29 +120,10 @@
     <Compile Include="HotelRecord\Manager\QueryHotel.cs" />
     <Compile Include="HotelRecord\MongoDBDal\RecordService.cs" />
     <Compile Include="HotelRecord\SqlDal\MyContext.cs" />
-    <Compile Include="MongoDBDal\BaseService.cs" />
-    <Compile Include="MyHtmlAgility\Core\DownloadImages.cs" />
-    <Compile Include="MyHtmlAgility\ProjectTest\MyHtmlAgilityTest\SyncTest.cs" />
-    <Compile Include="MyHtmlAgility\SpiderCommon\SpiderRestDto.cs" />
-    <Compile Include="MyHtmlAgility\SpiderCommon\SpiderConstant.cs" />
-    <Compile Include="MyHtmlAgility\SpiderCommon\SyncSpiderHelper.cs" />
-    <Compile Include="MyHtmlAgility\FromNode\HttpRestHelper.cs" />
-    <Compile Include="MyHtmlAgility\SpiderBase\BaseSpiderEntity.cs" />
-    <Compile Include="MyHtmlAgility\Core\NormalHtmlHelper.cs" />
-    <Compile Include="MyHtmlAgility\Core\HttpWebResponseUtility.cs" />
-    <Compile Include="MyHtmlAgility\SpiderBase\BaseParstialReader.cs" />
-    <Compile Include="MyHtmlAgility\Core\WebTaskFactory.cs" />
     <Compile Include="ManiaSongs\CommonDictionary.cs" />
     <Compile Include="ManiaSongs\SongDal.cs" />
     <Compile Include="ManiaSongs\SongInfo.cs" />
     <Compile Include="XML\GetContentFromLteDemo.cs" />
-    <Compile Include="MyHtmlAgility\ProjectTest\FixHahaJokeFlag.cs" />
-    <Compile Include="MyHtmlAgility\ProjectTest\TestWebReader.cs" />
-    <Compile Include="MyHtmlAgility\SpiderBase\SpiderServiceFactory.cs" />
-    <Compile Include="MyHtmlAgility\SpiderBase\SpiderService.cs" />
-    <Compile Include="MyHtmlAgility\Project\Youmin\YouminPartialReader.cs" />
-    <Compile Include="MyHtmlAgility\Project\Youmin\YouminWebReader.cs" />
-    <Compile Include="MyHtmlAgility\Project\Haha\HahaWebReader.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RedisDemo\DemoBase.cs" />
@@ -183,10 +163,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="EFDemo\" />
-    <Folder Include="MyHtmlAgility\Project\51job\" />
     <Folder Include="SignalRProject\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\JsonSong.BaseDao\JsonSong.BaseDao.csproj">
+      <Project>{611838FD-6236-46F7-A8A1-FC64D4D42ACA}</Project>
+      <Name>JsonSong.BaseDao</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Utils\Suijing.Utils.csproj">
       <Project>{EA4D5D5E-E6F8-4487-A65A-752C05E9F7B1}</Project>
       <Name>Suijing.Utils</Name>

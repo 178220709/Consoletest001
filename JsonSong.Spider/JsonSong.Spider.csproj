@@ -42,6 +42,10 @@
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
+    <Reference Include="LiteDB, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\LiteDB.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
@@ -79,6 +83,7 @@
     <Compile Include="Core\HtmlAsyncHelper.cs" />
     <Compile Include="Core\NormalHtmlHelper.cs" />
     <Compile Include="Core\WebTaskFactory.cs" />
+    <Compile Include="DataAccess\Entity\SpiderLiteEntity.cs" />
     <Compile Include="FromNode\HttpRestHelper.cs" />
     <Compile Include="ProjectTest\FixHahaJokeFlag.cs" />
     <Compile Include="ProjectTest\MyHtmlAgilityTest\SyncTest.cs" />
@@ -87,9 +92,10 @@
     <Compile Include="Project\Youmin\YouminPartialReader.cs" />
     <Compile Include="Project\Youmin\YouminWebReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpiderBase\BaseParstialReader.cs" />
-    <Compile Include="SpiderBase\BaseSpiderEntity.cs" />
-    <Compile Include="SpiderBase\SpiderService.cs" />
+    <Compile Include="Core\BaseParstialReader.cs" />
+    <Compile Include="DataAccess\Entity\SpiderMongoEntity.cs" />
+    <Compile Include="DataAccess\DAO\SpiderLiteDao.cs" />
+    <Compile Include="DataAccess\DAO\SpiderService.cs" />
     <Compile Include="SpiderCommon\SpiderConstant.cs" />
     <Compile Include="SpiderCommon\SpiderRestDto.cs" />
     <Compile Include="SpiderCommon\SyncSpiderHelper.cs" />

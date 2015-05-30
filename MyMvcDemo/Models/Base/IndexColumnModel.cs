@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Web;
 
-namespace MyMvcDemo.Models
+namespace JsonSong.ManagerUI.Models
 {
     public class IndexColumnModel
     {

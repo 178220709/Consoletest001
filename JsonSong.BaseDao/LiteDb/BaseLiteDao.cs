@@ -4,23 +4,21 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using LiteDB;
 using Suijing.Utils.ConfigTools;
+using Suijing.Utils.Utility;
 
 
 namespace JsonSong.BaseDao.LiteDb
 {
-    public abstract class BaseDao<TEntity> where TEntity : BaseEntity, new()
+    public abstract class BaseLiteDao<TEntity> where TEntity : BaseLiteEntity, new()
     {
-
-
-
         protected string Path { get; set; }
         protected string CnName { get; set; }
         protected LiteDatabase DB { get { return new LiteDatabase(Path); } }
-        protected LiteCollection<TEntity> Con { get { return new LiteDatabase(Path).GetCollection<TEntity>(CnName); } }
+        protected LiteCollection<TEntity> Con { get { return DB.GetCollection<TEntity>(CnName); } }
 
-        protected BaseDao(string path="",string cnName="")
+        protected BaseLiteDao(string dbName = "", string cnName = "")
         {
-            Path = string.IsNullOrWhiteSpace(path) ? PathHelper.GetDBPath() : path;
+            Path =  PathHelper.GetDBPath(dbName);
             CnName = string.IsNullOrWhiteSpace(cnName) ? typeof(TEntity).Name.ToLower() : cnName;
         }
 
@@ -31,11 +29,11 @@ namespace JsonSong.BaseDao.LiteDb
         }
         public int Insert(IEnumerable<TEntity> entities)
         {
-                return Con.Insert(entities);
+            return Con.Insert(entities);
         }
-        public int Delete( long id)
+        public int Delete(long id)
         {
-            Expression<Func<TEntity, bool>> predicate = entity => entity.Id==id;
+            Expression<Func<TEntity, bool>> predicate = entity => entity.Id == id;
             return Con.Delete(predicate);
         }
 
@@ -54,10 +52,29 @@ namespace JsonSong.BaseDao.LiteDb
             return Con.FindOne(predicate);
         }
 
-        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate,int skip=0,int limit = int.MaxValue)
+        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate, int skip = 0, int limit = int.MaxValue)
         {
-            return Con.Find(predicate,skip,limit);
+            return Con.Find(predicate, skip, limit);
         }
+        public IEnumerable<TEntity> test()
+        {
+            var orderKeys = new Dictionary<string, int>()
+            {
+                {"AddedTime", Query.Descending},
+                {"OtherFiled", Query.Ascending}
+            };
+
+            Func<TEntity, bool> predicate0 = t => t.AddedTime < DateTime.Now;
+
+
+
+            Expression<Func<TEntity, bool>> predicate = t => t.AddedTime < DateTime.Now;
+            var exp = PredicateBuilder.And(predicate, predicate);
+
+            return null;
+        }
+
+
 
 
         #endregion
