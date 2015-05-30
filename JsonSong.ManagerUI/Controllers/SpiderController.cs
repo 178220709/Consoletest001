@@ -5,7 +5,6 @@ using System.Web.Helpers;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using JsonSong.ManagerUI.Extend;
-using JsonSong.ManagerUI.Models.Spider;
 using JsonSong.Spider.DataAccess.DAO;
 using JsonSong.ManagerUI.Models;
 using JsonSong.Spider.DataAccess.Entity;

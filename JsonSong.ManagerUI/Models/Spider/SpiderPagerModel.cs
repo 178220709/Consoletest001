@@ -1,6 +1,6 @@
 ﻿using JsonSong.Spider.DataAccess.Entity;
 
-namespace JsonSong.ManagerUI.Models.Spider
+namespace JsonSong.ManagerUI.Models
 {
     public class SpiderPagerModel : BasePagerModel<SpiderLiteEntity>
     {
