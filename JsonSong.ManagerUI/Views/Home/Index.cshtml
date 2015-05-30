@@ -3,9 +3,13 @@
     Layout = "~/Views/Shared/_LteMenuLayout.cshtml";
 }
 <script>
-    seajs.use("page/home/index", function(page) {
-        
+    
+    require(["page/home/index"], function (page) {
+       
     });
+
+
+  
 </script>
 
 <!-- Content Wrapper. Contains page content -->
@@ -14,7 +18,7 @@
     @Html.Partial("LTEPartial/_LteCrumbsSection")
 
     <!-- Main content -->
-    <section class="content" id="divContainContent" ms-include-src="{{contentUrl}}" data-include-rendered='indexRender'>
+    <section class="content" id="divContainContent" ms-include-src="{{contentUrl}}" data-include-rendered="indexRender">
 
         <!-- Your Page Content Here -->
 

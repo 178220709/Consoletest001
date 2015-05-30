@@ -21,7 +21,6 @@ namespace JsonSong.ManagerUI.Controllers
             {
                 Name = "碎景"
             };
-            model.Modules = ControllerHelper.GetIndexModules();
             return View(model);
         }
          [Module(Name = "首页", CSS = MyConstants.Bootstrap.Icon.Globe)]

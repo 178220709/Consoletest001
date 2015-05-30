@@ -15,7 +15,7 @@
     <AssemblyName>JsonSong.ManagerUI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -141,6 +141,9 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
+    <Content Include="Content\css\ionicons\css\ionicons.css" />
+    <Content Include="Content\css\ionicons\css\ionicons.min.css" />
+    <Content Include="Content\css\ionicons\fonts\ionicons.svg" />
     <Content Include="Content\imgs\photo.png" />
     <Content Include="Content\libs\AdminLTE-2.0.3\.gitignore" />
     <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\css\bootstrap.css" />
@@ -773,16 +776,16 @@
     <Content Include="Content\libs\angularJS\angular-touch.min.js" />
     <Content Include="Content\libs\angularJS\angular.js" />
     <Content Include="Content\libs\angularJS\angular.min.js" />
-    <Content Include="Content\libs\avalon\class1.html" />
-    <Content Include="Content\libs\avalon\mmHistory.js" />
-    <Content Include="Content\libs\avalon\mmRouter.js" />
+    <Content Include="Content\libs\avalon\avalon.modern.min.js" />
     <Content Include="Content\libs\avalon\avalon.js" />
-    <Content Include="Content\libs\avalon\avalon.modern.js" />
-    <Content Include="Content\libs\avalon\avalon.modern.shim.js" />
     <Content Include="Content\libs\avalon\avalon.shim.js" />
     <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\css\font-awesome.css" />
     <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\css\font-awesome.min.css" />
     <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\Public\avalon\main.js" />
+    <Content Include="Content\libs\avalon\mmRouter\mmHistory.js" />
+    <Content Include="Content\libs\avalon\mmRouter\mmRouter.js" />
+    <Content Include="Content\libs\avalon\mmRouter\mmState.js" />
     <Content Include="Content\libs\seajs-2.3.0\sea-debug.js" />
     <Content Include="Content\libs\seajs-2.3.0\sea.js" />
     <Content Include="Content\libs\underscore\underscore-min.js" />
@@ -983,9 +986,6 @@
     <Content Include="Views\MyJSDemo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Index1.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\MyQunitDemo\hello.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -1139,6 +1139,9 @@
     <Content Include="Content\libs\angularJS\angular-sanitize.min.js.map" />
     <Content Include="Content\libs\angularJS\angular-touch.min.js.map" />
     <Content Include="Content\libs\angularJS\angular.min.js.map" />
+    <Content Include="Content\css\ionicons\fonts\ionicons.eot" />
+    <Content Include="Content\css\ionicons\fonts\ionicons.ttf" />
+    <Content Include="Content\css\ionicons\fonts\ionicons.woff" />
     <None Include="Properties\PublishProfiles\MVCDemo.pubxml" />
     <Content Include="Views\Shared\_LteBaseLayout.cshtml" />
     <Content Include="Views\Shared\_LteMenuLayout.cshtml" />
@@ -1175,7 +1178,6 @@
     <Content Include="Views\Home\LteDemos\UI\timeline.cshtml" />
     <Content Include="Views\Home\LteDemos\widgets.cshtml" />
     <Content Include="Views\Shared\LTEPartial\_LteDemoIndex.cshtml" />
-    <Content Include="Views\Shared\LTEPartial\_LteCrumbsSection.cshtml" />
     <Content Include="Views\seaJSDemo\underscore.cshtml" />
     <Content Include="Views\Spider\Haha.cshtml" />
     <Content Include="Views\Spider\Test.cshtml" />
@@ -1191,11 +1193,12 @@
     <Content Include="Views\Home\Waiting.cshtml" />
     <Content Include="Views\Spider\HahaList.cshtml" />
     <Content Include="Views\Shared\LTEPartial\_LtePlugins.cshtml" />
-    <Content Include="Views\Shared\_LteMenuLayout1.cshtml" />
     <Content Include="Views\Shared\LTEPartial\_LteTopTip.cshtml" />
     <Content Include="Views\AngularJS\httpDemo.cshtml" />
     <Content Include="Views\Home\test.cshtml" />
     <Content Include="Views\AngularJS\FilterDemo.cshtml" />
+    <Content Include="Views\Shared\LTEPartial\_LteHeadStyleAndLib.cshtml" />
+    <Content Include="Views\Shared\LTEPartial\_LteFootScript.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -1215,7 +1218,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3033</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:3033/</IISUrl>
+          <IISUrl>http://localhost/JsonSong.ManagerUI</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

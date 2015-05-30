@@ -1,7 +1,5 @@
 ﻿
-
-define(function(require, exports, module) {
-    var avalon = require("avalon.js");
+define(["avalon/mmRouter/mmRouter"], function (avalon) {
    
      var indexModel = window.indexModel = avalon.define("msTopContent", function (vm) {
         vm.showContent = true;//content is load over 
@@ -14,15 +12,9 @@ define(function(require, exports, module) {
            
         };
         vm.indexRender = function () {
-
-
-
-
             $(".content-wrapper, .right-side").css('min-height', getContentHeight() - 112);
         };
     });
-    
-    
 
     avalon.router.get("/*path", callback); //劫持url hash并触发回调
     avalon.history.start(); //历史记录堆栈管理

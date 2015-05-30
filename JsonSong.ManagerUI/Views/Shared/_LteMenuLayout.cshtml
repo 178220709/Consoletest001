@@ -6,10 +6,16 @@
     var indexModels = ControllerHelper.GetIndexModules();
 }
 
-
+@section head
+{
+    @RenderSection("head", false)
+}
+@section foot
+{
+    @RenderSection("foot", false)
+}
 
 <div class="wrapper" ms-controller="msTopContent" id="divTopContent">
-
     <!-- Main Header -->
     @Html.Partial("LTEPartial/_LteTopTip")
 
@@ -47,30 +53,29 @@
                 {
                     if (!module.Children.HasValue())
                     {
-                        <li class="" data-url="@module.Url" data-vname="@module.VName">
-                            <a href="#">
-                                <i class="fa fa-dashboard"></i> <span>@module.Name</span>
-                            </a>
-                        </li>
+            <li class="" data-url="@module.Url" data-vname="@module.VName">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>@module.Name</span>
+                </a>
+            </li>
                     }
                     else
                     {
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-laptop"></i>
-                                <span>@module.Name</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                @foreach (var cModule in module.Children)
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-laptop"></i>
+                    <span>@module.Name</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    @foreach (var cModule in module.Children)
                                 {
-                                    <li data-url="@module.Url" data-vname="@module.VName">
-                                        <a href="#!@cModule.Url" style="margin-left: 10px;"><i class="fa fa-angle-double-right"></i>@cModule.Name</a>
-                                    </li>
-
+                                <li data-url="@module.Url" data-vname="@module.VName">
+                                    <a href="#!@cModule.Url" style="margin-left: 10px;"><i class="fa fa-angle-double-right"></i>@cModule.Name</a>
+                                </li>
                                 }
-                            </ul>
-                        </li>
+                </ul>
+            </li>
                     }
                 }
 
