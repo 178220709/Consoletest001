@@ -118,10 +118,6 @@
       <Project>{8B51E80F-5B2A-4821-89BD-4A10D49DE877}</Project>
       <Name>JsonSong.Spider</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyMvcDemo\JsonSong.ManagerUI.csproj">
-      <Project>{582a8372-b8be-44ab-9be0-ad88062799c0}</Project>
-      <Name>JsonSong.ManagerUI</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MyProject\MyProject.csproj">
       <Project>{54cb55d4-e806-4b76-9900-0b0b8ffd6d16}</Project>
       <Name>MyProject</Name>
