@@ -45,6 +45,8 @@ namespace JsonSong.ManagerUI.Controllers
         }
         public ActionResult Test()
         {
+            var p1 = System.IO.Directory.GetCurrentDirectory();
+            var p2 = HttpContext.Server.MapPath("~");
             return View();
         }
         public ActionResult LteDemo(string path)

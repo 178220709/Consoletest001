@@ -12,12 +12,11 @@ require.config({
         "lte": "Content/libs/AdminLTE",
         "public": "Scripts/Public",
         "page": "Scripts/Pages",
-
         "util": "Scripts/public/util"
     }
 });
 
-require(["util"], function (util, b, c, d) {
+require(["util"], function (util) {
    //  avalon.log("util is ready ");
     util.setHost(avalon.require.config.baseUrl);
 });

@@ -19,15 +19,14 @@ namespace JsonSong.ManagerUI.Controllers
     public class SpiderController : Controller
     {
         [HttpGet]
-        [Module(Name = "哈哈最新", CSS = MyConstants.Bootstrap.Icon.Globe)]
-        public async Task<ActionResult> Haha()
+        [Module(Name = "功能清单", CSS = MyConstants.Bootstrap.Icon.Globe)]
+        public  ActionResult Index()
         {
-            var list = await HahaWebReader.GetRecommand();
-            return View(list);
+            return View();
         }
         [HttpGet]
 
-        [Module(Name = "List", CSS = MyConstants.Bootstrap.Icon.Globe)]
+        [Module(Name = "数据展示", CSS = MyConstants.Bootstrap.Icon.Globe)]
         public ActionResult HahaList()
         {
             return View();
@@ -73,6 +72,37 @@ namespace JsonSong.ManagerUI.Controllers
                 success = SpiderLiteDao.Instance.DeleteByUrl(url)
             });
         }
+
+
+        //index
+
+        [HttpPost]
+        public JsonResult SpiderRecommand(int? typeId)
+        {
+            HahaWebReader.GetRecommand();
+            return Json(new ResponseJsonModel()
+            {
+                success = true
+            });
+        }
+
+        [HttpPost]
+        public JsonResult GetSpiderInfo(int? typeId)
+        {
+
+            var count = SpiderLiteDao.Instance.GetCon().Count(a => a.Valid && a.TypeId == 1);
+            var updateTime = SpiderLiteDao.Instance.GetLastUpdateTime();
+
+            return Json(new ResponseJsonModel()
+            {
+                result = new
+                {
+                    Count= count,
+                    UpdateTime= updateTime
+                }
+            });
+        }
+
 
         #endregion
 

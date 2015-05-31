@@ -59,6 +59,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LiteDB, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\LiteDB.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -782,6 +786,7 @@
     <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\css\font-awesome.css" />
     <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\css\font-awesome.min.css" />
     <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\Pages\Spider\index.js" />
     <Content Include="Scripts\Public\avalon\main.js" />
     <Content Include="Content\libs\avalon\mmRouter\mmHistory.js" />
     <Content Include="Content\libs\avalon\mmRouter\mmRouter.js" />
@@ -1199,6 +1204,8 @@
     <Content Include="Views\AngularJS\FilterDemo.cshtml" />
     <Content Include="Views\Shared\LTEPartial\_LteHeadStyleAndLib.cshtml" />
     <Content Include="Views\Shared\LTEPartial\_LteFootScript.cshtml" />
+    <Content Include="Views\Spider\Index.cshtml" />
+    <Content Include="Views\Shared\LTEPartial\_LteCrumbsSection.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
