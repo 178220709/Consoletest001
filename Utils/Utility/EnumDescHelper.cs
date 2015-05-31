@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Web.Mvc;
 using System.Web.WebPages.Html;
+using SelectListItem = System.Web.Mvc.SelectListItem;
 
 namespace Suijing.Utils.Utility
 {

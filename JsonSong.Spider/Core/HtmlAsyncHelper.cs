@@ -36,7 +36,7 @@ namespace JsonSong.Spider.Core
         }
         /// <summary>
         /// 创建HtmlAsyncHelper的使用代理的实例
-        /// 0 SystemWebProxy 1 pacSs 2 pacLocal
+        /// -1 noProxy 0 SystemWebProxy 1 pacSs 2 pacLocal
         /// </summary>
         /// <returns></returns>
         public static HtmlAsyncHelper CreatWithProxy(int index)
@@ -50,6 +50,7 @@ namespace JsonSong.Spider.Core
         {
             switch (index)
             {
+                case -1: return null;
                 case 0: return WebRequest.GetSystemWebProxy();
                 case 1: return new WebProxy(Path.Combine(PathHelper.GetPacUrl(), "pacSs.js"));
                 case 2: return new WebProxy(Path.Combine(PathHelper.GetPacUrl(), "pacLocal.js"));

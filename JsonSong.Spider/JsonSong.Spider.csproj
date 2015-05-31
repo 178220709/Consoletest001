@@ -87,7 +87,6 @@
     <Compile Include="FromNode\HttpRestHelper.cs" />
     <Compile Include="ProjectTest\FixHahaJokeFlag.cs" />
     <Compile Include="ProjectTest\MyHtmlAgilityTest\SyncTest.cs" />
-    <Compile Include="ProjectTest\TestWebReader.cs" />
     <Compile Include="Project\Haha\HahaWebReader.cs" />
     <Compile Include="Project\Youmin\YouminPartialReader.cs" />
     <Compile Include="Project\Youmin\YouminWebReader.cs" />

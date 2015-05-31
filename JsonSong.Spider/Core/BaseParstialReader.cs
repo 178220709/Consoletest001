@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Threading.Tasks;
 using Suijing.Utils.sysTools;
 
 namespace JsonSong.Spider.Core
@@ -31,7 +32,7 @@ namespace JsonSong.Spider.Core
         /// 根据当前doc 判断是否还有下一页（next）  如果有 ，更新CurrentUrl和doc 返回true
         /// </summary>
         /// <returns></returns>
-        protected abstract bool CheckAndMoveNext();
+        protected abstract Task<bool> CheckAndMoveNext();
 
         public ReadResult OutputResult()
         {
@@ -39,7 +40,7 @@ namespace JsonSong.Spider.Core
             return result;
         }
 
-        public void StartReadAll()
+        public async Task StartReadAll()
         {
             LogHepler.WriteWebReader(string.Format("开始爬取{0}", BaseUrl ));
             try
@@ -50,7 +51,7 @@ namespace JsonSong.Spider.Core
                 {
                      GetCurrent();
                      PageId++;
-                } while (CheckAndMoveNext() && PageId <= Limit);
+                } while (await CheckAndMoveNext() && PageId <= Limit);
             }
             catch (Exception ex)
             {

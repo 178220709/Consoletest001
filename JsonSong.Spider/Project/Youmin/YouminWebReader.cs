@@ -12,11 +12,17 @@ namespace JsonSong.Spider.Project.Youmin
     [TestClass]
     public class YouminWebReader :WebTaskReader
     {
-        public override ReadResult GetHtmlContent(string url )
+        public YouminWebReader()
         {
-            var parstialReader = new YouminPartialReader(url);
-            parstialReader.StartReadAll();
+            _htmlAsyncHelper = HtmlAsyncHelper.CreatWithProxy(-1);
+        }
 
+        private readonly HtmlAsyncHelper _htmlAsyncHelper;
+
+        public override async Task<ReadResult> GetHtmlContent(string url )
+        {
+            var parstialReader = new YouminPartialReader(url, _htmlAsyncHelper);
+            await parstialReader.StartReadAll();
             return parstialReader.OutputResult();
         }
 

@@ -12,13 +12,20 @@ namespace JsonSong.Spider.Project.Haha
     [TestClass]
     public class HahaWebReader : WebTaskReader
     {
-        public override ReadResult GetHtmlContent(string url)
+        public HahaWebReader()
+        {
+            _htmlAsyncHelper = HtmlAsyncHelper.CreatWithProxy(-1);
+        }
+
+        private readonly HtmlAsyncHelper _htmlAsyncHelper;
+
+        public override async Task<ReadResult> GetHtmlContent(string url)
         {
             var re = new ReadResult(url);
-            var doc = NormalHtmlHelper.GetDocumentNode(url);
-            var divContent = doc.DocumentNode.QuerySelector(".list.joke.joke-item");
-            re.Content = divContent.QuerySelector(".clearfix.mt-15").OuterHtml;
-            var divFooterA = divContent.QuerySelectorAll(".clearfix.mt-20.joke-item-footer .fl a").ToArray();
+            var root = (await _htmlAsyncHelper.GetDocumentNode(url)).DocumentNode ;
+            re.Title = root.QuerySelector("title").InnerText;
+            re.Content = root.QuerySelector(".joke-main-content").OuterHtml;
+            var divFooterA = root.QuerySelectorAll(".joke-main-misc .fl a").ToArray();
             var zan = ConvertHelper.ConvertStrToInt(divFooterA[0].InnerText);
             var bishi = ConvertHelper.ConvertStrToInt(divFooterA[1].InnerText);
             re.Weight = ((zan + bishi) / 100) * (zan - bishi * 3);
@@ -57,36 +64,21 @@ namespace JsonSong.Spider.Project.Haha
             var reader = new HahaWebReader();
             var factory = new WebTaskFactory(reader);
             return  await factory.StartAndCallBack(urls.Distinct().ToList());
-
         }
 
         [TestMethod]
-        public void Test1()
+        public void GetHtmlContentTest()
         {
             // 测试文字笑话
             const string url = "http://www.haha.mx/joke/1660764";
-            var doc = NormalHtmlHelper.GetDocumentNode(url);
-            var divContent = doc.DocumentNode.QuerySelector(".list.joke.joke-item");
-
-            var content = divContent.QuerySelector(".clearfix.mt-15");
-            var divFooterA = divContent.QuerySelectorAll(".clearfix.mt-20.joke-item-footer .fl a").ToArray();
-            var zan = ConvertHelper.ConvertStrToInt(divFooterA[0].InnerText);
-            var bishi = ConvertHelper.ConvertStrToInt(divFooterA[1].InnerText);
-            var weight = ((zan + bishi) / 100) * (zan - bishi * 3);
+            var re =  GetHtmlContent(url);   
         }
         [TestMethod]
         public void Test2()
         {
             // 测试图片笑话
             const string url = "http://www.haha.mx/joke/1661700";
-            var doc = NormalHtmlHelper.GetDocumentNode(url);
-            var divContent = doc.DocumentNode.QuerySelector(".list.joke.joke-item");
-
-            var content = divContent.QuerySelector(".clearfix.mt-15");
-            var divFooterA = divContent.QuerySelectorAll(".clearfix.mt-20.joke-item-footer .fl a").ToArray();
-            var zan = ConvertHelper.ConvertStrToInt(divFooterA[0].InnerText);
-            var bishi = ConvertHelper.ConvertStrToInt(divFooterA[1].InnerText);
-            var weight = ((zan + bishi) / 100) * (zan - bishi * 3);
+            var re = GetHtmlContent(url);   
         }
     }
 }

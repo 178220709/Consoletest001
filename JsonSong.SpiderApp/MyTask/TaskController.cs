@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using JsonSong.Spider.Project.Haha;
 using JsonSong.SpiderApp.Application;
 using JsonSong.SpiderApp.Data;
-using JsonSong.Spider.Project.Haha;
 using Omu.ValueInjecter;
 
-namespace JsonSong.SpiderApp.Task
+namespace JsonSong.SpiderApp.MyTask
 {
     public  class  TaskController
     {
-
         /// <summary>
         /// 无尽模式 请注意此段代码在线程中执行
         /// </summary>
-        public void StartHahaTask()
+        public async Task StartHahaTask()
         {
             var start = 1650764;
             var end = 1750057;
             var list = new List<SpiderEntity>();
-            HahaWebReader reader = new HahaWebReader();
+            var reader = new HahaWebReader();
             for (int i = start; i < end; i++)
             {
                 var url = "http://www.haha.mx/joke/" + i;
-                var result = reader.GetHtmlContent(url);
+                var result = await reader.GetHtmlContent(url);
                 if (result.Weight < 100) continue;
                 var en = new SpiderEntity()
                 {

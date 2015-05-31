@@ -61,7 +61,7 @@
     <Compile Include="Data\SpiderLogEntity.cs" />
     <Compile Include="Data\SpiderEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Task\TaskController.cs" />
+    <Compile Include="MyTask\TaskController.cs" />
     <Compile Include="Test\SpiderTest.cs" />
     <Compile Include="Test\TaskTest.cs" />
   </ItemGroup>

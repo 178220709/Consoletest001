@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Fizzler.Systems.HtmlAgilityPack;
 using HtmlAgilityPack;
+using Suijing.Utils.Extention;
 using Suijing.Utils.sysTools;
 
 namespace JsonSong.Spider.Core
@@ -35,16 +36,18 @@ namespace JsonSong.Spider.Core
             LogHepler.WriteWebReader(string.Format("开始爬取{0}条数据:\n {1} ...", urls.Count, string.Join("\n", urls.Take(3))));
             try
             {
-                var res = urls.AsParallel().Select(a => _reader.GetHtmlContent(a))
+                var tasks = urls.Select(async a => await _reader.GetHtmlContent(a));
+                var res = (await Task.WhenAll(tasks))
                     .Where(a => !string.IsNullOrWhiteSpace(a.Content))
                     .ToList();
-              await  _reader.FireTaskCallBack(res);
+
+                await _reader.FireTaskCallBack(res);
                 LogHepler.WriteWebReader("成功爬取并执行完毕");
                 return res;
             }
             catch (Exception ex)
             {
-                LogHepler.WriteWebReader("出现异常:" + ex.Message); 
+                LogHepler.WriteWebReader("出现异常:" + ex.Message);
                 return null;
             }
         }
@@ -60,14 +63,14 @@ namespace JsonSong.Spider.Core
         {
             Url = url;
         }
-        public string  Url { get; set; }
-        public string  Title { get; set; }
-        public string  Content { get; set; }
-        public string  StyleStr { get; set; }
-       
-        public dynamic  Extend { get; set; }
+        public string Url { get; set; }
+        public string Title { get; set; }
+        public string Content { get; set; }
+        public string StyleStr { get; set; }
 
-        public int  Weight { get; set; }
+        public dynamic Extend { get; set; }
+
+        public int Weight { get; set; }
     }
 
 
@@ -81,21 +84,21 @@ namespace JsonSong.Spider.Core
         /// </summary>
         /// <param name="url"></param>
         /// <returns></returns>
-        public abstract ReadResult GetHtmlContent(string url);
+        public abstract Task<ReadResult> GetHtmlContent(string url);
         /// <summary>
         /// 工厂类执行获取任务后,会调用 子类Reader实现的回调  
         /// </summary>
         /// <param name="res"></param>
-        public abstract   Task FireTaskCallBack(IList<ReadResult> res);
+        public abstract Task FireTaskCallBack(IList<ReadResult> res);
     }
 
     public interface IWebTaskCallBack
     {
-         Task FireTaskCallBack(IList<ReadResult> res);
+        Task FireTaskCallBack(IList<ReadResult> res);
     }
 
     public interface IWebTaskReader
     {
-        ReadResult GetHtmlContent(string url);
+        Task<ReadResult> GetHtmlContent(string url);
     }
 }

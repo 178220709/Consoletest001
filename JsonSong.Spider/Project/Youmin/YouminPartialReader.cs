@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-
+using System.Threading.Tasks;
 using Fizzler.Systems.HtmlAgilityPack;
 using HtmlAgilityPack;
 using JsonSong.Spider.SpiderBase;
@@ -12,10 +12,11 @@ namespace JsonSong.Spider.Project.Youmin
     public class YouminPartialReader : BaseParstialReader
     {
         private HtmlNode _doc;
+        private readonly HtmlAsyncHelper _htmlAsyncHelper;
 
-
-        public YouminPartialReader(string baseUrl) : base(baseUrl)
+        public YouminPartialReader(string baseUrl, HtmlAsyncHelper htmlAsyncHelper) : base(baseUrl)
         {
+            _htmlAsyncHelper = htmlAsyncHelper;
             _doc = NormalHtmlHelper.GetDocumentNode(this.BaseUrl).DocumentNode;
         }
         // 
@@ -30,7 +31,7 @@ namespace JsonSong.Spider.Project.Youmin
                 .ForEach(a=> ContentBuilder.Append(a.OuterHtml));
         }
 
-        protected override bool CheckAndMoveNext()
+        protected override async Task<bool> CheckAndMoveNext()
         {
             var list = _doc.QuerySelectorAll(".page_css a")
                 .Select(a => new {title = a.InnerText, href = a.GetAttributeValue("href", "")});
@@ -40,7 +41,7 @@ namespace JsonSong.Spider.Project.Youmin
                 return false;
             }
             this.CurrentUrl = next.href;
-            _doc = NormalHtmlHelper.GetDocumentNode(this.CurrentUrl).DocumentNode;
+            _doc =( await  _htmlAsyncHelper.GetDocumentNode(this.CurrentUrl)).DocumentNode;
             return true;
         }
     }
