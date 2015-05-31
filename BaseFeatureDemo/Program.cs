@@ -29,7 +29,8 @@ namespace BaseFeatureDemo
     {
         static void Main(string[] args)
         {
-           ProxyDemo.ProxyDemo.Main1().Wait();
+            ProxyDemo.ProxyDemo.Main1().Wait();
+            //  DownloadStringTaskAsyncDemo.Main1().Wait();
         }
     }
 }

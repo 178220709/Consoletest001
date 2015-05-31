@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using JsonSong.ManagerUI.Extend;
 using JsonSong.ManagerUI.Models;
@@ -47,6 +48,7 @@ namespace JsonSong.ManagerUI.Controllers
         {
             var p1 = System.IO.Directory.GetCurrentDirectory();
             var p2 = HttpContext.Server.MapPath("~");
+            var p3 = AppDomain.CurrentDomain.BaseDirectory;
             return View();
         }
         public ActionResult LteDemo(string path)

@@ -5,6 +5,7 @@ using System.Web.Caching;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyProject.SystemInfo;
 using Newtonsoft.Json;
+using Suijing.Utils.ConfigTools;
 using Suijing.Utils.sysTools;
 using Suijing.Utils.WebTools;
 
@@ -39,6 +40,15 @@ namespace BaseFeatureTest.UtilsTest
 
             var str3 = File.ReadAllText(path, Encoding.GetEncoding("gbk"));
          
+        }
+
+
+        [TestMethod()]
+        public void Test3()
+        {
+
+            var path = PathHelper.GetDBPath("123");
+
         }
     }
 }

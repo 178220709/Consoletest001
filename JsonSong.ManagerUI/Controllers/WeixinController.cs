@@ -27,7 +27,7 @@ namespace JsonSong.ManagerUI.Controllers
                 var postStr = System.Text.Encoding.UTF8.GetString(b);
                 if (!string.IsNullOrEmpty(postStr))
                 {
-                    LogHepler.WriteLog(postStr);
+                    LogHepler.Info(postStr);
                     return responseMsg(postStr);
                 }
             }

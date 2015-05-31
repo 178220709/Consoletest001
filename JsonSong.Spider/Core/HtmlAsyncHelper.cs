@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
+using Suijing.Utils.ConfigTools;
 
 
 namespace JsonSong.Spider.Core
@@ -14,12 +15,12 @@ namespace JsonSong.Spider.Core
     public class HtmlAsyncHelper
     {
         protected HttpClient Client;
-        public HtmlAsyncHelper( IWebProxy proxy=null)
+        public HtmlAsyncHelper(IWebProxy proxy = null)
         {
             var proxy1 = WebRequest.GetSystemWebProxy();
             var proxy2 = new WebProxy();
 
-            if (proxy!=null)
+            if (proxy != null)
             {
                 var handler = new HttpClientHandler
                 {
@@ -33,22 +34,44 @@ namespace JsonSong.Spider.Core
                 Client = new HttpClient();
             }
         }
+        /// <summary>
+        /// 创建HtmlAsyncHelper的使用代理的实例
+        /// 0 SystemWebProxy 1 pacSs 2 pacLocal
+        /// </summary>
+        /// <returns></returns>
+        public static HtmlAsyncHelper CreatWithProxy(int index)
+        {
+            var proxy = HtmlAsyncHelper.GetProxy(index);
+            return new HtmlAsyncHelper(proxy);
+        }
+
+       
+        private static IWebProxy GetProxy(int index)
+        {
+            switch (index)
+            {
+                case 0: return WebRequest.GetSystemWebProxy();
+                case 1: return new WebProxy(Path.Combine(PathHelper.GetPacUrl(), "pacSs.js"));
+                case 2: return new WebProxy(Path.Combine(PathHelper.GetPacUrl(), "pacLocal.js"));
+                default: return WebRequest.GetSystemWebProxy();
+            }
+        }
 
         public async Task<string> GetDocHtmlStr(string url)
         {
-            return await GetDocHtmlStr(url,Encoding.UTF8);
+            return await GetDocHtmlStr(url, Encoding.UTF8);
         }
         public async Task<string> GetDocHtmlStr(string url, Encoding encoding)
         {
-            if (encoding==null)
+            if (encoding == null)
             {
                 return await Client.GetStringAsync(url);
             }
             else
             {
                 var buffer = await Client.GetByteArrayAsync(url);
-                Encoding.GetEncoding("gb2312").GetString(buffer, 0, buffer.Length);
-                return encoding.GetString(buffer, 0, buffer.Length);   
+                //Encoding.GetEncoding("gb2312").GetString(buffer, 0, buffer.Length);
+                return encoding.GetString(buffer, 0, buffer.Length);
             }
         }
 

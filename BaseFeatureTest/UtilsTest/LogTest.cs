@@ -25,7 +25,7 @@ namespace BaseFeatureTest.UtilsTest
             }
             catch (Exception ex)
             {
-                LogHepler.WriteLog("hahaha",ex);
+                LogHepler.Error("hahaha",ex);
             }
            
         }

@@ -41,7 +41,11 @@ namespace JsonSong.Spider.Project.Haha
         {
             var urls = new List<string>();
             const string url = "http://www.haha.mx/joke/1660764";
-            var doc = NormalHtmlHelper.GetDocumentNode(url);
+
+
+            var httpHelper = HtmlAsyncHelper.CreatWithProxy(1);
+
+            var doc = await httpHelper.GetDocumentNode(url);
             doc.DocumentNode.QuerySelector(".recommand-joke-main-list-thumbnail")
                 .QuerySelectorAll(".joke-text.word-wrap")
                 .Select(a => a.QuerySelector("a"))

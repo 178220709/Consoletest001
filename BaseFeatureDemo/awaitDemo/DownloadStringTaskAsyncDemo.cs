@@ -10,29 +10,41 @@ namespace BaseFeatureDemo.awaitDemo
     [TestClass]
     public class DownloadStringTaskAsyncDemo
     {
+       // const string url = "http://www.baidu.com";
+        const string url = "http://localhost/";
         [TestMethod]
         public static async Task Main1()
         {
-            Console.WriteLine(await DownloadStringTaskAsync());
+            // Console.WriteLine(await DownloadStringTaskAsync());
+            DownloadStringTaskAsyncDemo demo = new DownloadStringTaskAsyncDemo();
+
+          await  demo.Main2();
+            Console.ReadLine();
         }
 
         [TestMethod]
-        public static void Main2()
+        public async Task Main2()
         {
-            DownloadStringAsync();
+            await Task.Run(async () =>
+             {
+                 var re = await DownloadStringTaskAsync();
+                 Console.WriteLine(re);
+             });
+            Console.ReadLine();
         }
         private static async Task<string> DownloadStringTaskAsync()
         {
-            const string url = "http://t0.jsonsong.com/";
+            string str = "";
             using (var wc = new WebClient())
             {
-                return await wc.DownloadStringTaskAsync(url);
+                str = await wc.DownloadStringTaskAsync(url);
             }
+            return str;
         }
 
         private static void DownloadStringAsync()
         {
-            const string url = "http://t0.jsonsong.com/";
+
             using (var wc = new WebClient())
             {
                 wc.DownloadStringAsync(new Uri(url), new object());
@@ -42,7 +54,7 @@ namespace BaseFeatureDemo.awaitDemo
 
         private static async Task<string> DownloadStringAsync2()
         {
-            const string url = "http://t0.jsonsong.com/";
+
             using (var wc = new HttpClient())
             {
                 var res = await wc.GetAsync(url);

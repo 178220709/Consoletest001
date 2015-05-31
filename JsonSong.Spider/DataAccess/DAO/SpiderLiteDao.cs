@@ -1,7 +1,10 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using JsonSong.BaseDao.LiteDb;
 using JsonSong.Spider.Core;
 using JsonSong.Spider.DataAccess.Entity;
+using LiteDB;
 using Omu.ValueInjecter;
 
 namespace JsonSong.Spider.DataAccess.DAO
@@ -84,6 +87,18 @@ namespace JsonSong.Spider.DataAccess.DAO
         public SpiderLiteEntity GetByUrl(string url)
         {
             return  FindOne(a => a.Url == url); ;
+        }
+
+        public LiteCollection<SpiderLiteEntity> GetCon()
+        {
+            return  this.Con;
+        }
+
+
+        public DateTime GetLastUpdateTime()
+        {
+            var last = this.Con.Find(Query.All("AddedTime", Query.Descending), 0, 1).FirstOrDefault();
+            return last?.AddedTime ?? DateTime.MinValue;
         }
     }
 }

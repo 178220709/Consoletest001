@@ -26,7 +26,7 @@ namespace JsonSong.ManagerUI
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             LogHepler.SetConfig();
-            LogHepler.WriteLog("the mvcDemo is start up");
+            LogHepler.Info("the mvcDemo is start up");
 
         }
     }

@@ -25,7 +25,7 @@ namespace Suijing.Utils.sysTools
             log4net.Config.XmlConfigurator.Configure(configFile); 
         }
 
-        public static void WriteLog(string info)
+        public static void Info(string info)
         {
             if (logdebugger.IsDebugEnabled)
             {
@@ -33,11 +33,11 @@ namespace Suijing.Utils.sysTools
             }
         }
 
-        public static void WriteLog(string info,Exception se)
+        public static void Error(string info,Exception ex)
         {
             if(logerror.IsErrorEnabled)
             {
-                logerror.Error(info,se);
+                logerror.Error(info, ex);
             }
         }
 

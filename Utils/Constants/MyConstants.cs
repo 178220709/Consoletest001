@@ -18,8 +18,11 @@
         public static class CacheKey
         {
             public const string KEY_JS_CONFIG = "KEY_JS_CONFIG";
-           
         }
 
+        public static class AppSettingKey
+        {
+            public static string KEY_PacDir= "PacDir";
+        }
     }
 }

@@ -13,8 +13,8 @@ namespace JsonSong.BaseDao.LiteDb
     {
         protected string Path { get; set; }
         protected string CnName { get; set; }
-        protected LiteDatabase DB { get { return new LiteDatabase(Path); } }
-        protected LiteCollection<TEntity> Con { get { return DB.GetCollection<TEntity>(CnName); } }
+        protected LiteDatabase DB => new LiteDatabase(Path);
+        protected LiteCollection<TEntity> Con => DB.GetCollection<TEntity>(CnName);
 
         protected BaseLiteDao(string dbName = "", string cnName = "")
         {

@@ -20,7 +20,7 @@ namespace JsonSong.ManagerUI.Controllers
     {
         [HttpGet]
         [Module(Name = "功能清单", CSS = MyConstants.Bootstrap.Icon.Globe)]
-        public  ActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
@@ -77,9 +77,9 @@ namespace JsonSong.ManagerUI.Controllers
         //index
 
         [HttpPost]
-        public JsonResult SpiderRecommand(int? typeId)
+        public async Task<JsonResult> SpiderRecommand(int? typeId)
         {
-            HahaWebReader.GetRecommand();
+            var list = await HahaWebReader.GetRecommand();
             return Json(new ResponseJsonModel()
             {
                 success = true
@@ -97,8 +97,8 @@ namespace JsonSong.ManagerUI.Controllers
             {
                 result = new
                 {
-                    Count= count,
-                    UpdateTime= updateTime
+                    Count = count,
+                    UpdateTime = updateTime
                 }
             });
         }
