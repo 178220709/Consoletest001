@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Helpers;
 
@@ -79,7 +80,15 @@ namespace JsonSong.ManagerUI.Controllers
         [HttpPost]
         public async Task<JsonResult> SpiderRecommand(int? typeId)
         {
-            var list = await HahaWebReader.GetRecommand();
+            try
+            {
+                var list = await HahaWebReader.GetRecommand();
+            }
+            catch (Exception ex)
+            {
+                var ex2 = ex;
+            }
+           
             return Json(new ResponseJsonModel()
             {
                 success = true

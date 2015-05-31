@@ -41,9 +41,18 @@ namespace BaseFeatureDemo.ProxyDemo
         [TestMethod]
         public async Task Main1Test()
         {
-            const string _url = "https://www.youtube.com/";
+            const string _url = "http://www.baidu.com/";
             var factory = HtmlAsyncHelper.CreatWithProxy(1);
-            var str = await factory.GetDocHtmlStr(_url, Encoding.GetEncoding("gbk"));
+            try
+            {
+                var str = await factory.GetDocHtmlStr(_url, Encoding.GetEncoding("gbk"));
+            }
+            catch (Exception ex)
+            {
+
+                var str = ex;
+            }
+            
 
             Thread.Sleep(30000);
         }

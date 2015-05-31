@@ -18,7 +18,13 @@ namespace JsonSong.Spider.DataAccess.DAO
 
         private static SpiderLiteDao _instance;
 
-        public static SpiderLiteDao Instance => _instance ?? (_instance=new SpiderLiteDao("spider", "spider"));
+        public static SpiderLiteDao Instance
+        {
+            get
+            {
+                return _instance ?? (_instance = new SpiderLiteDao("spider", "spider"));
+            }
+        } 
 
         public  IEnumerable<SpiderLiteEntity> GetQueryByTypeId(int? typeId)
         {
@@ -97,8 +103,8 @@ namespace JsonSong.Spider.DataAccess.DAO
 
         public DateTime GetLastUpdateTime()
         {
-            var last = this.Con.Find(Query.All("AddedTime", Query.Descending), 0, 1).FirstOrDefault();
-            return last?.AddedTime ?? DateTime.MinValue;
+            var last = Con.Find(Query.All("AddedTime", Query.Descending), 0, 1).FirstOrDefault();
+            return last==null? DateTime.MinValue:last.AddedTime;
         }
     }
 }
