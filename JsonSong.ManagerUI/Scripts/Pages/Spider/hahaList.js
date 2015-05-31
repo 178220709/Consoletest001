@@ -1,16 +1,5 @@
 ﻿
-define(function (require, exports, module) {
-    var avalon = require("avalon.js");
-    var filters = require("public/avalon/filters.js");
-    var pagerInit = require("public/avalon/page.js");
-
-    var getList = function(pageIndex,callback) {
-        $.post("spider/getList", { PageSize: 10, PageIndex: pageIndex, typeId: model.typeId }, function (data) {
-            if (_.isFunction(callback)) {
-                callback(data);
-            }
-        });
-    };
+define(["public/avalon/filters.js", "public/avalon/page.js"], function (filters, pagerInit) {
 
     var model = avalon.define("ctrlSpiderHahaList", function (vm) {
         var pager = new pagerInit(vm);
@@ -25,15 +14,15 @@ define(function (require, exports, module) {
         vm.trClick = function (row) {
             vm.current = row;
         };
-        vm.refreshClick = function() {
-            getList(vm.pageIndex, function(data) {
+        vm.refreshClick = function () {
+            getList(vm.pageIndex, function (data) {
                 vm.list = data.Rows;
                 vm.pageCount = data.PageCount;
                 vm.current = _.first(vm.list);
             });
         };
         vm.getContent = filters.getHahaContent;
-      //  vm.changePage = pager.changePage;
+        //  vm.changePage = pager.changePage;
         vm.del = function (row) {
             if (confirm("sure?")) {
                 $.post("spider/Delete", { url: row.Url, typeId: model.typeId }, function (data) {
@@ -66,9 +55,9 @@ define(function (require, exports, module) {
                     if (i == list.length - 1) {
                         vm.pageIndex = vm.pageIndex + 1;
                     } else {
-                         vm.current = list[i+1];
+                        vm.current = list[i + 1];
                     }
-                } 
+                }
             }
         };
         vm.NextPageClick = function () {
@@ -85,22 +74,29 @@ define(function (require, exports, module) {
     model.$watch("current", function (p1) {
         var content = model.current.Content;
         var ps = $(content).find("p");
-        if (ps.length>15) {
+        if (ps.length > 15) {
             model.IsPartial = true;
         }
-        model.pList = _.map(ps, function(p) {
+        model.pList = _.map(ps, function (p) {
             return $(p).prop("outerHTML");
         });
     });
-    $(function (parameters) {
+
+    function getList(pageIndex, callback) {
+        $.post("spider/getList", { PageSize: 10, PageIndex: pageIndex, typeId: model.typeId }, function (data) {
+            if (_.isFunction(callback)) {
+                callback(data);
+            }
+        });
+    };
+
+    $(function () {
         //initpage
         getList(1, function (data) {
             model.list = data.Rows;
             model.pageCount = data.PageCount;
             avalon.scan(document.getElementById("divContainContent"), model);
-           
         });
-      
     });
 
 
