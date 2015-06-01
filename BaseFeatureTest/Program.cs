@@ -24,7 +24,7 @@ namespace BaseFeatureTest
         public static void Main(string[] args)
         {
 
-            LogHepler.SetConfig();
+            LogHelper.SetConfig();
            HahaWebReader.GetRecommand();
         }
     }

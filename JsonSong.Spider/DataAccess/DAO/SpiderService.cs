@@ -55,11 +55,10 @@ namespace JsonSong.Spider.SpiderBase
             var entity = await GetByUrlAsync(re.Url);
             if (entity == null)
             {
-                return ;
+                var en = new SpiderMongoEntity { TypeId = typeId };
+                en.InjectFrom(re);
+                await this.InsertOneAsync(en);
             }
-            var en = new SpiderMongoEntity {TypeId = typeId};
-            en.InjectFrom(re);
-           await this.InsertOneAsync(en);
         }
 
 

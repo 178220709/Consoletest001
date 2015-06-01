@@ -1,10 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Fizzler.Systems.HtmlAgilityPack;
+using JsonSong.Spider.DataAccess.DAO;
+using JsonSong.Spider.DataAccess.Entity;
 using JsonSong.Spider.SpiderBase;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using JsonSong.Spider.Core;
+using Omu.ValueInjecter;
 using Suijing.Utils;
 
 namespace JsonSong.Spider.Project.Haha
@@ -22,23 +26,27 @@ namespace JsonSong.Spider.Project.Haha
         public override async Task<ReadResult> GetHtmlContent(string url)
         {
             var re = new ReadResult(url);
-            var root = (await _htmlAsyncHelper.GetDocumentNode(url)).DocumentNode ;
-            re.Title = root.QuerySelector("title").InnerText;
-            re.Content = root.QuerySelector(".joke-main-content").OuterHtml;
-            var divFooterA = root.QuerySelectorAll(".joke-main-misc .fl a").ToArray();
-            var zan = ConvertHelper.ConvertStrToInt(divFooterA[0].InnerText);
-            var bishi = ConvertHelper.ConvertStrToInt(divFooterA[1].InnerText);
-            re.Weight = ((zan + bishi) / 100) * (zan - bishi * 3);
+            try
+            {
+                var root = (await _htmlAsyncHelper.GetDocumentNode(url)).DocumentNode;
+                re.Title = root.QuerySelector("title").InnerText;
+                re.Content = root.QuerySelector(".joke-main-content").OuterHtml;
+                var divFooterA = root.QuerySelectorAll(".joke-main-misc .fl a").ToArray();
+                var zan = ConvertHelper.ConvertStrToInt(divFooterA[0].InnerText);
+                var bishi = ConvertHelper.ConvertStrToInt(divFooterA[1].InnerText);
+                re.Weight = ((zan + bishi) / 100) * (zan - bishi * 3);
+            }
+            catch (Exception ex)
+            {
+                return re;
+            }
+           
             return re;
         }
 
-        public override async Task FireTaskCallBack(IList<ReadResult> res)
+        public override  void FireTaskCallBack(IList<ReadResult> res)
         {
-            var manager = SpiderService.Instance;
-            foreach (var re in res)
-            {
-              await  manager.AddNoRepeat(re, 1);
-            }
+            res.ToList().ForEach(a => SpiderLiteDao.Instance.AddNoRepeat(a, 1));
         }
 
 
@@ -67,11 +75,15 @@ namespace JsonSong.Spider.Project.Haha
         }
 
         [TestMethod]
-        public void GetHtmlContentTest()
+        public async Task GetHtmlContentTest()
         {
             // 测试文字笑话
             const string url = "http://www.haha.mx/joke/1660764";
-            var re =  GetHtmlContent(url);   
+            var re = await GetHtmlContent(url);
+
+            SpiderLiteEntity en = new SpiderLiteEntity() ;
+            en.InjectFrom(re);
+            SpiderLiteDao.Instance.Insert(en);
         }
         [TestMethod]
         public void Test2()

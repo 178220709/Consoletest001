@@ -7,7 +7,7 @@ namespace JsonSong.Spider.DataAccess.Entity
     {
         public SpiderLiteEntity()
         {
-
+            Valid = true;
         }
 
         public int TypeId { get; set; }

@@ -3,7 +3,7 @@ using System.IO;
 
 namespace Suijing.Utils.sysTools
 {
-    public  class LogHepler
+    public  class LogHelper
     {
         private static readonly log4net.ILog logdebugger = log4net.LogManager.GetLogger("logdebugger");
 
@@ -12,9 +12,10 @@ namespace Suijing.Utils.sysTools
 
         public static void SetConfig()
         {
-            if (File.Exists(@"D:\code\GitCode\HelloCSharp\MyMvcDemo"))
+            const string TestPath = @"D:\code\GitCode\HelloCSharp\JsonSong.ManagerUI\WEB.config";
+            if (File.Exists(TestPath))
             {
-                log4net.Config.XmlConfigurator.Configure(new FileInfo(@"D:\code\GitCode\HelloCSharp\MyMvcDemo")); 
+                log4net.Config.XmlConfigurator.Configure(new FileInfo(TestPath)); 
                 return;
             }
             log4net.Config.XmlConfigurator.Configure();

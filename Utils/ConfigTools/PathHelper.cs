@@ -40,7 +40,7 @@ namespace Suijing.Utils.ConfigTools
             if (string.IsNullOrEmpty(_projectPath))
             {
                 var p3 = AppDomain.CurrentDomain.BaseDirectory;
-                LogHepler.Info("AppDomain.CurrentDomain.BaseDirectory: " + p3);
+                LogHelper.Info("AppDomain.CurrentDomain.BaseDirectory: " + p3);
                 _projectPath = CuteProjectPath(p3);
             }
 

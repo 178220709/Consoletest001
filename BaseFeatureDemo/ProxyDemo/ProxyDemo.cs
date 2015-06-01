@@ -45,7 +45,7 @@ namespace BaseFeatureDemo.ProxyDemo
             var factory = HtmlAsyncHelper.CreatWithProxy(1);
             try
             {
-                var str = await factory.GetDocHtmlStr(_url, Encoding.GetEncoding("gbk"));
+                var str = await factory.GetDocHtmlStr(_url, Encoding.GetEncoding("utf-8"));
             }
             catch (Exception ex)
             {

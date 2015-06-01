@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Fizzler.Systems.HtmlAgilityPack;
+using JsonSong.Spider.DataAccess.DAO;
 using JsonSong.Spider.SpiderBase;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using JsonSong.Spider.Core;
@@ -26,13 +27,9 @@ namespace JsonSong.Spider.Project.Youmin
             return parstialReader.OutputResult();
         }
 
-        public override async Task FireTaskCallBack(IList<ReadResult> res)
+        public override void FireTaskCallBack(IList<ReadResult> res)
         {
-            var manager = SpiderService.Instance;
-            foreach (var re in res)
-            {
-              await  manager.AddNoRepeat(re, 2);
-            }
+            res.ToList().ForEach(a => SpiderLiteDao.Instance.AddNoRepeat(a, 1));
         }
 
         internal static string GetFlagFromUrl(string url)
@@ -57,8 +54,7 @@ namespace JsonSong.Spider.Project.Youmin
                   .AsParallel()
                   .ForAll(a => urls.Add(a.GetAttributeValue("href", ""))));
 
-
-            var urlsValid = urls.Where(a => !SpiderService.Instance.ExistUrl(a)).ToList();
+            var urlsValid = urls.Where(a => !SpiderLiteDao.Instance.ExistUrl(a)).ToList();
             //如果系统中已经有了 则不会去爬取
           
             var reader = new YouminWebReader();

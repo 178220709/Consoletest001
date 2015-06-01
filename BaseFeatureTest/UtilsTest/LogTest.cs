@@ -17,7 +17,7 @@ namespace BaseFeatureTest.UtilsTest
         [TestMethod()]
         public void Test1()
         {
-            LogHepler.SetConfig();
+            LogHelper.SetConfig();
             try
             {
                 int b = 0;
@@ -25,7 +25,7 @@ namespace BaseFeatureTest.UtilsTest
             }
             catch (Exception ex)
             {
-                LogHepler.Error("hahaha",ex);
+                LogHelper.Error("hahaha",ex);
             }
            
         }

@@ -47,7 +47,7 @@ namespace JsonSong.Spider.SpiderCommon
                 sum += list.Count();
             } while (pageIndex <= pageTotal);
 
-            LogHepler.WriteWebReader(string.Format("在{0}从{1}导入{2}条{3}数据",
+            LogHelper.WriteWebReader(string.Format("在{0}从{1}导入{2}条{3}数据",
                TestHelper.GetCurrentTime(), url, sum, paras["cnName"]));
             int result = sum;
         }

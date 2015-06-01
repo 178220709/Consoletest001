@@ -42,7 +42,7 @@ namespace JsonSong.Spider.Core
 
         public async Task StartReadAll()
         {
-            LogHepler.WriteWebReader(string.Format("开始爬取{0}", BaseUrl ));
+            LogHelper.WriteWebReader(string.Format("开始爬取{0}", BaseUrl ));
             try
             {
                 GetTitleInfo();
@@ -55,9 +55,9 @@ namespace JsonSong.Spider.Core
             }
             catch (Exception ex)
             {
-                LogHepler.WriteWebReader(BaseUrl+"出现异常:" + ex.Message); 
+                LogHelper.WriteWebReader(BaseUrl+"出现异常:" + ex.Message); 
             }
-            LogHepler.WriteWebReader(string.Format("爬取{0}结束", BaseUrl));
+            LogHelper.WriteWebReader(string.Format("爬取{0}结束", BaseUrl));
         }
     }
 

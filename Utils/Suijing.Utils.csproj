@@ -99,7 +99,7 @@
     <Compile Include="sysTools\CollectionHepler.cs" />
     <Compile Include="sysTools\ConvertHelper.cs" />
     <Compile Include="sysTools\CreateDataHepler.cs" />
-    <Compile Include="sysTools\LogHepler.cs" />
+    <Compile Include="sysTools\LogHelper.cs" />
     <Compile Include="sysTools\TestHelper.cs" />
     <Compile Include="Utility\DataConvertUtil.cs" />
     <Compile Include="Utility\EnumDescHelper.cs" />

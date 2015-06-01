@@ -18,8 +18,8 @@ namespace BaseFeatureDemo.Base.Path
              string str1 = System.IO.Directory.GetCurrentDirectory ( );
              string str2 = Assembly.GetExecutingAssembly().Location;
 
-             LogHepler.Info(str1);
-             LogHepler.Info(str2);
+             LogHelper.Info(str1);
+             LogHelper.Info(str2);
         }
 
         [TestMethod]

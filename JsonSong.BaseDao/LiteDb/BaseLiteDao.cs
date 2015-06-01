@@ -27,9 +27,10 @@ namespace JsonSong.BaseDao.LiteDb
         }
 
         #region Async Methods
-        public long Insert(TEntity entity)
+        public int Insert(TEntity entity)
         {
-            return Con.Insert(entity);
+            var idBson = Con.Insert(entity);
+            return idBson.AsInt32;
         }
         public int Insert(IEnumerable<TEntity> entities)
         {

@@ -43,11 +43,14 @@ namespace JsonSong.Spider.DataAccess.DAO
             var entity =   GetByUrl(re.Url);
             if (entity == null)
             {
-                return ;
+                var en = new SpiderLiteEntity { TypeId = typeId };
+                en.InjectFrom(re);
+                Insert(en);
             }
-            var en = new SpiderLiteEntity { TypeId = typeId};
-            en.InjectFrom(re);
-            Update(en);
+            else
+            {
+                return;
+            }
         }
 
 

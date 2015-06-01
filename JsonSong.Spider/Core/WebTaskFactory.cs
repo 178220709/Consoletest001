@@ -33,7 +33,7 @@ namespace JsonSong.Spider.Core
             if (!urls.Any())
                 return null;
 
-            LogHepler.WriteWebReader(string.Format("开始爬取{0}条数据:\n {1} ...", urls.Count, string.Join("\n", urls.Take(3))));
+            LogHelper.WriteWebReader(string.Format("开始爬取{0}条数据:\n {1} ...", urls.Count, string.Join("\n", urls.Take(3))));
             try
             {
                 var tasks = urls.Select(async a => await _reader.GetHtmlContent(a));
@@ -41,13 +41,13 @@ namespace JsonSong.Spider.Core
                     .Where(a => !string.IsNullOrWhiteSpace(a.Content))
                     .ToList();
 
-                await _reader.FireTaskCallBack(res);
-                LogHepler.WriteWebReader("成功爬取并执行完毕");
+                _reader.FireTaskCallBack(res);
+                LogHelper.WriteWebReader("成功爬取并执行完毕");
                 return res;
             }
             catch (Exception ex)
             {
-                LogHepler.WriteWebReader("出现异常:" + ex.Message);
+                LogHelper.WriteWebReader("出现异常:" + ex.Message);
                 return null;
             }
         }
@@ -89,12 +89,12 @@ namespace JsonSong.Spider.Core
         /// 工厂类执行获取任务后,会调用 子类Reader实现的回调  
         /// </summary>
         /// <param name="res"></param>
-        public abstract Task FireTaskCallBack(IList<ReadResult> res);
+        public abstract void FireTaskCallBack(IList<ReadResult> res);
     }
 
     public interface IWebTaskCallBack
     {
-        Task FireTaskCallBack(IList<ReadResult> res);
+        void FireTaskCallBack(IList<ReadResult> res);
     }
 
     public interface IWebTaskReader
