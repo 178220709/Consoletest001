@@ -1,5 +1,5 @@
 ﻿
-define(function(require, exports, module) {
+define(function() {
    
     var o = {};
     o.getHahaContent = function(content) {
@@ -30,5 +30,5 @@ define(function(require, exports, module) {
 
 
 
-    module.exports = o;
+    return o;
 });

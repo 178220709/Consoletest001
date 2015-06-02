@@ -1,5 +1,5 @@
 ﻿
-define(function (require, exports, module) {
+define(function () {
 
     function init (vm) {
         this.vm = vm;
@@ -13,5 +13,5 @@ define(function (require, exports, module) {
         vm.pageIndex = sum;
     };
 
-    module.exports = init;
+   return init;
 });

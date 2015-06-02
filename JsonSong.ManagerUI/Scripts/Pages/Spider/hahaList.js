@@ -1,6 +1,5 @@
 ﻿
 define(["public/avalon/filters.js", "public/avalon/page.js"], function (filters, pagerInit) {
-
     var model = avalon.define("ctrlSpiderHahaList", function (vm) {
         var pager = new pagerInit(vm);
         vm.list = [];
@@ -53,7 +52,7 @@ define(["public/avalon/filters.js", "public/avalon/page.js"], function (filters,
             for (var i = 0; i < list.length; i++) {
                 if (url == list[i].Url) {
                     if (i == list.length - 1) {
-                        vm.pageIndex = vm.pageIndex + 1;
+                        vm.pageIndex = parseInt(vm.pageIndex) + 1;
                     } else {
                         vm.current = list[i + 1];
                     }
@@ -61,7 +60,7 @@ define(["public/avalon/filters.js", "public/avalon/page.js"], function (filters,
             }
         };
         vm.NextPageClick = function () {
-            vm.pageIndex = vm.pageIndex + 1;
+            vm.pageIndex = parseInt(vm.pageIndex) + 1;
         };
 
     });
@@ -90,14 +89,21 @@ define(["public/avalon/filters.js", "public/avalon/page.js"], function (filters,
         });
     };
 
-    $(function () {
-        //initpage
-        getList(1, function (data) {
-            model.list = data.Rows;
-            model.pageCount = data.PageCount;
-            avalon.scan(document.getElementById("divContainContent"), model);
+    function init() {
+        $(function () {
+            //initpage
+            getList(1, function (data) {
+                model.list = data.Rows;
+                model.pageCount = data.PageCount;
+                avalon.scan(document.getElementById("divContainContent"), model);
+            });
         });
-    });
+    }
+
+    return {
+        init: init,
+        model: model
+    };
 
 
 });

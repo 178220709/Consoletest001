@@ -14,7 +14,7 @@
 <script>
 
     require(["page/Spider/HahaList.js"], function (pager) {
-        //.....
+        pager.init();
     });
 
  
@@ -52,7 +52,7 @@
                                 <th>Content</th>
                                 <th>Weight</th>
                             </tr>
-                            <tr ms-repeat-row="list" ms-click="trClick(row)" ms-class-1="bg-gray-active:row.Flag==current.Flag">
+                            <tr ms-repeat-row="list" ms-click="trClick(row)" ms-class-1="bg-gray-active:row.Url==current.Url">
                                 <td> <i class="fa fa-close btn" ms-click="del(row,$remove)"></i>  </td>
                                 <td>{{row.Flag}}</td>
                                 <td>  <a target="_blank" ms-href="{{row.Url}}">{{row.Url}}</a> </td>
@@ -77,8 +77,8 @@
                 更新内容
                 <button ms-click="updateClick(current)"> <i class="fa fa-refresh"></i></button>
             </label>
-            
-            <input type="button" value="next" style="margin-left: 100px;" ms-click="nextClick(1)" />
+            <button class="btn btn-success btn-lg" ms-click="nextClick(1)">NEXT</button>
+           
         </div>
     </div>
     <div ms-if="!IsPartial" class="row">
@@ -92,7 +92,7 @@
         <div ></div>
     </div>
     <div class="row">
-        <label   style="margin-left: 100px;" onclick="console.log('bottom is click')" ms-click="nextClick(2)"  >NEXT</label>
+        <button class="btn btn-success btn-lg" ms-click="nextClick(2)">NEXT</button>
     </div>
 
 </div>

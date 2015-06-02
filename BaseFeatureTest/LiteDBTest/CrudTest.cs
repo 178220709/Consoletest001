@@ -40,6 +40,13 @@ namespace BaseFeatureTest.LiteDBTest
         [TestMethod()]
         public void Test2()
         {
+            var list = SpiderLiteDao.Instance.GetCon().FindAll().Where((a => a.Content.Contains("和老婆在一小面馆吃面"))).ToList();
+            list.ToList().ForEach(a =>
+            {
+                var re = SpiderLiteDao.Instance.Delete(d=>d.Url==a.Url);
+                var in1 =  re;
+              
+            });
 
         }
     }

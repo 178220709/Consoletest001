@@ -1,5 +1,6 @@
 ﻿using System;
 using JsonSong.BaseDao.LiteDb;
+using LiteDB;
 
 namespace JsonSong.Spider.DataAccess.Entity
 {
@@ -12,6 +13,7 @@ namespace JsonSong.Spider.DataAccess.Entity
 
         public int TypeId { get; set; }
         public string Flag { get; set; }
+        [BsonIndex]
         public string Url { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }

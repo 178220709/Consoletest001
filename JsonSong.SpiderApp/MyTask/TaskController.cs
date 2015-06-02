@@ -18,14 +18,14 @@ namespace JsonSong.SpiderApp.MyTask
         /// </summary>
         public async Task StartHahaTask()
         {
-            var start = 1654376;
+            var start = 174999;
             var end = 1750057;
             var list = new List<SpiderEntity>();
             var reader = new HahaWebReader();
             for (int i = start; i < end; i++)
             {
-               // var url = "http://www.haha.mx/joke/" + i;
-                var url = "http://localhost:4001" + i;
+                var url = "http://www.haha.mx/joke/" + i;
+               // var url = "http://localhost:4001" + i;
                 Task.Run(async () =>
                 {
                     LogHelper.WriteWebReader(string.Format("1====> {0} start   ", url));
@@ -54,7 +54,6 @@ namespace JsonSong.SpiderApp.MyTask
                 {
                     LogHelper.WriteWebReader(string.Format("1====> {0} start   ", url));
                     var result = await reader.GetHtmlContent(url);
-
 
                     LogHelper.WriteWebReader(string.Format("2====> {0} done   ", url));
                     if (result.Weight < 100) return;
