@@ -23,6 +23,7 @@ namespace JsonSong.ManagerUI
                 app.UseHangfireServer();
                 //BackgroundJob.Requeue()
                 RecurringJob.AddOrUpdate(() => MyTaskFactory.SpiderTask(), Cron.Hourly);
+                LogHelper.WriteWebReader("UseSqlServerStorage is start");
             }
         }
 

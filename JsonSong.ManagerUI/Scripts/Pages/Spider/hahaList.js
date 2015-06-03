@@ -11,7 +11,7 @@ define(["public/avalon/filters.js", "public/avalon/page.js"], function (filters,
         vm.pList = [];
         vm.getWeightClass = filters.getColorLevel;
         vm.trClick = function (row) {
-            vm.current = row;
+            vm.current = row.$model;
         };
         vm.refreshClick = function () {
             getList(vm.pageIndex, function (data) {

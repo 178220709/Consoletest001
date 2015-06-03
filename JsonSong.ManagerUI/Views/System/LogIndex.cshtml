@@ -8,7 +8,7 @@
 
 
 
-<div ms-controller="mscContent">
+<div ms-controller="ctrlSystemLogIndex">
 
     <h2>Log:{{selectLog}}</h2>
 
@@ -27,15 +27,15 @@
 
 
 <script>
-    var avalon = seajs.require("avalon.js");
-    var vmodel = avalon.define({
-        $id: "mscContent",
-        selectLog: "",
-        LogContext: ""
+   
+    var model = avalon.define("ctrlSystemLogIndex", function (vm) {
+
+        vm.selectLog = "";
+        vm.LogContext = "";
     });
-    vmodel.$watch("selectLog", function (newValue, b) {
+    model.$watch("selectLog", function (newValue, b) {
         $.post("@Url.Action("GetLogByFullName", "System")", { fullName: newValue }, function (result) {
-            vmodel.LogContext = result.result;
+            model.LogContext = result.result;
         });
     });
 
