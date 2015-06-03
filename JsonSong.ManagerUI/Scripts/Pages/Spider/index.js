@@ -11,8 +11,9 @@ define(["util"], function (util) {
         };
 
         vm.CheckClick = function () {
-            $.post(util.getAbsUrl("Spider/GetSpiderInfo"), { typeId: 1 }, function (res) {
-                vm.Result = res.result;
+            $.post(util.getAbsUrl("Spider/GetSpiderInfo"), { }, function (res) {
+                var list = res.result;
+                vm.Result = list.join("\n");
             });
         };
     });

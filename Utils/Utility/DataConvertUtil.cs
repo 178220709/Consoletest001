@@ -97,6 +97,17 @@ namespace Suijing.Utils.Utility
         }
 
 
+        public static string ToMinTime(this DateTime dt)
+        {
+            var min = DateTime.Parse("1900-01-01");
+            if (dt < min)
+            {
+                dt = min;
+            }
+            dt = dt.ToLocalTime();
+            return dt.ToString("yyyy-MM-dd HH:mm");
+        }
+
 
     }
 

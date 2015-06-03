@@ -46,9 +46,8 @@ namespace JsonSong.Spider.Project.Youmin
             var urls = new List<string>();
             const string url = "http://www.gamersky.com/ent/";
 
-
-            var doc = NormalHtmlHelper.GetDocumentNode(url);
-
+            var httpHelper = HtmlAsyncHelper.CreatWithProxy(0);
+            var doc = await httpHelper.GetDocumentNode(url);
               doc.DocumentNode.QuerySelectorAll(".Lpic").ToList()
                   .ForEach(ul => ul.QuerySelectorAll("li .t2 a")
                   .AsParallel()

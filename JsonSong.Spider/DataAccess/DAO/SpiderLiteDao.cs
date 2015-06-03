@@ -5,6 +5,7 @@ using JsonSong.BaseDao.LiteDb;
 using JsonSong.Spider.Core;
 using JsonSong.Spider.DataAccess.Entity;
 using LiteDB;
+using MongoDB.Bson;
 using Omu.ValueInjecter;
 
 namespace JsonSong.Spider.DataAccess.DAO
@@ -104,9 +105,9 @@ namespace JsonSong.Spider.DataAccess.DAO
         }
 
 
-        public DateTime GetLastUpdateTime()
+        public DateTime GetLastUpdateTime(int typeId=1)
         {
-            var last = Con.Find(Query.All("AddedTime", Query.Descending), 0, 1).FirstOrDefault();
+            var last = Con.Find(Query.And(Query.All("AddedTime", Query.Descending), Query.EQ("TypeId", typeId)), 0, 1).FirstOrDefault();
             return last==null? DateTime.MinValue:last.AddedTime;
         }
     }

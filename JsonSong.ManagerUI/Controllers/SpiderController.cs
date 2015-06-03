@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Helpers;
@@ -14,6 +15,7 @@ using JsonSong.Spider.Project.Youmin;
 using JsonSong.Spider.SpiderBase;
 using Newtonsoft.Json;
 using Suijing.Utils.Constants;
+using Suijing.Utils.Utility;
 
 namespace JsonSong.ManagerUI.Controllers
 {
@@ -115,16 +117,18 @@ namespace JsonSong.ManagerUI.Controllers
         [HttpPost]
         public JsonResult GetSpiderInfo(int? typeId)
         {
-
-            var count = SpiderLiteDao.Instance.GetCon().Count(a => a.Valid && a.TypeId == 1);
-            var updateTime = SpiderLiteDao.Instance.GetLastUpdateTime();
+            var count1 = SpiderLiteDao.Instance.GetCon().Count(a => a.Valid && a.TypeId == 1);
+            var count2 = SpiderLiteDao.Instance.GetCon().Count(a => a.Valid && a.TypeId == 2);
+            var updateTime1 = SpiderLiteDao.Instance.GetLastUpdateTime(1).ToMinTime();
+            var updateTime2 = SpiderLiteDao.Instance.GetLastUpdateTime(2).ToMinTime();
 
             return Json(new ResponseJsonModel()
             {
-                result = new
+                result = new List<string>
                 {
-                    Count = count,
-                    UpdateTime = updateTime
+                   string.Format("type{0}  count={1},updateTime = {2} ",1,count1,updateTime1),
+                   string.Format("type{0}  count={1},updateTime = {2} ",2,count2,updateTime2),
+
                 }
             });
         }

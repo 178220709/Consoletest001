@@ -36,7 +36,7 @@ namespace JsonSong.Spider.Core
             LogHelper.WriteWebReader(string.Format("开始爬取{0}条数据:\n {1} ...", urls.Count, string.Join("\n", urls.Take(3))));
             try
             {
-                var tasks = urls.Select(async a => await _reader.GetHtmlContent(a));
+                var tasks = urls.Select( a =>  _reader.GetHtmlContent(a));
                 var res = (await Task.WhenAll(tasks))
                     .Where(a => !string.IsNullOrWhiteSpace(a.Content))
                     .ToList();

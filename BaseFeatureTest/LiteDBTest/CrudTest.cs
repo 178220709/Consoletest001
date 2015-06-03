@@ -4,6 +4,7 @@ using System.Linq;
 using JsonSong.Spider.DataAccess.DAO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
+using Suijing.Utils.Utility;
 
 namespace BaseFeatureTest.LiteDBTest    
 {
@@ -54,15 +55,7 @@ namespace BaseFeatureTest.LiteDBTest
         [TestMethod()]
         public void Test3()
         {
-            var list = SpiderLiteDao.Instance.GetCon()
-                .FindAll().OrderByDescending(a=>a.AddedTime)
-                .Where((a => a.TypeId==1)).Take(30).ToList();
-            list.ToList().ForEach(a =>
-            {
-               // var re = SpiderLiteDao.Instance.Delete(d => d.Url == a.Url);
-               // var in1 = re;
-
-            });
+            var updateTime1 = SpiderLiteDao.Instance.GetLastUpdateTime(1).ToMinTime();
 
         }
     }
