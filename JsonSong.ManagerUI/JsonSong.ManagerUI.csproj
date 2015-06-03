@@ -59,11 +59,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Hangfire.Core">
+      <HintPath>..\packages\Hangfire.Core.1.4.3\lib\net45\Hangfire.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.SqlServer">
+      <HintPath>..\packages\Hangfire.SqlServer.1.4.3\lib\net45\Hangfire.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="LiteDB, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\LiteDB.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -88,6 +100,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -142,6 +155,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\PreWarmCache.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="AuthController.cs" />
     <Compile Include="CaptchaImage.cs" />
@@ -805,7 +819,7 @@
     <Compile Include="Extend\JsonControllerEX\JsonAjaxResult.cs" />
     <Compile Include="Extend\JsonControllerEX\JsonTypeAttribute.cs" />
     <Compile Include="Controllers\AvalonDemoController.cs" />
-    <Compile Include="Extend\ConfigHelper.cs" />
+    <Compile Include="Extend\JSConfigHelper.cs" />
     <Compile Include="Extend\ModuleAttribute.cs" />
     <Compile Include="Controllers\MyJsDemoController.cs" />
     <Compile Include="Extend\JsonBinder.cs" />
@@ -960,6 +974,10 @@
     <ProjectReference Include="..\JsonSong.BaseDao\JsonSong.BaseDao.csproj">
       <Project>{611838FD-6236-46F7-A8A1-FC64D4D42ACA}</Project>
       <Name>JsonSong.BaseDao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JsonSong.SpiderApp\JsonSong.SpiderApp.csproj">
+      <Project>{70E939B8-2119-4BD5-AA4A-FA6D957D8DB6}</Project>
+      <Name>JsonSong.SpiderApp</Name>
     </ProjectReference>
     <ProjectReference Include="..\JsonSong.Spider\JsonSong.Spider.csproj">
       <Project>{8B51E80F-5B2A-4821-89BD-4A10D49DE877}</Project>

@@ -70,6 +70,7 @@
     <Compile Include="Base\MyDbContext.cs" />
     <Compile Include="Data\SpiderLogEntity.cs" />
     <Compile Include="Data\SpiderEntity.cs" />
+    <Compile Include="MyTask\MyTaskFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MyTask\TaskController.cs" />
     <Compile Include="Test\SpiderTest.cs" />

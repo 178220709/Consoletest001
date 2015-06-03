@@ -34,7 +34,7 @@ namespace JsonSong.Spider.DataAccess.DAO
 
         public IEnumerable<SpiderLiteEntity> GetQueryByTypeId(int typeId)
         {
-            return Find(a => a.TypeId == typeId);
+            return Find(a => a.TypeId == typeId&& a.Valid);
         }
 
 

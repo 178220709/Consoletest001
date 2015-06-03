@@ -10,6 +10,7 @@ using JsonSong.Spider.DataAccess.DAO;
 using JsonSong.ManagerUI.Models;
 using JsonSong.Spider.DataAccess.Entity;
 using JsonSong.Spider.Project.Haha;
+using JsonSong.Spider.Project.Youmin;
 using JsonSong.Spider.SpiderBase;
 using Newtonsoft.Json;
 using Suijing.Utils.Constants;
@@ -80,9 +81,25 @@ namespace JsonSong.ManagerUI.Controllers
         [HttpPost]
         public async Task<JsonResult> SpiderRecommand(int? typeId)
         {
+            int type = typeId ?? 0;
             try
             {
-                var list = await HahaWebReader.GetRecommand();
+                if (type==0)
+                {
+                    var list1 = await HahaWebReader.GetRecommand();
+                    var list2 = await YouminWebReader.GetRecommand();
+                }
+                else
+                {
+                    if (type==1)
+                    {
+                        var list1 = await HahaWebReader.GetRecommand();
+                    }
+                    else if (type == 2)
+                    {
+                        var list2 = await YouminWebReader.GetRecommand();
+                    }
+                }
             }
             catch (Exception ex)
             {

@@ -23,6 +23,7 @@
         public static class AppSettingKey
         {
             public static string KEY_PacDir= "PacDir";
+            public static string KEY_StartSpider = "StartSpider";
         }
     }
 }

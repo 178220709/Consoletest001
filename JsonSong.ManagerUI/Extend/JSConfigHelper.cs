@@ -10,9 +10,9 @@ using Suijing.Utils;
 
 namespace JsonSong.ManagerUI.Extend
 {
-    public static  class ConfigHelper
+    public static  class JSConfigHelper
     {
-        static ConfigHelper()
+        static JSConfigHelper()
         {
             TestHelper.InitCurrentContext();
         }
