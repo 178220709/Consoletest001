@@ -49,5 +49,21 @@ namespace BaseFeatureTest.LiteDBTest
             });
 
         }
+
+        //temp
+        [TestMethod()]
+        public void Test3()
+        {
+            var list = SpiderLiteDao.Instance.GetCon()
+                .FindAll().OrderByDescending(a=>a.AddedTime)
+                .Where((a => a.TypeId==1)).Take(30).ToList();
+            list.ToList().ForEach(a =>
+            {
+               // var re = SpiderLiteDao.Instance.Delete(d => d.Url == a.Url);
+               // var in1 = re;
+
+            });
+
+        }
     }
 }

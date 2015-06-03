@@ -29,7 +29,7 @@ namespace JsonSong.Spider.Project.Youmin
 
         public override void FireTaskCallBack(IList<ReadResult> res)
         {
-            res.ToList().ForEach(a => SpiderLiteDao.Instance.AddNoRepeat(a, 1));
+            res.ToList().ForEach(a => SpiderLiteDao.Instance.AddNoRepeat(a, 2));
         }
 
         internal static string GetFlagFromUrl(string url)
@@ -64,11 +64,11 @@ namespace JsonSong.Spider.Project.Youmin
 
         }
         [TestMethod]
-        public void Test1()
+        public async Task Test1()
         {
             // 测试
             string str = "http://www.gamersky.com/ent/201503/529106.shtml";
-          var re =  GetHtmlContent(str);
+            var re = await  GetHtmlContent(str);
         }
         [TestMethod]
         public void Test2()

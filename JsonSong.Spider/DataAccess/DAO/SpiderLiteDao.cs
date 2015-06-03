@@ -40,7 +40,7 @@ namespace JsonSong.Spider.DataAccess.DAO
 
         public void AddNoRepeat( ReadResult re, int typeId=1)
         {
-            var entity =   GetByUrl(re.Url);
+            var entity =  GetByUrl(re.Url);
             if (entity == null)
             {
                 var en = new SpiderLiteEntity { TypeId = typeId };
