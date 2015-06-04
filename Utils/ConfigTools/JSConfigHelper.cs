@@ -1,27 +1,19 @@
-﻿
-using System;
-using System.Diagnostics;
+﻿using System;
 using System.IO;
 using System.Web;
-using MyProject.TestHelper;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Suijing.Utils;
+using Suijing.Utils.Constants;
 
-namespace JsonSong.ManagerUI.Extend
+namespace Suijing.Utils.ConfigTools
 {
     public static  class JSConfigHelper
     {
-        static JSConfigHelper()
-        {
-            TestHelper.InitCurrentContext();
-        }
-
         public static string JSConfigPath = "~/App_Data/jsConfigs.js";
 
         public static string GetJsConfigPath()
         {
-            return GlobalConfigHelper.GetProjectPath() + "JsonSong.ManagerUI/App_Data/jsConfigs.js";
+            return PathHelper.GetRelativePath(JSConfigPath);
         }
 
         /// <summary>
@@ -33,9 +25,12 @@ namespace JsonSong.ManagerUI.Extend
         public static T GetJsConfigAs<T>( string key)
         {
             var result = default(T);
-
-            var configObject = HttpContext.Current.Cache[Suijing.Utils.Constants.MyConstants.CacheKey.KEY_JS_CONFIG] as JObject;
-
+            JObject configObject = null;
+            if (ConfigHelper.GetConfigBool(MyConstants.AppSettingKey.KEY_JSConfigCache))
+            {
+                configObject = HttpContext.Current.Cache[MyConstants.CacheKey.KEY_JS_CONFIG] as JObject;
+            }
+          
             if (configObject == null)
             {
                 var configFilePath = GetJsConfigPath();
@@ -45,11 +40,12 @@ namespace JsonSong.ManagerUI.Extend
                 configJson = configJson.TrimEnd(';');
 
                 configObject = JsonConvert.DeserializeObject(configJson) as JObject;
-                HttpContext.Current.Cache[Suijing.Utils.Constants.MyConstants.CacheKey.KEY_JS_CONFIG] = configObject;
+                if (HttpContext.Current!=null)
+                {
+                    HttpContext.Current.Cache[MyConstants.CacheKey.KEY_JS_CONFIG] = configObject; 
+                }
             }
-
-            result = (T)Convert.ChangeType(((JValue)configObject[key]).Value, typeof(T));
-
+            result = configObject[key].ToObject<T>();
             return result;
         }
     }

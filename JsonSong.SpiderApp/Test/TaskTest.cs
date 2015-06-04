@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using JsonSong.SpiderApp.Base;
 using JsonSong.SpiderApp.Data;
+using JsonSong.SpiderApp.MyTask;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Suijing.Utils.ConfigTools;
+using Suijing.Utils.Constants;
 
 namespace JsonSong.SpiderApp.Test
 {
@@ -19,24 +23,16 @@ namespace JsonSong.SpiderApp.Test
 
 
         [TestMethod]
-        public void AddTest1()
+        public async Task AddTest1()
         {
-            using (var context = new MyDbContext())
-            {
-                var en = new SpiderEntity()
-                {
-                    Title = "test",
-                    Url = "",
-                    Content = "Content",
-                    AddedTime = DateTime.Now,
-                };
-                context.Spiders.Add(en);
-                context.SaveChanges() ;
-            }
-           
+            var list = JSConfigHelper.GetJsConfigAs<IList<string>>(MyConstants.JSSettingKey.KEY_YouminTagUrls);
+
+
+            await MyTaskFactory.SpiderTagPage();
+
         }
 
     }
 
-    
+
 }

@@ -102,7 +102,23 @@ namespace Suijing.Utils.ConfigTools
             return path;
         }
 
+        /// <summary>
+        /// 根据相对路径得到文件路径, 单元测试可用
+        /// </summary>
+        /// <param name="rPath"></param>
+        /// <returns></returns>
+        public static string GetRelativePath(string rPath)
+        {
+            if (HttpContext.Current != null)
+            {
+                return HttpContext.Current.Server.MapPath(rPath);
+            }
+            else
+            {
+                return Path.Combine(GetProjectPath(), "JsonSong.ManagerUI" + rPath.TrimStart('~'));
+            }
 
+        }
     }
 
 }

@@ -819,7 +819,6 @@
     <Compile Include="Extend\JsonControllerEX\JsonAjaxResult.cs" />
     <Compile Include="Extend\JsonControllerEX\JsonTypeAttribute.cs" />
     <Compile Include="Controllers\AvalonDemoController.cs" />
-    <Compile Include="Extend\JSConfigHelper.cs" />
     <Compile Include="Extend\ModuleAttribute.cs" />
     <Compile Include="Controllers\MyJsDemoController.cs" />
     <Compile Include="Extend\JsonBinder.cs" />

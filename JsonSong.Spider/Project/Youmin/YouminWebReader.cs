@@ -11,7 +11,7 @@ using JsonSong.Spider.Core;
 namespace JsonSong.Spider.Project.Youmin
 {
     [TestClass]
-    public class YouminWebReader :WebTaskReader
+    public class YouminWebReader : WebTaskReader
     {
         public YouminWebReader()
         {
@@ -20,7 +20,7 @@ namespace JsonSong.Spider.Project.Youmin
 
         private readonly HtmlAsyncHelper _htmlAsyncHelper;
 
-        public override async Task<ReadResult> GetHtmlContent(string url )
+        public override async Task<ReadResult> GetHtmlContent(string url)
         {
             var parstialReader = new YouminPartialReader(url, _htmlAsyncHelper);
             await parstialReader.StartReadAll();
@@ -46,36 +46,58 @@ namespace JsonSong.Spider.Project.Youmin
             var urls = new List<string>();
             const string url = "http://www.gamersky.com/ent/";
 
-            var httpHelper = HtmlAsyncHelper.CreatWithProxy(0);
+            var httpHelper = HtmlAsyncHelper.CreatWithProxy(-1);
             var doc = await httpHelper.GetDocumentNode(url);
-              doc.DocumentNode.QuerySelectorAll(".Lpic").ToList()
-                  .ForEach(ul => ul.QuerySelectorAll("li .t2 a")
-                  .AsParallel()
-                  .ForAll(a => urls.Add(a.GetAttributeValue("href", ""))));
+            doc.DocumentNode.QuerySelectorAll(".Lpic").ToList()
+                .ForEach(ul => ul.QuerySelectorAll("li .t2 a")
+                .AsParallel()
+                .ForAll(a => urls.Add(a.GetAttributeValue("href", ""))));
 
             var urlsValid = urls.Where(a => !SpiderLiteDao.Instance.ExistUrl(a)).ToList();
             //如果系统中已经有了 则不会去爬取
-          
+
             var reader = new YouminWebReader();
             var factory = new WebTaskFactory(reader);
-       //  return  null;
+            //  return  null;
             return await factory.StartAndCallBack(urlsValid.Distinct().ToList());
 
         }
+
+        /// <summary>
+        /// 从url栏目页面中抓取全部内容
+        /// </summary>
+        /// <param name="pages"></param>
+        /// <returns></returns>
+        public static async Task SpiderAll(IList<string> pages)
+        {
+            var httpHelper = HtmlAsyncHelper.CreatWithProxy(0);
+            foreach (var listPageUrl in pages)
+            {
+                var urls = new List<string>();
+                var doc = await httpHelper.GetDocumentNode(listPageUrl);
+                var sourceUrls = doc.DocumentNode.QuerySelectorAll(".news_list a")
+                    .Select(a => a.GetAttributeValue("href", ""));
+                var urlsValid = sourceUrls.Where(a => !SpiderLiteDao.Instance.ExistUrl(a)).ToList();
+                var factory = new WebTaskFactory(new YouminWebReader());
+                await factory.StartAndCallBack(urlsValid.Distinct().ToList());
+            }
+        }
+
+
         [TestMethod]
         public async Task Test1()
         {
             // 测试
             string str = "http://www.gamersky.com/ent/201503/529106.shtml";
-            var re = await  GetHtmlContent(str);
+            var re = await GetHtmlContent(str);
         }
         [TestMethod]
-        public void Test2()
+        public async Task Test2()
         {
-            string str = "http://www.gamersky.com/ent/201503/529106.shtml";
-            var flag = GetFlagFromUrl(str);
-        } 
-        
+            IList<string> list = new[] { "http://www.gamersky.com/ent/cos/" };
+            await  SpiderAll(list);
+        }
+
         [TestMethod]
         public async Task Test3()
         {

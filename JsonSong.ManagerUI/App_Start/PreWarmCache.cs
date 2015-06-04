@@ -16,7 +16,7 @@ namespace JsonSong.ManagerUI
         {
             // Perform initialization and cache loading logic here...\
             LogHelper.Info("机器被唤醒");
-            RecurringJob.AddOrUpdate(() => MyTaskFactory.SpiderTask(), Cron.Hourly);
+            RecurringJob.AddOrUpdate(() => MyTaskFactory.StartTask(), Cron.Hourly);
         }
 
     }
