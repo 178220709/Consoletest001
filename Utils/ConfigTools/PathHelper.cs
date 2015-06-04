@@ -37,21 +37,27 @@ namespace Suijing.Utils.ConfigTools
                 }
             }
 
-            if (string.IsNullOrEmpty(_projectPath))
-            {
-                var p3 = AppDomain.CurrentDomain.BaseDirectory;
-                LogHelper.Info("AppDomain.CurrentDomain.BaseDirectory: " + p3);
-                _projectPath = CuteProjectPath(p3);
-            }
+            //if (string.IsNullOrEmpty(_projectPath))
+            //{
+            //    var p3 = AppDomain.CurrentDomain.BaseDirectory;
+            //    由不同项目调用 会得到不同路径 不适合在这里使用
+            //    _projectPath = CuteProjectPath(p3);
+            //}
 
 
             if (string.IsNullOrEmpty(_projectPath))
             {
                 var p1 = HttpRuntime.BinDirectory;
+                LogHelper.Info("HttpRuntime.BinDirectory: " + p1);
                 if (p1.Contains(ProjectName))
                 {
                     _projectPath = CuteProjectPath(p1);
                 }
+                else
+                {
+                    _projectPath = p1.Replace("bin\\", "");
+                }
+                LogHelper.Info("_projectPath: " + _projectPath);
             }
 
             if (string.IsNullOrEmpty(_projectPath))
@@ -103,21 +109,23 @@ namespace Suijing.Utils.ConfigTools
         }
 
         /// <summary>
-        /// 根据相对路径得到文件路径, 单元测试可用
+        /// 根据相对路径得到文件路径, 单元测试可用 //注意 无http请求时使用
         /// </summary>
         /// <param name="rPath"></param>
         /// <returns></returns>
         public static string GetRelativePath(string rPath)
         {
-            if (HttpContext.Current != null)
-            {
-                return HttpContext.Current.Server.MapPath(rPath);
-            }
-            else
+            var p3 = AppDomain.CurrentDomain.BaseDirectory;
+            if (p3.Contains(ProjectName))
             {
                 return Path.Combine(GetProjectPath(), "JsonSong.ManagerUI" + rPath.TrimStart('~'));
             }
-
+            else
+            {
+                var path =Path.Combine(GetProjectPath(), rPath.TrimStart('~'));
+               
+                return path;
+            }
         }
     }
 

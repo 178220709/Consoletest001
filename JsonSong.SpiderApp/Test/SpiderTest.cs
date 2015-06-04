@@ -27,6 +27,10 @@ namespace JsonSong.SpiderApp.Test
         [TestMethod]
         public async Task AddTest2()
         {
+
+            string str = @"f:\usr\LocalUser\qxw1099000260\bin";
+            var str2 = str.Replace("bin\\", "");
+          
             LogHelper.SetConfig();
             var controller = new TaskController();
             await controller.StartHahaTask();

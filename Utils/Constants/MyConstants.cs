@@ -42,6 +42,10 @@
             /// JSConfig是否需要缓存
             /// </summary>
             public static string KEY_JSConfigCache = "JSConfigCache";
+            /// <summary>
+            /// 每小时第几分钟
+            /// </summary>
+            public static string KEY_CronMin = "CronMin";
         }
     }
 }

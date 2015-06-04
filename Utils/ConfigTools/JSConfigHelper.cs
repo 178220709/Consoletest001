@@ -4,6 +4,8 @@ using System.Web;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Suijing.Utils.Constants;
+using Suijing.Utils.sysTools;
+using Suijing.Utils.WebTools;
 
 namespace Suijing.Utils.ConfigTools
 {
@@ -13,7 +15,22 @@ namespace Suijing.Utils.ConfigTools
 
         public static string GetJsConfigPath()
         {
-            return PathHelper.GetRelativePath(JSConfigPath);
+            if (HttpContext.Current==null)
+            {
+                const string server = @"f:\usr\LocalUser\qxw1099000260\App_Data\jsConfigs.js";
+                if (File.Exists(server))
+                {
+                    LogHelper.Info("File.Exists(server)");
+                    return server;
+                }
+                else
+                {
+                    var path = PathHelper.GetRelativePath(JSConfigPath);
+                    LogHelper.Info("PathHelper.GetRelativePath(JSConfigPath);" + PathHelper.GetProjectPath() + path);
+                    return path;
+                }
+            }
+            return HttpContext.Current.Server.MapPath(JSConfigPath);
         }
 
         /// <summary>
@@ -28,7 +45,7 @@ namespace Suijing.Utils.ConfigTools
             JObject configObject = null;
             if (ConfigHelper.GetConfigBool(MyConstants.AppSettingKey.KEY_JSConfigCache))
             {
-                configObject = HttpContext.Current.Cache[MyConstants.CacheKey.KEY_JS_CONFIG] as JObject;
+                configObject = CacheHelper.GetCache(MyConstants.CacheKey.KEY_JS_CONFIG) as JObject;
             }
           
             if (configObject == null)
@@ -40,10 +57,7 @@ namespace Suijing.Utils.ConfigTools
                 configJson = configJson.TrimEnd(';');
 
                 configObject = JsonConvert.DeserializeObject(configJson) as JObject;
-                if (HttpContext.Current!=null)
-                {
-                    HttpContext.Current.Cache[MyConstants.CacheKey.KEY_JS_CONFIG] = configObject; 
-                }
+                CacheHelper.SetCache(MyConstants.CacheKey.KEY_JS_CONFIG, configObject);
             }
             result = configObject[key].ToObject<T>();
             return result;

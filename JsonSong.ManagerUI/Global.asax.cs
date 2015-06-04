@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using ServiceStack.Text;
 using Suijing.Utils;
+using Suijing.Utils.ConfigTools;
 using Suijing.Utils.sysTools;
 
 namespace JsonSong.ManagerUI
@@ -27,6 +28,8 @@ namespace JsonSong.ManagerUI
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             LogHelper.SetConfig();
             LogHelper.Info("the mvcDemo is start up");
+            var path = JSConfigHelper.GetJsConfigPath();
+            LogHelper.Info("JSConfigHelper.GetJsConfigPath " + path);
 
         }
     }
