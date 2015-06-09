@@ -16,6 +16,12 @@ define(["util"], function (util) {
                 vm.Result = list.join("\n");
             });
         };
+        vm.SyncYouminClick = function () {
+            $.post(util.getAbsUrl("Spider/SyncYoumin"), {}, function (res) {
+                var list = res.result;
+                vm.Result = list.join("\n");
+            });
+        };
     });
 
     function init() {

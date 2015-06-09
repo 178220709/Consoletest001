@@ -113,6 +113,25 @@ namespace JsonSong.ManagerUI.Controllers
                 success = true
             });
         }
+        
+        [HttpPost]
+        public async Task<JsonResult> SyncYoumin()
+        {
+           
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                var ex2 = ex;
+            }
+           
+            return Json(new ResponseJsonModel()
+            {
+                success = true
+            });
+        }
 
         [HttpPost]
         public JsonResult GetSpiderInfo(int? typeId)

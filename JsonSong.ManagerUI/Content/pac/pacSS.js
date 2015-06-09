@@ -4533,8 +4533,8 @@ for (var i = 0; i < rules.length; i++) {
 
 function FindProxyForURL(url, host) {
 
-    if (!defaultMatcher.matchesAny(url, host)) {//如果不匹配 使用代理
-        return direct;
+    if (!defaultMatcher.matchesAny(url, host)) {// if no match , use what? 
+        return proxy;
     }
 
     if (defaultMatcher.matchesAny(url, host) instanceof BlockingFilter) {

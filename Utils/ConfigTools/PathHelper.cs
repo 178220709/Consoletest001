@@ -44,11 +44,25 @@ namespace Suijing.Utils.ConfigTools
             //    _projectPath = CuteProjectPath(p3);
             //}
 
+            //单元测试的时候不能使用
+            //if (string.IsNullOrEmpty(_projectPath))
+            //{
+            //    var p1 = HttpRuntime.BinDirectory;
+            //    LogHelper.Info("HttpRuntime.BinDirectory: " + p1);
+            //    if (p1.Contains(ProjectName))
+            //    {
+            //        _projectPath = CuteProjectPath(p1);
+            //    }
+            //    else
+            //    {
+            //        _projectPath = p1.Replace("bin\\", "");
+            //    }
+            //    LogHelper.Info("_projectPath: " + _projectPath);
+            //}
 
             if (string.IsNullOrEmpty(_projectPath))
             {
-                var p1 = HttpRuntime.BinDirectory;
-                LogHelper.Info("HttpRuntime.BinDirectory: " + p1);
+                var p1 = Environment.CurrentDirectory;
                 if (p1.Contains(ProjectName))
                 {
                     _projectPath = CuteProjectPath(p1);
@@ -126,6 +140,33 @@ namespace Suijing.Utils.ConfigTools
                
                 return path;
             }
+        }
+
+
+        /// <summary>
+        /// 得到文件的后缀
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="defaultEx"></param>
+        /// <returns></returns>
+        public static string GetFileEx(string name,string defaultEx = "")
+        {
+            var index = name.LastIndexOf('.');
+            var endIndex = name.LastIndexOf('?');
+            if (endIndex==-1 || endIndex < index)
+            {
+                endIndex = name.Length-1;
+            }
+            if (index ==-1)
+            {
+                return defaultEx ;
+            }
+            var subStr = name.Substring(index + 1, endIndex - index);
+            if (subStr.Length>3)
+            {
+                 return defaultEx ;
+            }
+            return subStr;
         }
     }
 

@@ -46,6 +46,10 @@
             /// 每小时第几分钟
             /// </summary>
             public static string KEY_CronMin = "CronMin";
+            /// <summary>
+            /// SpiderImgDir path 
+            /// </summary>
+            public static string KEY_SpiderImgDir = "SpiderImgDir";
         }
     }
 }

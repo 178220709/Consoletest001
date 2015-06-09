@@ -33,5 +33,12 @@ namespace JsonSong.MyWPFDemo
            var controller = new TaskController();
            await  controller.StartHahaTask();
         }
+
+        private async void StartSync_Click(object sender, RoutedEventArgs e)
+        {
+            var source = this.TxtSourcePath.Text;
+            var target = this.TxtTargetPath.Text;
+           
+        }
     }
 }

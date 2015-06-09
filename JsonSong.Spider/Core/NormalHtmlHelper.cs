@@ -54,6 +54,11 @@ namespace JsonSong.Spider.Core
                 encoding = Encoding.UTF8;
             }
             string strContent = GetDocHtmlStr(url, encoding);
+            return GetDocumentNode(strContent);
+        }
+
+        public static HtmlDocument GetDocumentNode(string html)
+        {
             var htmlDoc = new HtmlAgilityPack.HtmlDocument
             {
                 OptionAddDebuggingAttributes = false,
@@ -61,9 +66,10 @@ namespace JsonSong.Spider.Core
                 OptionFixNestedTags = true,
                 OptionReadEncoding = true
             };
-
-            htmlDoc.LoadHtml(strContent);
+            htmlDoc.LoadHtml(html);
             return htmlDoc;
         }
+
+
     }
 }

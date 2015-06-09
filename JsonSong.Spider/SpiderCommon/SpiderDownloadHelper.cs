@@ -12,44 +12,16 @@ namespace JsonSong.Spider.SpiderCommon
     /// <summary>
     /// 同步远程的数据
     /// </summary>
-    public static class SyncSpiderHelper
+    public static class SpiderDownloadHelper
     {
         /// <summary>
-        /// 根据para从远程获取数据 并绑定 可以用cnName 和AddedTime 控制
+        /// 将content中的图片下载到本地
         /// </summary>
         /// <param name="paras"></param>
         /// <param name="typeId"></param>
         public static async Task StartSync(IDictionary<string, string> paras, int typeId = 1)
         {
-            paras = paras ?? new Dictionary<string, string>();
-            paras["pageSize"] = "100";
-            var url = SpiderConstant.RemoteUrl;
-            // const string url = "http://localhost:18080/api/spider/GetSpiderList";
-            int sum = 0;
-            var pageTotal = 1;
-            int pageIndex = 1;
-            paras["pageIndex"] = "1";
-            var instance = SpiderService.Instance;
-            //得到最后更新日期
-            paras["AddedTime"] = instance.Entities.OrderByDescending(a => a.AddedTime).First().AddedTime.ToString("yyyy-MM-dd");
-            do
-            {
-              //  paras.SetDefault("cnName", SpiderConstant.CnNameDictionary[typeId]);
-              
-                var postStr = HttpRestHelper.GetPost(url, paras);
-                var dto = JsonConvert.DeserializeObject<SpiderRestDto>(postStr);
-                pageTotal = dto.count/dto.pageSize + 1;
-                var list = MapFromDTO(dto,typeId).Where( a => ! instance.ExistUrl(a.Url)).ToList();
-
-              await  instance.InsertManyAsync(list);
-                pageIndex++;
-                paras["pageIndex"] = pageIndex.ToString();
-                sum += list.Count();
-            } while (pageIndex <= pageTotal);
-
-            LogHelper.WriteWebReader(string.Format("在{0}从{1}导入{2}条{3}数据",
-               TestHelper.GetCurrentTime(), url, sum, paras["cnName"]));
-            int result = sum;
+            
         }
 
         private static List<SpiderMongoEntity> MapFromDTO(SpiderRestDto dto, int typeId)

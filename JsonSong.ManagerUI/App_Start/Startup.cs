@@ -26,6 +26,7 @@ namespace JsonSong.ManagerUI
 
                 RecurringJob.AddOrUpdate(() => MyTaskFactory.StartTask(), Cron.Hourly(min));
                 LogHelper.WriteWebReader("UseSqlServerStorage is start");
+                LogHelper.WriteWebReader("Environment.CurrentDirectory " + Environment.CurrentDirectory);
             }
         }
 

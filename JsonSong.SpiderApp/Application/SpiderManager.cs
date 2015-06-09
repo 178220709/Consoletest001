@@ -17,7 +17,16 @@ namespace JsonSong.SpiderApp.Application
                return con.SaveChanges()==1;
             }
         }
-       
-       
+
+        public static bool DownYoumin(SpiderEntity en)
+        {
+            using (var con = new MyDbContext())
+            {
+                con.Spiders.Add(en);
+                return con.SaveChanges() == 1;
+            }
+        }
+
+
     }
 }
