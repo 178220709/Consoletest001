@@ -10,7 +10,7 @@
 <p id="txtResult"></p>
 
 <script>
-    require("page/System/HttpDebugger.js", function (page) {
+    require(["page/System/HttpDebugger.js"], function (page) {
         page.init();
         page.model.postURL = '@Url.Action("GetHttpResult","System")';
     });
