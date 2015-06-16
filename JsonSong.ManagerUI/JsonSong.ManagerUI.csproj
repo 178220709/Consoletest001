@@ -802,6 +802,12 @@
     <Content Include="Content\libs\AdminLTE-2.0.3\bootstrap\font-awesome-4.3.0\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\pac\pacLocal.js" />
     <Content Include="Content\pac\pacSS.js" />
+    <Content Include="Scripts\Pages\MyJSDemo\coffee\coDemo1.js">
+      <DependentUpon>coDemo1.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Pages\MyJSDemo\coffee\coDemo1.min.js">
+      <DependentUpon>coDemo1.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\Pages\Spider\index.js" />
     <Content Include="Scripts\Public\avalon\main.js" />
     <Content Include="Content\libs\avalon\mmRouter\mmHistory.js" />
@@ -1224,6 +1230,13 @@
     <Content Include="Views\Shared\LTEPartial\_LteFootScript.cshtml" />
     <Content Include="Views\Spider\Index.cshtml" />
     <Content Include="Views\Shared\LTEPartial\_LteCrumbsSection.cshtml" />
+    <Content Include="Scripts\Pages\MyJSDemo\coffee\coDemo1.coffee" />
+    <Content Include="Scripts\Pages\MyJSDemo\coffee\coDemo1.js.map">
+      <DependentUpon>coDemo1.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Pages\MyJSDemo\coffee\coDemo1.min.js.map">
+      <DependentUpon>coDemo1.min.js</DependentUpon>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

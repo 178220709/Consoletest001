@@ -5,6 +5,7 @@
 #endif
 
 using System;
+using System.Data;
 using System.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -13,6 +14,8 @@ namespace BaseFeatureDemo.Base.CLR
     [TestClass]
     public class StringDemo
     {
+
+        private const string faceStr = "༼ ༎ຶ ෴ ༎ຶ༽ ";
         public static void Main1()
         {
             string str = "";
@@ -29,8 +32,6 @@ namespace BaseFeatureDemo.Base.CLR
             Assert.AreEqual(str0, str3);
             Assert.AreNotEqual(str1, str3);
             Assert.AreNotEqual(str2, str3);
-
-
 
         }
 
