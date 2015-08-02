@@ -1,0 +1,115 @@
+﻿@using System.Drawing.Printing
+@using JsonSong.Front.Models.System
+@using LiteDbLog.Facade
+@using WebGrease.Css.Extensions
+@model JsonSong.Front.Models.System.DBLogModel
+
+@{
+    ViewBag.Title = "Log";
+    Layout = "";
+}
+<div ms-controller="ctrlSystemDBLogIndex">
+
+    <div class="box box-default">
+        <div class="box-body">
+            <div class=" row">
+                <div class="col-xs-2">
+                    <select class="form-control" ms-duplex="Name">
+                        @foreach (string item in DBLogInstances.GetAllInstanceName())
+                        {
+                            <option  value="@item">@item</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-xs-2">
+
+                    @Html.DropDownList("Level", DBLogModel.LevelEnum, new Dictionary<string, object>()
+                {
+                    {"ms-duplex", "Level"},
+                    {"class", "form-control"},
+                })
+                </div>
+                <div class="col-xs-2">
+                    <input type="text" class="form-control  .input-group.input-group-lg" placeholder="content">
+
+                </div>
+                <div class="col-xs-1">
+                    <button type="button" class="btn btn-info pull-right" ms-click="SearchClick">Search</button>
+
+                </div>
+                <div class="col-xs-5">
+
+                </div>
+            </div>
+          
+        </div><!-- /.box-body -->
+    </div>
+
+    <div class="box">
+      
+        <div class="box-body no-padding">
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th style="width: 10px">#</th>
+                        <th>AddedTime</th>
+                        <th>Content</th>
+                        <th style="width: 40px">Name</th>
+                    </tr>
+                    <tr ms-repeat-row="BaseList">
+                        <td>{{$index}}.</td>
+                        <td>{{row.AddedTime}}</td>
+                        <td>
+                          {{row.Content}}
+                        </td>
+                        <td>{{row.Name}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div><!-- /.box-body -->
+    </div>
+
+    <div class="row">
+        <pre class="prettyprint">
+        <code class="json">
+                </code>
+                </pre>
+    </div>
+
+
+
+</div>
+
+
+<script>
+    var model = avalon.define("ctrlSystemDBLogIndex", function (vm) {
+        vm.Level = 2;
+        vm.Name = "System";
+        vm.Content = "";
+        vm.BaseList = [];
+        vm.ResultContent = "";
+
+        vm.SearchClick = function() {
+            getDBLOGList();
+        }
+    });
+    model.$watch("Level", function (newValue, b) {
+        getDBLOGList();
+    });
+    model.$watch("Name", function (newValue, b) {
+        getDBLOGList();
+    });
+
+    function getDBLOGList() {
+        $.post("@Url.Action("GetDbLogList", "System")",
+    { name: model.Name, level: model.Level, conent: model.Content })
+    .done(function (result) {
+        model.BaseList = result.rows;
+    });
+    }
+
+   
+  
+
+</script>

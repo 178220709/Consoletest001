@@ -74,12 +74,7 @@ namespace BaseFeatureDemo.awaitDemo
         }
 
 
-        public async Task<int> SumPageSizesAsync2(IList<Uri> uris)
-        {
-            var tasks = uris.Select(uri => new WebClient().DownloadDataTaskAsync(uri));
-            var data = await TaskEx.WhenAll(tasks);
-            return await TaskEx.Run(() => data.Sum(s => s.Length));
-        }
+      
 
 
 

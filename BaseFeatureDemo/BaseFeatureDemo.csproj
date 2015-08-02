@@ -105,6 +105,7 @@
     <Compile Include="Base\Disposable\DisposableDemo.cs" />
     <Compile Include="Base\Enum\EnumDemo.cs" />
     <Compile Include="Base\File\FileDemo.cs" />
+    <Compile Include="Base\InheritDemo\InheritDemoTest.cs" />
     <Compile Include="Base\Linq\ExpressDemo.cs" />
     <Compile Include="Base\Path\PathDemo.cs" />
     <Compile Include="Base\Reflect\SealedApplication.cs" />

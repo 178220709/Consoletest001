@@ -1,0 +1,15 @@
+﻿@model List<JsonSong.Spider.Core.ReadResult>
+@{
+   // ViewBag.Title = "哈哈推荐笑话";
+    Layout = "";
+}
+
+<div>
+    @foreach (var re in Model)
+    {
+        <p>
+             @Html.Raw(re.Content)   
+        </p>
+    <div class="clearfix"></div>
+    }
+</div>

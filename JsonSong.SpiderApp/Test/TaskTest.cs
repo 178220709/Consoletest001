@@ -38,7 +38,6 @@ namespace JsonSong.SpiderApp.Test
         [TestMethod]
         public async Task DownloadImgTest1()
         {
-            LogHelper.SetConfig();
             await JsonSong.Spider.Application.SpiderYouminImageApp.StartSync();
         }
         [TestMethod]

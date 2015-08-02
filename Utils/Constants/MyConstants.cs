@@ -5,7 +5,6 @@
         public static string Globe2 = "icon-globe";
         public static class Bootstrap
         {
-           
             public static class Icon
             {
                 public const string Globe = "icon-globe";
@@ -21,7 +20,6 @@
         }
         public static class JSSettingKey
         {
-           
             /// <summary>
             /// YouminTagUrls 用于任务的动态获取
             /// </summary>

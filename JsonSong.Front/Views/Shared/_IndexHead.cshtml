@@ -1,0 +1,49 @@
+﻿@model IList<IndexColumnModel>
+@{
+    Layout = null;
+}
+<style type="text/css">
+    .DivIndexHead {
+         width: 100%;
+         border-bottom: 2px antiquewhite;
+        margin-bottom: 30px;
+     }
+     .DivIndexHead  a{
+         width: 160px;
+     }
+    .DivIndexHead .active {
+         border-bottom: 2px aquamarine;
+    }
+</style>
+
+@{
+    
+}
+
+<div class="row">
+  
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        var mo = Model[i];
+        <div class="col-md-3">
+            <a href="#!@mo.Url">
+                <div class="box box-solid @(mo.IsCurrentPage() ? "box-primary" : "box-default")">
+                    <div class="box-header">
+                        @mo.Name
+
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        @mo.Description
+                    </div><!-- /.box-body -->
+                </div><!-- /.box -->
+
+            </a>
+        </div>
+
+        if (i % 4 == 3)
+        {
+            <div class="clearfix"></div>
+        }
+    }
+
+</div>

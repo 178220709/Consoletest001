@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Web.Mvc;
-using System.Web.WebPages.Html;
-using SelectListItem = System.Web.Mvc.SelectListItem;
+
 
 namespace Suijing.Utils.Utility
 {
@@ -34,9 +33,10 @@ namespace Suijing.Utils.Utility
             if (string.IsNullOrEmpty(name))
                 return string.Empty;
             object[] objs = enumType.GetField(name).GetCustomAttributes(typeof(DescriptionAttribute), false);
-            if (objs == null || objs.Length == 0)
+            if (objs.Length == 0)
             {
-                return string.Empty;
+              //  return string.Empty;
+               return name;
             }
             else
             {
@@ -91,7 +91,7 @@ namespace Suijing.Utils.Utility
 
             if (!string.IsNullOrEmpty(defaultDes))
             {
-                selectListItem.Add(new SelectListItem() { Text = defaultDes, Value = defaultValue });
+                selectListItem.Add(new SelectListItem() {   Text = defaultDes, Value = defaultValue });
             } 
 
             foreach (Enum value in Enum.GetValues(enumType))

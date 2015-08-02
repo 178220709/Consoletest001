@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Net;
+using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.HtmlControls;
 using JsonSong.ManagerUI.Extend;
 using MyProject.WeixinModel.Model;
 using Suijing.Utils.Constants;
@@ -13,9 +16,9 @@ namespace JsonSong.ManagerUI.Controllers
         [Module(Name = "Index", CSS = MyConstants.Bootstrap.Icon.Globe)]
         public ActionResult Index()
         {
+            HttpPostedFileBase file = Request.Files.Get("123");
             return View();
         }
-
 
         [Module(Name = "DateTime", CSS = MyConstants.Bootstrap.Icon.User)]
         public ActionResult DateTime()
@@ -33,8 +36,13 @@ namespace JsonSong.ManagerUI.Controllers
         public ActionResult Base()
         {
             return View();
+        }
+
+        [Module(Name = "Promise", CSS = MyConstants.Bootstrap.Icon.User)]
+        public ActionResult Promise()
+        {
+            return View();
         }   
-          
 
     }
 }

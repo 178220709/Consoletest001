@@ -1,0 +1,21 @@
+﻿ 日志时间：2015-07-29 11:03:08,582 [1] 
+ 日志级别：DEBUG     
+ 日 志 类：logdebugger [(null)] 
+the mvcDemo is start up 
+  日志时间：2015-07-29 11:03:08,629 [1] 
+ 日志级别：DEBUG     
+ 日 志 类：logdebugger [(null)] 
+JSConfigHelper.GetJsConfigPath D:\code\GitCode\HelloCSharp\JsonSong.Front\App_Data\jsConfigs.js 
+  日志时间：2015-07-29 11:15:09,180 [Worker #11] 
+ 日志级别：DEBUG     
+ 日 志 类：logdebugger [(null)] 
+_projectPath: c:\windows\system32\inetsrv 
+  日志时间：2015-07-29 21:36:36,317 [1] 
+ 日志级别：DEBUG     
+ 日 志 类：logdebugger [(null)] 
+the mvcDemo is start up 
+  日志时间：2015-07-29 21:36:36,356 [1] 
+ 日志级别：DEBUG     
+ 日 志 类：logdebugger [(null)] 
+JSConfigHelper.GetJsConfigPath D:\code\GitCode\HelloCSharp\JsonSong.Front\App_Data\jsConfigs.js 
+ 

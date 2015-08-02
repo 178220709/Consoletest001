@@ -1,0 +1,49 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "title";
+    Layout = "";
+}
+    
+
+<h2>羽毛球联谊活动报名处</h2>
+<script>
+    require(["page/TempApp/index.js"], function (pager) {
+        pager.init();
+    });
+
+    $("#txtBaseCondition").keydown(function (event) {
+        if (event.keyCode == 13) {
+            $("#btnBaseCondition")[0].click();
+        }
+    });
+
+</script>
+<div ms-controller="ctrlTempAppParticipant">
+    <div class="box">
+        <div class="box-body">
+            <div class="input-group margin">
+                <input type="text" class="form-control" id="txtBaseCondition" ms-duplex="AddName">
+                <span class="input-group-btn">
+                    <button class="btn btn-info btn-flat" id="btnBaseCondition" type="button" ms-click="AddClick">报名!</button>
+                </span>
+            </div><!-- /input-group -->
+        </div><!-- /.box-body -->
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Block buttons -->
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">已报名人员 {{BaseList.length}}</h3>
+                </div>
+                <div class="box-body" ms-repeat="BaseList">
+                    <label>{{el}}</label>
+                </div>
+            </div><!-- /.box -->
+        </div>
+        <div class="col-md-6">
+          
+        </div>
+    </div>
+
+</div>

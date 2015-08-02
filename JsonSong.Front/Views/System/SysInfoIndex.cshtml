@@ -1,0 +1,21 @@
+﻿@using log4net.Util
+
+
+@{
+    ViewBag.Title = "title";
+    Layout = "";
+}
+
+<h2>title</h2>
+
+
+<div >
+
+    <div class="highlight">
+        @MyProject.SystemInfo.SysteminfoHelper.GetMemorySize()
+    </div>
+    <div class="highlight">
+        @MyProject.SystemInfo.SysteminfoHelper.GetSystemInfo()
+    </div>
+
+</div>

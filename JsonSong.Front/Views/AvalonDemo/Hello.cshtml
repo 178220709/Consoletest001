@@ -1,0 +1,51 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "title";
+    Layout = "";
+}
+@*<script src="~/Scripts/Pages/AvalonDemo/hello.js"></script>*@
+<script>
+    //window.indexModel.pageName = "avalon Demo";
+    //window.indexModel.crumbs = [];//the crumbs on the top 
+
+    seajs.use("page/AvalonDemo/hello.js");
+</script>
+
+@Html.Partial("Head")
+
+    <div ms-controller="ctrlAvalonDemoHello">
+        <div class="row form-box" >
+            <div class="form-group">
+                <label>Text</label>
+                <input type="text" class="form-control" placeholder="Enter ..." ms-duplex="str">
+            </div> 
+            <div class="form-group">
+                <label>Number</label>
+                <input type="number" class="form-control" placeholder="Enter ..." ms-duplex="number">
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6">
+                    <label> select </label>   
+                    <select class="form-control" ms-duplex="sel">
+                        <option ms-repeat-el="selArr" ms-attr-data-testattr="$index" ms-attr-value="$index">{{el}}</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+            </div> 
+        </div>
+        
+      
+        <div class="row"  style="margin-top: 100px;" ms-controller="ctrlResult">
+            <textarea id="ms-duplex-show-json" style="width:90%;height:210px;" ms-duplex="result"></textarea>
+        </div>
+    </div>
+
+
+
+
+
+

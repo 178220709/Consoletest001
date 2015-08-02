@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "title";
+}
+@Html.Partial("Head")
+<h2>title</h2>
+
+<p>base1.js 用来说明js的继承关系 -- Person.prototype被修改了，添加了getNation方法</p>
+<p>这是因为在上面的代码Chinese.prototype = Person.prototype; 这是引用类型，修改Chinese同时也修改了Person。
+    这本身就是不能容忍的，且使类之间形成强耦合性，这不是我们要的效果</p>
+<b>-------------------------</b>
+
+<p></p>
+<script src="~/Scripts/Pages/MyJSDemo/Base/Base1.js"></script>
+<script src="~/Scripts/Pages/MyJSDemo/Base/Base2.js"></script>
+
+<p>ValueAndRefernce.js js 值类型和引用类型的实验</p>
+<b>-------------------------</b>
+<script src="~/Scripts/Pages/MyJSDemo/Base/ValueAndRefernce.js"></script>
+<script src="~/Scripts/Pages/MyJSDemo/Base/ValueAndRefernce2.js"></script>
+
+<p>jsProtoType.js js ProtoType的实验</p>
+<b>-------------------------</b>
+<script src="~/Scripts/Pages/MyJSDemo/Base/jsProtoType.js"></script>
+
+
+@{
+    uint  a = 242130069;
+    uint b = 563037500;
+    var ab = (a + b)/(a*b);
+    var b1 = uint.MinValue;
+    var b2 = uint.MaxValue;
+    var c1 = 222;
+    var c2 = 333;
+    var d1 = c1 ^ c2;
+    var d2 = c1 & c2;
+    
+    
+}
+
+<input type="text" name="name" value="@b1" />
+<input type="text" name="name" value="@b2" />
+
+<input type="text" name="name" value="@d1" />
+<input type="text" name="name" value="@d2" />
+
+<input type="text" name="name" value="@ab" />

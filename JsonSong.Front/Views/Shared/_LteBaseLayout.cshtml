@@ -1,0 +1,25 @@
+﻿@using Suijing.Utils.ConfigTools
+<html>
+
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="UTF-8">
+    @*<title>AdminLTE 2 | Dashboard</title>*@
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    @Html.Partial("LTEPartial/_LteHeadStyleAndLib")
+
+  
+
+    @RenderSection("head", false)
+</head>
+<body class="skin-blue  pace-done" style="min-height: 415px;">
+    @RenderBody()
+
+
+
+
+    @Html.Partial("LTEPartial/_LteFootScript")
+    @RenderSection("foot", false)
+</body>
+</html>

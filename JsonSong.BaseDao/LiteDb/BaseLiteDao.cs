@@ -9,7 +9,7 @@ using Suijing.Utils.Utility;
 
 namespace JsonSong.BaseDao.LiteDb
 {
-    public abstract class BaseLiteDao<TEntity> where TEntity : BaseLiteEntity, new()
+    public  class BaseLiteDao<TEntity> where TEntity : BaseLiteEntity, new()
     {
         protected string Path { get; set; }
         protected string CnName { get; set; }
@@ -52,6 +52,11 @@ namespace JsonSong.BaseDao.LiteDb
             return Con.Update(entity);
         }
 
+        public IEnumerable<TEntity> GetAll()
+        {
+            return Con.FindAll();
+        }
+
         public TEntity FindOne(Expression<Func<TEntity, bool>> predicate)
         {
             return Con.FindOne(predicate);
@@ -78,9 +83,6 @@ namespace JsonSong.BaseDao.LiteDb
 
             return null;
         }
-
-
-
 
         #endregion
     }

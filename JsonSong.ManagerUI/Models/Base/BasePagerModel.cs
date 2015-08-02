@@ -33,11 +33,6 @@ namespace JsonSong.ManagerUI.Models
         {
             get { return (PageIndex - 1)*PageSize; }
         }
-        
-      
     }
-
-
-
 
 }

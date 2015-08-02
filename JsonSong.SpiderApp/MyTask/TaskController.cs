@@ -6,6 +6,8 @@ using JsonSong.Spider.DataAccess.Entity;
 using JsonSong.Spider.Project.Haha;
 using JsonSong.SpiderApp.Application;
 using JsonSong.SpiderApp.Data;
+using LiteDbLog.Facade;
+using LiteDbLog.LiteDBLog;
 using Omu.ValueInjecter;
 using Suijing.Utils.sysTools;
 
@@ -28,14 +30,13 @@ namespace JsonSong.SpiderApp.MyTask
                // var url = "http://localhost:4001" + i;
                 Task.Run(async () =>
                 {
-                    LogHelper.WriteWebReader(string.Format("1====> {0} start   ", url));
+                    DBLogInstances.Spider.Log(string.Format("1====> {0} start   ", url) , level:DBLogLevelEnum.Debugger);
                     var result = await reader.GetHtmlContent(url);
-                  
-                   
-                    LogHelper.WriteWebReader(string.Format("2====> {0} done   ", url));
+
+                    DBLogInstances.Spider.Log(string.Format("2====> {0} done   ", url), level: DBLogLevelEnum.Debugger);
                     if (result.Weight < 100) return;
                     SpiderLiteDao.Instance.AddNoRepeat(result, 1);
-                    LogHelper.WriteWebReader(string.Format("3====> {0} is insert ", url));
+                    DBLogInstances.Spider.Log(string.Format("3====> {0} is insert ", url), level: DBLogLevelEnum.Debugger);
                 });
             }
         }
@@ -52,13 +53,13 @@ namespace JsonSong.SpiderApp.MyTask
                 var url = "http://localhost:4001" + i;
                 Task.Run(async () =>
                 {
-                    LogHelper.WriteWebReader(string.Format("1====> {0} start   ", url));
+                    DBLogInstances.Spider.Log(string.Format("1====> {0} start   ", url), level: DBLogLevelEnum.Debugger);
                     var result = await reader.GetHtmlContent(url);
 
-                    LogHelper.WriteWebReader(string.Format("2====> {0} done   ", url));
+                    DBLogInstances.Spider.Log(string.Format("2====> {0} done   ", url), level: DBLogLevelEnum.Debugger);
                     if (result.Weight < 100) return;
                     SpiderLiteDao.Instance.AddNoRepeat(result, 1);
-                    LogHelper.WriteWebReader(string.Format("3====> {0} is insert ", url));
+                    DBLogInstances.Spider.Log(string.Format("3====> {0} is insert ", url), level: DBLogLevelEnum.Debugger);
                 });
             }
         }

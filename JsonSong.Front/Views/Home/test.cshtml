@@ -1,0 +1,31 @@
+﻿@model IndexModel
+@{
+    Layout = "~/Views/Shared/_LteMenuLayout.cshtml";
+}
+
+@section foot
+{
+    <script>
+        avalon.log("baseUrl is " + avalon.require.config.baseUrl);
+        require(["util", "pages/MyJSDemo/Base/Base"], function (util, b, c, d) {
+            //.....
+            avalon.log("util is ready ");
+            var str = util.getAbsUrl("");
+        });
+
+       
+    </script>
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="min-height: 438px;" >
+
+    <a target="_blank" href="/"></a>
+    <a target="_blank" href="../../"></a>
+
+    <script src="~/Scripts/Pages/MyJSDemo/Base/Base.js"></script>
+</div><!-- /.content-wrapper -->
+
+
+
+

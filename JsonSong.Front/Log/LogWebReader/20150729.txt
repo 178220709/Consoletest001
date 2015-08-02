@@ -1,0 +1,17 @@
+﻿ 日志时间：2015-07-29 11:03:09,090 [1] 
+ 日志级别：DEBUG     
+ 日 志 类：logWebReader [(null)] 
+UseSqlServerStorage is start 
+  日志时间：2015-07-29 11:03:09,090 [1] 
+ 日志级别：DEBUG     
+ 日 志 类：logWebReader [(null)] 
+Environment.CurrentDirectory c:\windows\system32\inetsrv 
+  日志时间：2015-07-29 21:36:36,890 [1] 
+ 日志级别：DEBUG     
+ 日 志 类：logWebReader [(null)] 
+UseSqlServerStorage is start 
+  日志时间：2015-07-29 21:36:36,891 [1] 
+ 日志级别：DEBUG     
+ 日 志 类：logWebReader [(null)] 
+Environment.CurrentDirectory c:\windows\system32\inetsrv 
+ 
