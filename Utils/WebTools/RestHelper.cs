@@ -19,6 +19,24 @@ namespace Suijing.Utils.WebTools
 
     public class RestHelper
     {
+        public static string getIp()
+        {
+            string clientIp = "";
+            try
+            {
+                clientIp = (HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"] ??
+                HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"]).Split(',')[0].Trim();
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+            return clientIp;
+        }
+
+
+
+
         public static RestResult<T> Get<T>(string url)
         {
             var model = new RestResult<T>();
@@ -48,7 +66,7 @@ namespace Suijing.Utils.WebTools
             return model;
         }
 
-        public static RestResult<T> Post<T>(string url, Dictionary<string, string> paras=null,string name = "",string psw = "")
+        public static RestResult<T> Post<T>(string url, Dictionary<string, string> paras = null, string name = "", string psw = "")
         {
             var model = new RestResult<T>();
             Uri address = new Uri(url);
@@ -66,11 +84,11 @@ namespace Suijing.Utils.WebTools
             {
                 foreach (var item in paras)
                 {
-                    data.Append(string.Format("&{0}=", item.Key) +  HttpUtility.UrlEncode(item.Value));
-                } 
+                    data.Append(string.Format("&{0}=", item.Key) + HttpUtility.UrlEncode(item.Value));
+                }
             }
 
-            data.Append("&paratest=" + HttpUtility.UrlEncode("para中文test:"+DateTime.Now.ToString("HH:mm:ss")));
+            data.Append("&paratest=" + HttpUtility.UrlEncode("para中文test:" + DateTime.Now.ToString("HH:mm:ss")));
 
             // Create a byte array of the data we want to send
             byte[] byteData = UTF8Encoding.UTF8.GetBytes(data.ToString());
