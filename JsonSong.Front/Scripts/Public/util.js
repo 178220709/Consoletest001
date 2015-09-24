@@ -41,3 +41,21 @@ define(function () {
     };
     return o;
 });
+
+
+//avalon ¹«¹²
+avalon.directive("enter", {
+    init: function(binding) {
+        var elem = binding.element
+        var vmodels = binding.vmodels
+        var remove = avalon(elem).bind("click", function(p1,p2) {
+            if (p1) {
+                var code = p2;
+            }
+        });
+        binding.roolback = function() {
+            avalon(elem).unbind("click", remove)
+        }
+    }
+
+});

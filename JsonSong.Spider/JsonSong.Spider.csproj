@@ -99,6 +99,7 @@
     <Compile Include="DataAccess\Entity\SpiderMongoEntity.cs" />
     <Compile Include="DataAccess\DAO\SpiderLiteDao.cs" />
     <Compile Include="DataAccess\DAO\SpiderService.cs" />
+    <Compile Include="Proxy\HttpClientTest.cs" />
     <Compile Include="SpiderCommon\SpiderConstant.cs" />
     <Compile Include="SpiderCommon\SpiderRestDto.cs" />
     <Compile Include="SpiderCommon\SpiderDownloadHelper.cs" />

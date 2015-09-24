@@ -21,4 +21,9 @@ $(function () {
         h = h - 60 - 40; //去掉头部和底部的高度
       //  $("#main-content").css("min-height", h);
     }();
+
+
+
+
+
 });

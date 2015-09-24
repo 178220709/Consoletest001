@@ -19,16 +19,25 @@ namespace BaseFeatureDemo.ProxyDemo
 
         public static async Task Main1()
         {
-            var re = await TestProxy(null);
+
+
+            WebProxy myProxy = new WebProxy("218.189.26.20", 8080);
+            //建议连接（代理需要身份认证，才需要用户名密码）
+            //myProxy.Credentials = new NetworkCredential("admin", "123456");
+            //设置请求使用代理信息
+
+
+            var re = await TestProxy(myProxy);
             Thread.Sleep(20000);
         }
 
         private static async Task<string> TestProxy(IWebProxy proxy)
         {
-            const string _url = "http://www.baidu.com/";
-          //  const string _url = "http://ip.qq.com/";
+            //  const string _url = "http://www.baidu.com/";
+           const string _url = "http://ip.qq.com/";
             // const string _url = "https://www.youtube.com/";
-            var factory = HtmlAsyncHelper.CreatWithProxy(0);
+           var factory = new HtmlAsyncHelper(proxy);
+                
             return await factory.GetDocHtmlStr(_url, Encoding.GetEncoding("gbk"));
         }
 

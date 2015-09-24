@@ -5,7 +5,7 @@ using Suijing.Utils.Constants;
 namespace JsonSong.Front.Controllers
 {
     [Module(CSS = MyConstants.Bootstrap.Icon.Globe,Sort = 31)]
-    public class AngularJSController : JsonNetController
+    public class ToolsController : JsonNetController
     {
         [Module(CSS = MyConstants.Bootstrap.Icon.Globe)]
         public ActionResult Index()
@@ -13,8 +13,8 @@ namespace JsonSong.Front.Controllers
             return View();
         }
        
-        [Module(CSS = MyConstants.Bootstrap.Icon.Globe)]
-        public ActionResult ModelBind()
+        [Module(CSS = MyConstants.Bootstrap.Icon.Globe,Name = "js2coffee")]
+        public ActionResult Js2Coffee()
         {
             return View();
         } 

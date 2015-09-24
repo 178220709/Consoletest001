@@ -26,7 +26,7 @@ namespace LiteDbLog.LiteDBLog
                 Name = _cnName,
                 Content = content,
                 Title = title,
-                Level = level
+                Level = (int)level
             };
             Insert(en);
         }
@@ -38,7 +38,7 @@ namespace LiteDbLog.LiteDBLog
                 Name = _cnName,
                 Content = content,
                 Title = title,
-                Level = level,
+                Level = (int)level,
                 Exception = ex
             };
             Insert(en);

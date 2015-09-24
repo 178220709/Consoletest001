@@ -11,19 +11,18 @@ define(["util"], function (util) {
             model.paras.push({ key: "", value: "" });
         };
         vm.getTarget = function () {
-            vm.target = getTarget();
+            model.target = getTarget();
         };
         vm.postClick = function () {
             var opts = getParasObj();
             $.post(model.postURL, { url: model.url, paras: JSON.stringify(opts) }, function (context) {
                 //var data = JSON.parse(context);
                 //vm.result = JSON.stringify(data, 4, "\t");
-                vm.result = context;
+                model.result = context;
             });
         };
-
     });
-    model.paras.$watch("length", function () {
+    model.$watch("paras.length", function () {
         model.target = getTarget();
     });
     model.$watch("url", function () {
@@ -45,12 +44,29 @@ define(["util"], function (util) {
         return model.url + util.optsToStr(opts);
     }
 
+    //ping
+    var model2 = avalon.define("ctrlSystemPingDebugger", function (vm) {
+        vm.host = "";
+        vm.result = "";
+        vm.PingClick = function () {
+            $.post(util.getAbsUrl("System/GetPingResult"), { host: model2.host }, function (context) {
+                model2.result = context;
+            });
+        };
+    });
+
+    $("input[data-condition]").keydown(function (event) {
+        if (event.keyCode == 13)
+            //  $("a[data-search]").trigger("click");
+            $("a[data-search]")[0].click();
+    });
 
     return {
         model:model,
-        init:function (parameters) {
+        model2: model2,
+        init:function () {
             $(function () {
-                avalon.scan(document.getElementById("divContainContent"), model);
+                avalon.scan();
             });
         }
     };

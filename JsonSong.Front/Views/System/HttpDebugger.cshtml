@@ -1,37 +1,36 @@
 ﻿@{
-    ViewBag.Title = "title";
+    ViewBag.Title = "网络调试";
     Layout = "";
 }
 
-<h2>title</h2>
-
-@DateTime.Now
 
 <p id="txtResult"></p>
 
 <script>
     require(["page/System/HttpDebugger.js"], function (page) {
-        page.init();
         page.model.postURL = '@Url.Action("GetHttpResult","System")';
+        page.init();
     });
 </script>
 
-<div ms-controller="ctrlSystemHttpDebugger">
-
-    <div class="box">
+<div >
+    <div class="row">
+        <h3>http调试</h3>
+    </div>
+    <div class="box" ms-controller="ctrlSystemHttpDebugger">
         <div class="box-header">
             <div class="row">
                 <form role="form">
                     <div class=" col-md-8 form-group">
                         <input type="text" class="form-control" placeholder="url" ms-duplex="url">
                     </div>
-                  
+
                     <div class="col-md-4 form-group ">
                         <button type="button" class="btn btn-primary" ms-click="getClick">Get</button>&nbsp;&nbsp;
                         <button type="button" class="btn btn-primary" ms-click="postClick">Post</button>
                     </div>
                     <div class="col-md-12 form-group ">
-                      <input type="text" class="form-control" disabled="disabled" ms-duplex="target">
+                        <input type="text" class="form-control" disabled="disabled" ms-duplex="target">
                     </div>
                 </form>
             </div>
@@ -39,11 +38,18 @@
             <div class="row">
                 <form role="form">
                     <div class=" col-md-4 form-group" ms-repeat-opt="paras">
-                        <div class="col-md-5"><input type="text" class="form-control" placeholder="opt" ms-duplex="opt.key" ms-on-input="getTarget()"></div>
-                        <div class="col-md-5"><input type="text" class="form-control" placeholder="opt" ms-duplex="opt.value" ms-on-input="getTarget()"></div>
-                        <div class="col-md-1 " ms-class-1="disnone:$first" > <i class="glyphicon glyphicon-remove" ms-click="$remove"></i> </div>
-                        
-                        <div class="col-md-1" ms-class-1="disnone:!$last"> <i class=" glyphicon glyphicon-chevron-right" ms-click="addPara"></i> </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="opt" ms-duplex="opt.key" ms-on-input="getTarget()">
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="opt" ms-duplex="opt.value" ms-on-input="getTarget()">
+                        </div>
+                        <div class="col-md-1 " ms-class-1="disnone:$first">
+                            <i class="glyphicon glyphicon-remove" ms-click="$remove"></i>
+                        </div>
+                        <div class="col-md-1" ms-class-1="disnone:!$last">
+                            <i class=" glyphicon glyphicon-chevron-right" ms-click="addPara"></i>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -56,6 +62,27 @@
     </div>
 
 
+    <div class="row">
+        <h3>网络ping测试</h3>
+    </div>
+
+    <div class="box" ms-controller="ctrlSystemPingDebugger">
+        <div class="box-header">
+            <div class="row">
+                <form role="form">
+                    <div class=" col-md-8 form-group">
+                        <input type="text" class="form-control" placeholder="url" ms-duplex="host" id="txtPingHost" ms-enter="PingClick">
+                    </div>
+                    <div class="col-md-4 form-group ">
+                        <button type="button" class="btn btn-primary" ms-click="PingClick">Ping</button> 
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.box-header -->
+        <div class="box-body">
+            <textarea style="width: 600px; height: 400px;" ms-duplex="result"></textarea>
+        </div><!-- /.box-body -->
+    </div>
 
 
 </div>

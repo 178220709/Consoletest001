@@ -52,7 +52,7 @@ namespace JsonSong.Front
             int min = ConfigHelper.GetConfigInt(MyConstants.AppSettingKey.KEY_CronMin);
 
             RecurringJob.AddOrUpdate(() => MyTaskFactory.StartTask(), Cron.Hourly(min));
-            DBLogInstances.Spider.Log("UseSqlServerStorage is start", level: DBLogLevelEnum.Debugger);
+            DBLogInstances.Spider.Log("UseMemoryStorage is start", level: DBLogLevelEnum.Debugger);
             DBLogInstances.Spider.Log("Environment.CurrentDirectory " + Environment.CurrentDirectory, level: DBLogLevelEnum.Debugger);
 
         }

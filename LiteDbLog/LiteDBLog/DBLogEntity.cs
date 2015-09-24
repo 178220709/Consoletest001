@@ -10,7 +10,7 @@ namespace LiteDbLog.LiteDBLog
     public class DBLogEntity :BaseLiteEntity
     {
      
-        public DBLogLevelEnum Level { get; set; }
+        public int Level { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
         public Exception Exception { get; set; }

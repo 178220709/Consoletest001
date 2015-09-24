@@ -7,15 +7,16 @@ using LiteDbLog.Facade;
 using LiteDbLog.LiteDBLog;
 using Newtonsoft.Json;
 using Suijing.Utils.Constants;
+using Suijing.Utils.WebTools;
 
 namespace JsonSong.Front.Controllers
 {
-      [Module(CSS = MyConstants.Bootstrap.Icon.Globe,Sort = 80,Name = "系统调试")]
+    [Module(CSS = MyConstants.Bootstrap.Icon.Globe, Sort = 80, Name = "系统调试")]
     public class SystemController : Controller
     {
         [HttpGet]
         [Module(Name = "Log", CSS = MyConstants.Bootstrap.Icon.Globe)]
-        public ActionResult LogIndex(string path,string name)
+        public ActionResult LogIndex(string path, string name)
         {
             return View();
         }
@@ -27,14 +28,16 @@ namespace JsonSong.Front.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult GetDbLogList(string name,DBLogLevelEnum level, string content)
+        public ActionResult GetDbLogList(string name, int level, string content)
         {
-          var list =  DBLogInstances.GetnstanceByName(name).Find(a => a.Level == level).ToList();
+            // var levelEnum = (DBLogLevelEnum)(level);
+
+            var list = DBLogInstances.GetnstanceByName(name).Find(a => a.Level == level).ToList();
             var lis2 = DBLogInstances.Spider.GetAll();
             if (!string.IsNullOrWhiteSpace(content))
-          {
-              list = list.Where(a => a.Content.Contains(content)).ToList();
-          }
+            {
+                list = list.Where(a => a.Content.Contains(content)).ToList();
+            }
             return Json(new ResponseJsonModel()
             {
                 success = true,
@@ -48,8 +51,8 @@ namespace JsonSong.Front.Controllers
         public ActionResult SysInfoIndex(string path, string name)
         {
             return View();
-        } 
-          
+        }
+
         [HttpGet]
         [Module(Name = "HttpDebugger", CSS = MyConstants.Bootstrap.Icon.Globe)]
         public ActionResult HttpDebugger(string path, string name)
@@ -60,15 +63,23 @@ namespace JsonSong.Front.Controllers
 
 
         [HttpPost]
-        public ContentResult GetHttpResult(string url , string paras)
+        public ContentResult GetHttpResult(string url, string paras)
         {
             var dic = JsonConvert.DeserializeObject<IDictionary<string, string>>(paras);
             var result = HttpRestHelper.GetPost(url, dic);
 
-          return Content(result);
-        }   
+            return Content(result);
+        }
 
-
+        [HttpPost]
+        public ContentResult GetPingResult(string host)
+        {
+            var list = Enumerable.Range(1, 4)
+                  .Select(a => NetHelper.GetPing(host))
+                  .Select(a => string.Format("{0}  {1} ", host, a.RoundtripTime))
+                  .ToList();
+            return Content(string.Join("\n", list));
+        }
 
         [HttpPost]
         public JsonResult GetLog(string path, string name)
@@ -87,13 +98,13 @@ namespace JsonSong.Front.Controllers
                 success = true,
                 result = ViewLogHelp.GetrFileContent(path, name)
             });
-        }   
+        }
 
 
         [HttpPost]
         public JsonResult GetLogByFullName(string fullName)
         {
-            if (string.IsNullOrWhiteSpace(fullName) )
+            if (string.IsNullOrWhiteSpace(fullName))
             {
                 return Json(new ResponseJsonModel
                 {
@@ -107,7 +118,7 @@ namespace JsonSong.Front.Controllers
                 success = true,
                 result = ViewLogHelp.GetrFileContent(fullName)
             });
-        }   
+        }
 
     }
 }

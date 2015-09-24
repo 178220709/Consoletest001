@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using LiteDB;
@@ -11,16 +12,16 @@ namespace JsonSong.BaseDao.LiteDb
 {
     public  class BaseLiteDao<TEntity> where TEntity : BaseLiteEntity, new()
     {
-        protected string Path { get; set; }
-        protected string CnName { get; set; }
-        protected LiteDatabase DB {get { return new LiteDatabase(Path); }}
+        public string Path { get; set; }
+        public string CnName { get; set; }
+        public LiteDatabase DB { get { return new LiteDatabase(Path); } }
 
-        protected LiteCollection<TEntity> Con
+        public LiteCollection<TEntity> Con
         {
             get{return DB.GetCollection<TEntity>(CnName); }
         }
 
-        protected BaseLiteDao(string dbName = "", string cnName = "")
+        public BaseLiteDao(string dbName  , string cnName = "")
         {
             Path =  PathHelper.GetDBPath(dbName);
             CnName = string.IsNullOrWhiteSpace(cnName) ? typeof(TEntity).Name.ToLower() : cnName;
@@ -52,9 +53,9 @@ namespace JsonSong.BaseDao.LiteDb
             return Con.Update(entity);
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public IList<TEntity> GetAll()
         {
-            return Con.FindAll();
+            return Con.FindAll().ToList();
         }
 
         public TEntity FindOne(Expression<Func<TEntity, bool>> predicate)

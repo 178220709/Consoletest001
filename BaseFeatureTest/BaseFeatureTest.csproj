@@ -99,6 +99,8 @@
     <Compile Include="MongoTest\MongoDaoTest.cs" />
     <Compile Include="MOQ\ThisTestTest.cs" />
     <Compile Include="UtilsTest\FileEncodingTest.cs" />
+    <Compile Include="UtilsTest\NetTest.cs" />
+    <Compile Include="UtilsTest\MailTest.cs" />
     <Compile Include="UtilsTest\SysteminfoHelperTest.cs" />
     <Compile Include="UtilsTest\LogTest.cs" />
     <Compile Include="UtilsTest\JsonTest.cs" />
