@@ -8,5 +8,7 @@ namespace JsonSong.TaskFactory
 {
     public class Class1
     {
+
+
     }
 }
